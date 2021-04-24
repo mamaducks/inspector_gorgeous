@@ -7,7 +7,7 @@ import { Quote } from "../Components/RequestQuote";
 export function FaqPage() {
 
   return (
-    <Box direction="column">
+    <Box direction="column" style={{backgroundColor: "#6b4f6d2e"}}>
       <FaqHeader />
       <FaqAccordion />
       <Quote />

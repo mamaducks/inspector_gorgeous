@@ -12,6 +12,7 @@ import { MdExpandMore } from "react-icons/md";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+    padding: 30,
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
