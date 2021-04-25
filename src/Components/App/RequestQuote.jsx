@@ -20,7 +20,7 @@ export const Quote = () => {
     if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
 
     return (
-      <a href={`mailto:${email}${params}`} style={{ color: "beige" }}>
+      <a href={`mailto:${email}${params}`} style={{ color: "#786379" }}>
         {children}
       </a>
     );

@@ -1,6 +1,7 @@
-import { Icon, makeStyles, Typography } from "@material-ui/core";
+import { Icon, makeStyles, Typography, Box } from "@material-ui/core";
 import React from "react";
 import { IoMdPin, IoIosPhonePortrait } from "react-icons/io";
+import IgLogo from "../../../src/I.png";
 
 const useStyles = makeStyles({
   root: {
@@ -8,10 +9,14 @@ const useStyles = makeStyles({
     justifyContent: "space-evenly",
   },
   infoBox: {
-    padding: 45,
+    padding: 25,
     alignItems: "center",
     display: "flex",
+    backgroundColor: "#f3f0e8",
+    width: 300,
+    height: 250,
     flexDirection: "column",
+    justifyContent: "center",
   },
   logo: {
     display: "flex",
@@ -29,18 +34,23 @@ export function ContactBody() {
           <Icon>
             <IoMdPin />
           </Icon>
-          <Typography> somewhere in south jersey Maple Ave Berlin</Typography>
+          <Box style={{ padding: 20 }}>
+            <Typography> Washington Ave, Berlin NJ 08009 </Typography>
+          </Box>
         </div>
 
         <div className={classes.infoBox}>
           <Icon>
             <IoIosPhonePortrait />
           </Icon>
-
-          <Typography>p: 609-445-6778 fax: 609-890-6786</Typography>
+          <Box style={{ padding: 20 }}>
+            <Typography>p: 609-445-6778 fax: 609-890-6786</Typography>
+          </Box>
         </div>
       </div>
-      <div className={classes.logo}>logo</div>
+      <Box className={classes.logo}>
+        <img src={IgLogo} width="400" height="400" />
+      </Box>
     </>
   );
 }

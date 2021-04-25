@@ -10,7 +10,7 @@ export const Title = ({ title }) => {
       letterSpacing={3}
       lineHeight={5}
       textAlign="center"
-      color="text.primary"
+      color="#ffffffde"
       style={{ backgroundColor: "lightblue" }}
     >
       {title}

@@ -1,25 +1,30 @@
 // Imports
 import React from "react";
-import { Toolbar, Button, ButtonGroup } from "@material-ui/core";
+import { Toolbar, Button, ButtonGroup, SvgIcon, Icon } from "@material-ui/core";
 // App imports
 import routes from "../../App/Routes";
 import { makeStyles } from "@material-ui/core";
+import IgLogo from "../../../src/I.png";
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    flexGrow: 2,
-    display: "flex",
+    justifyContent: "space-between",
   },
 }));
+
 // Component
 export const Header = () => {
   const classes = useStyles();
   // render
   return (
-    <Toolbar>
-      <div className={classes.title}>put logo here</div>
+    <Toolbar style={{ justifyContent: "space-between" }}>
+      <img src={IgLogo} width="100" height="100" />
 
-      <ButtonGroup aria-label="small outlined button group" variant="primary">
+      <ButtonGroup
+        aria-label="small outlined button group"
+        variant="primary"
+        gutterBottom
+      >
         <Button
           // classes={{ label: classes.buttonLabel }}
           href={routes.pages.home}

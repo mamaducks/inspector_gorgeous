@@ -1,5 +1,11 @@
 import React from "react";
-import { ListItem, ListItemText, ListItemIcon, List } from "@material-ui/core";
+import {
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+  List,
+  Card,
+} from "@material-ui/core";
 import { IoMdPin, IoIosPhonePortrait } from "react-icons/io";
 import { AiOutlineMail } from "react-icons/ai";
 
@@ -7,7 +13,7 @@ const ProfileListItem = ({ Icon, text }) => {
   return (
     <>
       <ListItem>
-        <ListItemIcon fontSize={24}>
+        <ListItemIcon>
           <Icon />
         </ListItemIcon>
 
@@ -19,17 +25,34 @@ const ProfileListItem = ({ Icon, text }) => {
 
 export function ProfileList() {
   return (
-    <List>
+    <Card style={{ padding: 55 }}>
       <ListItemText
-        primary="AA Inspections"
-        style={{ display: "flex", justifyContent: "center" }}
+        primary="IG Inspections"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          fontSize: 18,
+          color: "#18566b",
+        }}
       />
-      <List style={{ padding: 35 }}>
-        <ProfileListItem Icon={IoIosPhonePortrait} text={"6093330400"} />
-        <ProfileListItem Icon={AiOutlineMail} text={"boxingmom"} />
-        <ProfileListItem Icon={IoMdPin} text={"somewhere south jersey"} />
+      <List style={{ padding: 25 }}>
+        <ProfileListItem
+          Icon={IoIosPhonePortrait}
+          text={"6093330400"}
+          style={{ alignSelf: "center" }}
+        />
+        <ProfileListItem
+          Icon={AiOutlineMail}
+          text={"boxingmom"}
+          style={{ alignSelf: "flex-start" }}
+        />
+        <ProfileListItem
+          Icon={IoMdPin}
+          text={"somewhere south jersey"}
+          style={{ alignSelf: "flex-end" }}
+        />
         <ProfileListItem Icon={IoIosPhonePortrait} text={"more"} />
       </List>
-    </List>
+    </Card>
   );
 }
