@@ -1,20 +1,16 @@
 import React from "react";
 import {
   Toolbar,
-  Button,
   IconButton,
   Typography,
   AppBar as MuiAppBar,
+  Box,
 } from "@material-ui/core";
 import { AiOutlineTwitter, AiFillFacebook } from "react-icons/ai";
 import { FiInstagram } from "react-icons/fi";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-
   title: {
     flexGrow: 2,
     display: "flex",
@@ -26,24 +22,22 @@ const useStyles = makeStyles((theme) => ({
 export function AppBar() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <MuiAppBar position="static">
-        <Toolbar>
-          <IconButton>
-            <AiFillFacebook />
-          </IconButton>
-          <IconButton>
-            <AiOutlineTwitter />
-          </IconButton>
-          <IconButton>
-            <FiInstagram />
-          </IconButton>
+    <MuiAppBar position="static" elevation={0}>
+      <Toolbar disableGutters>
+        <IconButton>
+          <AiFillFacebook />
+        </IconButton>
+        <IconButton>
+          <AiOutlineTwitter />
+        </IconButton>
+        <IconButton>
+          <FiInstagram />
+        </IconButton>
 
-          <Typography variant="h6" className={classes.title}>
-            Request a quote 609-adriennes#
-          </Typography>
-        </Toolbar>
-      </MuiAppBar>
-    </div>
+        <Box fontSize={15} letterSpacing={2} className={classes.title}>
+          <Typography>REQUEST A QUOTE 609-adriennes#</Typography>
+        </Box>
+      </Toolbar>
+    </MuiAppBar>
   );
 }

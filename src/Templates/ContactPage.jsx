@@ -6,7 +6,7 @@ import { ContactHeader } from "../Components/Contact/ContactHeader";
 export function ContactPage() {
   return (
     <>
-      <Title />
+      <Title title="Contact" />
       <ContactHeader />
       <ContactBody />
     </>

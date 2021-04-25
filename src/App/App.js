@@ -3,24 +3,17 @@ import React from "react";
 import theme from "../theme";
 import { AppBar } from "../Components/App/AppBar";
 import { Router } from "./Router";
-import {Header} from "../Components/App/Header"
-
+import { Header } from "../Components/App/Header";
+import { Quote } from "../Components/App/RequestQuote";
 export function App() {
- 
-
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <AppBar />
-<Header />
-     
-     
-      <div>
-        <div className="container">
-        
-          <Router />
-        </div>
+      <Header />
+      <div className="container">
+        <Router />
       </div>
-    </ThemeProvider>
+      <Quote />
+    </>
   );
 }
-

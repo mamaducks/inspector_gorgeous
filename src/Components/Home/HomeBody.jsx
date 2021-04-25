@@ -1,13 +1,7 @@
-import { Box, Container, makeStyles } from "@material-ui/core";
+import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
-  info: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    margin: "auto",
-    width: "60%",
-  },
+  info: {},
 });
 
 export const HomeBody = () => {
@@ -16,13 +10,13 @@ export const HomeBody = () => {
   return (
     <Box className={classes.info}>
       <Container>
-        <h3>
+        <Typography>
           {" "}
           WHAT TO EXPECT FROM YOUR HOME INSPECTION DRONE ROOF INSPECTION |
           INFRARED THERMOGRAPHY
-        </h3>
+        </Typography>
 
-        <h5>
+        <Typography>
           We promise to provide detailed reports clearly identifying any
           material defect along with a recommendation for what to do as well as
           what can happen if not repaired. Your home inspection and report will
@@ -35,7 +29,7 @@ export const HomeBody = () => {
           drainage systems, vent penetrations as well as any flashing. Infrared
           Thermography is used by LDG for the most thorough inspections
           available.
-        </h5>
+        </Typography>
       </Container>
     </Box>
   );

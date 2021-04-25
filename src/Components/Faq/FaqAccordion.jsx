@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
+  accordion: {
+    flexDirection: "column",
+    padding: 2,
+    borderRadius: 5,
+  },
 }));
 
 const AccordionBox = ({ heading, body }) => {
@@ -44,7 +49,7 @@ export function FaqAccordion() {
 
   return (
     <div className={classes.root}>
-      <Container>
+      <Container disableGutters className={classes.accordion}>
         <AccordionBox heading="WHY CHOOSE US?" body="am i just the coolest " />
         <AccordionBox
           heading="HAT DOES YOUR STANDARD HOME INSPECTION COVER?"

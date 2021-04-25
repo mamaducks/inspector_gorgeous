@@ -8,7 +8,7 @@ const ProfileListItem = ({ Icon, text }) => {
     <>
       <ListItem>
         <ListItemIcon fontSize={24}>
-          <Icon color="primary" />
+          <Icon />
         </ListItemIcon>
 
         <ListItemText primary={text} />

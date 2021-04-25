@@ -1,44 +1,31 @@
-import { Box, Container } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core";
-import styles from "../../Styles/headerstyle.module.css";
+import { Box, Container, makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
-  root: {
-    display: "flex",
-    backgroundColor: "#9f7dab1f",
-    padding: 25,
-  },
-  logoBox: {
-    flexGrow: 2,
-    alignItems: "center",
-    display: "flex",
-    justifyContent: "space-around",
-  },
   image: {
     height: 250,
     width: 250,
-    backgroundColor: "green",
-  },
-  profilePaper: {
-    padding: 20,
-    width: 480,
+    backgroundColor: "#49008033",
   },
 });
-
 export const HomeHeader = () => {
+  const classes = useStyles();
   return (
-    <Box item className={styles.root}>
-      <Container className={styles.logoBox}>
-        <Box className={styles.image}>
-          <h5>A picture of you</h5>
+    <Container>
+      <Box className={classes.image}>
+        <h5>A picture of you</h5>
+      </Box>
+      <Box style={{ alignSelf: "center" }}>
+        <Box lineHeight={3} fontWeight="bold">
+          <Typography>
+            Some header catchy about your awesome business
+          </Typography>{" "}
         </Box>
-
-        <Box className={styles.profilePaper}>
-          <h2>Some header catchy about your awesome business </h2>
-
-          <h3>Serving South Jersey area to wherever else you will go </h3>
+        <Box>
+          <Typography>
+            Serving South Jersey area to wherever else you will go
+          </Typography>{" "}
         </Box>
-      </Container>
-    </Box>
+      </Box>
+    </Container>
   );
 };

@@ -1,32 +1,46 @@
-import { DialogActions, Paper } from "@material-ui/core";
+import { Icon, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-import { ProfileList } from "../../Components/Profile";
+import { IoMdPin, IoIosPhonePortrait } from "react-icons/io";
+
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
+  infoBox: {
+    padding: 45,
+    alignItems: "center",
+    display: "flex",
+    flexDirection: "column",
+  },
+  logo: {
+    display: "flex",
+    justifyContent: "center",
+  },
+});
 
 export function ContactBody() {
-  const Mailto = ({ email, subject = "", body = "", children }) => {
-    let params = subject || body ? "?" : "";
-    if (subject) params += `subject=${encodeURIComponent(subject)}`;
-    if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
-
-    return <a href={`mailto:${email}${params}`}>{children}</a>;
-  };
+  const classes = useStyles();
 
   return (
-    <Paper>
-      <div>address box</div>
-      <div>telephone fax box</div>
-      <div>logo</div>
-      <ProfileList />
+    <>
+      <div className={classes.root}>
+        <div className={classes.infoBox}>
+          <Icon>
+            <IoMdPin />
+          </Icon>
+          <Typography> somewhere in south jersey Maple Ave Berlin</Typography>
+        </div>
 
-      <DialogActions>
-        <Mailto
-          email="scrubblies@gmail.com"
-          subject="I'm interested in a quote!"
-          body="Enter the details of your message and contact information."
-        >
-          Contact me!
-        </Mailto>
-      </DialogActions>
-    </Paper>
+        <div className={classes.infoBox}>
+          <Icon>
+            <IoIosPhonePortrait />
+          </Icon>
+
+          <Typography>p: 609-445-6778 fax: 609-890-6786</Typography>
+        </div>
+      </div>
+      <div className={classes.logo}>logo</div>
+    </>
   );
 }

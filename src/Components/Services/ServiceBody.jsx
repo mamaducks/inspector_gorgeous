@@ -1,25 +1,46 @@
-import { Link } from "@material-ui/core";
-import styles from "./servicesstyle.module.css";
+import {
+  Link,
+  Box,
+  makeStyles,
+  Container,
+  Typography,
+} from "@material-ui/core";
 import React from "react";
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  box: {
+    display: "flex",
+    justifyContent: "space-between",
+    margin: 15,
+  },
+});
 
 export function ServicesBody() {
+  const classes = useStyles();
+
   return (
-    <div className={styles.info}>
-      <h4>
-        WE ALSO INCLUDE THE FOLLOWING SERVICES WITH EVERY HOME INSPECTION:
-      </h4>
-      <div className={styles.box}>
+    <div className={classes.root}>
+      <Box component="span" fontSize={24} textAlign="center">
+        <Typography>
+          WE ALSO INCLUDE THE FOLLOWING SERVICES WITH EVERY HOME INSPECTION:
+        </Typography>
+      </Box>
+      <Container>
         <div>
           <Link href="/sellerLogin">Service A</Link>
 
-          <h6>a service you have maybe a picture behind</h6>
+          <Typography>a service you have maybe a picture behind</Typography>
         </div>
         <div>
           <Link href="/buyerLogin">Service B</Link>
 
-          <h6>a service you have</h6>
+          <Typography>a service you have</Typography>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

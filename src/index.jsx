@@ -1,15 +1,17 @@
 import React from "react";
 import { render } from "react-dom";
-import { StylesProvider } from "@material-ui/styles";
-
+import { ThemeProvider,  } from "@material-ui/styles";
+import theme from "./theme.jsx"
 import { RecoilRoot } from "recoil";
 import { App } from "./App/App";
 
+
 render(
   <RecoilRoot>
-     <StylesProvider injectFirst >
+     <ThemeProvider theme={theme} >
+      
       <App />
-   </StylesProvider>
+   </ThemeProvider>
   </RecoilRoot>,
   document.getElementById("root")
 );

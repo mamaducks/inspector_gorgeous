@@ -2,30 +2,138 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import React from "react";
 
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#b993d6",
-    },
-    secondary: {
-      main: "#691c88",
-    },
-    background: {
-      paper: "#fff",
-    },
-  },
-  overrides: {
-    MuiButton: { // Name of the component ⚛️ / style sheet
-      root: { // Name of the rule
-        color: '#094856', // Some CSS
+
+    palette: {
+      type: 'light',
+      primary: {
+        main: '#945D60',
+      },
+      secondary: {
+        main: '#2790b9',
+      },
+      text: {
+        primary: 'rgba(46,95,103,0.87)',
+        secondary: '#000000',
+        
+      },
+      background: {
+        default: '#ece3e3',
       },
     },
- MuiListItemIcon: {
-   root: {
-     fontSize: "large"
-   }
- }
-  }
+   
+    // typography: {
+    //   fontFamily: ["Helvetica", "Roboto", "Arial", "sans-serif"].join(","),
+    //   fontSize: 14,
+    //   fontWeightLight: 300,
+    //   fontWeightRegular: 400,
+    //   fontWeightMedium: 500,
+    // },
+    //      typography: {
+    //        fontFamily: [
+
+    //          '"Helvetica"',
+    //  '-apple-system',
+    //          'BlinkMacSystemFont',
+    //          '"Segoe UI"',
+    //         'Roboto',
+
+    //         'Arial',
+    //         'sans-serif',
+    //         '"Apple Color Emoji"',
+    //         '"Segoe UI Emoji"',
+    //         '"Segoe UI Symbol"',
+    //       ].join(','),
+    //   fontSize: 13,
+    //   display4: {
+    //     fontSize: 13,
+    //   },
+    //   display3: {
+    //     fontSize: 13,
+    //   },
+    //   display2: {
+    //     fontSize: 13,
+    //   },
+    //   display1: {
+    //     fontSize: 13,
+    //   },
+    //   headline: {
+    //     fontSize: 13,
+    //   },
+    //   title: {
+    //     fontSize: 13,
+    //   },
+    //   subheading: {
+    //     fontSize: 13,
+    //   },
+    //   body2: {
+    //     fontSize: 13,
+    //   },
+    //   body1: {
+    //     fontSize: 13,
+    //   },
+    //   caption: {
+    //     fontSize: 13,
+    //   },
+    //   button: {
+    //     fontSize: 13,
+    //   },
+    // },
+  
+  overrides: {
+   
+    MuiAppBar: {
+      root: {
+        paddingLeft: 45,
+        paddingRight: 45,
+      },
+    },
+    MuiToolbar: {
+      gutters: {},
+    },
+    // MuiBox: {
+    
+    //     fontFamily: "Helvetica",
+    //     fontSize: 88
+    
+    // },
+
+    MuiButton: {
+      // Name of the component ⚛️ / style sheet
+      root: {
+        // Name of the rule
+        // Some CSS
+      },
+      label: {
+        fontSize: 17,
+   
+      
+       
+      },
+    },
+
+    MuiContainer: {
+      root: {
+      
+        justifyContent: "space-evenly",
+        display: "flex",
+        padding: 20,
+      },
+    },
+
+    MuiListItemIcon: {
+      root: {
+        fontSize: "large",
+      },
+    },
+    // MuiListItemText: {
+    //   root: {
+    //     fontFamily: "Helvetica"
+    //   }
+    // }
+    
+  },
+  
+
 });
 
 export default theme;
-
