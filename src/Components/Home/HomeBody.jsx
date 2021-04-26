@@ -1,14 +1,17 @@
 import { Box, Container, makeStyles, Typography } from "@material-ui/core";
+import purpleBG from "/Users/leonaduckworth/code/InspectorGorgeous/inspector_gorgeous/src/purpleBG.png";
 
 const useStyles = makeStyles({
-  info: {},
+  info: {
+    backgroundImage: `url(${purpleBG})`,
+  },
 });
 
 export const HomeBody = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.info}>
+    <Box className={classes.info} style={{}}>
       <Container>
         <Typography>
           {" "}

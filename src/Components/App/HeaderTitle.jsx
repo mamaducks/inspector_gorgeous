@@ -1,7 +1,15 @@
 import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import greyHead from "../../greyHead.png"
+
+const useStyles = makeStyles({
+  box: {
+    backgroundImage: `url(${greyHead})`,
+  },
+});
 
 export const Title = ({ title }) => {
+  const classes = useStyles();
   return (
     <Box
       fontFamily="Helvetica"
@@ -10,8 +18,8 @@ export const Title = ({ title }) => {
       letterSpacing={3}
       lineHeight={5}
       textAlign="center"
-      color="#ffffffde"
-      style={{ backgroundColor: "lightblue" }}
+      color="#786379"
+     className={classes.box}
     >
       {title}
     </Box>

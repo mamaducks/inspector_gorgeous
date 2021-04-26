@@ -7,21 +7,31 @@ export function ServicesHeader() {
       <Box direction="column">
         <Container>
           <div>
-            <Typography>
-              GIVING YOU THE MOST FROM YOUR HOME INSPECTION WE OFFER THE MOST
-              THOROUGH HOME INSPECTION SERVICES UTILIZING THE LATEST TECHNOLOGY
-              FOR TOTAL PEACE OF MIND!
-            </Typography>
-            <Typography>
-              Our expert home inspections provide detailed reports clearly
-              identifying any material defect along with a recommendation for
-              what to do as well as what can happen if not repaired. Your home
-              inspection and report will cover the condition of the home’s
-              heating system; central air conditioning system (temperature
-              permitting); interior plumbing and electrical systems; the roof,
-              attic and visible insulation; walls, ceilings, floors, windows and
-              doors; the foundation, basement and structural components.
-            </Typography>
+            <div>
+              <Box
+                fontFamily="Helvetica"
+                fontSize={14}
+                letterSpacing={2}
+                lineHeight={1.8}
+                textAlign="center"
+                color="#786379"
+              >
+                A home inspection is only as good as the inspector. That’s why
+                IG Inspections LLC is your best choice for home inspections in
+                New Jersey. With over 30 years experience restoring, building,
+                and designing homes, whether you’re a homeowner, homebuyer, or
+                agent we’ll provide you with a detailed description of a home’s
+                condition so you can move forward confidently and with peace of
+                mind.
+              </Box>
+            </div>
+            <div>
+              Home Inspections\nWe offer the following specialized inspection
+              services:\n\n• Pre-Listing Inspection for Seller\n\n• Pre-Purchase
+              Inspection for Buyer\n\n• New Construction Home Inspection\n\n•
+              Multi-Unit Property Inspection\n\n• Radon Testing\n\n• Townhouse
+              Home Inspection\n\n• Condo Inspection
+            </div>
           </div>
         </Container>
       </Box>
