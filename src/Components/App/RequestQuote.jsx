@@ -3,11 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   title: {
-    height: 80,
-    alignItems: "center",
-    backgroundColor: "lightblue",
+    backgroundColor: "#786379",
     display: "flex",
     justifyContent: "space-evenly",
+    height: 80,
+    alignItems: "center",
   },
 });
 
@@ -20,7 +20,10 @@ export const Quote = () => {
     if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
 
     return (
-      <a href={`mailto:${email}${params}`} style={{ color: "#786379" }}>
+      <a
+        href={`mailto:${email}${params}`}
+        style={{ color: "#68a5b9", fontSize: 14, fontWeight: "bolder" }}
+      >
         {children}
       </a>
     );
@@ -33,8 +36,7 @@ export const Quote = () => {
       fontSize={14}
       textAlign="center"
       letterSpacing={1}
-      color="text.primary"
-      style={{ backgroundColor: "lightblue" }}
+      color="white"
     >
       <Box>REQUEST A QUOTE {"  "}609-adriennes#</Box>
       <Box style={{ display: "flex" }}>

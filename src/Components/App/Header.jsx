@@ -1,10 +1,10 @@
 // Imports
 import React from "react";
-import { Toolbar, Button, ButtonGroup, SvgIcon, Icon } from "@material-ui/core";
+import { Toolbar, Button, ButtonGroup } from "@material-ui/core";
 // App imports
 import routes from "../../App/Routes";
 import { makeStyles } from "@material-ui/core";
-import IgLogo from "../../../src/I.png";
+import IgLogo from "../../img/I.png";
 
 const useStyles = makeStyles((theme) => ({
   title: {

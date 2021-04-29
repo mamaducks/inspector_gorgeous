@@ -104,7 +104,9 @@ const theme = createMuiTheme({
         fontSize: 17,
       },
     },
-
+    MuiIconButton: {
+      root: { color: "white" },
+    },
     MuiContainer: {
       root: {
         justifyContent: "space-evenly",

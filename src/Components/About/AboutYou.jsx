@@ -1,7 +1,7 @@
 import { ProfileList } from "../../Components/Profile/Profile";
 import { Box, Container, Grid } from "@material-ui/core";
-import IgLogo from "../../../src/I.png";
-import Adrienne from "/Users/leonaduckworth/code/InspectorGorgeous/inspector_gorgeous/src/adrienne.JPG";
+import IgLogo from "/Users/leonaduckworth/code/InspectorGorgeous/inspector_gorgeous/src/img/I.png";
+import Adrienne from "/Users/leonaduckworth/code/InspectorGorgeous/inspector_gorgeous/src/img/adrienne.JPG";
 
 const AboutYou = () => {
   return (
