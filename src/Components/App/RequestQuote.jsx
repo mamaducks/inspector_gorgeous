@@ -1,5 +1,6 @@
 import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { MailTo } from "./MailTo";
 
 const useStyles = makeStyles({
   title: {
@@ -14,20 +15,6 @@ const useStyles = makeStyles({
 export const Quote = () => {
   const classes = useStyles();
 
-  const Mailto = ({ email, subject = "", body = "", label = "", children }) => {
-    let params = subject || body ? "?" : "";
-    if (subject) params += `subject=${encodeURIComponent(subject)}`;
-    if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
-
-    return (
-      <a
-        href={`mailto:${email}${params}`}
-        style={{ color: "#68a5b9", fontSize: 14, fontWeight: "bolder" }}
-      >
-        {children}
-      </a>
-    );
-  };
   return (
     <Box
       className={classes.title}
@@ -41,14 +28,7 @@ export const Quote = () => {
       <Box>REQUEST A QUOTE {"  "}609-adriennes#</Box>
       <Box style={{ display: "flex" }}>
         <Box style={{ paddingRight: 10 }}>Email Us:</Box>
-
-        <Mailto
-          email="scrubblies@gmail.com"
-          subject="I'm interested in a quote!"
-          body="Enter the details of your message and contact information."
-        >
-          boxingmom@gmail.com
-        </Mailto>
+        <MailTo />
       </Box>
     </Box>
   );

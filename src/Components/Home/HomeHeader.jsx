@@ -30,8 +30,8 @@ export const HomeHeader = () => {
             textAlign="center"
             color="#786379"
           >
-            <h3>Buyer Beware Home Inspections</h3>
-            <h4>We offer the following specialized inspection services:</h4>
+            <div style={{fontWeight: "bolder", fontSize: "larger"}}>Buyer Beware Home Inspections</div>
+            <div style={{fontWeight: "bold", }} >We offer the following specialized inspection services:</div>
             <div>
               • Pre-Listing Inspection for Seller • Pre-Purchase Inspection for
               Buyer New Construction Home Inspection • Multi-Unit Property

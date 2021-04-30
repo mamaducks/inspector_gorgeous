@@ -1,48 +1,42 @@
-import Drain from "/Users/leonaduckworth/code/InspectorGorgeous/inspector_gorgeous/src/img/drainage.png";
-import Meter from "../../img/meter.png";
-import Plug from "../../img/plug.png";
-import Pump from "../../img/pump.png";
-import Foundation from "../../img/foundation.png";
-import Roof from "../../img/roofing.png";
-import Gutter from "../../img/gutter.png";
-import Heat from "../../img/heatcool.png";
-
 export var services = [
   {
-    image: Plug,
+    id: 1,
+    image: "/img/plug.png",
     text: "Electrical Panels & Breakers",
   },
-  // {
-  //   id: 1,
-  //   image: "/img/plug.png",
-  //   text: "Electrical Panels & Breakers",
-  // },
   {
-    image: Pump,
+    id: 2,
+    image: "/img/pump.png",
     text: "Sump Pumps",
   },
   {
-    image: Meter,
+    id: 3,
+    image: "/img/meter.png",
     text: "Meter Boxes",
   },
   {
-    image: Foundation,
+    id: 4,
+    image: "/img/foundation.png",
     text: "Basement, Foundation",
   },
   {
-    image: Drain,
+    id: 5,
+    image: "/img/drainage.png",
     text: "Grading and Drainage",
   },
   {
-    image: Roof,
+    id: 6,
+    image: "/img/roofing.png",
     text: "Roof, Flashings, and Trim",
   },
   {
-    image: Gutter,
+    id: 7,
+    image: "/img/gutter.png",
     text: "Gutters and Downspouts",
   },
   {
-    image: Heat,
+    id: 8,
+    image: "/img/heatcool.png",
     text: "Heating and Cooling",
   },
 ];
