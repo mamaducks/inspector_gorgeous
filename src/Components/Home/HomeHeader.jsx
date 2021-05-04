@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 export const HomeHeader = () => {
   const classes = useStyles();
   return (
-    <Container>
+    <Container style={{padding: 20}}>
       <Box display="flex" justifyContent="space-between">
         <Box className={classes.imageBox}>
           <div className={classes.image}>A picture of you</div>
@@ -28,7 +28,7 @@ export const HomeHeader = () => {
             letterSpacing={2}
             lineHeight={2.3}
             textAlign="center"
-            color="#786379"
+            color="#095565"
           >
             <div style={{fontWeight: "bolder", fontSize: "larger"}}>Buyer Beware Home Inspections</div>
             <div style={{fontWeight: "bold", }} >We offer the following specialized inspection services:</div>

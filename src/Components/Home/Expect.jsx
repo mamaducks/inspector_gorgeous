@@ -20,7 +20,7 @@ export const Expect = () => {
             letterSpacing={2}
             lineHeight={1.8}
             textAlign="center"
-            color="#786379"
+            color="#406368"
           >
             WHAT TO EXPECT FROM YOUR HOME INSPECTION DRONE ROOF INSPECTION |
             INFRARED THERMOGRAPHY
@@ -30,9 +30,10 @@ export const Expect = () => {
             fontFamily="Helvetica"
             fontSize={14}
             letterSpacing={2}
-            lineHeight={1.8}
+            lineHeight={1.7}
             textAlign="center"
-            color="#786379"
+            color="#404040"
+            fontWeight={400}
             style={{ paddingTop: 20 }}
           >
             We will provide you with a detailed reports clearly identifying any

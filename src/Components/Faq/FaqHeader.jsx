@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
+import {PBox} from "../../MyBox"
 
 import { Expect } from "../Home/Expect";
 
@@ -19,11 +20,12 @@ export const FaqHeader = () => {
           fontFamily="Helvetica"
           lineHeight={2}
           letterSpacing={2}
-          color="#786379"
+          color="#000000"
         >
           <Expect />
         </Box>
-        <Box
+        
+        {/* <Box
           fontFamily="Helvetica"
           fontSize={14}
           letterSpacing={2}
@@ -50,7 +52,7 @@ export const FaqHeader = () => {
         >
           Other Inspection Services: Oil Tank Sweeps / Inspection Swimming pool
           Mold Septic Well water testing Home Energy Reports
-        </Box>
+        </Box> */}
       </Box>
     </Container>
   );

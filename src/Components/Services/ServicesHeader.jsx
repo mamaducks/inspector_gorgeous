@@ -3,31 +3,15 @@ import React from "react";
 
 const useStyles = makeStyles({
   boxPad: {
-    padding: 15,
   },
 });
-
-function BoxA({ text }) {
-  return (
-    <Box
-      fontFamily="Helvetica"
-      fontSize={14}
-      letterSpacing={2}
-      lineHeight={1.8}
-      textAlign="center"
-      color="#786379"
-    >
-      {text}
-    </Box>
-  );
-}
 
 export function ServicesHeader() {
   const classes = useStyles();
 
   return (
     <>
-      <Container>
+      <Container style={{padding: 20}}>
         <Box direction="column">
           <Box
             fontFamily="Helvetica"
@@ -35,7 +19,7 @@ export function ServicesHeader() {
             letterSpacing={2}
             lineHeight={1.8}
             textAlign="center"
-            color="#786379"
+            color="#095565"
           >
             A home inspection is only as good as the inspector. That’s why IG
             Inspections LLC is your best choice for home inspections in New
@@ -51,7 +35,7 @@ export function ServicesHeader() {
             letterSpacing={2}
             lineHeight={1.8}
             textAlign="center"
-            color="#786379"
+            color="#095565"
             style={{ paddingTop: 20 }}
           >
             FULL SERVICE INSPECTIONS include:

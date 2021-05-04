@@ -14,13 +14,13 @@ export const Title = ({ title }) => {
     <Box
       fontFamily="Helvetica"
       height="75%"
-      fontSize={16}
+      fontSize={18}
       letterSpacing={3}
       lineHeight={5}
       textAlign="center"
-      color="#786379"
+      color="#095565"
+      fontWeight={800}
       className={classes.box}
-      style={{ backgroundColor: "#f5f5f5" }}
     >
       {title}
     </Box>

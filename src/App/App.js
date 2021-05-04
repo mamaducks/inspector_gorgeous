@@ -5,15 +5,17 @@ import { AppBar } from "../Components/App/AppBar";
 import { Router } from "./Router";
 import { Header } from "../Components/App/Header";
 import { Quote } from "../Components/App/RequestQuote";
+
+
 export function App() {
   return (
     <>
-      <AppBar />
-      <Header />
+    <Header />
+      
       <div className="container">
         <Router />
       </div>
       <Quote />
-    </>
+      </>
   );
 }

@@ -25,17 +25,17 @@ const ProfileListItem = ({ Icon, text }) => {
 
 export function ProfileList() {
   return (
-    <Card style={{ padding: 55 }}>
+    <Card style={{ padding: 40 }}>
       <ListItemText
         primary="IG Inspections"
         style={{
           display: "flex",
           justifyContent: "center",
           fontSize: 18,
-          color: "#18566b",
+          color: "#095565",
         }}
       />
-      <List style={{ padding: 25 }}>
+      <List style={{ padding: 10 }}>
         <ProfileListItem
           Icon={IoIosPhonePortrait}
           text={"6093330400"}

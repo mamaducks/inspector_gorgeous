@@ -5,25 +5,48 @@ import {
   Typography,
   AppBar as MuiAppBar,
   Box,
+  Icon,
 } from "@material-ui/core";
 import { AiOutlineTwitter, AiFillFacebook } from "react-icons/ai";
 import { FiInstagram } from "react-icons/fi";
 import { makeStyles } from "@material-ui/core";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: 1,
+    alignItems: "center",
+    backgroundColor: "#095565",
+    display: "flex",
+  },
   title: {
     flexGrow: 2,
     display: "flex",
     justifyContent: "flex-end",
-    paddingRight: 12,
+  },
+  phone: {
+    display: "flex",
+    paddingLeft: 15,
+    color: "white",
+  },
+  phoneIcon: {
+    paddingRight: 20,
   },
 }));
 
 export function AppBar() {
   const classes = useStyles();
   return (
-    <MuiAppBar position="static" elevation={0}>
-      <Toolbar disableGutters>
+    // <MuiAppBar position="static" elevation={0}>
+    <div className={classes.root}>
+      <Box letterSpacing={2} className={classes.phone}>
+        <Icon className={classes.phoneIcon}>
+          <FaPhoneAlt />
+        </Icon>
+        <Typography>1-800-456-3456 609-adriennes#</Typography>
+      </Box>
+
+      <Box letterSpacing={2} className={classes.title}>
         <IconButton>
           <AiFillFacebook />
         </IconButton>
@@ -33,11 +56,9 @@ export function AppBar() {
         <IconButton>
           <FiInstagram />
         </IconButton>
+      </Box>
+    </div>
 
-        <Box fontSize={15} letterSpacing={2} className={classes.title}>
-          <Typography>REQUEST A QUOTE 609-adriennes#</Typography>
-        </Box>
-      </Toolbar>
-    </MuiAppBar>
+    // </MuiAppBar>
   );
 }

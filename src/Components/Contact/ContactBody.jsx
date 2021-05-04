@@ -2,8 +2,7 @@ import { makeStyles, Box, Grid } from "@material-ui/core";
 import React from "react";
 import IgLogo from "../../img/adriennelogo.png";
 import MapImage from "../../img/locationimg.png";
-import { PhoneInfo } from "./PhoneInfo";
-import { AddressInfo } from "./AddressInfo";
+import {PhoneInfo, AddressInfo} from "./ContactInfo"
 
 const useStyles = makeStyles({
   logo: {
@@ -55,30 +54,18 @@ const ContactGrid = () => {
 
   return (
     <>
-      <Box
-        lineHeight={5}
-        letterSpacing={3}
-        fontSize={18}
-        color="#4d767d"
-        textAlign="center"
-        fontWeight={600}
-        fontFamily="Helvetica"
-        style={{ backgroundColor: "#dcdfdf29" }}
-      >
-        Please feel free to contact us
-      </Box>
-      <Box className={classes.logo}>
+      {/* <Box className={classes.logo}>
         <img src={IgLogo} width="373" height="340" />
-      </Box>
+      </Box> */}
       <Box
         textAlign="center"
         fontSize={16}
         letterSpacing={1.5}
-        lineHeight={6}
+        lineHeight={3}
         fontWeight={700}
         fontFamily="Helvetica"
-        color="#786379"
-        style={{ backgroundColor: "#68a5b982" }}
+        color="white"
+        style={{ backgroundColor: "#33484c" }}
       >
         Traditional Home Inspections * Pre-Listing Inspections * Radon Testing *
         Termite Inspections

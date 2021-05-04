@@ -18,7 +18,7 @@ export function Router() {
     <ReactRouter history={history}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          {/* <Route exact path="/" component={HomePage} /> */}
 
           <Route path={routes.pages.about} component={AboutPage} />
           <Route path={routes.pages.services} component={ServicesPage} />

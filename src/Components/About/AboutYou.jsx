@@ -2,10 +2,12 @@ import { ProfileList } from "../../Components/Profile/Profile";
 import { Box, Container, Grid } from "@material-ui/core";
 import IgLogo from "/Users/leonaduckworth/code/InspectorGorgeous/inspector_gorgeous/src/img/I.png";
 import Adrienne from "/Users/leonaduckworth/code/InspectorGorgeous/inspector_gorgeous/src/img/adrienne.JPG";
+import EmmaLogo from "../../img/emmaLogo.png"
+
 
 const AboutYou = () => {
   return (
-    <Grid container justify="space-evenly" style={{ paddingTop: 30 }}>
+    <Grid container justify="space-evenly" spacing={3} >
       <Grid item xs={3} style={{ alignSelf: "center" }}>
         <img src={Adrienne} width="300" height="300" />
       </Grid>
@@ -15,7 +17,7 @@ const AboutYou = () => {
           fontFamily="Helvetica"
           lineHeight={2}
           letterSpacing={2}
-          color="#786379"
+          color="#095565"
         >
           Adrienne Soto is the founder and primary home inspector at IG
           Inspections llc. Adrienne has a vast knowledge in many aspects of real
@@ -37,11 +39,11 @@ const AboutYou = () => {
 
 export function AboutHeader() {
   return (
-    <Box item>
+    <Box container spacing={3}>
       <AboutYou />
-      <Container>
-        <img src={IgLogo} width="400" height="400" />
-        <ProfileList />
+      <Container style={{padding: 20}}>
+        <img src={EmmaLogo} width="350" height="350" />
+        <ProfileList  />
       </Container>
     </Box>
   );

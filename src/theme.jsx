@@ -78,14 +78,17 @@ const theme = createMuiTheme({
   // },
 
   overrides: {
-    MuiAppBar: {
-      root: {
-        paddingLeft: 45,
-        paddingRight: 45,
-      },
-    },
+    // MuiAppBar: {
+    //   root: {
+    //     paddingLeft: 45,
+    //     paddingRight: 45,
+    //   },
+    // },
     MuiToolbar: {
-      gutters: {},
+      root: {
+        paddingLeft: 9,
+        paddingRight: 12,
+      },
     },
     // MuiBox: {
 
@@ -102,6 +105,7 @@ const theme = createMuiTheme({
       },
       label: {
         fontSize: 17,
+        color: '#01333c'
       },
     },
     MuiIconButton: {
@@ -111,14 +115,13 @@ const theme = createMuiTheme({
       root: {
         justifyContent: "space-evenly",
         display: "flex",
-        padding: 20,
       },
     },
 
     MuiListItemIcon: {
       root: {
         fontSize: 30,
-        color: "#796379",
+        color: "#616161",
       },
     },
     // MuiListItemText: {
@@ -127,6 +130,7 @@ const theme = createMuiTheme({
     //   }
     // }
   },
+
 });
 
 export default theme;
