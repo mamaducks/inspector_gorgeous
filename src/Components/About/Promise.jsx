@@ -1,5 +1,4 @@
 import { makeStyles, Grid, Box } from "@material-ui/core";
-import Cut from "/Users/leonaduckworth/code/InspectorGorgeous/inspector_gorgeous/src/img/blueBG.png";
 
 const useStyles = makeStyles({
   box: {

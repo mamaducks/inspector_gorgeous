@@ -1,17 +1,15 @@
-import { Icon, makeStyles, Box } from "@material-ui/core";
+import { makeStyles, Box } from "@material-ui/core";
 import React from "react";
 import { IoIosPhonePortrait } from "react-icons/io";
-import Banner from "../../img/greenBanner.png";
 import { IoMdPin } from "react-icons/io";
 
 const useStyles = makeStyles({
   infoBottom: {
     // backgroundImage: `url(${Banner})`,
-    padding: 25,
     alignItems: "center",
     display: "flex",
-    width: 300,
-    height: 250,
+    width: 270,
+    height: 226,
     flexDirection: "column",
     justifyContent: "center",
     border: "solid",
@@ -45,7 +43,6 @@ export const ContactInfo = ({ Icon, topLine, bottomLine }) => {
 };
 
 export const PhoneInfo = () => {
-
   return (
     <ContactInfo
       Icon={IoIosPhonePortrait}
@@ -56,7 +53,6 @@ export const PhoneInfo = () => {
 };
 
 export const AddressInfo = () => {
-
   return (
     <ContactInfo
       Icon={IoMdPin}

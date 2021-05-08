@@ -1,6 +1,6 @@
 // Imports
 import React from "react";
-import { Toolbar, Button, ButtonGroup } from "@material-ui/core";
+import { Toolbar, Button, ButtonGroup, Link } from "@material-ui/core";
 import EmmaLogo from "../../img/emmaLogo.png";
 
 import routes from "../../App/Routes";
@@ -27,17 +27,19 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   tabList: {
-    margin: "0 0 0px",
     display: "flex",
-    justifyContent: "flex-end",
     alignSelf: "flex-end",
     fontFamily: "Helvetica",
-    color: "#095565",
-    height: 55,
+    height: 40,
     flexGrow: 1,
-    fontSize: 17,
+    fontSize: 19,
     justifyContent: "center",
-    borderColor: "#095565",
+    // borderColor: "#095565",
+  },
+  tab: {
+    width: "70%",
+    justifyContent: "space-evenly",
+    display: "flex",
   },
 }));
 
@@ -47,46 +49,36 @@ export const Header = () => {
   // render
   return (
     // <div className={classes.root}>
-
-    <Tabs variant="primary" gutterBottom>
+    <Tabs variant="primary">
       <div className={classes.title}>
-        <img src={EmmaLogo} width="188" height="115" />
-        <TabList className={classes.tabList}>
-          <Tab>
-            <h4>Home</h4>{" "}
-          </Tab>
-          <Tab>
-            <h4>Services</h4>
-          </Tab>
-          <Tab>
-            <h4>About</h4>{" "}
-          </Tab>
-          <Tab>
-            <h4>Faq</h4>{" "}
-          </Tab>
-          <Tab>
-            <h4>Contact</h4>
-          </Tab>
-        </TabList>
+        <img alt="" src={EmmaLogo} width="188" height="115" />
+
+        <div className={classes.tabList}>
+          <div className={classes.tab}>
+            <Link href="/" underline="none">
+              Home
+            </Link>{" "}
+            <Link href={routes.pages.services} underline="none">
+              Services
+            </Link>
+            <Link href={routes.pages.pricing} underline="none">
+              Pricing
+            </Link>
+            <Link href={routes.pages.about} underline="none">
+              About
+            </Link>{" "}
+            <Link href={routes.pages.faq} underline="none">
+              Faq
+            </Link>{" "}
+            <Link href={routes.pages.contact} underline="none">
+              Contact
+            </Link>
+          </div>
+        </div>
       </div>
       <div>
         <AppBar />
       </div>
-      <TabPanel>
-        <HomePage />
-      </TabPanel>
-      <TabPanel>
-        <ServicesPage />
-      </TabPanel>
-      <TabPanel>
-        <AboutPage />
-      </TabPanel>
-      <TabPanel>
-        <FaqPage />
-      </TabPanel>
-      <TabPanel>
-        <ContactPage />
-      </TabPanel>
     </Tabs>
 
     // </div>

@@ -7,7 +7,7 @@ import {
   Box,
   Icon,
 } from "@material-ui/core";
-import { AiOutlineTwitter, AiFillFacebook } from "react-icons/ai";
+import { AiOutlineTwitter, AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
 import { FiInstagram } from "react-icons/fi";
 import { makeStyles } from "@material-ui/core";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -55,6 +55,9 @@ export function AppBar() {
         </IconButton>
         <IconButton>
           <FiInstagram />
+        </IconButton>
+        <IconButton>
+          <AiFillLinkedin />
         </IconButton>
       </Box>
     </div>

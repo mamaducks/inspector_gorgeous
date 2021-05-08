@@ -13,10 +13,9 @@ export const Title = ({ title }) => {
   return (
     <Box
       fontFamily="Helvetica"
-      height="75%"
       fontSize={18}
       letterSpacing={3}
-      lineHeight={5}
+      lineHeight={4}
       textAlign="center"
       color="#095565"
       fontWeight={800}

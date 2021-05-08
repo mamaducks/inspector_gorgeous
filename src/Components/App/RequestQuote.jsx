@@ -4,6 +4,11 @@ import { MailTo } from "./MailTo";
 import { AppBar, Toolbar } from "@material-ui/core";
 
 const useStyles = makeStyles({
+  appBar: {
+    // top: "auto",
+    // bottom: 0,
+    color: "#095565",
+  },
   title: {
     backgroundColor: "#c3c3c3",
     display: "flex",
@@ -11,34 +16,19 @@ const useStyles = makeStyles({
     height: 80,
     alignItems: "center",
   },
-  appBar: {
-    top: "auto",
-    bottom: 0,
-    color: "#095565"
-  },
 });
 
 export const Quote = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="sticky"  className={classes.appBar}>
+    <AppBar position="sticky" className={classes.appBar}>
       <Toolbar className={classes.title}>
-        {/* <Box
-          className={classes.title}
-          height="75%"
-          fontFamily="Helvetica"
-          fontSize={14}
-          textAlign="center"
-          letterSpacing={1}
-          color="#095565"
-        > */}
-          <Box >REQUEST A QUOTE {"  "}609-adriennes#</Box>
-          <Box style={{ display: "flex" }}>
-            <Box style={{ paddingRight: 10 }}>Email Us:</Box>
-            <MailTo />
-          </Box>
-        {/* </Box> */}
+        <Box>REQUEST A QUOTE {"  "}609-adriennes#</Box>
+        <Box style={{ display: "flex" }}>
+          <Box style={{ paddingRight: 10 }}>Email Us:</Box>
+          <MailTo />
+        </Box>
       </Toolbar>
     </AppBar>
   );

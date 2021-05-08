@@ -4,6 +4,7 @@ const routes = {
     home: "/",
     about: "/about",
     services: "/services",
+    pricing: "/pricing",
     faq: "/faq",
     contact: "/contact",
   },
