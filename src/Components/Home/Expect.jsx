@@ -20,7 +20,7 @@ export const Expect = () => {
             letterSpacing={2}
             lineHeight={1.8}
             textAlign="center"
-            color="#406368"
+            color="#010101"
           >
             WHAT TO EXPECT FROM YOUR HOME INSPECTION DRONE ROOF INSPECTION |
             INFRARED THERMOGRAPHY
@@ -48,6 +48,21 @@ export const Expect = () => {
             drainage systems, vent penetrations as well as any flashing.
             Infrared Thermography is used by LDG for the most thorough
             inspections available.
+          </Box>
+          <Box>
+            HOME INSPECTIONS Our standard inspection is an evaluation of the
+            home’s visible and accessible interior and exterior structure,
+            systems and components. We encourage you to accompany us during the
+            inspection, when it is safe to do so. This allows us to answer any
+            questions, point out emergency switches and shutoff valves, discuss
+            important maintenance items, and familiarize you with your new home.
+            We will provide you with a narrative report that includes digital
+            photos.  We will inspect the following, when visible and
+            accessible: • Roof • Structural Components • Attic, Ventilation &
+            Insulation • Exterior Cladding • Porch & Deck • Attached Garage •
+            Foundation • Basement / Crawlspace • Electrical System • Plumbing
+            System • HVAC System Interior including; Built-In Appliances,
+            Ceilings, Floors & Walls, Windows and Doors
           </Box>
         </Box>
       </Container>

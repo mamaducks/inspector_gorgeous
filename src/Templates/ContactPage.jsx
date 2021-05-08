@@ -1,12 +1,14 @@
 import React from "react";
 import { Title } from "../Components/App/HeaderTitle";
-import { ContactBody } from "../Components/Contact/ContactBody";
+import { ContactCard } from "../Components/Contact/ContactCard";
 
 export function ContactPage() {
   return (
     <>
+    
       <Title title="Please feel free to contact us" />
-      <ContactBody />
+
+      <ContactCard />
     </>
   );
 }
