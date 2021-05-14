@@ -24,35 +24,8 @@ export const HomeHeader = () => {
             <Box className={classes.imageBox}>
               <div className={classes.image}>A picture of you</div>
             </Box>
-            <Box>
-              <Box
-                fontFamily="Helvetica"
-                fontSize={14}
-                letterSpacing={2}
-                lineHeight={2.3}
-                textAlign="center"
-                color="#095565"
-              >
-                <div style={{ fontWeight: "bolder", fontSize: "larger" }}>
-                  Buyer Beware Home Inspections
-                </div>
-                <div style={{ fontWeight: "bold" }}>
-                  We offer the following specialized inspection services:
-                </div>
-                <div>
-                  • Pre-Listing Inspection for Seller • Pre-Purchase Inspection
-                  for Buyer New Construction Home Inspection • Multi-Unit
-                  Property Inspection • Townhouse Home Inspection• • Condo
-                  Inspection • During Construction Home Inspection • Radon
-                  Testing • Termite / WDI (Wood Destroying Insect)
-                </div>
-                <div>
-                  Other Inspection Services: Oil Tank Sweeps / Inspection
-                  Swimming pool Mold Septic Well water testing Home Energy
-                  Reports
-                </div>
-              </Box>
-            </Box>
+            
+            
           </Box>
         </Grid>
         <Grid item xs={12}>
@@ -77,15 +50,7 @@ export const HomeHeader = () => {
             carpentry experience under our belts, we have the experience and
             knowledge needed to help you get to know your new home.
           </Box>
-          <Box>
-            The whole house inspection we perform for you will be of the most
-            complete and in-depth available in the Home Inspection Industry
-            today. Our New Jersey home inspection is an objective visual
-            analysis of a home`s structure and mechanical systems. An inspection
-            will determine the areas of the home that are not performing
-            properly, as well as items that are beyond their usefull life or are
-            unsafe.
-          </Box>
+
           <Box
             fontFamily="Helvetica"
             fontSize={14}
@@ -94,12 +59,40 @@ export const HomeHeader = () => {
             textAlign="center"
             color="#095565"
           >
-            What’s Included In My Home Inspection? Your Pillar To Post inspector
-            will examine all structures and major systems of a home. They will
-            identify important factors for you to consider as you make your home
-            ownership decision. Your home inspector is always happy to answer
-            any questions you have during the inspection.
+            <div style={{ fontWeight: "bold" }}>
+              What’s Included In My Home Inspection?
+            </div>{" "}
+            Your Pillar To Post inspector will examine all structures and major
+            systems of a home. They will identify important factors for you to
+            consider as you make your home ownership decision. Your home
+            inspector is always happy to answer any questions you have during
+            the inspection.
           </Box>
+          <Box>
+              <Box
+                fontFamily="Helvetica"
+                fontSize={14}
+                letterSpacing={2}
+                lineHeight={2.3}
+                textAlign="center"
+                color="#751f66"
+              >
+                <div style={{ fontWeight: "bolder", fontSize: "x-large" }}>
+                  Buyer Beware Home Inspections
+                </div>
+                <div style={{ fontWeight: "bold" }}>
+                  We offer the following specialized inspection services:
+                </div>
+                <div>
+                  • Pre-Listing Inspection for Seller • Pre-Purchase Inspection
+                  for Buyer New Construction Home Inspection • Multi-Unit
+                  Property Inspection • Townhouse Home Inspection• • Condo
+                  Inspection • During Construction Home Inspection • Radon
+                  Testing • Termite / WDI (Wood Destroying Insect)
+                </div>
+               
+              </Box>
+              </Box>
         </Grid>
         <Box>
           Home Inspection Saint David Dr Mt Laurel Township, NJ 08054 Monday8:00

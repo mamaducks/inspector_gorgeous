@@ -6,9 +6,9 @@ import { PhoneInfo, AddressInfo } from "./ContactInfo";
 const useStyles = makeStyles({
   map: {
     display: "flex",
-    justifyContent: "center",
-    padding: 25,
+    justifyContent: "space-around",
     alignItems: "center",
+    flexDirection: "column"
     // backgroundColor: "#2790b90a",
   },
   info: {
@@ -29,11 +29,12 @@ export const ContactGrid = () => {
       <Container
         style={{ display: "flex", justifyContent: "center", paddingTop: 10 }}
       >
-        <Box>
-          WE ARE BASED OUT OF BERLIN, NJ AND OFFER HOME INSPECTION SERVICES FOR
-          AREAS OF NEW JERSEY AND PHILADELPHIA.
-        </Box>
         <Grid item xs={6} className={classes.map}>
+          {" "}
+        
+            WE ARE BASED OUT OF BERLIN, NJ AND OFFER HOME INSPECTION SERVICES
+            FOR AREAS OF NEW JERSEY AND PHILADELPHIA.
+         
           <img alt="" src={MapImage} width="415" height="380" />
         </Grid>
         <Grid item xs={6} direction="column" className={classes.info}>
@@ -49,7 +50,7 @@ export const ContactGrid = () => {
         fontWeight={700}
         fontFamily="Helvetica"
         color="white"
-        style={{ backgroundColor: "#33484c" }}
+        style={{ backgroundColor: "#bf66b0" }}
       >
         Traditional Home Inspections * Pre-Listing Inspections * Radon Testing *
         Termite Inspections

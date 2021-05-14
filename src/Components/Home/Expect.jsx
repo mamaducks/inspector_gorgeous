@@ -22,8 +22,7 @@ export const Expect = () => {
             textAlign="center"
             color="#010101"
           >
-            WHAT TO EXPECT FROM YOUR HOME INSPECTION DRONE ROOF INSPECTION |
-            INFRARED THERMOGRAPHY
+            WHAT TO EXPECT FROM YOUR HOME INSPECTION
           </Box>
 
           <Box
@@ -50,6 +49,15 @@ export const Expect = () => {
             inspections available.
           </Box>
           <Box>
+            The whole house inspection we perform for you will be of the most
+            complete and in-depth available in the Home Inspection Industry
+            today. Our New Jersey home inspection is an objective visual
+            analysis of a home`s structure and mechanical systems. An inspection
+            will determine the areas of the home that are not performing
+            properly, as well as items that are beyond their usefull life or are
+            unsafe.
+          </Box>
+          <Box>
             HOME INSPECTIONS Our standard inspection is an evaluation of the
             home’s visible and accessible interior and exterior structure,
             systems and components. We encourage you to accompany us during the
@@ -57,12 +65,12 @@ export const Expect = () => {
             questions, point out emergency switches and shutoff valves, discuss
             important maintenance items, and familiarize you with your new home.
             We will provide you with a narrative report that includes digital
-            photos.  We will inspect the following, when visible and
-            accessible: • Roof • Structural Components • Attic, Ventilation &
-            Insulation • Exterior Cladding • Porch & Deck • Attached Garage •
-            Foundation • Basement / Crawlspace • Electrical System • Plumbing
-            System • HVAC System Interior including; Built-In Appliances,
-            Ceilings, Floors & Walls, Windows and Doors
+            photos. We will inspect the following, when visible and accessible:
+            • Roof • Structural Components • Attic, Ventilation & Insulation •
+            Exterior Cladding • Porch & Deck • Attached Garage • Foundation •
+            Basement / Crawlspace • Electrical System • Plumbing System • HVAC
+            System Interior including; Built-In Appliances, Ceilings, Floors &
+            Walls, Windows and Doors
           </Box>
         </Box>
       </Container>

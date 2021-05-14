@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     padding: 1,
     alignItems: "center",
-    backgroundColor: "#095565",
+    backgroundColor: "#b33a87",
     display: "flex",
   },
   title: {

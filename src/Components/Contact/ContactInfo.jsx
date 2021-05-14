@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "center",
     border: "solid",
-    borderColor: "#32474b",
+    borderColor: "#b23a87",
     borderRadius: 5,
     backgroundColor: "#e4e8e9",
   },
