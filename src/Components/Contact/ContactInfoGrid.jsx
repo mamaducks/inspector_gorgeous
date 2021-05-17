@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "space-around",
     alignItems: "center",
-    flexDirection: "column"
+    flexDirection: "column",
     // backgroundColor: "#2790b90a",
   },
   info: {
@@ -31,11 +31,14 @@ export const ContactGrid = () => {
       >
         <Grid item xs={6} className={classes.map}>
           {" "}
-        
-            WE ARE BASED OUT OF BERLIN, NJ AND OFFER HOME INSPECTION SERVICES
-            FOR AREAS OF NEW JERSEY AND PHILADELPHIA.
-         
+          WE ARE BASED OUT OF BERLIN, NJ AND OFFER HOME INSPECTION SERVICES FOR
+          AREAS OF NEW JERSEY AND PHILADELPHIA.
           <img alt="" src={MapImage} width="415" height="380" />
+          <Box>
+            <div>Monday thru Friday 8:00 am - 7:00 pm </div>
+            <div>Saturday 9:00 am - 5:00 pm</div>
+            <div>Sunday Closed</div>
+          </Box>
         </Grid>
         <Grid item xs={6} direction="column" className={classes.info}>
           <PhoneInfo />
@@ -55,11 +58,29 @@ export const ContactGrid = () => {
         Traditional Home Inspections * Pre-Listing Inspections * Radon Testing *
         Termite Inspections
       </Box>
-      <Box>
-        Let us know how we can help you, by filling out the form below. We will
-        get back with you as soon as possible. Feel free to call us if you are
-        in need of assistance immediately.
-      </Box>
+
+      <Container
+        style={{ display: "flex", justifyContent: "center", paddingTop: 10 }}
+      >
+        <Grid item xs={6} className={classes.map}>
+          <div>
+            Call or email us if you have any questions or use our online
+            scheduler to set up a home inspection.
+          </div>
+          <Box>
+            Let us know how we can help you, by filling out the form. We will
+            get back with you as soon as possible. Feel free to call us if you
+            are in need of assistance immediately.
+          </Box>
+        </Grid>
+        <Grid item xs={6} direction="column" className={classes.info}>
+          <form>
+            <input></input>
+            <input></input>
+            <input></input>
+          </form>
+        </Grid>
+      </Container>
     </>
   );
 };

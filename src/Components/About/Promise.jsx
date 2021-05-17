@@ -22,10 +22,9 @@ export const OurPromise = () => {
           <div>
             <Box
               fontSize={14}
-              fontFamily="Helvetica"
               lineHeight={2}
               letterSpacing={2}
-              color="#095565"
+              color="#751f66"
               flexDirection="column"
             >
               <div>Your Satisfaction Guaranteed </div>
@@ -36,9 +35,8 @@ export const OurPromise = () => {
         <Grid item xs={6}>
           <Box
             fontSize={14}
-            fontFamily="Helvetica"
             lineHeight={1.5}
-            color="#095565"
+            color="#751f66"
             flexDirection="column"
             style={{ padding: 20 }}
           >

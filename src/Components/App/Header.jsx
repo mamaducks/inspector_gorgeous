@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
   tabList: {
     display: "flex",
     alignSelf: "flex-end",
-    fontFamily: "Helvetica",
     height: 40,
     flexGrow: 1,
     fontSize: 19,

@@ -1,3 +1,5 @@
+import {OurPromise} from "../Components/About/Promise";
+
 export const PricingPage = () => {
   return (
     <>
@@ -30,6 +32,7 @@ export const PricingPage = () => {
         years old additional fee $75.00 Oil Tank Sweeps $200.00 Sewer Line
         Camera Inspection $400.00
       </div>
+      <OurPromise/>
     </>
   );
 };

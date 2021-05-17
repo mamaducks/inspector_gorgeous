@@ -25,16 +25,15 @@ export const ContactInfo = ({ Icon, topLine, bottomLine }) => {
   return (
     <Box style={{ padding: 20 }}>
       <div className={classes.infoBottom}>
-        <Icon color="#32474b">{Icon}</Icon>
+        <Icon color="#751f66">{Icon}</Icon>
         <Box
           style={{ padding: 20 }}
-          fontFamily="Helvetica"
           lineHeight={2}
           color="#32474b"
         >
           {topLine}
         </Box>
-        <Box fontFamily="Helvetica" lineHeight={2} color="#32474b">
+        <Box lineHeight={2} color="#32474b">
           {bottomLine}
         </Box>
       </div>

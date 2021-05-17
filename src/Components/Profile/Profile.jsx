@@ -14,7 +14,7 @@ const ProfileListItem = ({ Icon, text }) => {
     <>
       <ListItem>
         <ListItemIcon>
-          <Icon />
+          <Icon color="#b23a87"/>
         </ListItemIcon>
 
         <ListItemText primary={text} />
@@ -32,7 +32,7 @@ export function ProfileList() {
           display: "flex",
           justifyContent: "center",
           fontSize: 18,
-          color: "#095565",
+          color: "#751f66",
         }}
       />
       <List style={{ padding: 10 }}>

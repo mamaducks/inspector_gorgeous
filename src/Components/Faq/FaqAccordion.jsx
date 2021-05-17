@@ -53,23 +53,35 @@ export function FaqAccordion() {
         <AccordionBox heading="WHY CHOOSE US?" body="am i just the coolest " />
         <AccordionBox
           heading="HAT DOES YOUR STANDARD HOME INSPECTION COVER?"
-          body="dont you just want to love me all the time "
+          body="Our standard inspection is an evaluation of the
+          home’s visible and accessible interior and exterior structure,
+          systems and components. We will inspect the following,
+          when visible and accessible: • Roof • Structural Components •
+          Attic, Ventilation & Insulation • Exterior Cladding • Porch &
+          Deck • Attached Garage • Foundation • Basement / Crawlspace •
+          Electrical System • Plumbing System • HVAC System Interior
+          including; Built-In Appliances, Ceilings, Floors & Walls,
+          Windows and Doors"
         />
         <AccordionBox
           heading="HOW LONG WILL IT TAKE TO RECEIVE MY HOME INSPECTION REPORT?"
-          body="do you want to be my lover"
+          body=" We will provide you with a narrative report
+          that includes digital photos."
         />
         <AccordionBox
           heading="SHOULD THE HOME BUYER ATTEND THE HOME INSPECTION?
 "
-          body="dont you just want to love me all the time "
+          body="We encourage you to accompany us during
+          the inspection, when it is safe to do so. This allows us to
+          answer any questions, point out emergency switches and shutoff
+          valves, discuss important maintenance items, and familiarize you
+          with your new home."
         />
         <AccordionBox
           heading="CAN I SEE AN EXAMPLE OF YOUR HOME INSPECTION REPORT?
 "
           body="do you want to be my lover"
         />
-        <AccordionBox heading="PRICING" body="do you want to be my lover" />
       </Container>
     </div>
   );
@@ -89,7 +101,8 @@ const questions = () => {
       Inspectors will note torn or missing shingles and nail pops that may or
       may not indicate a full-fledged problem. To guarantee that you are buying
       a house with a durable roof, the inspector may suggest hiring a licensed
-      roofing contractor to provide a full evaluation. Attic and Crawl Space
+      roofing contractor to provide a full evaluation.
+       Attic and Crawl Space
       Inspections We do not mind to get dirty and inspect all accessible attic
       and crawl spaces. A number of structural issues are discovered in the
       attic and crawl spaces. Damaged (cracked or loose) roof rafters, floor
@@ -106,7 +119,8 @@ const questions = () => {
       system and is not required to report on any code issues. The electrical
       inspection includes the main service panel, service lines, power outlets,
       and the existence of GFCI and AFCI breakers,light fixtures circuit wiring
-      and grounding. Plumbing Inspections A home inspector can only be
+      and grounding.
+       Plumbing Inspections A home inspector can only be
       responsible for the components that are visible. Most of the home’s
       plumbing system is covered by the walls. What is visible could show the
       home’s plumbing health. Galvanized steel pipes are an indication of

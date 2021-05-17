@@ -12,12 +12,11 @@ export const Title = ({ title }) => {
   const classes = useStyles();
   return (
     <Box
-      fontFamily="Helvetica"
       fontSize={18}
       letterSpacing={3}
       lineHeight={4}
       textAlign="center"
-      color="#095565"
+      color="#494649"
       fontWeight={800}
       className={classes.box}
     >

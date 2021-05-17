@@ -50,7 +50,7 @@ export const ContactCard = () => {
 
   return (
     <>
-      <ContactGrid />
+      
       <Grid className={classes.cardGrid}>
         <Contact />
       </Grid>

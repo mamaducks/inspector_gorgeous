@@ -1,5 +1,7 @@
 import { Box, Grid } from "@material-ui/core";
 import Adrienne from "../../img/adrienne.JPG";
+import { MyApp } from "../PdfViewer/PDFviewer";
+import { Sample } from "../PdfViewer/PDFviewer";
 
 export const AboutYou = () => {
   return (
@@ -82,6 +84,7 @@ export const AboutYou = () => {
           all payment types including check, credit cards and PayPal
         </Box>
       </Grid>
+      
     </Grid>
   );
 };

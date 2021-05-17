@@ -1,4 +1,4 @@
-import { makeStyles, Card, CardActionArea } from "@material-ui/core";
+import { makeStyles, Card, CardActionArea, Box } from "@material-ui/core";
 import React from "react";
 import { services } from "./ServiceList";
 
@@ -26,6 +26,7 @@ const useStyles = makeStyles({
 export const ServiceCard = () => {
   return (
     <Card>
+      
       <CardActionArea>
         <ServiceListing services />
       </CardActionArea>
