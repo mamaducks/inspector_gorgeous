@@ -83,3 +83,92 @@ export var newServices = [
     text: "An Infrared (IR) thermal scan can help find anomalies that may otherwise remain hidden in walls, floors and ceilings.",
   },
 ];
+
+export var prices = [
+  {
+    id: 1,
+    service: "Average Single Family Home (max 4 bed, 2 bath)",
+    secondaryText: "up to 2000 sq ft.",
+    price: "$425.00",
+  },
+  {
+    id: 2,
+    service: "Large Single Family Home, (max 5 bed, 4 bath) ",
+    price: "$500.00",
+  },
+  {
+    id: 3,
+    service: "Larger Single Family Home",
+    price: "schedule for price quote",
+  },
+  {
+    id: 4,
+    service: "Condo / Townhouse",
+    price: "$375.00",
+  },
+  {
+    id: 5,
+    service: "Two-family home",
+    price: "$550.00",
+  },
+  {
+    id: 6,
+    service: "Three-Four Family Home",
+    price: "$650.00",
+  },
+  {
+    id: 7,
+    service: "Radon gas test",
+    price: "$125.00 ",
+  },
+  {
+    id: 8,
+    service: "Radon Test Only (No Home Inspection)",
+    price: "$150.00",
+  },
+  {
+    id: 9,
+    service: "House is over 75 years old additional fee ",
+    price: "$75.00",
+  },
+];
+
+export var priceCard = [
+  {
+    id: 1,
+    summary: "(Up to 2,500 sq. ft.) Single-family homes/townhomes",
+    price: "$395"
+  },
+  {
+    id: 2,
+    summary: "Condominiums",
+    price: "$325"
+  },
+  {
+    id: 3,
+    summary: "*Properties over 2,500 sq. ft.",
+    price: "request a free quote today!"
+  },
+]
+
+export var bundlePrice = [
+  {
+    id: 1,
+    summary: "Home Inspection Radon Testing Termite",
+    price: "$540"
+  },
+  {
+    id: 1,
+    summary: "Radon Testing",
+    secondaryText: "w/ Home Inspection:",
+    price: "$125",
+    secondaryPrice: "$100"
+  },
+  {
+    id: 2,
+    summary: "Termite testing",
+    secondaryText: "w/ Home Inspection:",
+    price: "$110",
+    secondaryPrice: "$90"
+  }
+]

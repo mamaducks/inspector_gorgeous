@@ -1,13 +1,15 @@
-import React from "react";
 import {
-  Toolbar,
   IconButton,
   Typography,
   AppBar as MuiAppBar,
   Box,
   Icon,
 } from "@material-ui/core";
-import { AiOutlineTwitter, AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiOutlineTwitter,
+  AiFillFacebook,
+  AiFillLinkedin,
+} from "react-icons/ai";
 import { FiInstagram } from "react-icons/fi";
 import { makeStyles } from "@material-ui/core";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -37,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
 export function AppBar() {
   const classes = useStyles();
   return (
-    // <MuiAppBar position="static" elevation={0}>
     <div className={classes.root}>
       <Box letterSpacing={2} className={classes.phone}>
         <Icon className={classes.phoneIcon}>
@@ -61,7 +62,5 @@ export function AppBar() {
         </IconButton>
       </Box>
     </div>
-
-    // </MuiAppBar>
   );
 }

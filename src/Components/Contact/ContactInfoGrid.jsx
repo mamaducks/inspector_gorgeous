@@ -1,5 +1,4 @@
 import { makeStyles, Box, Grid, Container } from "@material-ui/core";
-import React from "react";
 import MapImage from "../../img/locationimg.png";
 import { PhoneInfo, AddressInfo } from "./ContactInfo";
 
@@ -51,7 +50,6 @@ export const ContactGrid = () => {
         letterSpacing={1.5}
         lineHeight={3}
         fontWeight={700}
-        fontFamily="Helvetica"
         color="white"
         style={{ backgroundColor: "#bf66b0" }}
       >

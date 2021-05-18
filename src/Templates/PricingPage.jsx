@@ -1,38 +1,134 @@
-import {OurPromise} from "../Components/About/Promise";
+import { OurPromise } from "../Components/About/Promise";
+import {
+  makeStyles,
+  Card,
+  CardActionArea,
+  CardContent,
+} from "@material-ui/core";
+import {
+  prices,
+  priceCard,
+  bundlePrice,
+} from "../Components/Services/ServiceList";
+import { Title } from "../Components/App/HeaderTitle";
+
+const useStyles = makeStyles({
+  list: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    padding: 33,
+  },
+  listItem: {
+    alignItems: "center",
+    justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
+    width: "25%",
+  },
+  listImg: {
+    width: 55,
+    height: 55,
+    paddingBottom: 15,
+  },
+});
+
+export const PriceCard = () => {
+  return (
+    <Card>
+      <CardContent>
+        <PriceListing prices />
+      </CardContent>
+    </Card>
+  );
+};
+
+export function PriceListing() {
+  const classes = useStyles();
+
+  return (
+    <div>
+      {prices.map(({ service, price }) => {
+        return (
+          <div key={service} className={classes.listItem}>
+            <h3>{service}</h3>
+            <h4 style={{ fontWeight: "lighter" }}>{price}</h4>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export const SummaryPriceCard = () => {
+  return (
+    <Card>
+      <CardContent>
+        <SummaryPriceListing priceCard />
+      </CardContent>
+    </Card>
+  );
+};
+
+export function SummaryPriceListing() {
+  const classes = useStyles();
+
+  return (
+    <div>
+      {priceCard.map(({ summary, price }) => {
+        return (
+          <div key={summary} className={classes.listItem}>
+            <h3>{summary}</h3>
+            <h4 style={{ fontWeight: "lighter" }}>{price}</h4>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export const BundlePriceCard = () => {
+  return (
+    <Card>
+      <CardContent>
+        <BundlePriceListing bundlePrice />
+      </CardContent>
+    </Card>
+  );
+};
+
+export function BundlePriceListing() {
+  const classes = useStyles();
+
+  return (
+    <div>
+      {bundlePrice.map(({ summary, price }) => {
+        return (
+          <div key={summary} className={classes.listItem}>
+            <h3>{summary}</h3>
+            <h4 style={{ fontWeight: "lighter" }}>{price}</h4>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 export const PricingPage = () => {
   return (
     <>
+          <Title title="Pricing" />
+
       <div>
-        Home Inspection: A multi-point home inspection includes major components
-        and systems at the exterior, roof, and interior. Electrical, plumbing,
-        heating and cooling, insulations and ventilations, structure, and
-        installed appliances are inspected. (Up to 2,500 sq. ft.) Single-family
-        homes/townhomes.....................$395
-        Condominiums.............................$325 ​ *Properties over 2,500
-        sq. ft., request a free quote today! ​ Bundle
-        Pricing.........................$540 Home Inspection Radon Testing
-        Termite (WDI) ​ ​ Radon Testing: Morgan McConnell is certified by the
-        State of New Jersey in radon testing and is able to begin the testing
-        same day as inspection. Accurate results are emailed after the 48-hour
-        test is complete. ​ Radon Testing is $125. w/ Home Inspection: $100
-        Termite Inspections: Morgan McConnell is also certified in Wood
-        Destroying Insect inspections (termite certification) which allows him
-        to provide professional, certified, termite inspections. The client will
-        receive a Wood Destroying Insect Report the same day. ​ Termite testing
-        separately is $110 w/ home inspection: $90
+        Buyer Beware Home Inspection: A multi-point home inspection includes
+        major components and systems at the exterior, roof, and interior.
+        Electrical, plumbing, heating and cooling, insulations and ventilations,
+        structure, and installed appliances are inspected.
       </div>
-      <div>
-        {" "}
-        Average Single Family Home (max 4 bed, 2 bath) up to 2000 sq ft. $425.00
-        Larger Single Family Home, (max 5 bed, 4 bath) $500.00 Larger Single
-        Family Home (schedule for price quote) Condo / Townhouse $375.00
-        Two-family home $550.00 Three-Four Family Home $650.00 Radon gas test
-        $125.00 Radon Test Only (No Home Inspection) $150.00 House is over 75
-        years old additional fee $75.00 Oil Tank Sweeps $200.00 Sewer Line
-        Camera Inspection $400.00
-      </div>
-      <OurPromise/>
+
+      <PriceCard />
+      <SummaryPriceCard />
+      <BundlePriceCard />
+      <OurPromise />
     </>
   );
 };

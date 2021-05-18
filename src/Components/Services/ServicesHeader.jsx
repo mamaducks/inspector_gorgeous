@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Container, Grid, makeStyles } from "@material-ui/core";
 import ManMag from "../../img/manmag.png";
-import Inspect from "../../img/bldginspect.png";
 import ThumbUp from "../../img/thumbupCheck.png";
 
 const useStyles = makeStyles({

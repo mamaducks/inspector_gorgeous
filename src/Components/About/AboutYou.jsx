@@ -1,7 +1,5 @@
 import { Box, Grid } from "@material-ui/core";
 import Adrienne from "../../img/adrienne.JPG";
-import { MyApp } from "../PdfViewer/PDFviewer";
-import { Sample } from "../PdfViewer/PDFviewer";
 
 export const AboutYou = () => {
   return (

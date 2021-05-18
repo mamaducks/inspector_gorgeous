@@ -1,6 +1,5 @@
-import { Box, Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { greyHead } from "../../img/greyHead.png";
 
 const useStyles = makeStyles({
   // box: {

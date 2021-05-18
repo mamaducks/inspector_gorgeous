@@ -1,5 +1,4 @@
 import { makeStyles, Box } from "@material-ui/core";
-import React from "react";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { IoMdPin } from "react-icons/io";
 

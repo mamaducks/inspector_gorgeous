@@ -1,15 +1,9 @@
-import { Box, Container, Typography } from "@material-ui/core";
-
-import React from "react";
-
+import { Box, Container } from "@material-ui/core";
 
 import { Expect } from "../Home/Expect";
 
-
-
 export const FaqHeader = () => {
  
-
   return (
     <Container>
       <Box direction="column">
@@ -22,7 +16,6 @@ export const FaqHeader = () => {
         >
           <Expect />
         </Box>
-       
       </Box>
     </Container>
   );

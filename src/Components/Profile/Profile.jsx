@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ListItem,
   ListItemText,
@@ -25,8 +24,8 @@ const ProfileListItem = ({ Icon, text }) => {
 
 export function ProfileList() {
   return (
-    <Card style={{ padding: 40 }}>
-      <ListItemText
+    <div style={{ padding: 40, alignSelf: "center"}}>
+      {/* <ListItemText
         primary="IG Inspections"
         style={{
           display: "flex",
@@ -34,7 +33,7 @@ export function ProfileList() {
           fontSize: 18,
           color: "#751f66",
         }}
-      />
+      /> */}
       <List style={{ padding: 10 }}>
         <ProfileListItem
           Icon={IoIosPhonePortrait}
@@ -53,6 +52,6 @@ export function ProfileList() {
         />
         <ProfileListItem Icon={IoIosPhonePortrait} text={"more"} />
       </List>
-    </Card>
+    </div>
   );
 }
