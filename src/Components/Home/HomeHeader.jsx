@@ -1,4 +1,4 @@
-import { Box, Container, Grid, makeStyles } from "@material-ui/core";
+import { Box, Grid, makeStyles } from "@material-ui/core";
 import Corner from "../../img/cornerhouse.png";
 import MagList from "../../img/maglist.png";
 
@@ -149,17 +149,5 @@ export const BodyBottom = () => {
         </div>
       </Box>
     </Box>
-  );
-};
-export const HomeHeader = () => {
-  const classes = useStyles();
-  return (
-    <Container style={{ padding: 20 }}>
-      <Grid container>
-        <BodyTop />
-        <BodyMiddle />
-        <BodyBottom />
-      </Grid>
-    </Container>
   );
 };

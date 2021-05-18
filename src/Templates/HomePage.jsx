@@ -1,10 +1,15 @@
 import React from "react";
-import { HomeHeader } from "../Components/Home/HomeHeader";
+import { BodyTop, BodyMiddle, BodyBottom } from "../Components/Home/HomeHeader";
+import { Container, Grid } from "@material-ui/core";
 
 export function HomePage() {
   return (
-    <>
-      <HomeHeader />
-    </>
+    <Container style={{ padding: 20 }}>
+    <Grid container>
+      <BodyTop />
+      <BodyMiddle />
+      <BodyBottom />
+    </Grid>
+  </Container>
   );
 }

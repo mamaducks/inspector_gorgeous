@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   }
 });
 
-export function AboutBody() {
+export function AreaServe() {
   const classes = useStyles();
   return (
     <Grid container xs={12} justify="center" backgroundColor="#095565">
