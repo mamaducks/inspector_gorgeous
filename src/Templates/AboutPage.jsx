@@ -13,7 +13,7 @@ export function AboutPage() {
      
       <Box container spacing={3}>
       <AboutYou />
-      <Container>
+      <Container style={{ padding: 10 }}>
         <Card style={{ display: "flex", padding: 10 }}>
           <div style={{ padding: 10 }}>
             <img alt="" src={EmmaLogo} width="350" height="350" />

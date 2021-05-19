@@ -13,7 +13,7 @@ export const Title = ({ title }) => {
     <Box
       fontSize={18}
       letterSpacing={3}
-      lineHeight={4}
+      lineHeight={3}
       textAlign="center"
       color="#494649"
       fontWeight={800}

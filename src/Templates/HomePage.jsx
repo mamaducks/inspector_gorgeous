@@ -7,8 +7,9 @@ export function HomePage() {
     <Container style={{ padding: 20 }}>
     <Grid container>
       <BodyTop />
-      <BodyMiddle />
       <BodyBottom />
+      <BodyMiddle />
+      
     </Grid>
   </Container>
   );

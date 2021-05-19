@@ -1,29 +1,32 @@
 import { Box, Grid, makeStyles } from "@material-ui/core";
 import Corner from "../../img/cornerhouse.png";
 import MagList from "../../img/maglist.png";
+import GuyCheck from "../../img/guycheck.png";
+import CheckBox from "../../img/checkedbox.png";
+import {
+  MyBox,
+  HeaderBox,
+  MainTitleBox,
+  ContentRBox,
+  ContentBox,
+  DisplayBox,
+  MyContentBox,
+  MyMainTitleBox,
+  ListBox,
+  ImageBox,
+  ImageRBox,
+} from "../Box/MyBox";
 
 const useStyles = makeStyles({
-  imageBox: {
-    width: "100%",
-    alignSelf: "center",
-  },
-  midImageBox: {
-    width: "100%",
-    alignSelf: "center",
-    display: "flex",
-    justifyContent: "flex-end",
-  },
+  
   midImage: {
     width: 355,
     height: 355,
   },
-  image: {
-    height: 250,
-    width: 250,
-    backgroundColor: "#49008033",
-    paddingRight: 25,
+  checkImage: {
+    width: 100,
+    height: 100,
   },
-  homeP: {},
 });
 
 export const BodyTop = () => {
@@ -31,35 +34,19 @@ export const BodyTop = () => {
   return (
     <Grid item xs={12} style={{ padding: 10 }}>
       <Box display="flex" justifyContent="space-between">
-        <Box className={classes.imageBox}>
-          
+        <ImageBox>
           <img alt="" src={MagList} className={classes.midImage} />
-        </Box>
-        <Box
+        </ImageBox>
+        {/* <Box
           className={classes.homeP}
-          fontSize={14}
+          fontSize={15}
           letterSpacing={2}
-          lineHeight={2}
+          lineHeight={1.7}
           width="110em"
-        >
-          <div
-            style={{
-              fontWeight: "bolder",
-              fontSize: "x-large",
-              color: "#751f66",
-              textAlign: "center",
-            }}
-          >
-            Buyer Beware Home Inspections
-          </div>
-          <Box
-            style={{
-              fontWeight: "bold",
-              color: "#751f66",
-            }}
-          >
-            Let Us Help You Get to Know Your Home
-          </Box>
+        > */}
+        <MyBox>
+          <MainTitleBox>Buyer Beware Home Inspections</MainTitleBox>
+          <HeaderBox>Let Us Help You Get to Know Your Home</HeaderBox>
           <Box>
             At Safeway Home Inspections, we fully understand the importance of a
             thorough home inspection, and that’s why we work so hard to offer
@@ -73,7 +60,7 @@ export const BodyTop = () => {
             under our belts, we have the experience and knowledge needed to help
             you get to know your new home.
           </Box>
-        </Box>
+        </MyBox>
       </Box>
     </Grid>
   );
@@ -83,35 +70,27 @@ export const BodyMiddle = () => {
   const classes = useStyles();
   return (
     <Grid item xs={12} style={{ padding: 10 }}>
-      <Box display="flex" justifyContent="space-between">
-        <Box
-          className={classes.homeP}
-          fontSize={14}
-          letterSpacing={2}
-          lineHeight={2}
-          width="110em"
-        >
-          <div style={{ fontWeight: "bolder", color: "#751f66" }}>
-            What’s Included In My Home Inspection?
-          </div>{" "}
-          <Box>
+      <DisplayBox>
+        <ImageRBox>
+          <img alt="" src={GuyCheck} className={classes.midImage} />
+        </ImageRBox>
+        <ContentBox>
+          <HeaderBox>What’s Included In My Home Inspection?</HeaderBox>
+          <ContentRBox>
             Our New Jersey home inspection is an objective visual analysis of a
             home`s structure and mechanical systems. An inspection will
             determine the areas of the home that are not performing properly, as
             well as items that are beyond their usefull life or are unsafe.
-          </Box>
-          <Box>
-            Your Pillar To Post inspector will examine all structures and major
-            systems of a home. They will identify important factors for you to
-            consider as you make your home ownership decision. Your home
-            inspector is always happy to answer any questions you have during
-            the inspection.
-          </Box>
-        </Box>
-        <Box className={classes.midImageBox}>
-        <img alt="" src={MagList} className={classes.midImage} />
-        </Box>
-      </Box>
+            <Box>
+              Your Pillar To Post inspector will examine all structures and
+              major systems of a home. They will identify important factors for
+              you to consider as you make your home ownership decision. Your
+              home inspector is always happy to answer any questions you have
+              during the inspection.
+            </Box>
+          </ContentRBox>
+        </ContentBox>
+      </DisplayBox>
     </Grid>
   );
 };
@@ -119,35 +98,26 @@ export const BodyMiddle = () => {
 export const BodyBottom = () => {
   const classes = useStyles();
   return (
-    <Box>
-      <Box
-        fontSize={14}
-        letterSpacing={2}
-        lineHeight={3}
-        color="#751f66"
-        fontWeight="bold"
-      >
-        We offer the following specialized inspection services:
-      </Box>
-      <Box
-        fontSize={14}
-        letterSpacing={2}
-        lineHeight={1.5}
-        textAlign="center"
-        width="87em"
-      >
+    <Box style={{ padding: 10 }}>
+      <DisplayBox>
         <div>
-          • Pre-Listing Inspection for Seller • Pre-Purchase Inspection for
-          Buyer • New Construction Home Inspection • Multi-Unit Property
-          Inspection {"  "}
+          <MyContentBox>
+            <MyMainTitleBox>
+              We offer the following specialized inspection services:
+            </MyMainTitleBox>
+            <ListBox>
+              • Pre-Listing Inspection for Seller • Pre-Purchase Inspection for
+              Buyer • During Construction Home Inspection • New Construction
+              Home Inspection • Multi-Unit Property Inspection • Townhouse Home
+              Inspection • Condo Inspection • Radon Testing • Termite / WDI
+              (Wood Destroying Insect)
+            </ListBox>
+          </MyContentBox>
         </div>
-        <div>
-          {" "}
-          • Townhouse Home Inspection • Condo Inspection • During Construction
-          Home Inspection • Radon Testing • Termite / WDI (Wood Destroying
-          Insect)
-        </div>
-      </Box>
+        <Box >
+          <img alt="" src={CheckBox} className={classes.checkImage} />
+        </Box>
+      </DisplayBox>
     </Box>
   );
 };

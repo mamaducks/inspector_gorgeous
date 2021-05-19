@@ -1,6 +1,18 @@
 import { Box, Container, makeStyles, Grid } from "@material-ui/core";
 import PinkMag from "../../img/pinklistmag.png";
 import pinkHome from "../../img/pinkhome.png";
+import Thumbup from "../../img/guythumbup.png";
+import {
+  ExpectBox,
+  HeaderBox,
+  MyInfoBox,
+  MyBox,
+  MyContent,
+  InspectBox,
+  ListBox,
+  MyContentBox,
+  DisplayBox,
+} from "../Box/MyBox";
 
 const useStyles = makeStyles({
   info: {
@@ -38,36 +50,17 @@ export const Expect = () => {
             <img alt="" src={PinkMag} className={classes.ImgA} />
           </Box>
           <div>
-            <Box
-              fontSize={14}
-              letterSpacing={2}
-              lineHeight={1.8}
-              width="70em"
-              textAlign="center"
-              color="#010101"
-            >
-              WHAT TO EXPECT FROM YOUR HOME INSPECTION
-            </Box>
+            <HeaderBox>WHAT TO EXPECT FROM YOUR HOME INSPECTION</HeaderBox>
 
-            <Box
-              fontSize={14}
-              letterSpacing={2}
-              lineHeight={1.7}
-              textAlign="end"
-              color="#404040"
-              fontWeight={400}
-              width="63em"
-              style={{ paddingTop: 20 }}
-            >
-                Our New Jersey home inspection is an in-depth objective visual
-                analysis of a home`s structure and mechanical systems. An
-                inspection will determine the areas of the home that are not
-                performing properly, as well as items that are beyond their
-                useful life or are unsafe.
-  
-              We will provide you with a detailed reports clearly identifying
-              any material defect along with a recommendation for what to do as
-              well as what can happen if not repaired. covering the condition of the home’s heating system;
+            <ExpectBox>
+              Our New Jersey home inspection is an in-depth objective visual
+              analysis of a home`s structure and mechanical systems. An
+              inspection will determine the areas of the home that are not
+              performing properly, as well as items that are beyond their useful
+              life or are unsafe. We will provide you with a detailed reports
+              clearly identifying any material defect along with a
+              recommendation for what to do as well as what can happen if not
+              repaired. covering the condition of the home’s heating system;
               central air conditioning system (temperature permitting); interior
               plumbing and electrical systems; the roof, attic and visible
               insulation; walls, ceilings, floors, windows and doors; the
@@ -76,42 +69,27 @@ export const Expect = () => {
               detail including roof coverings, drainage systems, vent
               penetrations as well as any flashing. Infrared Thermography is
               used by LDG for the most thorough inspections available.
-          
-        </Box>
-        </div>
+            </ExpectBox>
+          </div>
         </Box>
         <Grid item xs={12}>
-          <Box display="flex" justifyContent="space-between">
-            <div>
-          <Box
-              fontSize={14}
-              letterSpacing={2}
-              lineHeight={1.8}
-              width="70em"
-              textAlign="center"
-              color="#010101"
-            >
-              We inspect the following, when visible and accessible:
-            </Box>
-            <Box
-              className={classes.homeP}
-              fontSize={14}
-              letterSpacing={2}
-              lineHeight={2}
-            >
+          <DisplayBox>
+            <MyContentBox>
+              <HeaderBox>
+                We inspect the following, when visible and accessible:
+              </HeaderBox>
               We inspect the following, when visible and accessible: • Roof •
               Structural Components • Attic, Ventilation & Insulation • Exterior
               Cladding • Porch & Deck • Attached Garage • Foundation • Basement
               / Crawlspace • Electrical System • Plumbing System • HVAC System
               Interior including; Built-In Appliances, Ceilings, Floors & Walls,
               Windows and Doors
-            </Box>
-            </div>
+            </MyContentBox>
 
             <Box className={classes.BottomImageBox}>
-              <img alt="" src={pinkHome} className={classes.ImgB} />
+              <img alt="" src={Thumbup} className={classes.ImgB} />
             </Box>
-          </Box>
+          </DisplayBox>
         </Grid>
       </Grid>
     </Container>

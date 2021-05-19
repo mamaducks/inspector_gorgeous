@@ -2,7 +2,15 @@ import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { MailTo } from "./MailTo";
 import { AppBar, Toolbar } from "@material-ui/core";
-
+import {
+  MyMapBox,
+  PadBox,
+  MyBox,
+  ListBox,
+  MyContentBox,
+  MyInfoBox,
+  DisplayEvenBox,
+} from "../Box/MyBox";
 const useStyles = makeStyles({
   appBar: {
     // top: "auto",
@@ -24,42 +32,42 @@ const useStyles = makeStyles({
 
 export const MyAddress = () => {
   return (
-    <Box>
+    <MyBox>
       <div>Buyers Beware Home Inspection </div>
-
       <div>Saint David Dr Mt Laurel Township, NJ 08054</div>
-    </Box>
+    </MyBox>
   );
 };
 
-export const MyHours = () => {
-  return (
-    <Box>
-      <div>Monday thru Friday 8:00 am - 7:00 pm </div>
-      <div>Saturday 9:00 am - 5:00 pm</div>
-      <div>Sunday Closed</div>
-    </Box>
-  );
-};
+// export const MyHours = () => {
+//   return (
+//     <Box>
+//       <div>Monday thru Friday 8:00 am - 7:00 pm </div>
+//       <div>Saturday 9:00 am - 5:00 pm</div>
+//       <div>Sunday Closed</div>
+//     </Box>
+//   );
+// };
 
 export const MyEmail = () => {
   return (
-    <Box style={{ display: "flex" }}>
-      <Box style={{ paddingRight: 10 }}>Email Us:</Box>
+    <DisplayEvenBox>
+      <Box fontSize={15} letterSpacing={2} style={{ paddingRight: 10 }}>
+        Email Us:
+      </Box>
       <MailTo />
-    </Box>
+    </DisplayEvenBox>
   );
 };
 
 export const CallAnytime = () => {
   return (
-    <Box>
+    <ListBox>
+      <div>Available 7 Days A Week</div>
       <div>We love hearing from you anytime!</div>
-      <div>
-        Call or email us if you have any questions or use our online scheduler
-        to set up a home inspection.
-      </div>
-    </Box>
+
+      <Box>REQUEST A QUOTE 609-adriennes#</Box>
+    </ListBox>
   );
 };
 
@@ -72,12 +80,10 @@ export const Quote = () => {
         <div className={classes.addHour}>
           <MyAddress />
         </div>
-
-        <div>
-          <div>We love hearing from you anytime!</div>
-
-          <div>Available 7 days a week</div>
+        <MyContentBox>
           <Box>REQUEST A QUOTE 609-adriennes#</Box>
+        </MyContentBox>
+        <div>
           <MyEmail />
         </div>
       </Toolbar>

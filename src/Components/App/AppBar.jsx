@@ -17,22 +17,22 @@ import { FaPhoneAlt } from "react-icons/fa";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: 1,
+    paddingLeft: 21,
+    paddingRight: 12,
     alignItems: "center",
     backgroundColor: "#b33a87",
     display: "flex",
+    letterSpacing: 1.3,
+    color: "white",
+    fontSize: 19,
+    alignSelf: "center",
+    margin: 0
   },
   title: {
     flexGrow: 2,
     display: "flex",
     justifyContent: "flex-end",
-  },
-  phone: {
-    display: "flex",
-    paddingLeft: 15,
-    color: "white",
-  },
-  phoneIcon: {
-    paddingRight: 20,
+    letterSpacing: 2,
   },
 }));
 
@@ -40,14 +40,12 @@ export function AppBar() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Box letterSpacing={2} className={classes.phone}>
-        <Icon className={classes.phoneIcon}>
-          <FaPhoneAlt />
-        </Icon>
-        <Typography>1-800-456-3456 609-adriennes#</Typography>
-      </Box>
+      <Icon>
+        <FaPhoneAlt />
+      </Icon>
+      <div>1-800-456-3456</div>
 
-      <Box letterSpacing={2} className={classes.title}>
+      <Box className={classes.title}>
         <IconButton>
           <AiFillFacebook />
         </IconButton>

@@ -4,6 +4,7 @@ import {
   Card,
   CardActionArea,
   CardContent,
+  Box,
 } from "@material-ui/core";
 import {
   prices,
@@ -11,12 +12,14 @@ import {
   bundlePrice,
 } from "../Components/Services/ServiceList";
 import { Title } from "../Components/App/HeaderTitle";
+import { MainTitleBox, ListBox, PadBox } from "../Components/Box/MyBox";
 
 const useStyles = makeStyles({
   list: {
     display: "flex",
     justifyContent: "space-evenly",
     padding: 33,
+    flexWrap: 'wrap'
   },
   listItem: {
     alignItems: "center",
@@ -24,11 +27,6 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     width: "25%",
-  },
-  listImg: {
-    width: 55,
-    height: 55,
-    paddingBottom: 15,
   },
 });
 
@@ -46,7 +44,7 @@ export function PriceListing() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.list}>
       {prices.map(({ service, price }) => {
         return (
           <div key={service} className={classes.listItem}>
@@ -73,7 +71,7 @@ export function SummaryPriceListing() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.list}>
       {priceCard.map(({ summary, price }) => {
         return (
           <div key={summary} className={classes.listItem}>
@@ -100,7 +98,7 @@ export function BundlePriceListing() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.list}>
       {bundlePrice.map(({ summary, price }) => {
         return (
           <div key={summary} className={classes.listItem}>
@@ -116,14 +114,16 @@ export function BundlePriceListing() {
 export const PricingPage = () => {
   return (
     <>
-          <Title title="Pricing" />
-
-      <div>
-        Buyer Beware Home Inspection: A multi-point home inspection includes
-        major components and systems at the exterior, roof, and interior.
-        Electrical, plumbing, heating and cooling, insulations and ventilations,
-        structure, and installed appliances are inspected.
-      </div>
+      <Title title="Pricing" />
+      <PadBox>
+        <MainTitleBox>Buyer Beware Home Inspection:</MainTitleBox>
+        <ListBox>
+          A multi-point home inspection includes major components and systems at
+          the exterior, roof, and interior. Electrical, plumbing, heating and
+          cooling, insulations and ventilations, structure, and installed
+          appliances are inspected.
+        </ListBox>
+      </PadBox>
 
       <PriceCard />
       <SummaryPriceCard />

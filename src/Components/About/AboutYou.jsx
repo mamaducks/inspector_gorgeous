@@ -1,20 +1,16 @@
 import { Box, Grid } from "@material-ui/core";
 import Adrienne from "../../img/adrienne.JPG";
+import { MyInfoBox, DisplayEvenBox } from "../Box/MyBox";
 
 export const AboutYou = () => {
   return (
-    <Grid container justify="space-evenly" spacing={3}>
+    <DisplayEvenBox>
       <Grid item xs={3} style={{ alignSelf: "center" }}>
         <img alt="" src={Adrienne} width="300" height="300" />
       </Grid>
       <Grid item xs={6} style={{ alignSelf: "center" }}>
-        <Box
-          fontSize={14}
-          fontFamily="Helvetica"
-          lineHeight={2}
-          letterSpacing={2}
-          color="#095565"
-        >
+        <MyInfoBox>
+          <Box>
           Adrienne Soto is the founder and primary home inspector at IG
           Inspections llc. Adrienne has a vast knowledge in many aspects of real
           estate and all types of construction. She has over 30 years of
@@ -81,8 +77,9 @@ export const AboutYou = () => {
           including digital pictures Extended office hours 7days/week We accept
           all payment types including check, credit cards and PayPal
         </Box>
+        </MyInfoBox>
       </Grid>
       
-    </Grid>
+    </DisplayEvenBox>
   );
 };

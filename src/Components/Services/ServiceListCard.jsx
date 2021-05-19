@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "space-evenly",
     padding: 33,
+    flexWrap: 'wrap'
   },
   listItem: {
     alignItems: "center",
@@ -38,7 +39,7 @@ export function ServiceListing() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.list}>
       {services.map(({ text, image }) => {
         return (
           <div key={text} className={classes.listItem}>

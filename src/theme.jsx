@@ -90,12 +90,20 @@ const theme = createMuiTheme({
         paddingRight: 12,
       },
     },
-    // MuiBox: {
-
-    //     fontFamily: "Helvetica",
-    //     fontSize: 88
-
-    // },
+    MuiIcon: {
+      root: {
+        paddingRight: 15,
+      },
+    },
+    MuiBox: {
+      // root: {
+      //   fontSize: 14,
+      //   lineHeight: 2,
+      //   letterSpacing: 2,
+      // },
+      //     fontFamily: "Helvetica",
+      //     fontSize: 88
+    },
 
     MuiButton: {
       // Name of the component ⚛️ / style sheet
@@ -105,11 +113,11 @@ const theme = createMuiTheme({
       },
       label: {
         fontSize: 17,
-        color: '#01333c'
+        color: "#01333c",
       },
     },
     MuiIconButton: {
-      root: { color: "white" },
+      root: { color: "white", fontSize: "2rem" },
     },
     MuiContainer: {
       root: {
@@ -130,7 +138,6 @@ const theme = createMuiTheme({
     //   }
     // }
   },
-
 });
 
 export default theme;

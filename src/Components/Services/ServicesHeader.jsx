@@ -2,20 +2,22 @@ import React from "react";
 import { Box, Container, Grid, makeStyles } from "@material-ui/core";
 import ManMag from "../../img/manmag.png";
 import ThumbUp from "../../img/thumbupCheck.png";
+import {
+  MyBox,
+  HeaderBox,
+  MainTitleBox,
+  ContentRBox,
+  ContentBox,
+  DisplayBox,
+  MyContentBox,
+  MyMainTitleBox,
+  ListBox,
+  MyContent,
+  ImageBox,
+  ImageRBox,
+} from "../Box/MyBox";
 
 const useStyles = makeStyles({
-  imageBox: {
-    width: "100%",
-    alignSelf: "center",
-    display: "flex",
-    justifyContent: "center",
-  },
-  BottomImageBox: {
-    width: "100%",
-    alignSelf: "center",
-    display: "flex",
-    justifyContent: "flex-end",
-  },
   image: {
     height: 250,
     width: 250,
@@ -25,7 +27,6 @@ const useStyles = makeStyles({
     width: 250,
     height: 250,
   },
-  homeP: {},
 });
 
 export function ServicesHeader() {
@@ -34,17 +35,11 @@ export function ServicesHeader() {
   return (
     <Container>
       <Grid xs={12}>
-        <Box display="flex" justifyContent="space-between">
-          <Box className={classes.imageBox}>
+        <DisplayBox>
+          <ImageBox>
             <img alt="" src={ManMag} className={classes.listImg} />
-          </Box>
-          <Box
-            fontSize={14}
-            letterSpacing={2}
-            lineHeight={1.8}
-            width="115em"
-            alignSelf="center"
-          >
+          </ImageBox>
+          <MyContent>
             <div>
               A home inspection is only as good as the inspector. That’s why IG
               Inspections LLC is your best choice for home inspections in New
@@ -60,18 +55,11 @@ export function ServicesHeader() {
               condition of the property. Our home inspectors are always
               reliable, professional, and knowledgeable.{" "}
             </div>
-          </Box>
-        </Box>
+          </MyContent>
+        </DisplayBox>
         <Grid item xs={12}>
-          <Box display="flex" justifyContent="space-between">
-            <Box
-              className={classes.homeP}
-              fontSize={14}
-              letterSpacing={2}
-              lineHeight={2}
-              width="110em"
-              alignSelf="center"
-            >
+          <DisplayBox>
+            <MyContent>
               Some issues are easily identified and others need a more in-depth
               and educated analysis. This is where I can help you. I will
               inspect all of the systems within your home – from roof to
@@ -85,11 +73,11 @@ export function ServicesHeader() {
                 budgeted for immediate attention or what can be put it on the
                 to-do list.
               </div>
-            </Box>
-            <Box className={classes.BottomImageBox}>
+            </MyContent>
+            <ImageRBox>
               <img alt="" src={ThumbUp} className={classes.listImg} />
-            </Box>
-          </Box>
+            </ImageRBox>
+          </DisplayBox>
         </Grid>
       </Grid>
     </Container>

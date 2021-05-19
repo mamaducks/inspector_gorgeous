@@ -7,8 +7,9 @@ export function ContactPage() {
   return (
     <>
     
-      <Title title="contact us" />
+      <Title title="Contact Us" />
       <ContactGrid />
+      
       
     </>
   );
