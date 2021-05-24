@@ -1,13 +1,7 @@
 import { makeStyles, Box } from "@material-ui/core";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { IoMdPin } from "react-icons/io";
-import {
-  DisplayEvenBox,
-  MyFlexBox,
-  DisplayCenterBox,
-  ImageBox,
-} from "../Box/MyBox";
-import Mag from "../../img/magnifyhome.png";
+import { MyFlexBox } from "../Box/MyBox";
 
 const useStyles = makeStyles({
   infoBottom: {
@@ -23,10 +17,10 @@ const useStyles = makeStyles({
     borderRadius: 5,
     backgroundColor: "#f9f9f9",
   },
-  midImage: {
-    width: 120,
-    height: 120,
-  },
+  // midImage: {
+  //   width: 120,
+  //   height: 120,
+  // },
   infoGrid: {
     alignItems: "center",
     display: "flex",
@@ -34,7 +28,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const ContactInfo = ({ Icon, topLine, bottomLine }) => {
+export const NotContactInfo = ({ Icon, topLine, bottomLine }) => {
   const classes = useStyles();
 
   return (
@@ -52,47 +46,53 @@ export const ContactInfo = ({ Icon, topLine, bottomLine }) => {
   );
 };
 
-export const PhoneInfo = () => {
-  return (
-    <ContactInfo
-      Icon={IoIosPhonePortrait}
-      topLine="P: 609-445-6778"
-      bottomLine="Fax: 609-890-6786"
-    />
-  );
-};
+// export const PhoneInfo = () => {
+//   return (
+//     <ContactInfo
+//       Icon={IoIosPhonePortrait}
+//       topLine="P: 609-445-6778"
+//       bottomLine="Fax: 609-890-6786"
+//     />
+//   );
+// };
 
-export const AddressInfo = () => {
-  return (
-    <ContactInfo
-      Icon={IoMdPin}
-      topLine="Washington Ave"
-      bottomLine="Berlin NJ 08009"
-    />
-  );
-};
+// export const AddressInfo = () => {
+//   return (
+//     <ContactInfo
+//       Icon={IoMdPin}
+//       topLine="Washington Ave"
+//       bottomLine="Berlin NJ 08009"
+//     />
+//   );
+// };
 
-export function InfoGrid() {
+export function ContactInfo() {
   const classes = useStyles();
 
   return (
     <MyFlexBox>
-      <Box letterSpacing={1} lineHeight={2} alignSelf= "center">
-        <Box style={{ padding: 10, width: 175, paddingBottom: 24}}>
+      <Box letterSpacing={1} lineHeight={2} alignSelf="center">
+        <Box style={{ padding: 10, width: 175, paddingBottom: 24 }}>
           <div className={classes.infoGrid}>
-            <IoIosPhonePortrait color="#751f66" fontSize={40} style={{ paddingBottom: 8 }}/>
-            <Box style={{ padding: 7 }} lineHeight={1} color="#32474b" >
-              p: 609-445-6778
-            </Box>
-            <Box lineHeight={1} color="#32474b">
-              fax: 609-890-6786
+            <IoIosPhonePortrait
+              color="#a51b77"
+              fontSize={40}
+              paddingBottom= "8px" 
+            />
+            <Box padding= "7px" lineHeight={1} color="#32474b">
+              p: 609-670-0451
             </Box>
           </div>
         </Box>
 
-        <Box style={{ padding: 10,  width: 175 }}>
+        <Box padding="10px" width={175}>
+          
           <div className={classes.infoGrid}>
-            <IoMdPin color="#751f66" fontSize={38} style={{ paddingBottom: 8 }}/>
+            <IoMdPin
+              color="#a51b77"
+              fontSize={38}
+              style={{ paddingBottom: 8 }}
+            />
             <Box style={{ padding: 7 }} lineHeight={1} color="#32474b">
               Washington Ave
             </Box>
@@ -102,7 +102,6 @@ export function InfoGrid() {
           </div>
         </Box>
       </Box>
-
     </MyFlexBox>
   );
 }

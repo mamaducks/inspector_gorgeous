@@ -1,23 +1,9 @@
 import { Box, Container, makeStyles, Grid } from "@material-ui/core";
 import PinkMag from "../../img/pinklistmag.png";
-import pinkHome from "../../img/pinkhome.png";
 import Thumbup from "../../img/guythumbup.png";
-import {
-  ExpectBox,
-  HeaderBox,
-  MyInfoBox,
-  MyBox,
-  MyContent,
-  InspectBox,
-  ListBox,
-  MyContentBox,
-  DisplayBox,
-} from "../Box/MyBox";
+import { DisplayBox } from "../Box/MyBox";
 
 const useStyles = makeStyles({
-  info: {
-    // backgroundImage: `url(${purpleBG})`,
-  },
   imageBox: {
     width: "100%",
     alignSelf: "center",
@@ -39,20 +25,21 @@ const useStyles = makeStyles({
   },
 });
 
-export const Expect = () => {
+export const FaqHeader = () => {
   const classes = useStyles();
 
   return (
     <Container>
       <Grid xs={12}>
-        <Box display="flex" justifyContent="space-between">
+        <DisplayBox>
           <Box className={classes.imageBox}>
             <img alt="" src={PinkMag} className={classes.ImgA} />
           </Box>
-          <div>
-            <HeaderBox>WHAT TO EXPECT FROM YOUR HOME INSPECTION</HeaderBox>
-
-            <ExpectBox>
+          <div style={{ paddingBottom: 10 }}>
+            <Box fontWeight="bold" color="#751f66" lineHeight={3}>
+              WHAT TO EXPECT FROM YOUR HOME INSPECTION
+            </Box>
+            <Box textAlign="end" lineHeight={1.5} letterSpacing={1.7}>
               Our New Jersey home inspection is an in-depth objective visual
               analysis of a home`s structure and mechanical systems. An
               inspection will determine the areas of the home that are not
@@ -69,22 +56,24 @@ export const Expect = () => {
               detail including roof coverings, drainage systems, vent
               penetrations as well as any flashing. Infrared Thermography is
               used by LDG for the most thorough inspections available.
-            </ExpectBox>
+            </Box>
           </div>
-        </Box>
+        </DisplayBox>
         <Grid item xs={12}>
           <DisplayBox>
-            <MyContentBox>
-              <HeaderBox>
-                We inspect the following, when visible and accessible:
-              </HeaderBox>
-              We inspect the following, when visible and accessible: • Roof •
-              Structural Components • Attic, Ventilation & Insulation • Exterior
-              Cladding • Porch & Deck • Attached Garage • Foundation • Basement
-              / Crawlspace • Electrical System • Plumbing System • HVAC System
-              Interior including; Built-In Appliances, Ceilings, Floors & Walls,
-              Windows and Doors
-            </MyContentBox>
+            <Box>
+              <Box fontWeight="bold" color="#751f66" lineHeight={3}>
+                WE INSPECT THE FOLLOWING WHEN VISIBLE AND ACCESSIBLE:
+              </Box>
+              <Box lineHeight={1.5} letterSpacing={1.7}>
+                We inspect the following, when visible and accessible: • Roof •
+                Structural Components • Attic, Ventilation & Insulation •
+                Exterior Cladding • Porch & Deck • Attached Garage • Foundation
+                • Basement / Crawlspace • Electrical System • Plumbing System •
+                HVAC System Interior including; Built-In Appliances, Ceilings,
+                Floors & Walls, Windows and Doors
+              </Box>
+            </Box>
 
             <Box className={classes.BottomImageBox}>
               <img alt="" src={Thumbup} className={classes.ImgB} />

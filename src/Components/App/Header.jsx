@@ -1,33 +1,26 @@
 // Imports
-import { Link } from "@material-ui/core";
-import EmmaLogo from "../../img/emmaLogo.png";
-
+import { Link, Box, Icon } from "@material-ui/core";
+import EmmaLogo from "../../img/emmaLogoSmall.png";
+import { FaPhoneAlt } from "react-icons/fa";
 import routes from "../../App/Routes";
 import { makeStyles } from "@material-ui/core";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { AppBar } from "./AppBar";
+import { Phone } from "../App/Phone";
 
-const useStyles = makeStyles((theme) => ({
-  title: {
-    flexGrow: 2,
-    justifyContent: "space-between",
-    paddingLeft: 17,
-    display: "flex",
-    paddingTop: 0,
-    paddingBottom: 0,
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: "#a61b77",
+    padding: 12,
   },
-  bookIt: {
-    justifyContent: "flex-end",
-    display: "flex",
-  },
+
   tabList: {
     display: "flex",
-    alignSelf: "flex-end",
-    height: 35,
-    flexGrow: 1,
     fontSize: 18,
-    justifyContent: "center",
+    justifyContent: "space-between",
+    height: "100%"
+
     // borderColor: "#095565",
   },
   tab: {
@@ -35,19 +28,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     display: "flex",
     letterSpacing: 2,
-    fontWeight: 700,
   },
-}));
+});
 
-export const Header = () => {
+export const HeadTabs = () => {
   const classes = useStyles();
 
   return (
-    <Tabs variant="primary">
-      <div className={classes.title}>
-        <img alt="" src={EmmaLogo} width="150" height="80" />
-
+    <div className={classes.root}>
+      <Tabs>
         <div className={classes.tabList}>
+          <Phone />
           <div className={classes.tab}>
             <Tab>
               <Link href="/" underline="none">
@@ -59,11 +50,11 @@ export const Header = () => {
                 SERVICES
               </Link>
             </Tab>
-            <Tab>
+            {/* <Tab>
               <Link href={routes.pages.pricing} underline="none">
                 PRICING
               </Link>
-            </Tab>
+            </Tab> */}
             <Tab>
               <Link href={routes.pages.about} underline="none">
                 ABOUT
@@ -81,10 +72,7 @@ export const Header = () => {
             </Tab>
           </div>
         </div>
-      </div>
-      <div>
-        <AppBar />
-      </div>
-    </Tabs>
+      </Tabs>
+    </div>
   );
 };

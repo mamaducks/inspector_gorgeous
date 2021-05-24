@@ -5,7 +5,7 @@ const theme = createMuiTheme({
   palette: {
     type: "light",
     primary: {
-      main: "#4a4649",
+      main: "#cdcdcd",
     },
     secondary: {
       main: "#2790b9",
@@ -117,7 +117,7 @@ const theme = createMuiTheme({
       },
     },
     MuiIconButton: {
-      root: { color: "white", fontSize: "2rem" },
+      root: { color: "black", fontSize: "2rem" },
     },
     MuiContainer: {
       root: {
@@ -128,8 +128,9 @@ const theme = createMuiTheme({
 
     MuiListItemIcon: {
       root: {
-        fontSize: 30,
-        color: "#616161",
+        fontSize: 24,
+        color: "#a61b77",
+        minWidth: 42
       },
     },
     // MuiListItemText: {

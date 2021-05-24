@@ -13,7 +13,7 @@ const ProfileListItem = ({ Icon, text }) => {
     <>
       <ListItem>
         <ListItemIcon>
-          <Icon color="#b23a87"/>
+          <Icon color="#b23a87" />
         </ListItemIcon>
 
         <ListItemText primary={text} />
@@ -24,33 +24,23 @@ const ProfileListItem = ({ Icon, text }) => {
 
 export function ProfileList() {
   return (
-    <div style={{ padding: 40, alignSelf: "center"}}>
-      {/* <ListItemText
-        primary="IG Inspections"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          fontSize: 18,
-          color: "#751f66",
-        }}
-      /> */}
-      <List style={{ padding: 10 }}>
+    <div style={{ padding: 25, paddingRight: 30, alignSelf: "center" }}>
+      <List style={{ padding: 3 }}>
         <ProfileListItem
           Icon={IoIosPhonePortrait}
-          text={"6093330400"}
+          text={"609-670-0451"}
           style={{ alignSelf: "center" }}
         />
         <ProfileListItem
           Icon={AiOutlineMail}
-          text={"boxingmom"}
+          text={"Contact@BuyerBeware.com"}
           style={{ alignSelf: "flex-start" }}
         />
         <ProfileListItem
           Icon={IoMdPin}
-          text={"somewhere south jersey"}
+          text={"Based in Berlin, NJ"}
           style={{ alignSelf: "flex-end" }}
         />
-        <ProfileListItem Icon={IoIosPhonePortrait} text={"more"} />
       </List>
     </div>
   );

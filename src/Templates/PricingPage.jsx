@@ -1,4 +1,4 @@
-import { OurPromise } from "../Components/About/Promise";
+import { OurPromise } from "../Components/Profile/Promise";
 import {
   makeStyles,
   Card,

@@ -28,11 +28,15 @@ export function MyFlexBox({ children }) {
 }
 
 export function PadBox({ children }) {
-  return <Box style={{ padding: 10 }}>{children}</Box>;
+  return (
+    <Box p={10} style={{ padding: 10 }}>
+      {children}
+    </Box>
+  );
 }
 export function MyBox({ children }) {
   return (
-    <Box fontSize={15} letterSpacing={2} lineHeight={1.7}>
+    <Box letterSpacing={1} lineHeight={1.7}>
       {children}
     </Box>
   );
@@ -41,27 +45,14 @@ export function MyBox({ children }) {
 export function MyInfoBox({ children }) {
   return (
     <Box
+    paddingTop={10}
       letterSpacing={1.5}
       lineHeight={1.6}
+      paddingBottom={15}
       style={{ paddingBottom: 15, width: "60em" }}
     >
       {children}
     </Box>
-  );
-}
-
-export function SpaceBox({ children }) {
-  return (
-    <Grid
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
-      {children}
-    </Grid>
   );
 }
 
@@ -81,13 +72,7 @@ export function MyMapBox({ children }) {
 
 export function HeaderBox({ children }) {
   return (
-    <Box
-      fontWeight="bold"
-      color="#751f66"
-      textAlign="center"
-      lineHeight={2}
-      style={{ padding: 20 }}
-    >
+    <Box fontWeight="bold" color="#751f66" lineHeight={2}>
       {children}
     </Box>
   );
@@ -100,7 +85,7 @@ export function MainTitleBox({ children }) {
       fontSize="x-large"
       color="#751f66"
       textAlign="center"
-      lineHeight={3}
+      lineHeight={4}
     >
       {children}
     </Box>
@@ -155,13 +140,7 @@ export function MyContentBox({ children }) {
 
 export function MyContent({ children }) {
   return (
-    <Box
-      fontSize={14}
-      letterSpacing={2}
-      lineHeight={1.8}
-      width="115em"
-      alignSelf="center"
-    >
+    <Box letterSpacing={1.7} lineHeight={1.5} width="115em" alignSelf="center">
       {children}
     </Box>
   );
@@ -169,7 +148,13 @@ export function MyContent({ children }) {
 
 export function ImageBox({ children }) {
   return (
-    <Box width="100%" alignSelf="center" display="flex" justifyContent="center">
+    <Box
+      width="100%"
+      alignSelf="center"
+      display="flex"
+      justifyContent="center"
+      style={{ padding: 10 }}
+    >
       {children}
     </Box>
   );
@@ -227,52 +212,5 @@ export function LongBox({ children }) {
     >
       {children}
     </Box>
-  );
-}
-
-export function ColorBox({ children }) {
-  return (
-    <Box
-      textAlign="center"
-      letterSpacing={1.5}
-      lineHeight={3}
-      fontWeight={700}
-      color="white"
-      style={{ backgroundColor: "#b23a87", marginBottom: 15 }}
-    >
-      {children}
-    </Box>
-  );
-}
-
-export function ExpectBox({ children }) {
-  return (
-    <Box
-      fontSize={14}
-      letterSpacing={2}
-      lineHeight={1.7}
-      textAlign="end"
-      color="#404040"
-      fontWeight={400}
-      width="63em"
-      style={{ paddingTop: 20 }}
-    >
-      {children}
-    </Box>
-  );
-}
-
-export function InspectBox({ children }) {
-  return (
-  <Box
-    fontSize={14}
-    letterSpacing={2}
-    lineHeight={1.8}
-    width="70em"
-    textAlign="center"
-    color="#010101"
-  >
-    {children}
-  </Box>
   );
 }

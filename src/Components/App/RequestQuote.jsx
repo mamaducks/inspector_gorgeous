@@ -1,7 +1,10 @@
 import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { MailTo } from "./MailTo";
-import { AppBar, Toolbar } from "@material-ui/core";
+import { AppBar, Toolbar, IconButton } from "@material-ui/core";
+import { FiInstagram } from "react-icons/fi";
+import { AiFillFacebook } from "react-icons/ai";
+
 import {
   MyMapBox,
   PadBox,
@@ -11,11 +14,12 @@ import {
   MyInfoBox,
   DisplayEvenBox,
 } from "../Box/MyBox";
+
 const useStyles = makeStyles({
   appBar: {
     // top: "auto",
     // bottom: 0,
-    color: "#751f66",
+    color: "#a4358c",
   },
   title: {
     backgroundColor: "#c3c3c3",
@@ -32,30 +36,23 @@ const useStyles = makeStyles({
 
 export const MyAddress = () => {
   return (
-    <MyBox>
-      <div>Buyers Beware Home Inspection </div>
-      <div>Saint David Dr Mt Laurel Township, NJ 08054</div>
-    </MyBox>
+    <Box letterSpacing={1} lineHeight={1.5}>
+      <div>BUYERS BEWARE HOME INSPECTION</div>
+      <div>Covering all of South Jersey</div>
+    </Box>
   );
 };
 
-// export const MyHours = () => {
-//   return (
-//     <Box>
-//       <div>Monday thru Friday 8:00 am - 7:00 pm </div>
-//       <div>Saturday 9:00 am - 5:00 pm</div>
-//       <div>Sunday Closed</div>
-//     </Box>
-//   );
-// };
-
 export const MyEmail = () => {
+  const classes = useStyles();
+  
   return (
     <DisplayEvenBox>
-      <Box fontSize={15} letterSpacing={2} style={{ paddingRight: 10 }}>
+      <Box letterSpacing={2} style={{ paddingRight: 7 }}>
         Email Us:
+        {/* BuyerBewareHomeInspections@gmail.com" */}
       </Box>
-      <MailTo />
+      <MailTo label="Click Here" className={classes.appBar}/>
     </DisplayEvenBox>
   );
 };
@@ -77,15 +74,30 @@ export const Quote = () => {
   return (
     <AppBar position="sticky" className={classes.appBar}>
       <Toolbar className={classes.title}>
-        <div className={classes.addHour}>
-          <MyAddress />
-        </div>
-        <MyContentBox>
-          <Box>REQUEST A QUOTE 609-adriennes#</Box>
-        </MyContentBox>
+        <MyAddress />
+
+        <Box>
+          <Box letterSpacing={1} lineHeight={1.5}>
+            Call to schedule 609-670-0451
+          </Box>
+        </Box>
         <div>
           <MyEmail />
         </div>
+{/* 
+        <Box display="flex" flexDirection="column">
+          <div>
+            <IconButton >
+              <FiInstagram color="#751f66" />
+            </IconButton>
+            buyerbewarehomeinspections
+          </div>
+          <div>
+            <IconButton>
+              <AiFillFacebook color="#751f66" />
+            </IconButton>
+          </div>
+        </Box> */}
       </Toolbar>
     </AppBar>
   );
