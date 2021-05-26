@@ -7,46 +7,45 @@ import PinkMag from "../img/pinklistmag.png";
 import Thumbup from "../img/guythumbup.png";
 import { DisplayBox } from "../Components/Box/MyBox";
 import { OurPromise } from "../Components/Profile/Promise";
-
-
-const useStyles = makeStyles({
-  imageBox: {
-    width: "100%",
-    alignSelf: "center",
-  },
-  BottomImageBox: {
-    width: "100%",
-    alignSelf: "center",
-    display: "flex",
-    justifyContent: "center",
-    paddingLeft: 20,
-  },
-  ImgA: {
-    width: 190,
-    height: 190,
-  },
-  ImgB: {
-    width: 200,
-    height: 200,
-  },
-});
+import { SERVICES } from "../Components/Services/Services";
 
 export const FaqPage = () => {
-  const classes = useStyles();
-
   return (
     <Box direction="column">
       <Container>
         <Grid xs={12}>
-          <DisplayBox>
-            <Box className={classes.imageBox}>
-              <img alt="" src={PinkMag} className={classes.ImgA} />
+          <Box display="flex" padding="7px">
+            <Box
+              width="100%"
+              alignSelf="center"
+              display="flex"
+              justifyContent="center"
+            >
+              <img alt="" src={PinkMag} width="190px" height="190px" />
             </Box>
-            <div style={{ paddingBottom: 10 }}>
-              <Box fontWeight="bold" color="#751f66" lineHeight={3}>
+
+            <Box paddingBottom="30px">
+              <Box
+                fontWeight="bold"
+                color="#751f66"
+                lineHeight={3}
+                textAlign="center"
+              >
                 WHAT TO EXPECT FROM YOUR HOME INSPECTION
               </Box>
-              <Box textAlign="end" lineHeight={1.5} letterSpacing={1.7}>
+
+              <Box
+                textAlign="start"
+                lineHeight={1.5}
+                letterSpacing={1.7}
+                width="51em"
+              >
+                <div>
+                  Buyers Beware inspector will provide you with the best home
+                  inspection service and a comprehensive report on the condition
+                  of the property. Our home inspectors are always reliable,
+                  professional, and knowledgeable.{" "}
+                </div>
                 Our New Jersey home inspection is an in-depth objective visual
                 analysis of a home`s structure and mechanical systems. An
                 inspection will determine the areas of the home that are not
@@ -65,31 +64,44 @@ export const FaqPage = () => {
                 Thermography is used by LDG for the most thorough inspections
                 available.
               </Box>
-            </div>
-          </DisplayBox>
+            </Box>
+          </Box>
           <Grid item xs={12}>
             <DisplayBox>
-              <Box>
+              <Box alignSelf="center">
                 <Box fontWeight="bold" color="#751f66" lineHeight={3}>
                   WE INSPECT THE FOLLOWING WHEN VISIBLE AND ACCESSIBLE:
                 </Box>
-                <Box lineHeight={1.5} letterSpacing={1.7}>
-                  We inspect the following, when visible and accessible: • Roof
-                  • Structural Components • Attic, Ventilation & Insulation •
-                  Exterior Cladding • Porch & Deck • Attached Garage •
-                  Foundation • Basement / Crawlspace • Electrical System •
-                  Plumbing System • HVAC System Interior including; Built-In
-                  Appliances, Ceilings, Floors & Walls, Windows and Doors
+
+                <Box
+                  letterSpacing={1}
+                  lineHeight={1.5}
+                  // textAlign="center"
+                  width="58em"
+                  color="#751f66"
+                  fontSize={17}
+                >
+                  <ul>
+                    {SERVICES.map((service) => (
+                      <li key={service}>{service}</li>
+                    ))}
+                  </ul>
                 </Box>
               </Box>
 
-              <Box className={classes.BottomImageBox}>
-                <img alt="" src={Thumbup} className={classes.ImgB} />
+              <Box
+                width="100%"
+                alignSelf="center"
+                display="flex"
+                justifyContent="center"
+                paddingLeft="20px"
+              >
+                <img alt="" src={Thumbup} width="200px" height="200px" />
               </Box>
             </DisplayBox>
             <FaqAccordion />
           </Grid>
-          <OurPromise />
+          {/* <OurPromise /> */}
         </Grid>
       </Container>
     </Box>

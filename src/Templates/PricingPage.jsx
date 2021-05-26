@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "space-evenly",
     padding: 33,
-    flexWrap: 'wrap'
+    flexWrap: "wrap",
   },
   listItem: {
     alignItems: "center",
@@ -126,9 +126,11 @@ export const PricingPage = () => {
       </PadBox>
 
       <PriceCard />
+
       <SummaryPriceCard />
+
       <BundlePriceCard />
-      <OurPromise />
+      {/* <OurPromise /> */}
     </>
   );
 };

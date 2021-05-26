@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     display: "flex",
     fontSize: 18,
     justifyContent: "space-between",
-    height: "100%"
+    height: "100%",
 
     // borderColor: "#095565",
   },

@@ -7,38 +7,30 @@ import {
   ImageBox,
   DisplayCenterBox,
 } from "../Components/Box/MyBox";
-import {ScheduleButton} from "../Components/App/ScheduleButton";
+import { ScheduleButton } from "../Components/App/ScheduleButton";
+import { INSPECT_TYPE } from "../Components/Services/Services";
 
 export const HomePage = () => {
   return (
-    <Container >
+    <Container>
       <Grid container>
-        <Grid item xs={12} >
+        <Grid item xs={12}>
           <DisplayBox>
             <ImageBox>
               <img alt="" src={MagList} width="345" height="320" />
             </ImageBox>
 
             <Box
-              
-                lineHeight= {1.5}
-                letterSpacing= {1}
-                justifyContent= "center"
-                display= "flex"
-                flexDirection= "column"
-              
+              lineHeight={1.5}
+              letterSpacing={1}
+              justifyContent="center"
+              display="flex"
+              flexDirection="column"
             >
-              <Box fontWeight="bold" color="#ba359f" lineHeight={3}>
+              <Box fontWeight="bold" lineHeight={3}>
                 Let Us Help You Get to Know Your Home
               </Box>
-              <Box
-                
-                  display= "flex"
-                  flexDirection= "column"
-                  justifyContent= "center"
-                  width= "45em"
-              
-              >
+              <Box width="45em">
                 At Buyer Beware Home Inspections, we fully understand the
                 importance of a thorough home inspection, and that’s why we work
                 so hard to offer you the very best. Let us provide an unbiased,
@@ -53,27 +45,26 @@ export const HomePage = () => {
               </Box>
             </Box>
           </DisplayBox>
-          <DisplayCenterBox>
+          <Box display="flex">
             <div>
               <Box letterSpacing={1} lineHeight={1.5}>
-                <Box fontWeight="bold" color="#ba359f" lineHeight={2}>
+                <Box fontWeight="bold" lineHeight={2}>
                   We offer the following specialized inspection services:
                 </Box>
 
-                <Box>
-                  • Pre-Listing Inspection for Seller • Pre-Purchase Inspection
-                  for Buyer • During Construction Home Inspection • New
-                  Construction Home Inspection • Multi-Unit Property Inspection
-                  • Townhouse Home Inspection • Condo Inspection • Radon Testing
-                  • Termite / WDI (Wood Destroying Insect)
+                <Box display="flex" justifyContent="flex-start">
+                  <ul>
+                    {INSPECT_TYPE.map((service) => (
+                      <li key={service}>{service}</li>
+                    ))}
+                  </ul>
                 </Box>
               </Box>
             </div>
-            <Box style={{ paddingRight: 10 }}>
+            <Box alignSelf="center">
               <img alt="" src={CheckBox} width="100" height="100" />
             </Box>
-          </DisplayCenterBox>
-
+          </Box>
           <ScheduleButton />
         </Grid>
       </Grid>

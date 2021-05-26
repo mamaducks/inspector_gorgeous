@@ -6,48 +6,48 @@ export var services = [
   },
   {
     id: 2,
-    image: "/img/pump.png",
-    text: "Walls, ceilings, floors",
+    image: "/img/housepink.png",
+    text: "Walls, Ceilings, & Floors",
   },
   {
     id: 3,
-    image: "/img/meter.png",
-    text: "Windows and Doors",
+    image: "/img/doorwind.png",
+    text: "Windows & Doors",
   },
   {
     id: 4,
-    image: "/img/foundation.png",
-    text: "Basement, Foundation",
+    image: "/img/basement.png",
+    text: "Basement & Foundation",
   },
-  {
-    id: 5,
-    image: "/img/drainage.png",
-    text: "Grading and Drainage",
-  },
+  // {
+  //   id: 5,
+  //   image: "/img/drainage.png",
+  //   text: "Grading & Drainage",
+  // },
   {
     id: 6,
-    image: "/img/roofing.png",
-    text: "Roof, Flashings, and Trim",
+    image: "/img/roofcolor.png",
+    text: "Roof, Flashings, & Trim",
   },
   {
     id: 7,
     image: "/img/gutter.png",
-    text: "Gutters and Downspouts",
+    text: "Gutters & Downspouts",
   },
   {
     id: 8,
-    image: "/img/heatcool.png",
-    text: "Heating and Cooling",
+    image: "/img/heatcooler.png",
+    text: "Heating & Cooling",
   },
   {
     id: 9,
-    image: "/img/drainage.png",
+    image: "/img/plumbing.png",
     text: "Interior Plumbing System",
   },
   {
     id: 10,
-    image: "/img/drainage.png",
-    text: "Attic and visible Insulation",
+    image: "/img/attics.png",
+    text: "Attic & Visible Insulation",
   },
 ];
 

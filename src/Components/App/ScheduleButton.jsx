@@ -1,7 +1,9 @@
-import React from "react";
-import { Box, Button } from "@material-ui/core";
+import React, {useState} from "react";
+import { Box, Button, Dialog } from "@material-ui/core";
+import {ScheduleMeetingComponentInYourApp} from "../App/ScheduleMeeting";
 
 export function ScheduleButton() {
+  const [open, setOpen] = useState(false);
   return (
     <Box
       display="flex"
@@ -10,6 +12,15 @@ export function ScheduleButton() {
       style={{ padding: 25 }}
     >
       <Button variant="contained">Schedule your inspection today</Button>
-    </Box>
+   
+    <Button variant="contained" color="primary" onClick={() => setOpen(true)}>
+    Open simple dialog
+  </Button>
+  <div>
+        <Dialog open={open} onClose={() => setOpen(false)} >
+        <ScheduleMeetingComponentInYourApp />
+        </Dialog>
+      </div>
+ </Box>
   );
 }

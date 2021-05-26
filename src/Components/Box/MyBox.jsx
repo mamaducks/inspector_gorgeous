@@ -1,5 +1,17 @@
 import { Box, Grid, makeStyles } from "@material-ui/core";
 
+const MyStyles = {
+  Flex: { display: "flex" },
+  Center: { display: "flex", justifyContent: "center" },
+  DisplayEven: {
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
+};
+
+function GG() {
+  return <Box {...MyStyles.Flex} {...MyStyles.Center}>ff</Box>;
+}
 export function DisplayBox({ children }) {
   return (
     <Box display="flex" justifyContent="space-between">
@@ -45,7 +57,7 @@ export function MyBox({ children }) {
 export function MyInfoBox({ children }) {
   return (
     <Box
-    paddingTop={10}
+      paddingTop={10}
       letterSpacing={1.5}
       lineHeight={1.6}
       paddingBottom={15}
@@ -140,13 +152,13 @@ export function MyContentBox({ children }) {
 
 export function MyContent({ children }) {
   return (
-    <Box letterSpacing={1.7} lineHeight={1.5} width="115em" alignSelf="center">
+    <Box letterSpacing={1.5} lineHeight={1.5} width="115em" alignSelf="center">
       {children}
     </Box>
   );
 }
 
-export function ImageBox({ children }) {
+export function ImageBox({ children, ...props }) {
   return (
     <Box
       width="100%"
@@ -154,19 +166,21 @@ export function ImageBox({ children }) {
       display="flex"
       justifyContent="center"
       style={{ padding: 10 }}
+      {...props}
     >
       {children}
     </Box>
   );
 }
 
-export function ImageRBox({ children }) {
+export function ImageRBox({ children, ...props }) {
   return (
     <Box
       width="100%"
       alignSelf="center"
       display="flex"
       justifyContent="flex-end"
+      {...props}
     >
       {children}
     </Box>

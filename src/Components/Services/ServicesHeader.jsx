@@ -25,15 +25,18 @@ import {
 } from "../Box/MyBox";
 
 import { newServices } from "./ServiceList";
+import {INSPECT_TYPE} from "../Services/Services";
 
 const ITEMS_PER_ROW = 4;
+
+
 
 const useStyles = makeStyles({
   root: {
     padding: 10,
     alignItems: "center",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     flexDirection: "column",
   },
   list: {
@@ -73,44 +76,38 @@ export function ServicesHeader() {
   return (
     <Container>
       <Grid xs={12}>
-        {/* <DisplayBox>
-          <ImageBox>
-            <img alt="" src={ManMag} className={classes.listImg} />
-          </ImageBox> 
-           <MyContent>
-            <div>
-              A home inspection is only as good as the inspector. That’s why IG
-              Inspections LLC is your best choice for home inspections in New
-              Jersey. With over 30 years experience restoring, building, and
-              designing homes, whether you’re a homeowner, homebuyer, or agent
-              we’ll provide you with a detailed description of a home’s
-              condition so you can move forward confidently and with peace of
-              mind.
-            </div>
-            <div>
-              Count on WIN Home Inspection to provide you with the best home
-              inspection service and an unbiased, comprehensive report on the
-              condition of the property. Our home inspectors are always
-              reliable, professional, and knowledgeable.{" "}
-            </div>
-          </MyContent> 
-        </DisplayBox>*/}
         <Grid item xs={12}>
           <DisplayBox>
             <ImageBox>
               <img alt="" src={ManMag} className={classes.image} />
             </ImageBox>
-            
-            <MyContent>
-              <Box
-              color="rgb(117, 31, 102)"
-              textAlign="center"
-              fontSize="larger"
-              lineHeight={3}
-              letterSpacing={1}
+
+            <Box
+              letterSpacing={1.5}
+              lineHeight={1.5}
+              width="115em"
+              alignSelf="center"
             >
-              content header
-            </Box>
+              <Box
+                color="rgb(117, 31, 102)"
+                textAlign="center"
+                fontSize="larger"
+                lineHeight={3}
+                letterSpacing={1}
+              >
+                content header
+              </Box>
+              <div>
+                {" "}
+                A home inspection is only as good as the inspector. That’s why
+                IG Inspections LLC is your best choice for home inspections in
+                New Jersey. With over 30 years experience restoring, building,
+                and designing homes Buyer Beware is the top choice in south
+                jersey for your home inspection services. Whether you’re a
+                homeowner, homebuyer, or agent we’ll provide you with a detailed
+                description of a home’s condition so you can move forward
+                confidently and with peace of mind.
+              </div>
               Our inspections give you detailed report so you have the comfort
               and knowledge to make informed decisions about your home. Some
               issues are easily identified and others need a more in-depth and
@@ -132,46 +129,44 @@ export function ServicesHeader() {
                 condition, images and recommendations, delivered within 24 hours
                 (next business day) – often the same day
               </div>
-            </MyContent>
+            </Box>
           </DisplayBox>
         </Grid>
-
-        <DisplayBox>
-          <Box className={classes.root}>
-            <Box
-              letterSpacing={1}
-              lineHeight={1.5}
-              // textAlign="center"
-              width="58em"
-              color="#751f66"
-              fontSize={17}
-              style={{}}
-            >
-              • Pre-Listing Inspection for Seller • Pre-Purchase Inspection for
-              Buyer • New Construction Home Inspection • Multi-Unit Property
-              Inspection {"  "}• Townhouse Home Inspection • Condo Inspection •
-              During Construction Home Inspection • Radon Testing • Termite /
-              WDI (Wood Destroying Insect)
+        <Grid>
+          <DisplayBox>
+            <Box className={classes.root}>
+              <Box
+                letterSpacing={1}
+                lineHeight={1.5}
+                // textAlign="center"
+                width="58em"
+                // color="#751f66"
+                fontSize={17}
+                paddingBottom="12px"
+              >
+                <ul>
+                  {INSPECT_TYPE.map((service) => (
+                    <li key={service}>{service}</li>
+                  ))}
+                </ul>
+              </Box>
+              <Box fontWeight="bold">Our Full Service Inspections include</Box>
             </Box>
-            {/* <Box
-              letterSpacing={1.7}
-              lineHeight={1.5}
-              width="68em"
-              textAlign="center"
-            >
-              Your detailed Buyer Beware Inspection Report will be done by a
-              highly trained home inspector with details about your homes
-              condition, images and recommendations, delivered within 24 hours
-              (next business day) – often the same day
-            </Box> */}
-          </Box>
-          <ImageBox>
-            <img alt="" src={ThumbUp} className={classes.listImg} />
-          </ImageBox>
-        </DisplayBox>
-        {/* <CardActionArea>
+
+            <ImageBox>
+              <img
+                alt=""
+                src={ThumbUp}
+                width="177"
+                height="161"
+                className={classes.listImg}
+              />
+            </ImageBox>
+          </DisplayBox>
+          {/* <CardActionArea>
           <NewServiceListing newServices />
         </CardActionArea> */}
+        </Grid>
       </Grid>
     </Container>
   );

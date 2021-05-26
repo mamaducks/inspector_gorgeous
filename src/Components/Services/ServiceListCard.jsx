@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   list: {
     display: "flex",
     justifyContent: "space-evenly",
-    padding: 33,
+    padding: 20,
     flexWrap: "wrap",
   },
   listItem: {
@@ -17,20 +17,20 @@ const useStyles = makeStyles({
     justifyContent: "center",
     display: "flex",
     flexDirection: "column",
-    width: "25%",
-  },
-  listImg: {
-    width: 55,
-    height: 55,
-    paddingBottom: 15,
+    width: "21%",
+    marginBottom: 20,
+    padding: 12,
+    "& img": {
+      width: 75,
+      height: 67,
+      paddingBottom: 15,
+    }
   },
 });
+
 export const ServiceCard = () => {
   return (
     <Grid>
-      <Box color="#b23a87" fontWeight="bold" lineHeight={2} textAlign="center">
-        FULL SERVICE INSPECTIONS INCLUDE -
-      </Box>
       <GridList>
         <ServiceListing services />
       </GridList>
@@ -46,7 +46,7 @@ export function ServiceListing() {
       {services.map(({ text, image }) => {
         return (
           <div key={text} className={classes.listItem}>
-            <img alt="" src={image} className={classes.listImg} />
+            <img alt="" src={image} />
             <Box fontSize="larger" fontWeight="lighter" color="#b23a87">
               {text}
             </Box>
