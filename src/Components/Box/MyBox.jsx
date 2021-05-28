@@ -10,7 +10,11 @@ const MyStyles = {
 };
 
 function GG() {
-  return <Box {...MyStyles.Flex} {...MyStyles.Center}>ff</Box>;
+  return (
+    <Box {...MyStyles.Flex} {...MyStyles.Center}>
+      ff
+    </Box>
+  );
 }
 export function DisplayBox({ children }) {
   return (
@@ -209,6 +213,8 @@ export function CenterBox({ children }) {
       letterSpacing={2}
       color="#751f66"
       flexDirection="column"
+      textAlign="center"
+      alignSelf="center"
     >
       {children}
     </Box>
@@ -225,6 +231,69 @@ export function LongBox({ children }) {
       style={{ padding: 20 }}
     >
       {children}
+    </Box>
+  );
+}
+
+export function Summary({children, ...props}) {
+  return (
+    <Box
+      letterSpacing={1.5}
+      lineHeight={1.5}
+      width="115em"
+      alignSelf="center"
+      m="0 0 20px 0"
+      {...props}
+    >
+      {children}
+    </Box>
+  );
+}
+export function LayoutRBox({ image, heading, summary, second, third, fourth, ...props }) {
+  return (
+    <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
+     
+        <img alt="" src={image} width="345" height="320" style={{alignSelf: "center"}} {...props} />
+      
+
+      <Box
+        lineHeight={1.5}
+        letterSpacing={1}
+        justifyContent="space-evenly"
+        display="flex"
+        flexDirection="column"
+        alignContent="end"
+        width="50%"
+      >
+        <Box fontWeight="bold" lineHeight={2}>
+          {heading}
+        </Box>
+        <Box >{summary}</Box>
+        <Box>{second}</Box>
+        <Box>{third}</Box>
+        <Box>{fourth}</Box>
+      </Box>
+    </Box>
+  );
+}
+
+export function LayoutBox({ heading, image, children, ...props }) {
+  return (
+    <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
+      <Box letterSpacing={1} lineHeight={1.5} alignSelf="center">
+        <Box fontWeight="bold" lineHeight={1}>
+          {heading}
+        </Box>
+
+        <Box display="flex" justifyContent="flex-start" >
+          
+          <ul style={{ listStyleType: "square" }}>{children}</ul>
+        </Box>
+      </Box>
+
+      <Box alignSelf="center">
+        <img alt="" src={image} width="100" height="100" {...props} />
+      </Box>
     </Box>
   );
 }

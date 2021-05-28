@@ -181,4 +181,4 @@ export var bundlePrice = [
     price: "$110",
     secondaryPrice: "$90"
   }
-]
+];

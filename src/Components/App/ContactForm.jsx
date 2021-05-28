@@ -1,27 +1,29 @@
 import React, { useState } from "react";
 
 const ContactForm = () => {
-  const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+
     const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    let response = await fetch("http://localhost:5000/contact", {
+
+    fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
-      body: JSON.stringify(details),
+      body: JSON.stringify({
+        name: name.value,
+        email: email.value,
+        message: message.value,
+      }),
     });
-    setStatus("Submit");
-    let result = await response.json();
-    alert(result.status);
+
+    // eslint-disable-next-line no-restricted-globals
+    location.href = 'mailto:blah@fff.com'
+
+    name.value = email.value = message.value = "";
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
@@ -36,7 +38,8 @@ const ContactForm = () => {
         <label htmlFor="message">Message:</label>
         <textarea id="message" required />
       </div>
-      <button type="submit">{status}</button>
+
+      <button type="submit">Submit</button>
     </form>
   );
 };

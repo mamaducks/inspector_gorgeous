@@ -1,14 +1,13 @@
-import { makeStyles, Card, CardActionArea, Box, Grid, GridList } from "@material-ui/core";
+import { makeStyles, Box, Grid, GridList } from "@material-ui/core";
 import React from "react";
 import { services } from "./ServiceList";
-import { HeaderBox } from "../Box/MyBox";
 
 const ITEMS_PER_ROW = 4;
 
 const useStyles = makeStyles({
   list: {
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
     padding: 20,
     flexWrap: "wrap",
   },
@@ -31,9 +30,9 @@ const useStyles = makeStyles({
 export const ServiceCard = () => {
   return (
     <Grid>
-      <GridList>
+      
         <ServiceListing services />
-      </GridList>
+      
     </Grid>
   );
 };
@@ -57,31 +56,3 @@ export function ServiceListing() {
   );
 }
 
-export function ServiceListingCrappy() {
-  const classes = useStyles();
-
-  var items = services.slice(0, ITEMS_PER_ROW).map(({ text, image }) => {
-    return (
-      <div key={text} className={classes.listItem}>
-        <img alt="" src={image} className={classes.listImg} />
-        <h4 style={{ fontWeight: "lighter" }}>{text}</h4>
-      </div>
-    );
-  });
-
-  var itemsBottom = services.slice(ITEMS_PER_ROW).map(({ text, image }) => {
-    return (
-      <div key={text} className={classes.listItem}>
-        <img alt="" src={image} className={classes.listImg} />
-        <h4 style={{ fontWeight: "lighter" }}>{text}</h4>
-      </div>
-    );
-  });
-
-  return (
-    <div style={{ padding: 45 }}>
-      <div className={classes.list}>{items}</div>
-      <div className={classes.list}>{itemsBottom}</div>
-    </div>
-  );
-}

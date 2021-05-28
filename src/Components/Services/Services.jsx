@@ -21,5 +21,7 @@ export const INSPECT_TYPE = [
     "Basement / Crawlspace",
     "Electrical System",
     "Plumbing System",
-    "HVAC System Interior including; Built-In Appliances, Ceilings, Floors & Walls, Windows and Doors",
+    "HVAC System Interior",
   ];
+
+  

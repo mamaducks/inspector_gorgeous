@@ -133,12 +133,16 @@ const theme = createMuiTheme({
         minWidth: 42
       },
     },
+    // MuiDialogPaperWidthSm: {
+    //   maxWidth: "md"
+    // }
     // MuiListItemText: {
     //   root: {
     //     fontFamily: "Helvetica"
     //   }
     // }
   },
+ 
 });
 
 export default theme;
