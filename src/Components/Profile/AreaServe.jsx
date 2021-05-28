@@ -11,23 +11,17 @@ const useStyles = makeStyles({
 export function AreaServe() {
   const classes = useStyles();
   return (
-    <Container>
-      <Box
-        display="flex"
-        justifyContent="space-evenly"
-        color="#751f66"
-        letterSpacing={1.5}
-        lineHeight={1.6}
-      >
+    <Container display="flex" justifyContent="space-evenly" paddingTop="15px" paddingBottom="12px">
+    
         <CenterBox>SERVICE AREA</CenterBox>
+        <CenterBox>
+        <Box textAlign="center">SOUTH JERSEY</Box>
         <div>
-        <Box textAlign="center">South Jersey</Box>
-        <Box>
           Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape May
           Counties
-        </Box>
         </div>
-      </Box>
+        </CenterBox>
+     
       {/* <Grid container xs={12} justify="center" backgroundColor="#095565">
         <Grid
           item

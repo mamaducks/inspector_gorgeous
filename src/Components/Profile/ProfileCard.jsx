@@ -13,8 +13,8 @@ export function ProfileCard() {
           <img
             alt=""
             src={EmmaLogo}
-            width="350"
-            height="280"
+            width="320"
+            height="245"
             style={{ paddingLeft: 25 }}
           />
   

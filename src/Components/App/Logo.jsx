@@ -6,9 +6,9 @@ const useStyles = makeStyles({
   logo: {
     display: "flex",
     alignItems: "flex-end",
-    fontSize: 31,
-    fontWeight: "bolder",
-    paddingBottom: 12,
+    fontSize: 30,
+    fontWeight: "bold",
+    paddingBottom: 9,
     paddingLeft: 4,
     "& div": {
       fontWeight: "lighter",

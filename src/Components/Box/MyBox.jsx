@@ -209,8 +209,8 @@ export function CenterBox({ children }) {
   return (
     <Box
       fontSize={14}
-      lineHeight={2}
-      letterSpacing={2}
+      lineHeight={1.4}
+      letterSpacing={1}
       color="#751f66"
       flexDirection="column"
       textAlign="center"
