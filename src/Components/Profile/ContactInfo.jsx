@@ -2,18 +2,24 @@ import { Box } from "@material-ui/core";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { IoMdPin } from "react-icons/io";
 import { MyFlexBox } from "../Box/MyBox";
+import Phone from "../../img/phoneSVG.svg"
+import Locate from "../../img/locateSVG.svg"
+import Email from "../../img/emailSVG.svg"
 
 export function InfoView() {
   return (
     <MyFlexBox>
       <Box letterSpacing={1} lineHeight={2} alignSelf="center">
-        <AllInfo Icon={<IoIosPhonePortrait />}>
+        <AllInfo Icon={Phone}>
           <InfoBox info="p: 609-670-0451" />
         </AllInfo>
-        <AllInfo Icon={<IoMdPin />}>
+        <AllInfo Icon={Locate}>
           <InfoBox info="Washington Ave" />
           <InfoBox info="Berlin NJ 08009" />
         </AllInfo>
+        {/* <AllInfo Icon={Email}>
+          <InfoBox info="BuyersBewareHomeInspections@gmail.com" />
+        </AllInfo> */}
       </Box>
     </MyFlexBox>
   );
@@ -30,7 +36,7 @@ export function AllInfo({ Icon, children, ...props }) {
         fontSize={40}
         paddingBottom="8px"
       >
-        {Icon}
+       <img alt="" src={Icon} width="60px" height="60px"/>
       </Box>
       {children}
     </Box>

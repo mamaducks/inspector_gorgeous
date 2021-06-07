@@ -112,7 +112,7 @@ const theme = createMuiTheme({
         // Some CSS
       },
       label: {
-        fontSize: 17,
+        // fontSize: 17,
         color: "#01333c",
       },
     },
@@ -127,13 +127,13 @@ const theme = createMuiTheme({
       },
     },
 
-    MuiListItemIcon: {
-      root: {
-        fontSize: 24,
-        color: "#a61b77",
-        minWidth: 42
-      },
-    },
+    // MuiListItemIcon: {
+    //   root: {
+    //     fontSize: 24,
+    //     color: "#a61b77",
+    //     minWidth: 42
+    //   },
+    // },
     // MuiDialogPaperWidthSm: {
     //   maxWidth: "md"
     // }

@@ -1,4 +1,5 @@
-import { makeStyles, Box, Grid, GridList } from "@material-ui/core";
+import Icon from "@iconify/react";
+import { makeStyles, Box, Grid, GridList, List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import React from "react";
 import { services } from "./ServiceList";
 
@@ -16,28 +17,39 @@ const useStyles = makeStyles({
     justifyContent: "center",
     display: "flex",
     flexDirection: "column",
-    width: "21%",
+    width: "215px",
     marginBottom: 20,
-    padding: 12,
+    padding: 8,
     "& img": {
-      width: 75,
-      height: 67,
+      width: 40,
+      height: 40,
       paddingBottom: 15,
     }
+  },
+  newList: {
+display: "flex",
+
+
   },
 });
 
 export const ServiceCard = () => {
   return (
+    <>
     <Grid>
       
-        <ServiceListing services />
+        <ServiceInclude servicesOld />
+        
       
     </Grid>
+    <Grid>
+      {/* <Service services /> */}
+    </Grid>
+    </>
   );
 };
 
-export function ServiceListing() {
+export function ServiceInclude() {
   const classes = useStyles();
 
   return (
@@ -45,8 +57,8 @@ export function ServiceListing() {
       {services.map(({ text, image }) => {
         return (
           <div key={text} className={classes.listItem}>
-            <img alt="" src={image} />
-            <Box fontSize="larger" fontWeight="lighter" color="#b23a87">
+            <img alt="" src={image} width="55px" height="55px"/>
+            <Box  fontWeight="lighter" >
               {text}
             </Box>
           </div>
@@ -55,4 +67,40 @@ export function ServiceListing() {
     </div>
   );
 }
+
+
+
+// export function Service() {
+//   const classes = useStyles();
+//   const [dense, setDense] = React.useState(false);
+
+//   return (
+//     <div>
+//       {services.map(({ text, image, Icon }) => {
+//         return (
+         
+//           <div >
+//             <List dense={dense}>
+             
+                
+//                   <ListItem>
+//                   <img alt="" src={image} width="50px" height="50px" marginRight="20px"/>
+//                   <Box fontSize="larger" fontWeight="lighter" color="#b23a87">
+//               {text}
+//             </Box>
+//                   </ListItem>
+                 
+//             </List>
+//           </div>
+//         );
+
+       
+//       })}
+//     </div>
+//   );
+// }
+
+// export function BdService() {
+
+// }
 

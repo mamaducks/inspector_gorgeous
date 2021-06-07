@@ -11,7 +11,7 @@ import { Phone } from "../App/Phone";
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "#c54299",
+    backgroundColor: "#a71976",
     padding: 12,
   },
 

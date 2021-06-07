@@ -1,7 +1,9 @@
 import { LayoutBox } from "../Box/MyBox";
 import CheckBox from "../../img/checkedbox.png";
 import { INSPECT_TYPE } from "../Services/Services";
-
+import { Service } from "../Services/ServiceListCard";
+import {services} from "../Services/ServiceList";
+import {List, ListItem, ListItemAvatar, ListItemText, Avatar, Icon} from "@material-ui/core"
 export const Services = ({image, ...props}) => {
   return (
     <LayoutBox
@@ -17,3 +19,5 @@ export const Services = ({image, ...props}) => {
     </LayoutBox>
   );
 };
+
+

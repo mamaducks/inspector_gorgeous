@@ -18,25 +18,25 @@ const useStyles = makeStyles({
   },
 });
 
-export function Social() {
+export function Social({color, ...props}) {
   const classes = useStyles();
 
   return (
-    <Box className={classes.title}>
+    <Box flexGrow={2} display="flex" justifyContent="center" {...props}>
       <IconButton>
-        <MailTo label={<AiOutlineMail className={classes.mail} />} />
+        <MailTo label={<AiOutlineMail className={classes.mail} color={color} />} />
         {/* <AiOutlineMail/> */}
       </IconButton>
 
       <IconButton>
-        <AiFillFacebook />
+        <AiFillFacebook color={color}/>
       </IconButton>
 
       <IconButton>
-        <FiInstagram />
+        <FiInstagram color={color}/>
       </IconButton>
       <IconButton>
-        <AiFillLinkedin />
+        <AiFillLinkedin color={color}/>
       </IconButton>
     </Box>
   );

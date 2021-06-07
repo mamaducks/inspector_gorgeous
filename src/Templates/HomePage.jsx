@@ -1,15 +1,16 @@
 import { Container, Grid } from "@material-ui/core";
-import House from "../img/houseclip.png";
-import CheckBox from "../img/checkedbox.png";
+import House from "../img/homePage.png";
+import CheckBox from "../img/inspectList.png";
 import { LayoutRBox } from "../Components/Box/MyBox";
-import { ScheduleButton } from "../Components/App/ScheduleButton";
+import { ScheduleButtonNew } from "../Components/App/ScheduleButton";
 import { Services } from "../Components/Services/ServiceTypes";
-
+import {PadBox} from "../Components/Box/MyBox"
 export const HomePage = () => {
   return (
     <Container>
       <Grid container>
         <Grid item xs={12}>
+          <PadBox/>
           <LayoutRBox
             image={House}
             width="530px"
@@ -27,9 +28,11 @@ export const HomePage = () => {
           we have the knowledge needed to help you get to know your new
           home."
           />
-          <Services image={CheckBox} width="140px" height="140px" />
-
-          <ScheduleButton />
+          <PadBox/>
+          <Services image={CheckBox} width="400px" height="320px" />
+<PadBox />
+          <ScheduleButtonNew title="Schedule your Inspection "   />
+         
         </Grid>
       </Grid>
     </Container>

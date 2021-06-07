@@ -13,7 +13,7 @@ const ProfileListItem = ({ Icon, text }) => {
     <>
       <ListItem>
         <ListItemIcon>
-          <Icon color="#b23a87" />
+          <Icon color="#a71976" />
         </ListItemIcon>
 
         <ListItemText primary={text} />

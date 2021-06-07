@@ -1,6 +1,5 @@
 import { ScheduleMeeting } from 'react-schedule-meeting';
 
-
 // this generates basic available timeslots for the next 6 days
 const availableTimeslots = [0, 1, 2, 3, 4, 5].map((id) => {
   return {

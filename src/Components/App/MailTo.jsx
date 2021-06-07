@@ -7,7 +7,7 @@ export const MailTo = ({label}) => {
     return (
       <a
         href={`mailto:${email}${params}`}
-        style={{ color: "white"}}
+        style={{ color: "#a71976"}}
       >
         {children}
       </a>

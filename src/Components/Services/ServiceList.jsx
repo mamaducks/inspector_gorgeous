@@ -1,52 +1,64 @@
+import { ListItem, ListItemIcon, List } from "@material-ui/core";
+import {
+  atom,
+  useRecoilState,
+  useRecoilValue,
+  setRecoilValue,
+  useSetRecoilState,
+} from "recoil";
+import WindDoor from "../../img/windowDoor.svg";
+
+
+
 export var services = [
   {
     id: 1,
-    image: "/img/plug.png",
+    image: "/img/plugSVG.svg",
     text: "Electrical Panels & Breakers",
   },
   {
     id: 2,
-    image: "/img/housepink.png",
+    image: "/img/wallImg.svg",
     text: "Walls, Ceilings, & Floors",
   },
   {
     id: 3,
-    image: "/img/doorwind.png",
+    image: "/img/winDoorSVG.svg",
     text: "Windows & Doors",
   },
   {
     id: 4,
-    image: "/img/basement.png",
+    image: "/img/basementSVG.svg",
     text: "Basement & Foundation",
   },
-  // {
-  //   id: 5,
-  //   image: "/img/drainage.png",
-  //   text: "Grading & Drainage",
-  // },
+  {
+    id: 5,
+    image: "/img/drainageSVG.svg",
+    text: "Grading & Drainage",
+  },
   {
     id: 6,
-    image: "/img/roofcolor.png",
+    image: "/img/roofSVG.svg",
     text: "Roof, Flashings, & Trim",
   },
   {
     id: 7,
-    image: "/img/gutter.png",
+    image: "/img/gutterSVG.svg",
     text: "Gutters & Downspouts",
   },
   {
     id: 8,
-    image: "/img/heatcooler.png",
+    image: "/img/heatcoolSVG.svg",
     text: "Heating & Cooling",
   },
   {
     id: 9,
-    image: "/img/plumbing.png",
+    image: "/img/plumbSVG.svg",
     text: "Interior Plumbing System",
   },
   {
     id: 10,
-    image: "/img/attics.png",
+    image: "/img/atticSVG.svg",
     text: "Attic & Visible Insulation",
   },
 ];
@@ -147,38 +159,38 @@ export var priceCard = [
   {
     id: 1,
     summary: "(Up to 2,500 sq. ft.) Single-family homes/townhomes",
-    price: "$395"
+    price: "$395",
   },
   {
     id: 2,
     summary: "Condominiums",
-    price: "$325"
+    price: "$325",
   },
   {
     id: 3,
     summary: "*Properties over 2,500 sq. ft.",
-    price: "request a free quote today!"
+    price: "request a free quote today!",
   },
-]
+];
 
 export var bundlePrice = [
   {
     id: 1,
     summary: "Home Inspection Radon Testing Termite",
-    price: "$540"
+    price: "$540",
   },
   {
     id: 1,
     summary: "Radon Testing",
     secondaryText: "w/ Home Inspection:",
     price: "$125",
-    secondaryPrice: "$100"
+    secondaryPrice: "$100",
   },
   {
     id: 2,
     summary: "Termite testing",
     secondaryText: "w/ Home Inspection:",
     price: "$110",
-    secondaryPrice: "$90"
-  }
+    secondaryPrice: "$90",
+  },
 ];

@@ -43,10 +43,11 @@ export function MyFlexBox({ children }) {
   return <Box display="flex">{children}</Box>;
 }
 
-export function PadBox({ children }) {
+export function PadBox({ children, ...props }) {
   return (
-    <Box p={10} style={{ padding: 10 }}>
+    <Box p={10} style={{ padding: 10 }} {...props}>
       {children}
+     
     </Box>
   );
 }
@@ -71,6 +72,23 @@ export function MyInfoBox({ children }) {
     </Box>
   );
 }
+
+export function MyQuoteBox({ children }) {
+  return (
+    <PadBox>
+    <Box
+      
+      letterSpacing={1}
+      lineHeight={1.4}
+      textAlign="center"
+    >
+      {children}
+    </Box>
+    </PadBox>
+  );
+}
+
+
 
 export function MyMapBox({ children }) {
   return (
@@ -263,7 +281,7 @@ export function LayoutRBox({ image, heading, summary, second, third, fourth, ...
         display="flex"
         flexDirection="column"
         alignContent="end"
-        width="50%"
+        width="33rem"
       >
         <Box fontWeight="bold" lineHeight={2}>
           {heading}
@@ -277,7 +295,7 @@ export function LayoutRBox({ image, heading, summary, second, third, fourth, ...
   );
 }
 
-export function LayoutBox({ heading, image, children, ...props }) {
+export function LayoutBox({ heading, image, button, children, ...props }) {
   return (
     <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
       <Box letterSpacing={1} lineHeight={1.5} alignSelf="center">
@@ -289,6 +307,7 @@ export function LayoutBox({ heading, image, children, ...props }) {
           
           <ul style={{ listStyleType: "square" }}>{children}</ul>
         </Box>
+        {button}
       </Box>
 
       <Box alignSelf="center">

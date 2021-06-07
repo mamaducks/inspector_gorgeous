@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Accordion,
@@ -6,8 +6,16 @@ import {
   AccordionDetails,
   Typography,
   Container,
+  Box,
+  Dialog,
+  Button,
+  Card,
+  CardMedia,
+  CardActionArea,
 } from "@material-ui/core";
 import { MdExpandMore } from "react-icons/md";
+import Report from "../../img/reportA.png";
+import Reporter from "../../img/reportB.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,6 +54,7 @@ const AccordionBox = ({ heading, body }) => {
 
 export function FaqAccordion() {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
 
   return (
     <div className={classes.root}>
@@ -55,35 +64,75 @@ export function FaqAccordion() {
           heading="HAT DOES YOUR STANDARD HOME INSPECTION COVER?"
           body="Our standard inspection is an evaluation of the
           home’s visible and accessible interior and exterior structure,
-          systems and components. We will inspect the following,
-          when visible and accessible: • Roof • Structural Components •
-          Attic, Ventilation & Insulation • Exterior Cladding • Porch &
-          Deck • Attached Garage • Foundation • Basement / Crawlspace •
-          Electrical System • Plumbing System • HVAC System Interior
-          including; Built-In Appliances, Ceilings, Floors & Walls,
-          Windows and Doors"
+          systems and components. We will inspect all visible and accessible systems within your home from roof to basement – to ensure that everything is in proper working order."
         />
         <AccordionBox
           heading="HOW LONG WILL IT TAKE TO RECEIVE MY HOME INSPECTION REPORT?"
-          body=" We will provide you with a narrative report
-          that includes digital photos."
+          body=" Your detailed Buyer Beware Inspection Report will be done by a highly trained home inspector with details about your homes condition, images and recommendations, delivered within 24 hours (next business day) – often the same day."
         />
         <AccordionBox
           heading="SHOULD THE HOME BUYER ATTEND THE HOME INSPECTION?
 "
-          body="We encourage you to accompany us during
-          the inspection, when it is safe to do so. This allows us to
-          answer any questions, point out emergency switches and shutoff
-          valves, discuss important maintenance items, and familiarize you
-          with your new home."
+          body="We encourage you to accompany us during the inspection, when it is safe to do so. This allows us to answer any questions, point out emergency switches and shutoff valves, discuss important maintenance items, and familiarize you with your new home."
         />
         <AccordionBox
           heading="CAN I SEE AN EXAMPLE OF YOUR HOME INSPECTION REPORT?
 "
-          body="do you want to be my lover"
+          body={
+            <div>
+              <Box textAlign="center" >
+                We will provide you with a detailed description of the home’s
+                condition so you can move forward confidently with knowledge and peace of
+                mind
+              </Box>
+              <Box display="flex" justifyContent="center">
+                <Box display="flex" flexDirection="column">
+                  <img
+                    alt=""
+                    src={Report}
+                    width="150px"
+                    height="150px"
+                    onClick={() => setOpen(true)}
+                  />{" "}
+                 <DialogReport open={open} onClick={() => setOpen(false)} image={Report} /> 
+                </Box>
+                
+                
+                <Box display="flex" flexDirection="column">
+                  <img
+                    alt=""
+                    src={Reporter}
+                    width="150px"
+                    height="150px"
+                    onClick={() => setOpen(true)}
+                  />
+                  <DialogReport open={open} onClick={() => setOpen(false)} image={Reporter} />
+                </Box>
+              </Box>
+            </div>
+          }
         />
       </Container>
     </div>
+  );
+}
+
+
+
+function DialogReport({ image }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+    <Button onClick={() => setOpen(true)}>View Large</Button>
+
+    <Dialog
+      open={open}
+      onClose={() => setOpen(false)}
+    >
+      <img alt="" src={image} width="300px" height="450px" />
+    </Dialog>
+    </>
   );
 }
 
@@ -101,8 +150,7 @@ const questions = () => {
       Inspectors will note torn or missing shingles and nail pops that may or
       may not indicate a full-fledged problem. To guarantee that you are buying
       a house with a durable roof, the inspector may suggest hiring a licensed
-      roofing contractor to provide a full evaluation.
-       Attic and Crawl Space
+      roofing contractor to provide a full evaluation. Attic and Crawl Space
       Inspections We do not mind to get dirty and inspect all accessible attic
       and crawl spaces. A number of structural issues are discovered in the
       attic and crawl spaces. Damaged (cracked or loose) roof rafters, floor
@@ -119,8 +167,7 @@ const questions = () => {
       system and is not required to report on any code issues. The electrical
       inspection includes the main service panel, service lines, power outlets,
       and the existence of GFCI and AFCI breakers,light fixtures circuit wiring
-      and grounding.
-       Plumbing Inspections A home inspector can only be
+      and grounding. Plumbing Inspections A home inspector can only be
       responsible for the components that are visible. Most of the home’s
       plumbing system is covered by the walls. What is visible could show the
       home’s plumbing health. Galvanized steel pipes are an indication of
