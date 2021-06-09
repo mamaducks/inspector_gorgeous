@@ -1,4 +1,4 @@
-export const MailTo = ({label}) => {
+export const MailTo = ({label, ...props}) => {
   const Mailto = ({ email, subject = "", body = "", label = "", children }) => {
     let params = subject || body ? "?" : "";
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
@@ -7,7 +7,7 @@ export const MailTo = ({label}) => {
     return (
       <a
         href={`mailto:${email}${params}`}
-        style={{ color: "#a71976"}}
+        {...props}
       >
         {children}
       </a>
@@ -19,8 +19,7 @@ export const MailTo = ({label}) => {
       email="scrubblies@gmail.com"
       subject="I'm interested in a quote!"
       body="Enter the details of your message and contact information."
-    >
-      {label}
+    >{label}
     </Mailto>
   );
 };

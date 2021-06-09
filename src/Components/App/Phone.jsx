@@ -9,12 +9,11 @@ const useStyles = makeStyles({
     alignItems: "center",
     display: "flex",
     letterSpacing: 1.3,
-    color: "#cdcdcd",
     fontSize: "21px",
     alignSelf: "center",
     margin: 0,
     "& div": {
-      fontSize: 19,
+      fontSize: 20,
     },
   },
 });

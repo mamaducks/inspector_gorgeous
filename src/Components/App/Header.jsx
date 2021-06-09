@@ -1,33 +1,36 @@
 // Imports
-import { Link, Box, Icon } from "@material-ui/core";
-import EmmaLogo from "../../img/emmaLogoSmall.png";
-import { FaPhoneAlt } from "react-icons/fa";
-import routes from "../../App/Routes";
-import { makeStyles } from "@material-ui/core";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import {
+  Link,
+  makeStyles,
+  Tab as MuiTab,
+  Tabs as MuiTabs,
+} from "@material-ui/core";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { AppBar } from "./AppBar";
+import routes from "../../App/Routes";
 import { Phone } from "../App/Phone";
 
 const useStyles = makeStyles({
   root: {
     backgroundColor: "#a71976",
-    padding: 12,
+    padding: 1,
   },
 
   tabList: {
     display: "flex",
     fontSize: 18,
     justifyContent: "space-between",
-    height: "100%",
 
     // borderColor: "#095565",
   },
   tab: {
-    width: "70%",
-    justifyContent: "space-evenly",
-    display: "flex",
+    // justifyContent: "space-evenly",
+    // display: "flex",
     letterSpacing: 2,
+  },
+  button: {
+    display: "flex",
+    justifyContent: "space-evenly",
   },
 });
 
@@ -38,41 +41,71 @@ export const HeadTabs = () => {
     <div className={classes.root}>
       <Tabs>
         <div className={classes.tabList}>
-          <Phone />
           <div className={classes.tab}>
-            <Tab>
-              <Link href="/" underline="none">
-                HOME
-              </Link>
-            </Tab>
-            <Tab>
-              <Link href={routes.pages.services} underline="none">
-                SERVICES
-              </Link>
-            </Tab>
-            {/* <Tab>
+            <TabList>
+              <Tab>
+                <Link href="/" underline="none">
+                  HOME
+                </Link>
+              </Tab>
+
+              <Tab>
+                <Link href={routes.services.link} underline="none">
+                  SERVICES
+                </Link>
+              </Tab>
+
+              {/* <Tab>
               <Link href={routes.pages.pricing} underline="none">
                 PRICING
               </Link>
             </Tab> */}
-            <Tab>
-              <Link href={routes.pages.about} underline="none">
-                ABOUT
-              </Link>
-            </Tab>
-            <Tab>
-              <Link href={routes.pages.faq} underline="none">
-                FAQ
-              </Link>
-            </Tab>
-            <Tab>
-              <Link href={routes.pages.contact} underline="none">
-                CONTACT
-              </Link>
-            </Tab>
+
+              <Tab>
+                <Link href={routes.about.link} underline="none">
+                  ABOUT
+                </Link>
+              </Tab>
+
+              <Tab>
+                <Link href={routes.faq.link} underline="none">
+                  FAQ
+                </Link>
+              </Tab>
+
+              <Tab>
+                <Link href={routes.contact.link} underline="none">
+                  CONTACT
+                </Link>
+              </Tab>
+            </TabList>
+
+            <TabPanel />
+            <TabPanel />
+            <TabPanel />
+            <TabPanel />
+            <TabPanel />
           </div>
         </div>
       </Tabs>
+    </div>
+  );
+};
+
+export const HeadButtons = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <div className={classes.tabList}>
+        <MuiTabs value={window.location.pathname}>
+          {Object.values(routes).map(({ link, label }) => (
+            <MuiTab label={label} href={link} component="a" value={link} />
+          ))}
+        </MuiTabs>
+
+        <Phone />
+      </div>
     </div>
   );
 };

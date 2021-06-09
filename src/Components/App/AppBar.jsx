@@ -6,7 +6,7 @@ import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { MailTo } from "./MailTo";
 import { Logo } from "../App/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { Phone } from "./Phone";
 import {
   faYoutube,
   faFacebook,
@@ -15,19 +15,14 @@ import {
   faLinkedin,
   
 } from "@fortawesome/free-brands-svg-icons";
+import {HiOutlineMail} from 'react-icons/hi';
+
+import { Social } from "../App/SocialMedia";
 
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    paddingLeft: 21,
-    paddingRight: 12,
-    "& span": {
-      flexGrow: 2,
-      display: "flex",
-      justifyContent: "flex-end",
-      alignSelf: "flex-end",
-    },
-    
+    justifyContent: "space-between",
   },
 });
 
@@ -36,44 +31,19 @@ export function AppBar() {
   return (
     <div className={classes.root}>
       <Logo />
-      <span>
-        <Box width= "21%"
-    display= "flex"
-    justifyContent= "space-evenly"
-    paddingBottom="12px">
-        <IconButton>
-          <MailTo
-            label={
-              <AiOutlineMail color="black" fontSize="2rem" display="flex" />
-            }
-          />
-          {/* <AiOutlineMail/> */}
-        </IconButton>
-{/* 
-        <IconButton>
-          <AiFillFacebook />
-        </IconButton>
 
-        <IconButton>
-          <FiInstagram />
-        </IconButton>
-        <IconButton>
-          <AiFillLinkedin />
-        </IconButton> */}
-        <a href="https://www.facebook.com/learnbuildteach/"
-  className="facebook social">
-  <FontAwesomeIcon color="black" icon={faFacebook} size="2x" />
-</a>
-<a href="https://www.instagram.com/learnbuildteach"
-  className="instagram social">
-  <FontAwesomeIcon color="black" icon={faInstagram} size="2x" />
-</a>
-<a href="https://www.instagram.com/learnbuildteach"
-  className="instagram social">
-  <FontAwesomeIcon color="black" icon={faLinkedin} size="2x" />
-</a>
-</Box>
-      </span>
+      <Box display="flex" justifyContent="flex-end">
+        <Social
+          color="black"
+          alignSelf="flex-end"
+          display="flex"
+          justifyContent="space-evenly"
+          paddingBottom="10px"
+          minWidth="200px"
+          size="2x"
+          label={<HiOutlineMail color="black" />}
+          />
+      </Box>
     </div>
   );
 }

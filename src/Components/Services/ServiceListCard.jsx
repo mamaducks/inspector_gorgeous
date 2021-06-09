@@ -1,5 +1,14 @@
 import Icon from "@iconify/react";
-import { makeStyles, Box, Grid, GridList, List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+import {
+  makeStyles,
+  Box,
+  Grid,
+  GridList,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@material-ui/core";
 import React from "react";
 import { services } from "./ServiceList";
 
@@ -21,30 +30,23 @@ const useStyles = makeStyles({
     marginBottom: 20,
     padding: 8,
     "& img": {
-      width: 40,
-      height: 40,
+      width: 50,
+      height: 50,
       paddingBottom: 15,
-    }
+    },
   },
   newList: {
-display: "flex",
-
-
+    display: "flex",
   },
 });
 
 export const ServiceCard = () => {
   return (
     <>
-    <Grid>
-      
+      <Grid>
         <ServiceInclude servicesOld />
-        
-      
-    </Grid>
-    <Grid>
-      {/* <Service services /> */}
-    </Grid>
+      </Grid>
+      <Grid>{/* <Service services /> */}</Grid>
     </>
   );
 };
@@ -57,18 +59,15 @@ export function ServiceInclude() {
       {services.map(({ text, image }) => {
         return (
           <div key={text} className={classes.listItem}>
-            <img alt="" src={image} width="55px" height="55px"/>
-            <Box  fontWeight="lighter" >
-              {text}
-            </Box>
+            <img alt="" src={image}  />
+            
+            <Box fontWeight="lighter">{text}</Box>
           </div>
         );
       })}
     </div>
   );
 }
-
-
 
 // export function Service() {
 //   const classes = useStyles();
@@ -78,23 +77,21 @@ export function ServiceInclude() {
 //     <div>
 //       {services.map(({ text, image, Icon }) => {
 //         return (
-         
+
 //           <div >
 //             <List dense={dense}>
-             
-                
+
 //                   <ListItem>
 //                   <img alt="" src={image} width="50px" height="50px" marginRight="20px"/>
 //                   <Box fontSize="larger" fontWeight="lighter" color="#b23a87">
 //               {text}
 //             </Box>
 //                   </ListItem>
-                 
+
 //             </List>
 //           </div>
 //         );
 
-       
 //       })}
 //     </div>
 //   );
@@ -103,4 +100,3 @@ export function ServiceInclude() {
 // export function BdService() {
 
 // }
-

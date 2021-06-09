@@ -5,17 +5,16 @@ import EmmaLogo from "../../img/emmaLogoSmall.png";
 const useStyles = makeStyles({
   logo: {
     display: "flex",
-    alignItems: "flex-end",
-    fontSize: 30,
-    fontWeight: "bold",
-    paddingBottom: 9,
-    paddingLeft: 4,
-    "& div": {
-      fontWeight: "lighter",
-      fontSize: 18,
-      paddingLeft: 6,
-      paddingBottom: 4,
-    },
+    fontWeight: "lighter",
+    paddingBottom: "4px",
+    fontSize: "16px",
+  },
+  smallText: {
+    alignSelf: "flex-end",
+  },
+  largeText: {
+    fontSize: "30px",
+    fontWeight: "500",
   },
 });
 
@@ -23,10 +22,18 @@ export function Logo() {
   const classes = useStyles();
 
   return (
-    <Box display="flex" paddingBottom="4px">
-      <img alt="" src={EmmaLogo} width="105" height="85" />
-      <Box className={classes.logo}>
-        BUYER BEWARE <div>HOME INSPECTION, LLC</div>
+    <Box className={classes.logo}>
+      <img alt="" src={EmmaLogo} width="70" height="70" />
+
+      <Box
+        paddingLeft="4px"
+        flexDirection="column"
+        display="flex"
+        justifyContent="center"
+      >
+        <div className={classes.largeText}>BUYER BEWARE</div>
+
+        <div className={classes.smallText}>HOME INSPECTION, LLC</div>
       </Box>
     </Box>
   );

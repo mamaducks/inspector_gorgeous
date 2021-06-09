@@ -3,26 +3,28 @@ import { Box, Button, Dialog } from "@material-ui/core";
 import { ScheduleAppointment } from "../App/ScheduleMeeting";
 
 export function ScheduleButtonNew({ title, ...props }) {
-  const [open, setOpen] = useState(false);
-  const [appointment, setAppointment] = useState(null)
-  return (
-    <Box display="flex" justifyContent="center" width="100%">
-      <Button variant="contained" {...props} onClick={() => setOpen(true)}>
-        {title}
-      </Button>
+  // const [open, setOpen] = useState(false);
+  // const [appointment, setAppointment] = useState(null)
+  return null;
 
-      <div>
-        <Dialog
-          open={open}
-          onClose={() => setOpen(false)}
-          fullWidth
-          maxWidth="md"
-        >
-          <ScheduleAppointment setAppointment/>
-        </Dialog>
-      </div>
-    </Box>
-  );
+  // return (
+  //   <Box display="flex" justifyContent="center" width="100%">
+  //     <Button variant="contained" {...props} onClick={() => setOpen(true)}>
+  //       {title}
+  //     </Button>
+
+  //     <div>
+  //       <Dialog
+  //         open={open}
+  //         onClose={() => setOpen(false)}
+  //         fullWidth
+  //         maxWidth="md"
+  //       >
+  //         <ScheduleAppointment setAppointment/>
+  //       </Dialog>
+  //     </div>
+  //   </Box>
+  // );
 }
 
 // export function ScheduleButton({...props}) {

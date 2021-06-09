@@ -1,64 +1,53 @@
-import { ListItem, ListItemIcon, List } from "@material-ui/core";
-import {
-  atom,
-  useRecoilState,
-  useRecoilValue,
-  setRecoilValue,
-  useSetRecoilState,
-} from "recoil";
-import WindDoor from "../../img/windowDoor.svg";
-
-
+import Plug from "./plugSVG.svg";
+import Attic from "./atticSVG.svg";
+import Basement from "./basementSVG.svg";
+import Drainage from "./drainageSVG.svg";
+import Gutter from "./gutterSVG.svg";
+import HeatCool from "./heatcoolSVG.svg";
+import Plumb from "./plumbSVG.svg";
+import Roof from "./roofSVG.svg";
+import Wall from "./wallImg.svg";
+import Wind from "./winDoorSVG.svg";
 
 export var services = [
   {
-    id: 1,
-    image: "/img/plugSVG.svg",
+    image: Plug,
     text: "Electrical Panels & Breakers",
   },
   {
-    id: 2,
-    image: "/img/wallImg.svg",
+    image: Wall,
     text: "Walls, Ceilings, & Floors",
   },
   {
-    id: 3,
-    image: "/img/winDoorSVG.svg",
+    image: Wind,
     text: "Windows & Doors",
   },
   {
-    id: 4,
-    image: "/img/basementSVG.svg",
+    image: Basement,
     text: "Basement & Foundation",
   },
   {
-    id: 5,
-    image: "/img/drainageSVG.svg",
+    image: Drainage,
     text: "Grading & Drainage",
   },
   {
-    id: 6,
-    image: "/img/roofSVG.svg",
+    image: Roof,
     text: "Roof, Flashings, & Trim",
   },
   {
-    id: 7,
-    image: "/img/gutterSVG.svg",
+    image: Gutter,
     text: "Gutters & Downspouts",
   },
   {
-    id: 8,
-    image: "/img/heatcoolSVG.svg",
+    image: HeatCool,
     text: "Heating & Cooling",
   },
   {
-    id: 9,
-    image: "/img/plumbSVG.svg",
+    image: Plumb,
     text: "Interior Plumbing System",
   },
   {
-    id: 10,
-    image: "/img/atticSVG.svg",
+    image: Attic,
     text: "Attic & Visible Insulation",
   },
 ];

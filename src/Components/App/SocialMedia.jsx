@@ -3,7 +3,14 @@ import { IconButton, Box, Icon } from "@material-ui/core";
 import { AiFillFacebook, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 import { FiInstagram } from "react-icons/fi";
 import { MailTo } from "./MailTo";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faYoutube,
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 const useStyles = makeStyles({
   title: {
     flexGrow: 2,
@@ -18,26 +25,41 @@ const useStyles = makeStyles({
   },
 });
 
-export function Social({color, ...props}) {
+export function Social({ color, size, label, ...props }) {
   const classes = useStyles();
 
   return (
-    <Box flexGrow={2} display="flex" justifyContent="center" {...props}>
+    <Box  display="flex" justifyContent="center" {...props}>
       <IconButton>
-        <MailTo label={<AiOutlineMail className={classes.mail} color={color} />} />
-        {/* <AiOutlineMail/> */}
+        <MailTo
+          label={label}
+        />
       </IconButton>
 
-      <IconButton>
-        <AiFillFacebook color={color}/>
-      </IconButton>
-
-      <IconButton>
-        <FiInstagram color={color}/>
-      </IconButton>
-      <IconButton>
-        <AiFillLinkedin color={color}/>
-      </IconButton>
+      <a
+        href="https://www.facebook.com/learnbuildteach/"
+        className="facebook social"
+      >
+        <FontAwesomeIcon color={color} icon={faFacebook} size={size} />
+      </a>
+      <a
+        href="https://www.instagram.com/learnbuildteach"
+        className="instagram social"
+      >
+        <FontAwesomeIcon color={color} icon={faInstagram} size={size} />
+      </a>
+      <a
+        href="https://www.instagram.com/learnbuildteach"
+        className="instagram social"
+      >
+        <FontAwesomeIcon color={color} icon={faLinkedin} size={size} />
+      </a>
+      {/* <AiOutlineMail
+              color={color}
+              fontSize={size}
+              display="flex"
+              className={classes.mail}
+            /> */}
     </Box>
   );
 }

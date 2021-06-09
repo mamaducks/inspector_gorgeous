@@ -1,18 +1,20 @@
 import React from "react";
 import { Router } from "./Router";
-import { HeadTabs, Phone } from "../Components/App/Header";
+import { HeadTabs, Phone, HeadButtons } from "../Components/App/Header";
 import { Quote } from "../Components/App/RequestQuote";
-import {AppBar} from "../Components/App/AppBar";
+import { AppBar } from "../Components/App/AppBar";
 
 export function App() {
   return (
     <>
-    <AppBar />
-      <HeadTabs />
-     
+      <AppBar />
+      
+      <HeadButtons />
 
       <div className="container">
-        <Router />
+        <Router>
+          
+        </Router>
       </div>
 
       <Quote />

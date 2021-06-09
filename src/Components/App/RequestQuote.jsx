@@ -29,9 +29,14 @@ const useStyles = makeStyles({
     // justifyContent: "space-between",
     color: "#a71976",
     alignItems: "center",
+    paddingTop:"4px",
     // padding: "7px",
-   
   },
+  smallText: {
+fontWeight: "500",
+paddingRight: "4px"
+
+  }
 });
 
 const QuoteBox = ({ topText, btmText, ...props }) => {
@@ -55,11 +60,11 @@ export const Quote = () => {
 
   return (
     <>
-      <PadBox />
+      
 
-      <AppBar position="sticky" elevation={0}>
+      <AppBar position="sticky" elevation={0} className={classes.root}>
         {/* <Toolbar className={classes.title} disableGutters="true"> */}
-        <Grid xs={12} className={classes.title}>
+        <Grid container className={classes.title}>
           <Grid item xs={4}>
             <PadBox>
               <Box
@@ -68,7 +73,8 @@ export const Quote = () => {
                 fontSize="14px"
                 textAlign="center"
               >
-                <Box fontSize="16px">BUYERS BEWARE HOME INSPECTION</Box>
+                <Box fontSize="16px" lineHeight="16px" fontWeight="600">BUYER BEWARE HOME INSPECTION</Box>
+
                 <Box fontSize="15px">
                   <div>Serving Counties of South Jersey</div>
                   <Box fontSize="12px">
@@ -87,7 +93,8 @@ export const Quote = () => {
                 fontSize="14px"
                 textAlign="center"
               >
-                <Box fontSize="17px">Call to schedule 609-670-0451</Box>
+                <Box fontSize="17px" fontWeight="bold" display="flex" justifyContent="center" flexDirection="column">
+                  <div className={classes.smallText}>Call Today for a Quote </div><div>609-670-0451</div></Box>
                 <Box paddingTop="5px">
                   <ScheduleButtonNew
                     title="Schedule Online"
@@ -109,7 +116,7 @@ export const Quote = () => {
                 <Box fontSize="16px">Email Us</Box>
                 <Box>
                   <div>
-                    <MailTo label="Click Here" /> to send us an email
+                    <MailTo label="Click Here" style={{ color: "#a71976", fontWeight:"bold"}} /> to Send Us an Email
                   </div>
                 </Box>
               </Box>

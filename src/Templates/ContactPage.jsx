@@ -1,96 +1,145 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core";
 import { Title } from "../Components/App/HeaderTitle";
 import { Box, Container } from "@material-ui/core";
 import MapImage from "../img/mapNJ.png";
 import { ContactInfo, InfoView } from "../Components/Profile/ContactInfo";
-import { DisplayEvenBox, MyMapBox, MyInfoBox } from "../Components/Box/MyBox";
+import {
+  DisplayEvenBox,
+  ContactSocialBox,
+  MyMapBox,
+  MyInfoBox,
+} from "../Components/Box/MyBox";
 import ContactForm from "../Components/App/ContactForm";
 import { OldMap } from "../App/Map";
-import {Social} from "../Components/App/SocialMedia";
-import Heart from "../img/heart.svg"
-const location = {
-  address: "located in Berlin NJ",
-  lat: 39.7912,
-  lng: 74.9291,
-};
+import { Social } from "../Components/App/SocialMedia";
+import Heart from "../img/heart.svg";
+import { HiOutlineMail } from "react-icons/hi";
+import Happy from "../img/happyHouse.png";
+
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  header: {
+    paddingBlock: "25px",
+    letterSpacing: 1,
+    lineHeight: 1.3,
+    marginInline: "20px",
+    alignSelf: "center",
+    display: "flex",
+    justifyContent: "space-evenly",
+    "& img": {
+      width: "75px",
+      height: "75px",
+      paddingRight: "25px",
+    },
+  },
+
+  hours: {
+    letterSpacing: 1,
+    lineHeight: 2,
+    alignSelf: "center",
+    paddingTop: "20px",
+    display: "flex",
+    fontWeight: "lighter",
+    justifyContent: "space-evenly",
+    fontSize: "18px",
+    "& div": {
+      fontWeight: "bold",
+      paddingInline: "6px",
+    },
+  },
+  pageLine: {
+    textAlign: "center",
+    letterSpacing: 1.5,
+    lineHeight: 1.5,
+    fontWeight: 700,
+    color: "#ffffff",
+    fontSize: "larger",
+    backgroundColor: "#a71976",
+    marginBlock: "20px",
+  },
+  divLine: {
+    borderTop: "2px solid #a71976 ",
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  socialBox: {
+    textAlign: "center",
+    fontSize: "22px",
+    display: "flex",
+    alignItems: "center",
+    "& img": {
+      width: "40px",
+      height: "35px",
+      padding: "4px",
+    },
+  },
+  socialButtons: {
+    fontSize: "45px",
+    alignSelf: "center",
+    width: "100%",
+    justifyContent: "space-evenly",
+    paddingTop: "10px",
+    color: "#a71976",
+  },
+});
 
 export const ContactPage = () => {
+  const classes = useStyles();
   return (
     <>
-      {/* <Title title="Contact Us" /> */}
-      <Container style={{ display: "flex", flexDirection: "column" }}>
-        <Box display="flex" flexDirection="column" >
-          <Box
-            paddingTop="25px"
-            paddingBottom="20px"
-            letterSpacing={1.2}
-            lineHeight={1.4}
-            textAlign="center"
-            alignSelf="center"
-          >
-             Buyer Beware Home Inspections is based out of Berlin, NJ
-             <div> We offer Home
-            Inspection services to areas of New Jersey and Philadelphia
-            </div>
-            {/* We welcome you to contact us with any questions, comments, or
-            concerns. */}
+      <Container className={classes.root}>
+        <Box className={classes.root}>
+          <Box className={classes.header}>
+            <img alt="" src={Happy} />
+            <Box alignSelf="center" width="43rem" fontSize="18px">
+              Buyer Beware Home Inspections is based out of Berlin, NJ
+              <div>
+                {" "}
+                We offer Home Inspection services to areas of New Jersey and
+                Philadelphia
+              </div>
+            </Box>
           </Box>
 
-          <Box
-            display="flex"
-            justifyContent="space-evenly"
-            width="80%"
-            alignSelf="center"
-
-          >
-            {/* <img
-              alt=""
-              src={MapImage}
-              width="415"
-              height="380"
-              style={{ padding: 20, alignSelf: "center" }}
-            /> */}
-            {/* <OldMap location={location} /> */}
+          <DisplayEvenBox>
             <img alt="" src={MapImage} />
-            {/* <ContactInfo /> */}
             <InfoView />
-          </Box>
+          </DisplayEvenBox>
 
-          <Box letterSpacing={1} alignSelf="center" paddingTop="20px" >
-            Monday thru Friday 8:00 am - 7:00 pm Saturday 9:00 am - 5:00 pm
-            Sunday Closed
+          <Box className={classes.hours}>
+            <div>Monday thru Friday</div> 8:00 am - 7:00 pm <div>Saturday</div>{" "}
+            9:00 am - 5:00 pm
+            <div>Sunday </div>Closed
           </Box>
         </Box>
       </Container>
 
-      <Box
-        textAlign="center"
-        letterSpacing={1.5}
-        lineHeight={3}
-        fontWeight={700}
-        color="#ffffff"
-        marginTop="21px"
-        marginBottom="15px"
-        style={{ backgroundColor: "#a71976" }}
-      >
+      <Box className={classes.pageLine}>
         Traditional Home Inspections • Pre-Listing Inspections • Radon Testing •
         Termite Inspections
       </Box>
 
       <Container>
-        
-          <Box letterSpacing={1} lineHeight={2} >
-            <Box textAlign="center" fontSize="22px" display="flex" alignItems="center" >Have any questions?{" "} We'd <img alt="" src={Heart} width="40px" height="35px" style={{padding:"4px"}}/>to hear from you!</Box>
-            {/* Feel free to call or email us if you have any questions or reach out to us online */}
-            <Box paddingTop="10px">
-            <div style={{ borderTop: "2px solid #a71976 ", marginLeft: 20, marginRight: 20 }}></div>
-            <div>
-            <Social fontSize="60px" alignSelf="center" width="100%" justifyContent="space-evenly" paddingTop="10px" color="#a71976"/>
-            </div>
-            </Box>
+        <ContactSocialBox>
+          <Box className={classes.socialBox}>
+            Have any questions? We'd <img alt="" src={Heart} />
+            to hear from you!
           </Box>
-          {/* <ContactForm /> */}
-      
+          <Box paddingTop="15px">
+            <div className={classes.divLine}></div>
+            <div>
+              <Social
+                color="#a71976"
+                className={classes.socialButtons}
+                label={<HiOutlineMail color="#a71976" fontSize="45px" />}
+              />
+            </div>
+          </Box>
+        </ContactSocialBox>
       </Container>
     </>
   );

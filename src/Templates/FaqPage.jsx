@@ -1,30 +1,41 @@
 import { Box, Container, Grid } from "@material-ui/core";
 import { FaqAccordion } from "../Components/App/FaqAccordion";
-
-import { DisplayCenterBox, LayoutBox, LayoutRBox, PadBox } from "../Components/Box/MyBox";
-import { OurPromise } from "../Components/Profile/Promise";
-import { SERVICES } from "../Components/Services/Services";
 import { ScheduleButtonNew } from "../Components/App/ScheduleButton";
-import House from "../img/houseMag.png";
+import { LayoutBox, LayoutLBox, LayoutRBox,  PadBox } from "../Components/Box/MyBox";
+import { SERVICES } from "../Components/Services/Services";
 import Corner from "../img/houseC.png";
+import House from "../img/houseMag.png";
+import FaqHome from "../img/fagImg.png";
 
-import PinkMag from "../img/pinklistmag.png";
-import Thumbup from "../img/guythumbup.png";
-import ThumbCheck from "../img/thumbupCheck.png";
-import GuyCheck from "../img/guycheck.png";
-// import MagHouse from "../img/maghouse.png";
-import { Title } from "../Components/App/HeaderTitle";
-import Building from "../img/bldginspect.png";
 
 export const FaqPage = () => {
   return (
     <Box direction="column">
       <Container>
-        <Grid xs={12} style={{paddingTop: "25px"}}>
+        <Grid  style={{paddingTop: "25px"}}>
+          <LayoutLBox
+          image={Corner}
+          width="600"
+          height="400"
+          heading="WHAT TO EXPECT FROM YOUR HOME INSPECTION"
+
+          summary=" Buyers Beware inspector will provide you with the best home
+            inspection service and a comprehensive report on the condition
+            of the property. Our home inspectors are always reliable,
+            professional, and knowledgeable."
+            second="Our New Jersey home inspection is an in-depth objective visual
+          analysis of a home`s structure and mechanical systems. An
+          inspection will determine the areas of the home that are not
+          performing properly, as well as items that are beyond their
+          useful life or are unsafe."
+            third="We will provide you with a detailed reports clearly
+          identifying any material defect along with a recommendation
+          for what to do as well as what can happen if not repaired."
+          />
           <LayoutRBox
-            image={House}
-            width="500"
-            height="400"
+            image={FaqHome}
+            width="425"
+            height="350"
             heading="WHAT TO EXPECT FROM YOUR HOME INSPECTION"
             summary=" Buyers Beware inspector will provide you with the best home
             inspection service and a comprehensive report on the condition
@@ -42,14 +53,16 @@ export const FaqPage = () => {
           <Grid item xs={12} style={{paddingTop: "25px"}}>
             <LayoutBox
               heading="WE INSPECT THE FOLLOWING WHEN VISIBLE AND ACCESSIBLE:"
-              image={Corner}
-              width="600px"
-              height="400px"
+              image={House}
+              width="500px"
+              height="325px"
               button={<ScheduleButtonNew title="Schedule Today"/>}
             >
+              <Box lineHeight={1.7} >
               {SERVICES.map((service) => (
                 <li key={service}>{service}</li>
               ))}
+              </Box>
               <PadBox/>
              
             </LayoutBox>
@@ -62,6 +75,8 @@ export const FaqPage = () => {
     </Box>
   );
 };
+
+
 
 // const Question = {
 //   summary="A home inspection is only as good as the inspector.
@@ -80,6 +95,7 @@ export const FaqPage = () => {
 //               home – from roof to basement – to ensure that everything is in
 //               proper working order. I encourage you to attend, and accompany me
 //               during the inspection."
+// can be the difference between closing on the home of your dreams, or walking away entirely from a costly headache
 //               third="Feel free to ask questions as we inspect the premises together.
 //               I will give you a full explanation, in non-technical terms, to
 //               provide you with a better understanding of the systems within

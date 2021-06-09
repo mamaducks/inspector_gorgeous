@@ -5,10 +5,10 @@ const theme = createMuiTheme({
   palette: {
     type: "light",
     primary: {
-      main: "#cdcdcd",
+      main: "#e6e0e4",
     },
     secondary: {
-      main: "#2790b9",
+      main: "#c575aa",
     },
     text: {
       primary: "#494649",
@@ -119,13 +119,38 @@ const theme = createMuiTheme({
     MuiIconButton: {
       root: { color: "black", fontSize: "2rem", padding: "0px" },
     },
-   
+
     MuiContainer: {
       root: {
         justifyContent: "space-evenly",
         display: "flex",
       },
     },
+
+    MuiTabs: {
+      root: {
+        color: "white",
+      },
+    },
+    MuiTab: {
+      root: {
+        "&:hover": {
+          color: "#c575aa",
+        },
+      },
+    },
+
+    MuiAccordion: {
+      root: {
+        
+        
+        
+        '&$expanded': {
+          margin: 'auto',
+        },
+      },
+      
+    }
 
     // MuiListItemIcon: {
     //   root: {
@@ -143,7 +168,6 @@ const theme = createMuiTheme({
     //   }
     // }
   },
- 
 });
 
 export default theme;

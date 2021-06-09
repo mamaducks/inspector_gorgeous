@@ -9,8 +9,8 @@ export const Services = ({image, ...props}) => {
     <LayoutBox
       heading="We offer the following specialized inspection services:"
       image={image}
-      width="260"
-      height="250"
+      width="515"
+      height="309"
       {...props}
     >
       {INSPECT_TYPE.map((service) => (
