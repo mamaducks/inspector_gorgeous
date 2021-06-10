@@ -1,7 +1,10 @@
 import { Box, Container, Grid, makeStyles } from "@material-ui/core";
 import {
   HeaderBox,
+  LayoutLBox,
   LayoutRBox,
+  LayoutRightBox,
+  MyMapBox,
   PadBox,
   Summary,
 } from "../Components/Box/MyBox";
@@ -11,7 +14,6 @@ import About from "../img/houseB.png";
 import Back from "../img/houseBack.png";
 import Inspect from "../img/inspector.png";
 import House from "../img/houseMag.png";
-
 
 const useStyles = makeStyles({
   image: {
@@ -43,13 +45,56 @@ const ImgText = () => {
   );
 };
 
+const GridDisplay = () => {
+  return (
+    <Grid style={{ display: "flex", justifyContent: "space-between" }}>
+      <Grid item></Grid>
+      <Grid item></Grid>
+    </Grid>
+  );
+};
+
 const Bio = () => {
   const classes = useStyles();
 
   return (
-    <Container>
-      <Grid container>
-        <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
+    <>
+      {/* <Container> */}
+      {/* <Grid container style={{justifyContent:"space-between"}}> */}
+
+      <MyMapBox>
+        <LayoutRBox
+          image={About}
+          width="600"
+          height="400"
+          heading="About Us"
+          summary="Adrienne Soto is the founder and primary home inspector at Buyer
+        Beware Home Inspections LLC. Before she inspected homes, she was a
+        longtime designer/remodeler and has a vast knowledge of many
+        aspects of real estate and over 20 years of experience in
+        restoring, building and designing homes in the New Jersey area."
+          second="Working with many contractors and inspectors through the
+        years has given her experience and a keen sense of knowing
+        what to look for when inspecting a property. Adrienne enjoys all
+        aspects of building and maintaining homes, and is eager to share
+        this information with her clients."
+        />
+        <LayoutLBox
+          image={Inspect}
+          width="600"
+          height="400"
+          heading="Background and Experience"
+          summary="Adrienne has completed all of the state’s required approved
+        professional home inspection courses and exams, and has also
+        passed the NACHI exam to become a certified member. She has completed extensive training, both in the classroom and in the field. Throughout the
+        year she takes continuing education courses to stay abreast on new
+        products, codes and inspection techniques.Our Home Inspectors are fully licensed by the state, and fully insured.  Contact Adrienne at
+        Buyer Beware Home Inspections today to schedule your reliable,
+        professional in-depth home inspection in the Southern
+        New Jersey area."
+        />
+      </MyMapBox>
+      {/* <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
           <img alt="" src={About} width="600" height="400" />
 
           <Box lineHeight={1.5} letterSpacing={0.5} width="40%">
@@ -65,8 +110,8 @@ const Bio = () => {
               what to look for when inspecting a property. Adrienne enjoys all
               aspects of building and maintaining homes, and is eager to share
               this information with her clients.
-            </div>
-            {/* second="Industry Experience and
+            </div> */}
+      {/* second="Industry Experience and
             Background — Before becoming a licensed // home inspector, Adrienne
             worked as a home remodeler. She has over // 20 years of experience
             in redesigning and remodeling, which makes // her a knowledgable
@@ -78,10 +123,10 @@ const Bio = () => {
             what they’re getting when they purchase their // new home. Contact
             Adrienne at Buyer Beware Home Inspections today // to schedule your
             reliable, professional, and knowledgeable home // inspection in the
-            Southern New Jersey area. */}
+            Southern New Jersey area.
           </Box>
-        </Box>
-        <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
+        </Box> */}
+      {/* <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
           <Box lineHeight={1.5} letterSpacing={0.5} width="40%">
             <div>
               {" "}
@@ -102,9 +147,10 @@ const Bio = () => {
             height="309"
             style={{ alignSelf: "center" }}
           />
-        </Box>
-      </Grid>
-    </Container>
+        </Box> */}
+      {/* </Grid> */}
+      {/* </Container> */}
+    </>
   );
 };
 

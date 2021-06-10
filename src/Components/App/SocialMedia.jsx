@@ -37,7 +37,7 @@ export function Social({ color, size, label, ...props }) {
       </IconButton>
 
       <a
-        href="https://www.facebook.com/learnbuildteach/"
+        href="https://www.facebook.com/Wizard-Wands-109736221325090/"
         className="facebook social"
       >
         <FontAwesomeIcon color={color} icon={faFacebook} size={size} />
@@ -48,12 +48,12 @@ export function Social({ color, size, label, ...props }) {
       >
         <FontAwesomeIcon color={color} icon={faInstagram} size={size} />
       </a>
-      <a
+      {/* <a
         href="https://www.instagram.com/learnbuildteach"
         className="instagram social"
       >
         <FontAwesomeIcon color={color} icon={faLinkedin} size={size} />
-      </a>
+      </a> */}
       {/* <AiOutlineMail
               color={color}
               fontSize={size}

@@ -6,6 +6,7 @@ import { FiInstagram } from "react-icons/fi";
 import { AiFillFacebook } from "react-icons/ai";
 import { Box, Button, Dialog, Link, Grid } from "@material-ui/core";
 import { ScheduleAppointment } from "../App/ScheduleMeeting";
+import {Phone} from "../App/Phone";
 import {
   MyMapBox,
   PadBox,
@@ -93,8 +94,8 @@ export const Quote = () => {
                 fontSize="14px"
                 textAlign="center"
               >
-                <Box fontSize="17px" fontWeight="bold" display="flex" justifyContent="center" flexDirection="column">
-                  <div className={classes.smallText}>Call Today for a Quote </div><div>609-670-0451</div></Box>
+                <Box fontSize="16px" fontWeight="bold" display="flex" justifyContent="center" flexDirection="column">
+                  <div className={classes.smallText}>Call Today for a Quote </div><Phone style={{fontSize:"15px"}} /></Box>
                 <Box paddingTop="5px">
                   <ScheduleButtonNew
                     title="Schedule Online"

@@ -60,9 +60,9 @@ export function MyBox({ children }) {
 
 export function ContactSocialBox({ children }) {
   return (
-  <Box letterSpacing={1} lineHeight={2} style={{ paddingBlock: "20px" }}>
-    {children}
-  </Box>
+    <Box letterSpacing={1} lineHeight={2} style={{ paddingBlock: "20px" }}>
+      {children}
+    </Box>
   );
 }
 
@@ -278,13 +278,12 @@ export function HeadingBox({ heading, ...props }) {
 
 export function OuterLayout({ image, children, ...props }) {
   return (
-  <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
-    <img alt="" src={image} style={{ alignSelf: "center" }} {...props} />
-    {children}
-  </Box>
+    <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
+      <img alt="" src={image} style={{ alignSelf: "center" }} {...props} />
+      {children}
+    </Box>
   );
 }
-
 
 export function InnerContent({ heading, summary, ...props }) {
   return (
@@ -300,7 +299,7 @@ export function InnerContent({ heading, summary, ...props }) {
     >
       {heading}
 
-      <Box >{summary}</Box>
+      <Box>{summary}</Box>
     </Box>
   );
 }
@@ -315,23 +314,29 @@ export function LayoutRBox({
   ...props
 }) {
   return (
-    <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
+    <Box
+      display="flex"
+      justifyContent="space-evenly"
+      alignContent="space-between"
+      paddingTop="25px"
+    >
       <img alt="" src={image} style={{ alignSelf: "center" }} {...props} />
 
       <Box
         lineHeight={1.5}
         letterSpacing={1}
-        justifyContent="space-evenly"
+        justifyContent="center"
         display="flex"
         flexDirection="column"
         alignContent="end"
         width="33rem"
+        fontWeight="lighter"
       >
-        <Box lineHeight={4} fontSize="17px">
+        <Box lineHeight={2} fontSize="17px">
           {heading}
         </Box>
 
-        <Box fontSize="17px">
+        <Box fontSize="16px">
           <div>{summary}</div>
           <div>{second}</div>
           <div>{third}</div>
@@ -342,6 +347,47 @@ export function LayoutRBox({
   );
 }
 
+export function LayoutRightBox({
+  image,
+  heading,
+  summary,
+  second,
+  third,
+  fourth,
+  ...props
+}) {
+  return (
+    <Box
+      display="flex"
+      justifyContent="space-evenly"
+      alignContent="space-between"
+      paddingTop="25px"
+    >
+      <Box style={{ alignSelf: "center" }}> {image}</Box>
+      <Box
+        lineHeight={1.5}
+        letterSpacing={1}
+        justifyContent="center"
+        display="flex"
+        flexDirection="column"
+        alignContent="end"
+        width="33rem"
+        fontWeight="lighter"
+      >
+        <Box lineHeight={2} fontSize="17px">
+          {heading}
+        </Box>
+
+        <Box fontSize="16px">
+          <div>{summary}</div>
+          <div>{second}</div>
+          <div>{third}</div>
+          <div>{fourth}</div>
+        </Box>
+      </Box>
+    </Box>
+  );
+}
 
 export function LayoutLBox({
   image,
@@ -353,8 +399,12 @@ export function LayoutLBox({
   ...props
 }) {
   return (
-    <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
-
+    <Box
+      display="flex"
+      justifyContent="space-evenly"
+      alignContent="space-between"
+      paddingTop="25px"
+    >
       <Box
         lineHeight={1.5}
         letterSpacing={1}
@@ -363,12 +413,13 @@ export function LayoutLBox({
         flexDirection="column"
         alignContent="end"
         width="33rem"
+        fontWeight="lighter"
       >
-        <Box lineHeight={4} fontSize="17px">
+        <Box lineHeight={2} fontSize="17px">
           {heading}
         </Box>
 
-        <Box fontSize="17px">
+        <Box fontSize="16px">
           <div>{summary}</div>
           <div>{second}</div>
           <div>{third}</div>
@@ -376,14 +427,12 @@ export function LayoutLBox({
         </Box>
       </Box>
       <img alt="" src={image} style={{ alignSelf: "center" }} {...props} />
-
-
     </Box>
   );
 }
 
 export function ListLayoutBox({ heading, image, button, children, ...props }) {
-  return(
+  return (
     <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
       <Box letterSpacing={1} lineHeight={1.5} alignSelf="flex-end">
         <Box fontWeight="lighter" fontSize="16px" lineHeight={1.5}>
@@ -400,6 +449,28 @@ export function ListLayoutBox({ heading, image, button, children, ...props }) {
 
       <Box alignSelf="center">
         <img alt="" src={image} width="100" height="100" {...props} />
+      </Box>
+    </Box>
+  );
+}
+
+export function ListLayoutRBox({ heading, image, button, children, ...props }) {
+  return (
+    <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
+      <Box alignSelf="center">
+        <img alt="" src={image} width="100" height="100" {...props} />
+      </Box>
+      <Box letterSpacing={1} lineHeight={1.5} alignSelf="flex-end">
+        <Box fontWeight="lighter" fontSize="16px" lineHeight={1.5}>
+          {heading}
+        </Box>
+
+        <Box display="flex" justifyContent="flex-start">
+          <ul style={{ listStyleType: "square", fontWeight: "300" }}>
+            {children}
+          </ul>
+        </Box>
+        {button}
       </Box>
     </Box>
   );

@@ -61,7 +61,7 @@ export function FaqAccordion() {
   return (
     <div className={classes.root}>
       <Container disableGutters className={classes.accordion}>
-        <AccordionBox heading="WHY CHOOSE US?" body="am i just the coolest " />
+        {/* <AccordionBox heading="WHY CHOOSE US?" body="am i just the coolest " /> */}
         <AccordionBox
           heading="WHAT DOES YOUR HOME INSPECTION COVER?"
           body="
@@ -70,7 +70,7 @@ export function FaqAccordion() {
           "
         />
         <AccordionBox
-          heading="Why perform a Home Inspection?"
+          heading="WHY PERFORM A HOME INSPECTION?"
           body="​
           Purchasing a home is the single biggest investment that most people make in their lives.  Knowing how the systems of your potential new home are functioning is integral.  Undetected deficiencies can mean thousands of dollars out of your pocket. Having a proper inspection 
           will give you piece of mind and knowledge to make informed decisions about your home "
@@ -82,7 +82,7 @@ export function FaqAccordion() {
         <AccordionBox
           heading="SHOULD THE HOME BUYER ATTEND THE HOME INSPECTION?
 "
-          body="We encourage you to accompany us during the inspection, when it is safe to do so. This allows us to answer any questions, point out emergency switches and shutoff valves, discuss important maintenance items, and familiarize you with your new home.  will provide answers to any questions you may have during the home inspection, so it’s a good idea to go to the inspection and hear the findings firsthand."
+          body="We encourage you to accompany us during the inspection, when it is safe to do so.  We will provide answers to any questions you may have during the home inspection, as well as point out emergency switches and shutoff valves, discuss important maintenance items, and familiarize you with your new home. It’s a good idea to go to the inspection and hear the findings firsthand."
         />
         <AccordionBox
           heading="CAN I SEE AN EXAMPLE OF YOUR HOME INSPECTION REPORT?

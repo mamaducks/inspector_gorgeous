@@ -8,13 +8,15 @@ import {
   LayoutRBox,
   PadBox,
   DisplayCenterBox,
-  LayoutBox,
+  LayoutLBox,
+  ListLayoutRBox,
   OuterLayout,
   InnerContent,
   HeadingBox,
   MyFlexBox,
 } from "../Components/Box/MyBox";
 import { Services, ServicesInclude } from "../Components/Services/ServiceTypes";
+import { INSPECT_TYPE } from "../Components/Services/Services";
 
 import ManMag from "../img/magman.png";
 import ThumbUp from "../img/guythumbup.png";
@@ -28,15 +30,19 @@ import Thermal from "../img/thermal.png";
 
 export function ServicesPage() {
   return (
-    <>
-      {/* <Title title="Services" /> */}
-
-      <Container>
-        <Grid>
-          <Grid item xs={12}>
-            <OuterLayout image={MagHouse} width="530px" height="380px">
+      
+      <Container style={{display:"flex", flexDirection:"column", justifyContent:"space-evenly"}}>
+        {/* <Box direction="column"> */}
+        {/* <Grid style={{paddingTop: "25px"}}> */}
+          
+            {/* <OuterLayout image={MagHouse} width="530px" height="380px">
               <InnerContent
-                heading={<HeadingBox heading="Home Inspection Services" lineHeight={1} />}
+                heading={
+                  <HeadingBox
+                    heading="Home Inspection Services"
+                    lineHeight={1}
+                  />
+                }
                 summary={
                   <>
                     <div>
@@ -56,14 +62,46 @@ export function ServicesPage() {
                   </>
                 }
               />
-            </OuterLayout>
+            </OuterLayout> */}
+            <LayoutLBox
+              image={MagHouse}
+              width="530px"
+              height="380px"
             
-          </Grid>
-          <PadBox />
-          <Grid>
-            <Services image={Drone} />
-            <PadBox />
-            <Box
+              heading="Home Inspection Services"
+              summary=" Home inspections provide valuable information before you
+              buy a home. We will look at things like a home’s
+              foundation, structural components, roof, HVAC, plumbing,
+              and electrical systems, then provide a detailed report of
+              a home’s condition so you can move forward confidently
+              with peace of mind and knowledge to make informed
+              decisions about your home."
+              second="With over 20 years experience restoring, building, and
+              designing homes Buyer Beware is the top choice in south
+              jersey for your home inspection services."
+            />
+{/*           
+          <Grid item xs={12} style={{paddingTop: "25px"}}> */}
+            <ListLayoutRBox
+              heading="WE INSPECT THE FOLLOWING WHEN VISIBLE AND ACCESSIBLE:"
+              image={Drone}
+              width="515"
+              height="309"
+              button={<ScheduleButtonNew title="Schedule Today" />}
+            >
+              <Box lineHeight={1.7}>
+                {INSPECT_TYPE.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </Box>
+              <PadBox />
+            </ListLayoutRBox>
+
+            
+            {/* <Services image={Drone} /> */}
+            {/* <PadBox /> */}
+
+            {/* <Box
               fontSize="18px"
               fontWeight="400"
               textAlign="center"
@@ -72,10 +110,12 @@ export function ServicesPage() {
             >
               Our Full Service Inspections Include &mdash;
             </Box>
-            <ServiceInclude />
-            {/* <ServicesInclude services/> */}
+            <ServiceInclude />  */}
+
+
+             {/* <ServicesInclude services/>  */}
             {/* <Service /> */}
-          </Grid>
+          {/* </Grid> */}
           {/* <Box display="flex">
             <div>
             Tools We Use During Your Inspection
@@ -96,8 +136,9 @@ export function ServicesPage() {
             </MyFlexBox>
             </div>
           </Box> */}
-        </Grid>
+        {/* </Grid> */}
+        {/* </Box> */}
       </Container>
-    </>
+      
   );
 }

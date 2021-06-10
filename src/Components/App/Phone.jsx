@@ -18,14 +18,14 @@ const useStyles = makeStyles({
   },
 });
 
-export function Phone() {
+export function Phone({...props}) {
   const classes = useStyles();
   return (
-    <Box className={classes.logoBox}>
+    <Box className={classes.logoBox} {...props}>
       <Icon>
-        <FaPhoneAlt />
+        <FaPhoneAlt {...props}/>
       </Icon>
-      <div>1-609-670-0451</div>
+      <div {...props}>1-609-670-0451</div>
     </Box>
   );
 }

@@ -1,18 +1,18 @@
 import { Box, Container, Grid } from "@material-ui/core";
 import { FaqAccordion } from "../Components/App/FaqAccordion";
 import { ScheduleButtonNew } from "../Components/App/ScheduleButton";
-import { LayoutBox, LayoutLBox, LayoutRBox,  PadBox } from "../Components/Box/MyBox";
+import { LayoutBox, LayoutLBox, ListLayoutRBox, LayoutRBox,  PadBox } from "../Components/Box/MyBox";
 import { SERVICES } from "../Components/Services/Services";
 import Corner from "../img/houseC.png";
 import House from "../img/houseMag.png";
 import FaqHome from "../img/fagImg.png";
 
 
-export const FaqPage = () => {
+export function FaqPage() {
   return (
-    <Box direction="column">
-      <Container>
-        <Grid  style={{paddingTop: "25px"}}>
+    // <Box direction="column">
+      <Container style={{display:"flex", flexDirection:"column", justifyContent:"space-evenly"}}>
+        {/* <Grid  style={{paddingTop: "25px"}}> */}
           <LayoutLBox
           image={Corner}
           width="600"
@@ -32,7 +32,7 @@ export const FaqPage = () => {
           identifying any material defect along with a recommendation
           for what to do as well as what can happen if not repaired."
           />
-          <LayoutRBox
+          {/* <LayoutRBox
             image={FaqHome}
             width="425"
             height="350"
@@ -49,12 +49,12 @@ export const FaqPage = () => {
             third="We will provide you with a detailed reports clearly
           identifying any material defect along with a recommendation
           for what to do as well as what can happen if not repaired."
-          />
-          <Grid item xs={12} style={{paddingTop: "25px"}}>
-            <LayoutBox
+          /> */}
+          {/* <Grid item xs={12} style={{paddingTop: "25px"}}> */}
+            <ListLayoutRBox
               heading="WE INSPECT THE FOLLOWING WHEN VISIBLE AND ACCESSIBLE:"
               image={House}
-              width="500px"
+              width="475px"
               height="325px"
               button={<ScheduleButtonNew title="Schedule Today"/>}
             >
@@ -65,14 +65,14 @@ export const FaqPage = () => {
               </Box>
               <PadBox/>
              
-            </LayoutBox>
+            </ListLayoutRBox>
             
             <FaqAccordion />
-          </Grid>
+          {/* </Grid> */}
           {/* <OurPromise /> */}
-        </Grid>
+        {/* </Grid> */}
       </Container>
-    </Box>
+    // {/* </Box> */}
   );
 };
 
