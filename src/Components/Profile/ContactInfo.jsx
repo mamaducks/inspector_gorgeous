@@ -1,11 +1,8 @@
-import { Box, Typography } from "@material-ui/core";
-import { IoIosPhonePortrait } from "react-icons/io";
-import { IoMdPin } from "react-icons/io";
-import { MyFlexBox } from "../Box/MyBox";
-import Phone from "../../img/phoneSVG.svg";
+import { Box } from "@material-ui/core";
 import Locate from "../../img/locateSVG.svg";
-import Email from "../../img/emailSVG.svg";
-import Mail from "../../img/mailSVG.svg"
+import Mail from "../../img/mailSVG.svg";
+import Phone from "../../img/phoneSVG.svg";
+import { MyFlexBox } from "../Box/MyBox";
 
 export function InfoView() {
   return (
@@ -21,8 +18,7 @@ export function InfoView() {
           <InfoBox info="BuyersBewareHomeInspections@gmail.com" />
         </AllInfo> */}
         <AllInfo Icon={Mail}>
-          
-          <InfoBox info="Buyer Beware Home Inspections" flexWrap="nowrap"  />
+          <InfoBox info="Buyer Beware Home Inspections" flexWrap="nowrap" />
           <InfoBox info="P. O. Box 463" />
           <InfoBox info="Bordentown, NJ 08505" />
         </AllInfo>
@@ -33,7 +29,7 @@ export function InfoView() {
 
 export function AllInfo({ Icon, children, ...props }) {
   return (
-    <Box padding="10px"  paddingBottom="24px" {...props}>
+    <Box padding="10px" paddingBottom="24px" {...props}>
       <Box
         alignItems="center"
         display="flex"
@@ -50,7 +46,7 @@ export function AllInfo({ Icon, children, ...props }) {
 
 export function InfoBox({ info, ...props }) {
   return (
-    <Box  color="#32474b" textAlign="center" fontSize="16px" >
+    <Box color="#32474b" textAlign="center" fontSize="16px">
       {info}
     </Box>
   );

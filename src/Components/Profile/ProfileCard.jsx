@@ -1,5 +1,5 @@
 import { ProfileList } from "../Profile/Profile";
-import { Card, Paper, Container } from "@material-ui/core";
+import { Paper, Container } from "@material-ui/core";
 import EmmaLogo from "../../img/newEmmaLogo.png";
 
 export function ProfileCard() {

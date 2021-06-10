@@ -1,21 +1,12 @@
+import { Box, Container, makeStyles } from "@material-ui/core";
 import React from "react";
-import { makeStyles } from "@material-ui/core";
-import { Title } from "../Components/App/HeaderTitle";
-import { Box, Container } from "@material-ui/core";
-import MapImage from "../img/mapNJ.png";
-import { ContactInfo, InfoView } from "../Components/Profile/ContactInfo";
-import {
-  DisplayEvenBox,
-  ContactSocialBox,
-  MyMapBox,
-  MyInfoBox,
-} from "../Components/Box/MyBox";
-import ContactForm from "../Components/App/ContactForm";
-import { OldMap } from "../App/Map";
-import { Social } from "../Components/App/SocialMedia";
-import Heart from "../img/heart.svg";
 import { HiOutlineMail } from "react-icons/hi";
+import { Social } from "../Components/App/SocialMedia";
+import { ContactSocialBox, DisplayEvenBox } from "../Components/Box/MyBox";
+import { InfoView } from "../Components/Profile/ContactInfo";
 import Happy from "../img/happyHouse.png";
+import Heart from "../img/heart.svg";
+import MapImage from "../img/mapNJ.png";
 
 const useStyles = makeStyles({
   root: {

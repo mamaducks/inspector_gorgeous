@@ -2,6 +2,8 @@ import Icon from "@iconify/react";
 import {
   makeStyles,
   Box,
+  Card,
+  Container,
   Grid,
   GridList,
   List,
@@ -9,16 +11,17 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
-import React from "react";
-import { services } from "./ServiceList";
+import React, { useState } from "react";
+import { services, servicesCard } from "./ServiceList";
+import ReactCardFlip from "react-card-flip";
 
 const ITEMS_PER_ROW = 4;
 
 const useStyles = makeStyles({
   list: {
     display: "flex",
-    justifyContent: "center",
-    padding: 20,
+    // justifyContent: "center",
+    // padding: 20,
     flexWrap: "wrap",
   },
   listItem: {
@@ -38,36 +41,159 @@ const useStyles = makeStyles({
   newList: {
     display: "flex",
   },
+  gridBox: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    flexWrap: "wrap",
+  },
+  flipList: {
+    // display: "flex",
+    // justifyContent: "center",
+    padding: 20,
+    flexWrap: "wrap",
+  },
+  flipCard: {
+    alignItems: "center",
+    justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
+    width: "240px",
+    height: "245px",
+
+    "& img": {
+      width: 40,
+      height: 40,
+      // paddingBottom: 15,
+    },
+    flipBack: {
+      width: "16rem",
+      // height: "245px",
+      alignItems: "center",
+    justifyContent: "center",
+    display: "flex",
+    fontWeight:"lighter"
+    },
+    flipCardItem: {},
+    // listGrid: {
+    //   display: "flex",
+    // }
+  },
 });
 
 export const ServiceCard = () => {
   return (
     <>
-      <Grid>
+      {/* <Grid>
         <ServiceInclude servicesOld />
+      </Grid> */}
+      <Grid>
+        <ServiceCardGrid servicesCard={servicesCard} />
+        {/* <CardDeets servicesCard /> */}
+        {/* <ServiceListInclude /> */}
+        {/* <Service services /> */}
       </Grid>
-      <Grid>{/* <Service services /> */}</Grid>
     </>
   );
 };
 
-export function ServiceInclude() {
+// export function ServiceInclude() {
+//   const classes = useStyles();
+
+//   return (
+//     <div className={classes.list}>
+//       {services.map(({ text, image }) => {
+//         return (
+//           <div key={text} className={classes.listItem}>
+//             <img alt="" src={image} />
+
+//             <Box fontWeight="lighter">{text}</Box>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// }
+
+export function CardDeets({ textFront, textBack, image, ...props }) {
   const classes = useStyles();
+  const [isFlipped, setIsFlipped] = useState(false);
+  const onFlip = () => setIsFlipped(!isFlipped);
 
   return (
-    <div className={classes.list}>
-      {services.map(({ text, image }) => {
-        return (
-          <div key={text} className={classes.listItem}>
-            <img alt="" src={image}  />
-            
-            <Box fontWeight="lighter">{text}</Box>
+    <div style={{paddingBlock: "15px"}}>
+      <ReactCardFlip
+        isFlipped={isFlipped}
+        flipDirection="vertical"
+        key={textFront}
+        {...props}
+      >
+        <Card onClick={onFlip}>
+          <div key={textFront} className={classes.flipCard}>
+            <img alt="" src={image} />
+
+            <Box fontWeight="lighter">{textFront}</Box>
           </div>
-        );
-      })}
+        </Card>
+        <Card onClick={onFlip}>
+          <Box  width="16rem" padding={2} fontWeight="lighter"  textAlign="right">{textBack}</Box>
+        </Card>
+      </ReactCardFlip>
     </div>
   );
 }
+
+// export const Listings = () => {
+//   const listings = useAllListings();
+
+//   const { listingId } = useParams();
+
+//   return (
+//     <>
+//       <div>
+//         {servicesCard.map((data, key) => {
+//           return (
+//             <div key={key}>
+//               <CardDeets key={key} {...data} />
+//             </div>
+//           );
+//         })}
+//       </div>
+//     </>
+//   );
+// };
+
+export const ServiceCardGrid = ({ servicesCard }) => {
+  const classes = useStyles();
+
+  console.log(servicesCard);
+  return (
+    <>
+      <div className={classes.gridBox}>
+        {/* <GridList className={classes.listGrid} > */}
+        {servicesCard.map((data, index) => (
+          <div key={index} className={classes.flipCardItem}>
+            <CardDeets {...data} />
+          </div>
+        ))}
+        {/* </GridList> */}
+      </div>
+    </>
+  );
+};
+// return (
+//   <div className={classes.list}>
+//     {services.map(({ text, image }) => {
+//       return (
+//         <div key={text} className={classes.listItem}>
+//           <img alt="" src={image}  />
+
+//           <Box fontWeight="lighter">{text}</Box>
+//         </div>
+//       );
+//     })}
+//   </div>
+// );
+// }
 
 // export function Service() {
 //   const classes = useStyles();

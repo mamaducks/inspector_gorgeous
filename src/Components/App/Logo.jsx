@@ -1,4 +1,3 @@
-import { SvgIcon } from "@material-ui/core";
 import { Box, makeStyles } from "@material-ui/core";
 import EmmaLogo from "../../img/emmaLogoSmall.png";
 
@@ -36,13 +35,5 @@ export function Logo() {
         <div className={classes.smallText}>HOME INSPECTION, LLC</div>
       </Box>
     </Box>
-  );
-}
-
-export function TextLogo(props) {
-  return (
-    <SvgIcon {...props}>
-      <path d="../../../src/littlelogo.png" />
-    </SvgIcon>
   );
 }

@@ -1,12 +1,6 @@
-import {
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  List,
-  Card,
-} from "@material-ui/core";
-import { IoMdPin, IoIosPhonePortrait } from "react-icons/io";
+import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import { AiOutlineMail } from "react-icons/ai";
+import { IoIosPhonePortrait, IoMdPin } from "react-icons/io";
 
 const ProfileListItem = ({ Icon, text }) => {
   return (

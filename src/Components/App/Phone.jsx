@@ -18,12 +18,12 @@ const useStyles = makeStyles({
   },
 });
 
-export function Phone({...props}) {
+export function Phone({ ...props }) {
   const classes = useStyles();
   return (
     <Box className={classes.logoBox} {...props}>
       <Icon>
-        <FaPhoneAlt {...props}/>
+        <FaPhoneAlt {...props} />
       </Icon>
       <div {...props}>1-609-670-0451</div>
     </Box>
