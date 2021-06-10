@@ -1,4 +1,3 @@
-import { Box, Grid, makeStyles } from "@material-ui/core";
 import {
   LayoutLBox,
   LayoutRBox, MyMapBox,
@@ -8,19 +7,6 @@ import { ProfileCard } from "../Components/Profile/ProfileCard";
 import About from "../img/houseB.png";
 import Inspect from "../img/inspector.png";
 
-const useStyles = makeStyles({
-  image: {
-    position: "relative",
-    width: "900px",
-    height: "600px",
-    "& h2": {
-      position: "absolute",
-      top: "200px",
-      left: 0,
-      width: "100%",
-    },
-  },
-});
 
 // const ImgText = () => {
 //   return (

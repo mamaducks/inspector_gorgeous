@@ -3,9 +3,10 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Button, Card, Container,
+  Card,
+  Container,
   Dialog,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React, { useState } from "react";
@@ -31,8 +32,9 @@ const useStyles = makeStyles((theme) => ({
   },
   medroot: {
     maxWidth: 345,
-display: "flex",
-justifyContent: "center"  },
+    display: "flex",
+    justifyContent: "center",
+  },
   media: {
     height: 150,
   },
@@ -79,7 +81,6 @@ const MediaBox = ({ image }) => {
 };
 
 const ExampleReport = () => {
-
   return (
     <div>
       <Box textAlign="center">

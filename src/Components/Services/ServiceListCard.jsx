@@ -1,21 +1,10 @@
-import Icon from "@iconify/react";
 import {
-  makeStyles,
   Box,
-  Card,
-  Container,
-  Grid,
-  GridList,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
+  Card, Grid, makeStyles
 } from "@material-ui/core";
 import React, { useState } from "react";
-import { services, servicesCard } from "./ServiceList";
 import ReactCardFlip from "react-card-flip";
-
-const ITEMS_PER_ROW = 4;
+import { servicesCard } from "./ServiceList";
 
 const useStyles = makeStyles({
   list: {

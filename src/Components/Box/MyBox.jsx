@@ -1,21 +1,21 @@
-import { Box, Grid, makeStyles } from "@material-ui/core";
+import { Box, Grid, } from "@material-ui/core";
 
-const MyStyles = {
-  Flex: { display: "flex" },
-  Center: { display: "flex", justifyContent: "center" },
-  DisplayEven: {
-    display: "flex",
-    justifyContent: "space-evenly",
-  },
-};
+// const MyStyles = {
+//   Flex: { display: "flex" },
+//   Center: { display: "flex", justifyContent: "center" },
+//   DisplayEven: {
+//     display: "flex",
+//     justifyContent: "space-evenly",
+//   },
+// };
 
-function GG() {
-  return (
-    <Box {...MyStyles.Flex} {...MyStyles.Center}>
-      ff
-    </Box>
-  );
-}
+// function GG() {
+//   return (
+//     <Box {...MyStyles.Flex} {...MyStyles.Center}>
+//       ff
+//     </Box>
+//   );
+// }
 export function DisplayBox({ children }) {
   return (
     <Box display="flex" justifyContent="space-between">

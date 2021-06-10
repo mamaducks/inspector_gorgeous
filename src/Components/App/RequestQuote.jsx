@@ -14,13 +14,11 @@ const useStyles = makeStyles({
     "& button": {},
   },
   title: {
-    // backgroundColor: "#c3c3c3",
+   
     display: "flex",
-    // justifyContent: "space-between",
     color: "#a71976",
     alignItems: "center",
     paddingTop: "4px",
-    // padding: "7px",
   },
   smallText: {
     fontWeight: "500",
@@ -28,21 +26,21 @@ const useStyles = makeStyles({
   },
 });
 
-const QuoteBox = ({ topText, btmText, ...props }) => {
-  return (
-    <PadBox>
-      <Box
-        letterSpacing={0.5}
-        lineHeight={1.4}
-        fontSize="14px"
-        textAlign="center"
-      >
-        <Box {...props}>{topText}</Box>
-        <Box>{btmText}</Box>
-      </Box>
-    </PadBox>
-  );
-};
+// const QuoteBox = ({ topText, btmText, ...props }) => {
+//   return (
+//     <PadBox>
+//       <Box
+//         letterSpacing={0.5}
+//         lineHeight={1.4}
+//         fontSize="14px"
+//         textAlign="center"
+//       >
+//         <Box {...props}>{topText}</Box>
+//         <Box>{btmText}</Box>
+//       </Box>
+//     </PadBox>
+//   );
+// };
 
 export const Quote = () => {
   const classes = useStyles();
