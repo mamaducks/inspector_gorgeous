@@ -91,7 +91,7 @@ const theme = createMuiTheme({
     },
     MuiIcon: {
       root: {
-        paddingRight: 15,
+        // paddingRight: 15,
       },
     },
     MuiBox: {
@@ -141,23 +141,18 @@ const theme = createMuiTheme({
 
     MuiAccordion: {
       root: {
-        
-        
-        
-        '&$expanded': {
-          margin: 'auto',
+        "&$expanded": {
+          margin: "auto",
         },
       },
-      
-    }
+    },
 
-    // MuiListItemIcon: {
-    //   root: {
-    //     fontSize: 24,
-    //     color: "#a61b77",
-    //     minWidth: 42
-    //   },
-    // },
+    MuiListItemIcon: {
+      root: {
+        minWidth: "unset",
+        padding: 10,
+      },
+    },
     // MuiDialogPaperWidthSm: {
     //   maxWidth: "md"
     // }

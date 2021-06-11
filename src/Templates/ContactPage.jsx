@@ -1,9 +1,9 @@
 import { Box, Container, makeStyles } from "@material-ui/core";
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
-import { Social } from "../Components/App/SocialMedia";
+import { Social } from "../App/AppBar/SocialMedia";
 import { ContactSocialBox, DisplayEvenBox } from "../Components/Box/MyBox";
-import { InfoView } from "../Components/Profile/ContactInfo";
+import { InfoCard } from "../Components/ContactInfo/InfoCard";
 import Happy from "../img/happyHouse.png";
 import Heart from "../img/heart.svg";
 import MapImage from "../img/mapNJ.png";
@@ -98,7 +98,7 @@ export const ContactPage = () => {
 
           <DisplayEvenBox>
             <img alt="" src={MapImage} />
-            <InfoView />
+            <InfoCard />
           </DisplayEvenBox>
 
           <Box className={classes.hours}>

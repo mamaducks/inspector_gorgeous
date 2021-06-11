@@ -1,5 +1,5 @@
 import { LayoutBox } from "../Box/MyBox";
-import { INSPECT_TYPE } from "../Services/Services";
+import { INSPECT_TYPE } from "../Services/services";
 export const Services = ({ image, ...props }) => {
   return (
     <LayoutBox

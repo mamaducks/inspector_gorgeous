@@ -1,7 +1,7 @@
 import React from "react";
-import { AppBar } from "../Components/App/AppBar";
-import { HeadButtons } from "../Components/App/Header";
-import { Quote } from "../Components/App/RequestQuote";
+import { AppBar } from "./AppBar/AppBar";
+import { HeadButtons } from "./AppBar/Header";
+import { Quote } from "../App/Footer/RequestQuote";
 import { Router } from "./Router";
 
 export function App() {

@@ -1,4 +1,4 @@
-import { Box, Grid, } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 
 // const MyStyles = {
 //   Flex: { display: "flex" },
@@ -460,6 +460,7 @@ export function ListLayoutRBox({ heading, image, button, children, ...props }) {
       <Box alignSelf="center">
         <img alt="" src={image} width="100" height="100" {...props} />
       </Box>
+
       <Box letterSpacing={1} lineHeight={1.5} alignSelf="flex-end">
         <Box fontWeight="lighter" fontSize="16px" lineHeight={1.5}>
           {heading}
@@ -470,6 +471,7 @@ export function ListLayoutRBox({ heading, image, button, children, ...props }) {
             {children}
           </ul>
         </Box>
+        
         {button}
       </Box>
     </Box>
