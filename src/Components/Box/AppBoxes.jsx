@@ -1,4 +1,4 @@
-import { Box, Divider } from "@material-ui/core";
+import { Box, Container, Divider } from "@material-ui/core";
 
 export function PadBox({ children, ...props }) {
   return (
@@ -7,14 +7,26 @@ export function PadBox({ children, ...props }) {
     </Box>
   );
 }
+
+export function NewContainer({children}) {
+  return (
+<Container
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-evenly",
+      }}
+    >
+      {children}
+    </Container>
+  );
+}
+
 export function LayoutBox({
   children,
   image,
   heading,
   summary,
-  second,
-  third,
-  fourth,
   reverse,
   ...props
 }) {
@@ -135,11 +147,14 @@ export function LayoutLBox({
   );
 }
 
-export function ListLayoutRBox({ heading, image, button, children, ...props }) {
+export function ListLayoutRBox({ heading, image, button, flipCard, children, ...props }) {
   return (
     <Box display="flex" justifyContent="space-evenly" paddingTop="25px">
       <Box alignSelf="center">
         <img alt="" src={image} width="100" height="100" {...props} />
+        <Box>
+        {flipCard}
+      </Box>
       </Box>
       <Box letterSpacing={1} lineHeight={1.5} alignSelf="flex-end">
         <Box fontWeight="lighter" fontSize="16px" lineHeight={1.5}>
@@ -153,11 +168,12 @@ export function ListLayoutRBox({ heading, image, button, children, ...props }) {
         </Box>
         {button}
       </Box>
+      
     </Box>
   );
 }
 
-export function InfoBox({ Icon, children, ...props }) {
+export function InfoBox({ Icon, info, children, ...props }) {
   return (
     <Box padding="10px" paddingBottom="24px" {...props}>
       <Box
@@ -167,9 +183,29 @@ export function InfoBox({ Icon, children, ...props }) {
         color="#a51b77"
         paddingBottom="8px"
       >
-        <img alt="" src={Icon} width="45px" height="45px" />
+        <img alt="" src={Icon} width="50px" height="50px" />
       </Box>
-      {children}
+      <Box color="#32474b" textAlign="center" fontSize="16px">
+        {info}
+      </Box>
     </Box>
   );
+}
+
+export function DivBox( {children, ...props} ) {
+  return (
+    <Box
+    justifyContent="center"
+    display="flex"
+    flexDirection="column"
+    alignContent="end"
+    fontWeight="lighter"
+    lineHeight={1.5}
+    letterSpacing={1}
+    textAlign="center"
+    {...props}
+    >
+      {children}
+    </Box>
+  )
 }

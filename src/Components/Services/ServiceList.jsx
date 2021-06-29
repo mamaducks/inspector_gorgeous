@@ -13,23 +13,23 @@ export var servicesCard = [
   {
     image: Plug,
     textFront: "Electrical Panels & Breakers",
-    textBack: "We assess the condition of readily accessible service panel components, note the presence of GFCIs, AFCIs, smoke alarms and check the operation of representative outlets, switches, fixtures and other devices. ",
+    textBack: "The condition of readily accessible service panel components, note the presence of GFCIs, AFCIs, smoke alarms and check the operation of representative outlets, switches, fixtures and other devices. ",
   },
   {
     image: Wall,
     textFront: "Walls, Ceilings, & Floors",
-    textBack: "Inspectors check for leaning, cracked, or bowed walls, all of which may be signs of defects in the foundation or underlying structure of the home. Inspectors will also look for popping nail heads or drywall tape tears. Additionally, inspectors look for signs of moisture.  Termite damage is also on an inspector’s radar; peeling or pitted paint may indicate termite damage underneath. Inspectors examine ceilings for cracks that may indicate structural problems as well as any signs that moisture is getting into the ceiling from the attic or rooms above.  Sloping, uneven floors may mean the structure underneath is damaged due to ground settling, moisture, or termites. Inspectors look closely at all floors to make certain there are no indications of serious problems",
+    textBack: "   Visible areas of all walls, ceilings, stairways, and floors are assessed for signs of leakage, damage, sagging or other structural concerns. Termite damage is also on an inspector’s radar; peeling or pitted paint may indicate termite damage underneath. Your inspector will  check for leaning, cracked, or bowed walls, all of which may be signs of defects in the foundation or underlying structure of the home, examine ceilings for cracks that may indicate structural problems as well as look for any signs that moisture is getting into the ceiling from the attic or rooms above. We will also examine the floors. Sloping, uneven floors may mean the structure underneath is damaged due to ground settling, moisture, or termites.",
   },
   {
     image: Wind,
-    textFront: "Exterior",
-    textBack: "We inspect visible siding and trim, windows, doors, garages, porches, decks, stairs, and railings. We assess the elements for proper construction and function; looking for damage, missing components or other conditions that might lead to infiltration or functional concerns. Inspectors go through your home to check proper air sealing. They look for air gaps along windows, walls, and doors as well as openings near electrical wiring, HVAC system connections, and other places. Identifying and closing these gaps will help make your home more energy efficient.",
+    textFront: "Windows and Doors",
+    textBack: "The inspector will assess visible siding, trim, windows, and doors for proper construction and function; looking for signs of leakage and damage, sagging, missing components, air gaps, or other structural concerns. Windows will be operated to determine function..",
   },
-  {
-    image: Basement,
-    textFront: "Interior",
-    textBack: "What we inspect: visible areas of all walls, ceilings, stairways, representative windows and doors, and attic areas for signs of leakage and damage, sagging or other structural concerns. Windows will be operated to determine function. In accessible attics, besides assessing structural components, we will note insulation and ventilation conditions. ",
-  },
+  // {
+  //   image: Basement,
+  //   textFront: "Interior",
+  //   textBack: "What we inspect: visible areas of all walls, ceilings, stairways, representative windows and doors, and attic areas for signs of leakage and damage, sagging or other structural concerns. Windows will be operated to determine function. In accessible attics, besides assessing structural components, we will note insulation and ventilation conditions. ",
+  // },
   {
     image: Basement,
     textFront: "Basement & Foundation",
@@ -54,7 +54,7 @@ export var servicesCard = [
   {
     image: HeatCool,
     textFront: "Heating & Cooling",
-    textBack: " Visible components of the central AC or heat pump system including condensers and air handlers, and the distribution ductwork. We assess the function and condition of the accessible indoor/ outdoor components. ",
+    textBack: " The function and condition of visible components of the central AC or heat pump system including condensers and air handlers, and the distribution ductwork will be assessed. Your inspector will look for air gaps at openings near electrical wiring, HVAC system connections, as well as other places. Identifying and closing these gaps will help make your home more energy efficient ",
   },
   {
     image: Plumb,

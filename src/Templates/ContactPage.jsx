@@ -1,9 +1,11 @@
-import { Box, Container, makeStyles } from "@material-ui/core";
+import { Box, Container, Divider, makeStyles } from "@material-ui/core";
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { Social } from "../App/AppBar/SocialMedia";
-import { ContactSocialBox, DisplayEvenBox } from "../Components/Box/MyBox";
+
+import {LayoutBox} from "../Components/Box/AppBoxes";
 import { InfoCard } from "../Components/ContactInfo/InfoCard";
+import { NewContainer } from "../Components/Box/AppBoxes";
 import Happy from "../img/happyHouse.png";
 import Heart from "../img/heart.svg";
 import MapImage from "../img/mapNJ.png";
@@ -32,7 +34,7 @@ const useStyles = makeStyles({
     letterSpacing: 1,
     lineHeight: 2,
     alignSelf: "center",
-    paddingTop: "20px",
+    marginBlock: "12px",
     display: "flex",
     fontWeight: "lighter",
     justifyContent: "space-evenly",
@@ -50,17 +52,13 @@ const useStyles = makeStyles({
     color: "#ffffff",
     fontSize: "larger",
     backgroundColor: "#a71976",
-    marginBlock: "20px",
   },
-  divLine: {
-    borderTop: "2px solid #a71976 ",
-    marginLeft: 20,
-    marginRight: 20,
-  },
+
   socialBox: {
     textAlign: "center",
     fontSize: "22px",
     display: "flex",
+    fontWeight: "lighter",
     alignItems: "center",
     "& img": {
       width: "40px",
@@ -69,11 +67,8 @@ const useStyles = makeStyles({
     },
   },
   socialButtons: {
-    fontSize: "45px",
-    alignSelf: "center",
-    width: "100%",
+    fontSize: "40px",
     justifyContent: "space-evenly",
-    paddingTop: "10px",
     color: "#a71976",
   },
 });
@@ -82,24 +77,33 @@ export const ContactPage = () => {
   const classes = useStyles();
   return (
     <>
-      <Container className={classes.root}>
+      <NewContainer>
         <Box className={classes.root}>
           <Box className={classes.header}>
             <img alt="" src={Happy} />
-            <Box alignSelf="center" width="43rem" fontSize="18px">
-              Buyer Beware Home Inspections is based out of Berlin, NJ
-              <div>
-                {" "}
-                We offer Home Inspection services to areas of New Jersey and
-                Philadelphia
-              </div>
+            <Box
+              justifyContent="center"
+              display="flex"
+              flexDirection="column"
+              alignContent="end"
+              width="43rem"
+              fontWeight="lighter"
+              lineHeight={1.5}
+              letterSpacing={1}
+            >
+              <Box fontSize="1.15em">
+                Buyer Beware Home Inspections is based out of Berlin, NJ
+              </Box>
+              <Divider style={{ margin: "10px 0" }} />
+              We offer Home Inspection services to areas of New Jersey and
+              Philadelphia
             </Box>
           </Box>
 
-          <DisplayEvenBox>
+          <Box display="flex" justifyContent="space-evenly">
             <img alt="" src={MapImage} />
             <InfoCard />
-          </DisplayEvenBox>
+          </Box>
 
           <Box className={classes.hours}>
             <div>Monday thru Friday</div> 8:00 am - 7:00 pm <div>Saturday</div>{" "}
@@ -107,7 +111,9 @@ export const ContactPage = () => {
             <div>Sunday </div>Closed
           </Box>
         </Box>
-      </Container>
+      </NewContainer>
+
+
 
       <Box className={classes.pageLine}>
         Traditional Home Inspections • Pre-Listing Inspections • Radon Testing •
@@ -115,22 +121,21 @@ export const ContactPage = () => {
       </Box>
 
       <Container>
-        <ContactSocialBox>
+        <Box style={{ paddingBlock: "15px" }}>
           <Box className={classes.socialBox}>
             Have any questions? We'd <img alt="" src={Heart} />
             to hear from you!
           </Box>
-          <Box paddingTop="15px">
-            <div className={classes.divLine}></div>
-            <div>
-              <Social
-                color="#a71976"
-                className={classes.socialButtons}
-                label={<HiOutlineMail color="#a71976" fontSize="45px" />}
-              />
-            </div>
-          </Box>
-        </ContactSocialBox>
+          <Divider style={{ margin: "10px", color: "#a71976" }} />
+
+          {/* <div className={classes.divLine}></div> */}
+
+          <Social
+            color="#a71976"
+            className={classes.socialButtons}
+            label={<HiOutlineMail color="#a71976" fontSize="40px" />}
+          />
+        </Box>
       </Container>
     </>
   );

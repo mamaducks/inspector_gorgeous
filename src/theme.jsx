@@ -153,6 +153,12 @@ const theme = createMuiTheme({
         padding: 10,
       },
     },
+
+    MuiListItemText: {
+      root: {
+        fontFamily: "Helvetica"
+      }
+    }
     // MuiDialogPaperWidthSm: {
     //   maxWidth: "md"
     // }

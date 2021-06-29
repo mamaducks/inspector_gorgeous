@@ -4,10 +4,10 @@ export const ProfileListItem = ({ Icon, text }) => {
   return (
     <ListItem>
       <ListItemIcon>
-        <Icon color="#a71976" />
+        <Icon color="#a71976" fontSize="20px" />
       </ListItemIcon>
 
-      <ListItemText primary={text} />
+      <ListItemText>{text}</ListItemText>
     </ListItem>
   );
 };

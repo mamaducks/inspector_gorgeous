@@ -16,6 +16,25 @@ import { Box, Grid } from "@material-ui/core";
 //     </Box>
 //   );
 // }
+
+export function DivBox( {children, ...props} ) {
+  return (
+    <Box
+    justifyContent="center"
+    display="flex"
+    flexDirection="column"
+    alignContent="end"
+    fontWeight="lighter"
+    lineHeight={1.5}
+    letterSpacing={1}
+    textAlign="center"
+    {...props}
+    >
+      {children}
+    </Box>
+  )
+}
+
 export function DisplayBox({ children }) {
   return (
     <Box display="flex" justifyContent="space-between">

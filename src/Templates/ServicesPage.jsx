@@ -1,21 +1,13 @@
-import { Container } from "@material-ui/core";
-import { LayoutBox } from "../Components/Box/AppBoxes";
-import { ListLayoutRBox, PadBox } from "../Components/Box/MyBox";
+import { LayoutBox, NewContainer } from "../Components/Box/AppBoxes";
 import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
-import { ServiceCardGrid } from "../Components/Services/FlpiCardGrid";
-import { servicesCard } from "../Components/Services/ServiceList";
 import MagHouse from "../img/houseMagnify.png";
 import ManMag from "../img/manmag.png";
+import { Box, Divider } from "@material-ui/core";
+import { DisplayService } from "../Components/Services/DisplayServices";
 
 export function ServicesPage() {
   return (
-    <Container
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-      }}
-    >
+    <NewContainer>
       <LayoutBox
         image={MagHouse}
         width="530px"
@@ -34,17 +26,22 @@ export function ServicesPage() {
         services.
       </LayoutBox>
 
-      <ListLayoutRBox
-        heading="WE INSPECT THE FOLLOWING WHEN VISIBLE AND ACCESSIBLE:"
-        image={ManMag}
-        width="305"
-        height="259"
-        button={<ScheduleButtonNew title="Schedule Today" />}
+      <Box
+        lineHeight={1.5}
+        letterSpacing={1}
+        justifyContent="center"
+        display="flex"
+        flexDirection="column"
+        alignContent="end"
+        fontWeight="lighter"
+        fontSize="1.25em"
       >
-        <ServiceCardGrid servicesCard={servicesCard} />
-
-        <PadBox />
-      </ListLayoutRBox>
-    </Container>
+        We Inspect the Following When Visible and Accessible:
+        <Divider style={{ margin: "10px 0" }} />
+      </Box>
+      <DisplayService />
+      <Divider style={{ margin: "10px 0" }} />
+      <ScheduleButtonNew title="Schedule Today" />
+    </NewContainer>
   );
 }

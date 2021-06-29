@@ -1,19 +1,12 @@
-import { Container } from "@material-ui/core";
-import { LayoutBox } from "../Components/Box/AppBoxes";
+import { LayoutBox, NewContainer } from "../Components/Box/AppBoxes";
 import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
 import { INSPECT_TYPE } from "../Components/Services/services";
 import House from "../img/homePage.png";
 import CheckBox from "../img/inspectList.png";
+
 export const HomePage = () => {
   return (
-    <Container
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-      }}
-    >
-      <>
+    <NewContainer>
         <LayoutBox
           image={House}
           width="530px"
@@ -27,13 +20,12 @@ export const HomePage = () => {
           with us on inspection day, and learn about the home’s features, as
           well as tips for care and maintenance. We take the time to find the
           smallest details and issues and answer all your questions. With over
-          20 years of all aspects of real estate construction experience under
-          our belts, we have the knowledge needed to help you get to know your
-          new home.
+          20 years of experience in various aspects of real estate including buying, restoring and selling homes, we have the knowledge needed to help you get to know your
+          home.
         </LayoutBox>
 
         <LayoutBox
-          heading="We offer the following inspection services:"
+          heading="We Offer the Following Inspection Services:"
           image={CheckBox}
           width="400px"
           height="320px"
@@ -47,7 +39,6 @@ export const HomePage = () => {
         </LayoutBox>
 
         <ScheduleButtonNew title="Schedule your Inspection " />
-      </>
-    </Container>
+    </NewContainer>
   );
 };

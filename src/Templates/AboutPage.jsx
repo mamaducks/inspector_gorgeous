@@ -1,18 +1,12 @@
-import { Box, Container } from "@material-ui/core";
-import { LayoutBox } from "../Components/Box/AppBoxes";
+import { Box } from "@material-ui/core";
+import { LayoutBox, NewContainer } from "../Components/Box/AppBoxes";
 import { ProfileCard } from "../Components/Profile/ProfileCard";
 import About from "../img/houseB.png";
 import Inspect from "../img/inspector.png";
 
 export function AboutPage() {
   return (
-    <Container
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-      }}
-    >
+    <NewContainer>
       <LayoutBox
         image={About}
         width="600"
@@ -24,7 +18,7 @@ export function AboutPage() {
           Adrienne Soto is the founder and primary home inspector at Buyer
           Beware Home Inspections LLC. Before she inspected homes, she was a
           longtime designer/remodeler and has a vast knowledge of many aspects
-          of real estate and over 20 years of experience in restoring, building
+          of real estate with over 20 years of experience in restoring, building
           and designing homes in the New Jersey area.
           <br />
           <br />
@@ -54,6 +48,6 @@ export function AboutPage() {
       </LayoutBox>
 
       <ProfileCard />
-    </Container>
+    </NewContainer>
   );
 }
