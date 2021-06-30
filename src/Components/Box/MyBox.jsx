@@ -35,29 +35,29 @@ export function DivBox( {children, ...props} ) {
   )
 }
 
-export function DisplayBox({ children }) {
-  return (
-    <Box display="flex" justifyContent="space-between">
-      {children}
-    </Box>
-  );
-}
+// export function DisplayBox({ children }) {
+//   return (
+//     <Box display="flex" justifyContent="space-between">
+//       {children}
+//     </Box>
+//   );
+// }
 
-export function DisplayEvenBox({ children }) {
-  return (
-    <Box display="flex" justifyContent="space-evenly">
-      {children}
-    </Box>
-  );
-}
+// export function DisplayEvenBox({ children }) {
+//   return (
+//     <Box display="flex" justifyContent="space-evenly">
+//       {children}
+//     </Box>
+//   );
+// }
 
-export function DisplayCenterBox({ children }) {
-  return (
-    <Box display="flex" justifyContent="center" alignItems="center">
-      {children}
-    </Box>
-  );
-}
+// export function DisplayCenterBox({ children }) {
+//   return (
+//     <Box display="flex" justifyContent="center" alignItems="center">
+//       {children}
+//     </Box>
+//   );
+// }
 export function MyFlexBox({ children }) {
   return <Box display="flex">{children}</Box>;
 }

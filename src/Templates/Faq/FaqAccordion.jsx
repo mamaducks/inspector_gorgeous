@@ -1,8 +1,8 @@
 import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { AccordionBox } from "./AccordionBox";
-import { ExampleReport } from "./ExampleReport";
+import { AccordionBox } from "../Faq/Accordion/AccordionBox";
+import { ExampleReport } from "../Faq/Accordion/ExampleReport";
 
 const useStyles = makeStyles({
   root: {

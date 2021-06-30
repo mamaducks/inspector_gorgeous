@@ -6,7 +6,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { MdExpandMore } from "react-icons/md";
-import { DivBox } from "../Box/AppBoxes";
+import { DivBox } from "../../../Components/Box/AppBoxes";
 
   const useStyles = makeStyles((theme) => ({
   

@@ -1,13 +1,13 @@
-import Plug from "./plugSVG.svg";
-import Attic from "./atticSVG.svg";
-import Basement from "./basementSVG.svg";
-import Drainage from "./drainageSVG.svg";
-import Gutter from "./gutterSVG.svg";
-import HeatCool from "./heatcoolSVG.svg";
-import Plumb from "./plumbSVG.svg";
-import Roof from "./roofSVG.svg";
-import Wall from "./wallImg.svg";
-import Wind from "./winDoorSVG.svg";
+import Plug from "../plugSVG.svg";
+import Attic from "../atticSVG.svg";
+import Basement from "../basementSVG.svg";
+import Drainage from "../drainageSVG.svg";
+import Gutter from "../gutterSVG.svg";
+import HeatCool from "../heatcoolSVG.svg";
+import Plumb from "../plumbSVG.svg";
+import Roof from "../roofSVG.svg";
+import Wall from "../wallImg.svg";
+import Wind from "../winDoorSVG.svg";
 
 export var servicesCard = [
   {

@@ -1,21 +1,17 @@
-import {
-  LayoutBox,
-  NewContainer,
-  DivBox,
-} from "../Components/Box/AppBoxes";
-import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
-import MagHouse from "../img/houseMagnify.png";
-import ManMag from "../img/manmag.png";
-import { Box, Divider } from "@material-ui/core";
-import { DisplayService } from "../Components/Services/DisplayServices";
+import { LayoutBox, NewContainer, DivBox } from "../../Components/Box/AppBoxes";
+import { ScheduleButtonNew } from "../../Components/Schedule/ScheduleButton";
+import MagHouse from "../../img/houseMagnify.png";
+import ManMag from "../../img/manmag.png";
+import { Divider } from "@material-ui/core";
+import { DisplayService } from "./ServicesList/DisplayServices";
 
 export function ServicesPage() {
   return (
     <NewContainer>
       <LayoutBox
         image={MagHouse}
-        width="530px"
-        height="380px"
+        width="600px"
+        height="400px"
         heading="Home Inspection Services"
       >
         Home inspections provide valuable information before you buy a home. We
@@ -30,12 +26,11 @@ export function ServicesPage() {
         services.
       </LayoutBox>
       <DivBox fontSize="1.25em" lineHeight={1.2} paddingTop="10px">
-        {" "}
         We Inspect the Following When Visible and Accessible:
       </DivBox>
-      <Divider style={{ margin: "10px 0" }} />
+      <Divider />
       <DisplayService />
-      <Divider style={{ margin: "10px 0" }} />
+      <Divider />
       <ScheduleButtonNew title="Schedule Today" />
     </NewContainer>
   );

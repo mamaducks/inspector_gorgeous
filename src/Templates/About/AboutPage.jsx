@@ -1,8 +1,8 @@
 import { Box } from "@material-ui/core";
-import { LayoutBox, NewContainer } from "../Components/Box/AppBoxes";
-import { ProfileCard } from "../Components/Profile/ProfileCard";
-import About from "../img/houseB.png";
-import Inspect from "../img/inspector.png";
+import { LayoutBox, NewContainer } from "../../Components/Box/AppBoxes";
+import { ProfileCard } from "./ProfileCard";
+import About from "../../img/houseB.png";
+import Inspect from "../../img/inspector.png";
 
 export function AboutPage() {
   return (
@@ -10,11 +10,11 @@ export function AboutPage() {
       <LayoutBox
         image={About}
         width="600"
-        reverse
         height="400"
+        reverse
         heading="About Us"
       >
-        <Box fontSize="16px">
+        
           Adrienne Soto is the founder and primary home inspector at Buyer
           Beware Home Inspections LLC. Before she inspected homes, she was a
           longtime designer/remodeler and has a vast knowledge of many aspects
@@ -27,7 +27,7 @@ export function AboutPage() {
           inspecting a property. Adrienne enjoys all aspects of building and
           maintaining homes, and is eager to share this information with her
           clients.
-        </Box>
+     
       </LayoutBox>
 
       <LayoutBox

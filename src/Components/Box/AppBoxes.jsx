@@ -8,9 +8,9 @@ export function PadBox({ children, ...props }) {
   );
 }
 
-export function NewContainer({children}) {
+export function NewContainer({ children }) {
   return (
-<Container
+    <Container
       style={{
         display: "flex",
         flexDirection: "column",
@@ -50,9 +50,7 @@ export function LayoutBox({
         width="33rem"
         fontWeight="lighter"
       >
-        <Box fontSize="1.25em">
-          {heading}
-        </Box>
+        <Box fontSize="1.25em">{heading}</Box>
 
         <Divider style={{ margin: "10px 0" }} />
 
@@ -61,8 +59,6 @@ export function LayoutBox({
     </Box>
   );
 }
-
-
 
 export function InfoBox({ Icon, info, children, ...props }) {
   return (
@@ -83,20 +79,36 @@ export function InfoBox({ Icon, info, children, ...props }) {
   );
 }
 
-export function DivBox( {children, ...props} ) {
+export function DivBox({ children, ...props }) {
   return (
     <Box
-    justifyContent="center"
-    display="flex"
-    flexDirection="column"
-    alignContent="end"
-    fontWeight="lighter"
-    lineHeight={1.5}
-    letterSpacing={1}
-    textAlign="center"
-    {...props}
+      justifyContent="center"
+      display="flex"
+      flexDirection="column"
+      alignContent="end"
+      fontWeight="lighter"
+      lineHeight={1.5}
+      letterSpacing={1}
+      textAlign="center"
+      {...props}
     >
       {children}
     </Box>
-  )
+  );
+}
+
+export function FooterBox({ children, ...props }) {
+  return (
+    <PadBox>
+      <Box
+        letterSpacing={0.5}
+        lineHeight={1.4}
+        textAlign="center"
+        fontSize="16px"
+        {...props}
+      >
+        {children}
+      </Box>
+    </PadBox>
+  );
 }

@@ -1,17 +1,15 @@
-import { Box, Container, Divider, makeStyles } from "@material-ui/core";
+import { Box, Divider, makeStyles } from "@material-ui/core";
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
-import { Social } from "../App/AppBar/SocialMedia";
-
-import { LayoutBox } from "../Components/Box/AppBoxes";
-import { NewContainer } from "../Components/Box/AppBoxes";
-import Happy from "../img/happyHouse.png";
-import Heart from "../img/heart.svg";
-import MapImage from "../img/mapNJ.png";
-import Locate from "../img/locateSVG.svg";
-import Mail from "../img/mailSVG.svg";
-import Phone from "../img/phoneSVG.svg";
-import { InfoBox } from "../Components/Box/AppBoxes";
+import { Social } from "../../App/SocialMedia";
+import { NewContainer } from "../../Components/Box/AppBoxes";
+import Happy from "../../img/happyHouse.png";
+import Heart from "../../img/heart.svg";
+import MapImage from "../../img/mapNJ.png";
+import Locate from "../../img/locateSVG.svg";
+import Mail from "../../img/mailSVG.svg";
+import Phone from "../../img/phoneSVG.svg";
+import { InfoBox } from "../../Components/Box/AppBoxes";
 
 const useStyles = makeStyles({
   root: {
@@ -32,9 +30,7 @@ const useStyles = makeStyles({
       paddingRight: "25px",
     },
   },
-
 });
-
 
 function ContactHeader() {
   const classes = useStyles();
@@ -61,7 +57,6 @@ function ContactHeader() {
     </Box>
   );
 }
-
 
 function InfoMap() {
   return (
@@ -91,7 +86,6 @@ function InfoMap() {
   );
 }
 
-
 function Hours() {
   return (
     <Box
@@ -111,7 +105,6 @@ function Hours() {
     </Box>
   );
 }
-
 
 function ServicesLine() {
   return (
@@ -154,20 +147,15 @@ function Days({ children }) {
   );
 }
 
-
 export const ContactPage = () => {
-  const classes = useStyles();
   return (
     <>
       <NewContainer>
-        
-          <ContactHeader />
+        <ContactHeader />
 
-          <InfoMap />
-      
+        <InfoMap />
+
         <Hours />
-
-
       </NewContainer>
 
       <ServicesLine />

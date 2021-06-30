@@ -3,14 +3,15 @@ import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
 import { INSPECT_TYPE } from "../Components/Services/services";
 import House from "../img/homePage.png";
 import CheckBox from "../img/inspectList.png";
+import ManMag from "../img/magman.png"
 
 export const HomePage = () => {
   return (
     <NewContainer>
         <LayoutBox
           image={House}
-          width="530px"
-          height="380px"
+          width="600px"
+          height="400px"
           heading="Let Us Help You Get to Know Your Home"
         >
           At Buyer Beware Home Inspections, we fully understand the importance
@@ -27,8 +28,8 @@ export const HomePage = () => {
         <LayoutBox
           heading="We Offer the Following Inspection Services:"
           image={CheckBox}
-          width="400px"
-          height="320px"
+          width="500px"
+          height="300px"
           reverse
         >
           <ul style={{ listStyleType: "square", fontWeight: "300" }}>

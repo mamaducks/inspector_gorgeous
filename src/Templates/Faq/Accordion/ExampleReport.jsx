@@ -1,9 +1,9 @@
 import { Box } from "@material-ui/core";
 import React from "react";
-import Report from "../../img/reportA.png";
-import Reporter from "../../img/reportB.png";
+import Report from "../../../img/reportA.png";
+import Reporter from "../../../img/reportB.png";
 import { MediaBox } from "./MediaBox.jsx";
-import { DivBox } from "../Box/MyBox";
+import { DivBox } from "../../../Components/Box/AppBoxes";
 
 export const ExampleReport = () => {
   return (

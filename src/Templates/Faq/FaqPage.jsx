@@ -1,8 +1,8 @@
-import { FaqAccordion } from "../Components/Accordion/FaqAccordion";
-import { LayoutBox, NewContainer } from "../Components/Box/AppBoxes";
-import { SERVICES } from "../Components/Services/services";
-import Corner from "../img/houseC.png";
-import House from "../img/houseMag.png";
+import { FaqAccordion } from "../Faq/FaqAccordion";
+import { LayoutBox, NewContainer } from "../../Components/Box/AppBoxes";
+import { SERVICES } from "../../Components/Services/services";
+import Corner from "../../img/houseC.png";
+import House from "../../img/houseMag.png";
 
 export function FaqPage() {
   return (
@@ -32,8 +32,8 @@ export function FaqPage() {
 
       <LayoutBox
         image={House}
-        width="475px"
-        height="325px"
+        width="500px"
+        height="300px"
         heading="What do we inspect?"
       >
         <ul style={{ listStyleType: "square", fontWeight: "300" }}>

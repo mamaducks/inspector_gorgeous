@@ -1,4 +1,4 @@
-import { servicesCard } from "../Services/ServiceList";
+import { servicesCard } from "./ServiceList";
 
 import React, { useState } from "react";
 import { Box, Card, Dialog, makeStyles } from "@material-ui/core";

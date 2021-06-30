@@ -1,7 +1,6 @@
 import React from "react";
-import { AppBar } from "./AppBar/AppBar";
-import { HeadButtons } from "./AppBar/Header";
-import { Quote } from "../App/Footer/RequestQuote";
+import { AppBar } from "./AppBar";
+import { Quote } from "./Footer";
 import { Router } from "./Router";
 
 export function App() {
@@ -9,7 +8,6 @@ export function App() {
     <>
       <AppBar />
 
-      <HeadButtons />
 
       <div className="container">
         <Router />

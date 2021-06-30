@@ -8,11 +8,11 @@ import {
 import { history } from "../_helpers/helpers";
 import routes from "./Routes";
 
-import { AboutPage } from "../Templates/AboutPage";
-import { ContactPage } from "../Templates/ContactPage";
-import { FaqPage } from "../Templates/FaqPage";
+import { AboutPage } from "../Templates/About/AboutPage";
+import { ContactPage } from "../Templates/Contact/ContactPage";
+import { FaqPage } from "../Templates/Faq/FaqPage";
 import { HomePage } from "../Templates/HomePage";
-import { ServicesPage } from "../Templates/ServicesPage";
+import { ServicesPage } from "../Templates/Services/ServicesPage";
 
 export function Router() {
   return (
