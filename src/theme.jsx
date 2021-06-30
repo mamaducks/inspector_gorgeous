@@ -18,98 +18,18 @@ const theme = createMuiTheme({
     },
   },
 
-  // typography: {
-  //   fontFamily: ["Helvetica", "Roboto", "Arial", "sans-serif"].join(","),
-  //   fontSize: 14,
-  //   fontWeightLight: 300,
-  //   fontWeightRegular: 400,
-  //   fontWeightMedium: 500,
-  // },
-  //      typography: {
-  //        fontFamily: [
-
-  //          '"Helvetica"',
-  //  '-apple-system',
-  //          'BlinkMacSystemFont',
-  //          '"Segoe UI"',
-  //         'Roboto',
-
-  //         'Arial',
-  //         'sans-serif',
-  //         '"Apple Color Emoji"',
-  //         '"Segoe UI Emoji"',
-  //         '"Segoe UI Symbol"',
-  //       ].join(','),
-  //   fontSize: 13,
-  //   display4: {
-  //     fontSize: 13,
-  //   },
-  //   display3: {
-  //     fontSize: 13,
-  //   },
-  //   display2: {
-  //     fontSize: 13,
-  //   },
-  //   display1: {
-  //     fontSize: 13,
-  //   },
-  //   headline: {
-  //     fontSize: 13,
-  //   },
-  //   title: {
-  //     fontSize: 13,
-  //   },
-  //   subheading: {
-  //     fontSize: 13,
-  //   },
-  //   body2: {
-  //     fontSize: 13,
-  //   },
-  //   body1: {
-  //     fontSize: 13,
-  //   },
-  //   caption: {
-  //     fontSize: 13,
-  //   },
-  //   button: {
-  //     fontSize: 13,
-  //   },
-  // },
-
   overrides: {
-    // MuiAppBar: {
-    //   root: {
-    //     paddingLeft: 45,
-    //     paddingRight: 45,
-    //   },
-    // },
     MuiToolbar: {
       root: {
         paddingLeft: 9,
         paddingRight: 12,
       },
     },
-    MuiIcon: {
-      root: {
-        // paddingRight: 15,
-      },
-    },
-MuiDivider: {
-root:{
-  margin: "10px 0",
-  color: "green"
-}
-},
 
-    MuiBox: {
-     
-      // root: {
-      //   fontSize: 14,
-      //   lineHeight: 2,
-      //   letterSpacing: 2,
-      // },
-      //     fontFamily: "Helvetica",
-      //     fontSize: 88
+    MuiDivider: {
+      root: {
+        margin: "10px 0",
+      },
     },
 
     MuiButton: {
@@ -119,7 +39,6 @@ root:{
         // Some CSS
       },
       label: {
-        // fontSize: 17,
         color: "#01333c",
       },
     },
@@ -164,17 +83,9 @@ root:{
 
     MuiListItemText: {
       root: {
-        fontFamily: "Helvetica"
-      }
-    }
-    // MuiDialogPaperWidthSm: {
-    //   maxWidth: "md"
-    // }
-    // MuiListItemText: {
-    //   root: {
-    //     fontFamily: "Helvetica"
-    //   }
-    // }
+        fontFamily: "Helvetica",
+      },
+    },
   },
 });
 
