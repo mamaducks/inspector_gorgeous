@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     borderRadius: 5,
     margin: "25px 50px",
+    paddingBottom: "15px"
   },
 });
 

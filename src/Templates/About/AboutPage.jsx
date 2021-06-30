@@ -1,4 +1,3 @@
-import { Box } from "@material-ui/core";
 import { LayoutBox, NewContainer } from "../../Components/Box/AppBoxes";
 import { ProfileCard } from "./ProfileCard";
 import About from "../../img/houseB.png";
@@ -11,7 +10,7 @@ export function AboutPage() {
         image={About}
         width="600"
         height="400"
-        reverse
+       
         heading="About Us"
       >
         
@@ -34,6 +33,7 @@ export function AboutPage() {
         image={Inspect}
         width="600"
         height="400"
+        reverse
         heading="Background and Experience"
       >
         Adrienne has completed all of the state’s required approved professional

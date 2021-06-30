@@ -4,6 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { Social } from "./SocialMedia";
 import { FaPhoneAlt } from "react-icons/fa";
 import EmmaLogo from "../img/emmaLogoSmall.png";
+import { FlexBox } from "../Components/Box/AppBoxes";
 
 function Logo() {
   return (
@@ -31,30 +32,22 @@ function Logo() {
   );
 }
 
+
 export function AppBar() {
   return (
     <>
-      <Box display="flex" justifyContent="space-between">
+      <FlexBox justifyContent="space-between">
         <Logo />
 
         <Social
           color="black"
           alignSelf="flex-end"
-          display="flex"
-          justifyContent="space-evenly"
-          paddingBottom="10px"
-          minWidth="200px"
           size="2x"
           label={<HiOutlineMail color="black" />}
         />
-      </Box>
+      </FlexBox>
       <Box style={{ backgroundColor: "#a71976", padding: "1px" }}>
-        <Box
-          color="white"
-          display="flex"
-          fontSize="18px"
-          justifyContent="space-between"
-        >
+        <FlexBox color="white" justifyContent="space-between">
           <Tabs value={window.location.pathname}>
             {Object.values(routes).map(({ link, label }) => (
               <Tab label={label} href={link} component="a" value={link} />
@@ -66,9 +59,9 @@ export function AppBar() {
               <FaPhoneAlt size="20px" />
             </Icon>
 
-            <div>1-609-670-0451</div>
+            <div style={{paddingInline:"12px"}}>1-609-670-0451</div>
           </Box>
-        </Box>
+        </FlexBox>
       </Box>
     </>
   );

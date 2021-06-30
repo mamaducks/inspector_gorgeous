@@ -2,28 +2,16 @@ import { AppBar, Box, Icon } from "@material-ui/core";
 import React from "react";
 import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
 import { MailTo } from "./MailTo";
-import { FooterBox } from "../Components/Box/AppBoxes";
+import { FooterBox, FootOuterBox } from "../Components/Box/AppBoxes";
 import { FaPhoneAlt } from "react-icons/fa";
 
-function FootOuter({ children }) {
-  return (
-    <Box
-      display="flex"
-      justifyContent="space-evenly"
-      color="#a71976"
-      alignItems="center"
-      paddingTop="4px"
-    >
-      {children}
-    </Box>
-  );
-}
 
-export const Quote = () => {
+
+export const Footer = () => {
   return (
     <>
       <AppBar position="sticky" elevation={0}>
-        <FootOuter>
+        <FootOuterBox>
           <FooterBox>
             <Box lineHeight="16px" fontWeight="600">
               BUYER BEWARE HOME INSPECTION
@@ -66,7 +54,7 @@ export const Quote = () => {
               </div>
             </Box>
           </FooterBox>
-        </FootOuter>
+        </FootOuterBox>
       </AppBar>
     </>
   );

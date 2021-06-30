@@ -3,7 +3,6 @@ import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
 import { INSPECT_TYPE } from "../Components/Services/services";
 import House from "../img/homePage.png";
 import CheckBox from "../img/inspectList.png";
-import ManMag from "../img/magman.png"
 
 export const HomePage = () => {
   return (

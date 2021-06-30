@@ -34,7 +34,7 @@ export function FaqPage() {
         image={House}
         width="500px"
         height="300px"
-        heading="What do we inspect?"
+        heading="What We Inspect"
       >
         <ul style={{ listStyleType: "square", fontWeight: "300" }}>
           {SERVICES.map((service) => (

@@ -1,7 +1,6 @@
 import { LayoutBox, NewContainer, DivBox } from "../../Components/Box/AppBoxes";
 import { ScheduleButtonNew } from "../../Components/Schedule/ScheduleButton";
 import MagHouse from "../../img/houseMagnify.png";
-import ManMag from "../../img/manmag.png";
 import { Divider } from "@material-ui/core";
 import { DisplayService } from "./ServicesList/DisplayServices";
 
@@ -26,11 +25,11 @@ export function ServicesPage() {
         services.
       </LayoutBox>
       <DivBox fontSize="1.25em" lineHeight={1.2} paddingTop="10px">
-        We Inspect the Following When Visible and Accessible:
+        We inspect the following when accessible:
       </DivBox>
       <Divider />
       <DisplayService />
-      <Divider />
+      
       <ScheduleButtonNew title="Schedule Today" />
     </NewContainer>
   );

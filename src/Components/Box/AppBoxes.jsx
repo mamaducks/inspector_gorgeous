@@ -8,6 +8,15 @@ export function PadBox({ children, ...props }) {
   );
 }
 
+
+export function FlexBox({ children, ...props }) {
+  return (
+    <Box display="flex" justifyContent="space-evenly" {...props}>
+      {children}
+    </Box>
+  );
+}
+
 export function NewContainer({ children }) {
   return (
     <Container
@@ -97,6 +106,20 @@ export function DivBox({ children, ...props }) {
   );
 }
 
+export function FootOuterBox({ children }) {
+  return (
+    <Box
+      display="flex"
+      justifyContent="space-evenly"
+      color="#a71976"
+      alignItems="center"
+      paddingTop="4px"
+    >
+      {children}
+    </Box>
+  );
+}
+
 export function FooterBox({ children, ...props }) {
   return (
     <PadBox>
@@ -110,5 +133,59 @@ export function FooterBox({ children, ...props }) {
         {children}
       </Box>
     </PadBox>
+  );
+}
+
+export function ContactBox({ children, ...props }) {
+  return (
+    <Box
+      textAlign="center"
+      fontSize="22px"
+      display="flex"
+      fontWeight="lighter"
+      alignItems="center"
+      justifyContent="center"
+      letterSpacing={1}
+      {...props}
+    >
+      {children}
+    </Box>
+  );
+}
+
+export function ServiceGrid({ children }) {
+  return (
+    <Box display="flex" justifyContent="center" flexWrap="wrap" style={{paddingBlock:"15px"}}>
+      {children}
+    </Box>
+  );
+}
+export function ServiceDialog({ children }) {
+  return (
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+      alignItems="center"
+      paddingTop="25px"
+      width="300px"
+    >
+      {children}
+    </Box>
+  );
+}
+export function ServiceCard({ children }) {
+  return (
+    <Box
+      alignItems="center"
+      justifyContent="center"
+      display="flex"
+      flexDirection="column"
+      width="230px"
+      height="180px"
+      fontSize="14px"
+    >
+      {children}
+    </Box>
   );
 }

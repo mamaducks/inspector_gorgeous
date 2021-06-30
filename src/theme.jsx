@@ -102,6 +102,7 @@ root:{
 },
 
     MuiBox: {
+     
       // root: {
       //   fontSize: 14,
       //   lineHeight: 2,

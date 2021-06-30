@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar } from "./AppBar";
-import { Quote } from "./Footer";
+import { Footer } from "./Footer";
 import { Router } from "./Router";
 
 export function App() {
@@ -13,7 +13,7 @@ export function App() {
         <Router />
       </div>
 
-      <Quote />
+      <Footer />
     </>
   );
 }

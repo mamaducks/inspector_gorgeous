@@ -5,7 +5,7 @@ import { MailTo } from "./MailTo";
 
 export function Social({ color, size, label, ...props }) {
   return (
-    <Box display="flex" justifyContent="center" {...props}>
+    <Box display="flex" justifyContent="space-evenly" paddingBottom="10px" minWidth="200px" {...props}>
       <IconButton>
         <MailTo label={label} />
       </IconButton>
