@@ -15,7 +15,7 @@ export function ServicesPage() {
       >
         Home inspections provide valuable information before you buy a home. We
         will look at things like a home’s foundation, structural components,
-        roof, HVAC, plumbing, and electrical systems, then provide a detailed
+        roof, HVAC, plumbing, and electrical systems, then provide you with a detailed
         report of a home’s condition so you can move forward confidently with
         peace of mind and knowledge to make informed decisions about your home.
         <br />
@@ -24,7 +24,7 @@ export function ServicesPage() {
         Buyer Beware is the top choice in south jersey for your home inspection
         services.
       </LayoutBox>
-      <DivBox fontSize="1.25em" lineHeight={1.2} paddingTop="10px">
+      <DivBox fontSize="1.25em" >
         We inspect the following when accessible:
       </DivBox>
       <Divider />

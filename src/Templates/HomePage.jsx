@@ -16,12 +16,10 @@ export const HomePage = () => {
           At Buyer Beware Home Inspections, we fully understand the importance
           of a thorough home inspection, and that’s why we work so hard to offer
           you the very best. Let us provide an unbiased, comprehensive, visual
-          inspection of your entire home and property. Walk through the home
-          with us on inspection day, and learn about the home’s features, as
-          well as tips for care and maintenance. We take the time to find the
-          smallest details and issues and answer all your questions. With over
+          inspection of your entire home and property. We take the time to find the
+          smallest details and issues and are available to answer any questions you may have. With over
           20 years of experience in various aspects of real estate including buying, restoring and selling homes, we have the knowledge needed to help you get to know your
-          home.
+          home. Count on Buyer Beware Home Inspection to provide you the very best service.
         </LayoutBox>
 
         <LayoutBox

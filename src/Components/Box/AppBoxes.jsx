@@ -81,7 +81,7 @@ export function InfoBox({ Icon, info, children, ...props }) {
       >
         <img alt="" src={Icon} width="50px" height="50px" />
       </Box>
-      <Box color="#32474b" textAlign="center" fontSize="16px">
+      <Box color="#32474b" textAlign="center" fontSize="16px" letterSpacing={1}>
         {info}
       </Box>
     </Box>
@@ -155,7 +155,7 @@ export function ContactBox({ children, ...props }) {
 
 export function ServiceGrid({ children }) {
   return (
-    <Box display="flex" justifyContent="center" flexWrap="wrap" style={{paddingBlock:"15px"}}>
+    <Box display="flex" justifyContent="center" flexWrap="wrap" style={{paddingBlock:"10px"}}>
       {children}
     </Box>
   );
@@ -167,8 +167,11 @@ export function ServiceDialog({ children }) {
       flexDirection="column"
       justifyContent="space-between"
       alignItems="center"
-      paddingTop="25px"
+      padding="25px"
       width="300px"
+
+      letterSpacing={0.3}
+      fontSize="14px"
     >
       {children}
     </Box>

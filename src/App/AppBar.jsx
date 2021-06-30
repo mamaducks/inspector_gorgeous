@@ -59,7 +59,7 @@ export function AppBar() {
               <FaPhoneAlt size="20px" />
             </Icon>
 
-            <div style={{paddingInline:"12px"}}>1-609-670-0451</div>
+            <div style={{paddingInline:"12px", fontSize:"17px"}}>1-609-670-0451</div>
           </Box>
         </FlexBox>
       </Box>

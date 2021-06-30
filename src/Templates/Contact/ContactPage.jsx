@@ -66,7 +66,7 @@ export const ContactPage = () => {
         <ContactBox
           marginBlock="12px"
           justifyContent="space-evenly"
-          fontSize="15px"
+          fontSize="17px"
           alignSelf="center"
           style={{paddingBlock:"15px"}}
         >
@@ -86,7 +86,7 @@ export const ContactPage = () => {
         Termite Inspections
       </ContactBox>
       <NewContainer >
-        <Box style={{ paddingBlock: "15px" }}>
+        <Box alignSelf="center" style={{ paddingTop: "15px" }}>
           <ContactBox>
             {" "}
             Have any questions? We'd{" "}
