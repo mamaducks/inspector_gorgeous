@@ -3,12 +3,15 @@ import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { Social } from "../App/AppBar/SocialMedia";
 
-import {LayoutBox} from "../Components/Box/AppBoxes";
-import { InfoCard } from "../Components/ContactInfo/InfoCard";
+import { LayoutBox } from "../Components/Box/AppBoxes";
 import { NewContainer } from "../Components/Box/AppBoxes";
 import Happy from "../img/happyHouse.png";
 import Heart from "../img/heart.svg";
 import MapImage from "../img/mapNJ.png";
+import Locate from "../img/locateSVG.svg";
+import Mail from "../img/mailSVG.svg";
+import Phone from "../img/phoneSVG.svg";
+import { InfoBox } from "../Components/Box/AppBoxes";
 
 const useStyles = makeStyles({
   root: {
@@ -30,113 +33,159 @@ const useStyles = makeStyles({
     },
   },
 
-  hours: {
-    letterSpacing: 1,
-    lineHeight: 2,
-    alignSelf: "center",
-    marginBlock: "12px",
-    display: "flex",
-    fontWeight: "lighter",
-    justifyContent: "space-evenly",
-    fontSize: "18px",
-    "& div": {
-      fontWeight: "bold",
-      paddingInline: "6px",
-    },
-  },
-  pageLine: {
-    textAlign: "center",
-    letterSpacing: 1.5,
-    lineHeight: 1.5,
-    fontWeight: 700,
-    color: "#ffffff",
-    fontSize: "larger",
-    backgroundColor: "#a71976",
-  },
-
-  socialBox: {
-    textAlign: "center",
-    fontSize: "22px",
-    display: "flex",
-    fontWeight: "lighter",
-    alignItems: "center",
-    "& img": {
-      width: "40px",
-      height: "35px",
-      padding: "4px",
-    },
-  },
-  socialButtons: {
-    fontSize: "40px",
-    justifyContent: "space-evenly",
-    color: "#a71976",
-  },
 });
+
+
+function ContactHeader() {
+  const classes = useStyles();
+  return (
+    <Box className={classes.header}>
+      <img alt="" src={Happy} />
+      <Box
+        justifyContent="center"
+        display="flex"
+        flexDirection="column"
+        alignContent="end"
+        width="43rem"
+        fontWeight="lighter"
+        lineHeight={1.3}
+        letterSpacing={1}
+      >
+        <Box fontSize="1.15em">
+          Buyer Beware Home Inspections is based out of Berlin, NJ
+        </Box>
+        <Divider />
+        We offer Home Inspection services to areas of New Jersey and
+        Philadelphia
+      </Box>
+    </Box>
+  );
+}
+
+
+function InfoMap() {
+  return (
+    <Box display="flex" justifyContent="space-evenly">
+      <img alt="" src={MapImage} />
+      {/* <InfoCard /> */}
+      <Box display="flex">
+        <Box alignSelf="center">
+          <InfoBox Icon={Phone} info="p: 609-670-0451" />
+          <InfoBox Icon={Locate} info="Berlin, NJ 08009" />
+          {/* <AllInfo Icon={Email}>
+            <InfoBox info="BuyersBewareHomeInspections@gmail.com" />
+          </AllInfo> */}
+          <InfoBox
+            Icon={Mail}
+            info={
+              <>
+                <div>Buyer Beware Home Inspections</div>
+                <div>P. O. Box 463</div>
+                <div>Bordentown, NJ 08505</div>
+              </>
+            }
+          />
+        </Box>
+      </Box>
+    </Box>
+  );
+}
+
+
+function Hours() {
+  return (
+    <Box
+      letterSpacing={1}
+      lineHeight={2}
+      alignSelf="center"
+      marginBlock="12px"
+      display="flex"
+      fontWeight="lighter"
+      justifyContent="space-evenly"
+      fontSize="18px"
+      paddingInline="10px"
+    >
+      <Days>Monday thru Friday</Days> 8:00 am - 7:00 pm <Days>Saturday</Days>{" "}
+      9:00 am - 5:00 pm
+      <Days>Sunday </Days>Closed
+    </Box>
+  );
+}
+
+
+function ServicesLine() {
+  return (
+    <Box
+      textAlign="center"
+      letterSpacing={1.5}
+      lineHeight={1.5}
+      fontWeight="700"
+      fontSize="larger"
+      style={{ color: "#ffffff", backgroundColor: "#a71976" }}
+    >
+      Traditional Home Inspections • Pre-Listing Inspections • Radon Testing •
+      Termite Inspections
+    </Box>
+  );
+}
+
+function SocialBox() {
+  return (
+    <Box
+      textAlign="center"
+      fontSize="22px"
+      display="flex"
+      fontWeight="lighter"
+      alignItems="center"
+      justifyContent="center"
+    >
+      Have any questions? We'd{" "}
+      <img alt="" src={Heart} width="40px" height="35px" padding="4px" />
+      to hear from you!
+    </Box>
+  );
+}
+
+function Days({ children }) {
+  return (
+    <Box fontWeight="bold" style={{ paddingInline: "20px" }}>
+      {children}
+    </Box>
+  );
+}
+
 
 export const ContactPage = () => {
   const classes = useStyles();
   return (
     <>
       <NewContainer>
-        <Box className={classes.root}>
-          <Box className={classes.header}>
-            <img alt="" src={Happy} />
-            <Box
-              justifyContent="center"
-              display="flex"
-              flexDirection="column"
-              alignContent="end"
-              width="43rem"
-              fontWeight="lighter"
-              lineHeight={1.5}
-              letterSpacing={1}
-            >
-              <Box fontSize="1.15em">
-                Buyer Beware Home Inspections is based out of Berlin, NJ
-              </Box>
-              <Divider style={{ margin: "10px 0" }} />
-              We offer Home Inspection services to areas of New Jersey and
-              Philadelphia
-            </Box>
-          </Box>
+        
+          <ContactHeader />
 
-          <Box display="flex" justifyContent="space-evenly">
-            <img alt="" src={MapImage} />
-            <InfoCard />
-          </Box>
+          <InfoMap />
+      
+        <Hours />
 
-          <Box className={classes.hours}>
-            <div>Monday thru Friday</div> 8:00 am - 7:00 pm <div>Saturday</div>{" "}
-            9:00 am - 5:00 pm
-            <div>Sunday </div>Closed
-          </Box>
-        </Box>
+
       </NewContainer>
 
+      <ServicesLine />
 
-
-      <Box className={classes.pageLine}>
-        Traditional Home Inspections • Pre-Listing Inspections • Radon Testing •
-        Termite Inspections
-      </Box>
-
-      <Container>
+      <NewContainer>
         <Box style={{ paddingBlock: "15px" }}>
-          <Box className={classes.socialBox}>
-            Have any questions? We'd <img alt="" src={Heart} />
-            to hear from you!
-          </Box>
-          <Divider style={{ margin: "10px", color: "#a71976" }} />
+          <SocialBox />
 
-          {/* <div className={classes.divLine}></div> */}
+          <Divider />
 
           <Social
             color="#a71976"
-            className={classes.socialButtons}
+            justifyContent="space-evenly"
+            fontSize="40px"
             label={<HiOutlineMail color="#a71976" fontSize="40px" />}
           />
         </Box>
-      </Container>
+      </NewContainer>
     </>
   );
 };

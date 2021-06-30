@@ -1,4 +1,8 @@
-import { LayoutBox, NewContainer } from "../Components/Box/AppBoxes";
+import {
+  LayoutBox,
+  NewContainer,
+  DivBox,
+} from "../Components/Box/AppBoxes";
 import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
 import MagHouse from "../img/houseMagnify.png";
 import ManMag from "../img/manmag.png";
@@ -25,20 +29,11 @@ export function ServicesPage() {
         Buyer Beware is the top choice in south jersey for your home inspection
         services.
       </LayoutBox>
-
-      <Box
-        lineHeight={1.5}
-        letterSpacing={1}
-        justifyContent="center"
-        display="flex"
-        flexDirection="column"
-        alignContent="end"
-        fontWeight="lighter"
-        fontSize="1.25em"
-      >
+      <DivBox fontSize="1.25em" lineHeight={1.2} paddingTop="10px">
+        {" "}
         We Inspect the Following When Visible and Accessible:
-        <Divider style={{ margin: "10px 0" }} />
-      </Box>
+      </DivBox>
+      <Divider style={{ margin: "10px 0" }} />
       <DisplayService />
       <Divider style={{ margin: "10px 0" }} />
       <ScheduleButtonNew title="Schedule Today" />

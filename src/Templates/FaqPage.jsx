@@ -1,19 +1,12 @@
-import { Container } from "@material-ui/core";
 import { FaqAccordion } from "../Components/Accordion/FaqAccordion";
-import { LayoutBox } from "../Components/Box/AppBoxes";
+import { LayoutBox, NewContainer } from "../Components/Box/AppBoxes";
 import { SERVICES } from "../Components/Services/services";
 import Corner from "../img/houseC.png";
 import House from "../img/houseMag.png";
 
 export function FaqPage() {
   return (
-    <Container
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-      }}
-    >
+    <NewContainer>
       <LayoutBox
         image={Corner}
         width="600"
@@ -51,6 +44,6 @@ export function FaqPage() {
       </LayoutBox>
 
       <FaqAccordion />
-    </Container>
+    </NewContainer>
   );
 }

@@ -94,6 +94,13 @@ const theme = createMuiTheme({
         // paddingRight: 15,
       },
     },
+MuiDivider: {
+root:{
+  margin: "10px 0",
+  color: "green"
+}
+},
+
     MuiBox: {
       // root: {
       //   fontSize: 14,
