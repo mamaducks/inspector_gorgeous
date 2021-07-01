@@ -50,7 +50,7 @@ export function AppBar() {
         <FlexBox color="white" justifyContent="space-between">
           <Tabs value={window.location.pathname}>
             {Object.values(routes).map(({ link, label }) => (
-              <Tab label={label} href={link} component="a" value={link} />
+              <Tab key={link} label={label} href={link} component="a" value={link} />
             ))}
           </Tabs>
 
