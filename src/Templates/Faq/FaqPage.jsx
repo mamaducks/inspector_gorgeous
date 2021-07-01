@@ -1,6 +1,6 @@
 import { FaqAccordion } from "../Faq/FaqAccordion";
 import { LayoutBox, NewContainer } from "../../Components/Box/AppBoxes";
-import { SERVICES } from "../../Components/Services/services";
+import { SERVICES } from "../../Templates/Services/services";
 import Corner from "../../img/houseC.png";
 import House from "../../img/houseMag.png";
 

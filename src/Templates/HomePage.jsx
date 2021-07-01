@@ -1,6 +1,6 @@
 import { LayoutBox, NewContainer } from "../Components/Box/AppBoxes";
 import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
-import { INSPECT_TYPE } from "../Components/Services/services";
+import { INSPECT_TYPE } from "../Templates/Services/services";
 import House from "../img/homePage.png";
 import CheckBox from "../img/inspectList.png";
 
