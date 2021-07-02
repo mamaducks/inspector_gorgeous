@@ -40,7 +40,7 @@ export function AboutPage() {
         home inspection courses and exams, and has also passed the NACHI exam to
         become a certified member. She has completed extensive training, both in
         the classroom and in the field. Throughout the year she takes continuing
-        education courses to stay abreast on new products, codes and inspection
+        education courses to stay abreast on new products and inspection
         techniques.Our Home Inspectors are fully licensed by the state, and
         fully insured. Contact Adrienne at Buyer Beware Home Inspections today
         to schedule your reliable, professional in-depth home inspection in the

@@ -1,10 +1,10 @@
 import { Box, Divider } from "@material-ui/core";
 import React from "react";
-import { HiOutlineMail } from "react-icons/hi";
-import { Social } from "../../App/SocialMedia";
+import { HiOutlineMail, HiOutlineHeart } from "react-icons/hi";
+import { Social } from "../../Components/Social/SocialMedia";
 import {
   NewContainer,
-  ContactBox,
+  
   DivBox,
   FlexBox,
 } from "../../Components/Box/AppBoxes";
@@ -24,6 +24,25 @@ function Days({ children }) {
   );
 }
 
+
+function ContactBox({ children, ...props }) {
+  return (
+    <Box
+      textAlign="center"
+      fontSize="22px"
+      display="flex"
+      fontWeight="lighter"
+      alignItems="center"
+      justifyContent="center"
+      letterSpacing={1}
+      {...props}
+    >
+      {children}
+    </Box>
+  );
+}
+
+
 export const ContactPage = () => {
   return (
     <>
@@ -32,9 +51,9 @@ export const ContactPage = () => {
           <img
             alt=""
             src={Happy}
-            width="75px"
-            height="75px"
-            style={{ paddingRight: "25px" }}
+            width="80px"
+            height="80px"
+            style={{ paddingRight: "30px" }}
           />
 
           <DivBox>
@@ -51,18 +70,10 @@ export const ContactPage = () => {
           <FlexBox alignSelf="center" flexDirection="column">
             <InfoBox Icon={Phone} info="p: 609-670-0451" />
             <InfoBox Icon={Locate} info="Berlin, NJ 08009" />
-            <InfoBox
-              Icon={Mail}
-              info={
-                <>
-                  <div>Buyer Beware Home Inspections</div>
-                  <div>P. O. Box 463</div>
-                  <div>Bordentown, NJ 08505</div>
-                </>
-              }
-            />
+            <InfoBox Icon={Mail} info="BuyerBewareHomeInspections@gmail.com" />
           </FlexBox>
         </FlexBox>
+        
         <ContactBox
           marginBlock="12px"
           justifyContent="space-evenly"
@@ -76,21 +87,14 @@ export const ContactPage = () => {
         </ContactBox>
       </NewContainer>
 
-      <ContactBox
-        fontWeight="700"
-        fontSize="large"
-        lineHeight={2}
-        style={{ color: "#ffffff", backgroundColor: "#a71976" }}
-      >
-        Traditional Home Inspections • Pre-Listing Inspections • Radon Testing •
-        Termite Inspections
-      </ContactBox>
+      
       <NewContainer >
         <Box alignSelf="center" style={{ paddingTop: "15px" }}>
           <ContactBox>
             {" "}
             Have any questions? We'd{" "}
-            <img alt="" src={Heart} width="40px" height="35px" padding="7px" />
+            {/* <HiOutlineHeart fontSize="45px" color="#a71976" /> */}
+            <img alt="" src={Heart} width="40px" height="35px" padding="7px" color="#a71976"/>
             to hear from you!
           </ContactBox>
           <Divider />
@@ -101,7 +105,18 @@ export const ContactPage = () => {
             label={<HiOutlineMail color="#a71976" fontSize="35px" />}
           />
         </Box>
-      </NewContainer>
+        </NewContainer>
+        <ContactBox
+        fontWeight="700"
+        fontSize="large"
+        lineHeight={2}
+        style={{ color: "#ffffff", backgroundColor: "#a71976" }}
+      >
+        Traditional Home Inspections • Pre-Listing Inspections • Radon Testing •
+        Termite Inspections
+      </ContactBox>
+      
+
     </>
   );
 };

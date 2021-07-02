@@ -46,14 +46,14 @@ export function FaqAccordion() {
         body="We encourage you to accompany us during the inspection, when it is safe to do so.  We will provide answers to any questions you may have during the home inspection, as well as point out emergency switches and shutoff valves, discuss important maintenance items, and familiarize you with your new home. It’s a good idea to go to the inspection and hear the findings firsthand."
       />
 
-      <AccordionBox
+      {/* <AccordionBox
         heading="CAN I SEE AN EXAMPLE OF YOUR HOME INSPECTION REPORT?"
         body={<ExampleReport />}
-      />
+      /> */}
 
       <AccordionBox
         heading="HOW MUCH IS A HOME INSPECTION?"
-        body="The cost of a Home Inspection can vary widely depending on the type of home, the size of the home, and maybe most importantly - on the Inspector themselves.   We believe in fair, honest, upfront pricing.  We are proud to offer senior and military discounts.  Call today to request your free quote."
+        body="The cost of a Home Inspection can vary widely depending on the type of home, the size of the home, and maybe most importantly - on the Inspector themselves.   We believe in fair, honest, upfront pricing.  We are proud to offer senior and military discounts.  Click Here to request your free quote!"
       />
     </Container>
   );
