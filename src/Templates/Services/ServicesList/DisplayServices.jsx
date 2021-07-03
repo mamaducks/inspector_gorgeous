@@ -22,7 +22,6 @@ export function DisplayService() {
           padding="25px"
           width="300px"
           letterSpacing={0.3}
-          fontSize="14px"
         >
           <img
             alt=""
@@ -32,7 +31,7 @@ export function DisplayService() {
             style={{ paddingBlock: "12px" }}
           />
 
-          <DivBox textAlign="justify" flexWrap="wrap">
+          <DivBox textAlign="justify" flexWrap="wrap" fontSize="1rem">
             {selected?.textBack}
           </DivBox>
         </Box>
@@ -51,7 +50,6 @@ export function DisplayService() {
               flexDirection="column"
               width="230px"
               height="180px"
-              fontSize="14px"
             >
               <img alt="" src={image} width="50px" height="50px" />
 

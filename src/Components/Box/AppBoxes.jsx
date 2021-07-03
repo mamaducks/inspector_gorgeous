@@ -20,6 +20,7 @@ export function DivBox({ children, ...props }) {
       lineHeight={1.5}
       letterSpacing={1}
       textAlign="center"
+      fontSize="1.25rem"
       {...props}
     >
       {children}
@@ -50,7 +51,7 @@ export function LayoutBox({
   ...props
 }) {
   const isWide = useMediaQuery({
-    query: "(min-device-width: 700px)",
+    query: "(min-device-width: 600px)",
   });
 
   return (
@@ -63,7 +64,7 @@ export function LayoutBox({
       flexWrap="wrap"
     >
       {isWide && (
-        <img alt="" src={image} style={{ alignSelf: "center" }} {...props} />
+        <img alt="" src={image} maxWidth="100%" height="auto" style={{ alignSelf: "center" }} {...props} />
       )}
 
       <Box
@@ -77,7 +78,7 @@ export function LayoutBox({
         fontWeight="lighter"
         paddingTop="10px"
       >
-        <Box fontSize="1.25em">{heading}</Box>
+        <Box fontSize="1.5rem">{heading}</Box>
 
         <Divider style={{ margin: "10px 0" }} />
 

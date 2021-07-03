@@ -67,7 +67,7 @@ export function ContactBox({ children, ...props }) {
   return (
     <Box
       textAlign="center"
-      fontSize="22px"
+      // fontSize="22px"
       display="flex"
       fontWeight="lighter"
       alignItems="center"
@@ -92,7 +92,7 @@ export function InfoBox({ Icon, info, children, ...props }) {
       >
         {Icon}
       </Box>
-      <Box color="#32474b" textAlign="center" fontSize="16px" letterSpacing={1}>
+      <Box color="#32474b" textAlign="center"  letterSpacing={1}>
         {info}
       </Box>
     </Box>

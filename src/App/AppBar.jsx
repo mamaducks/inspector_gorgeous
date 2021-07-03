@@ -8,7 +8,7 @@ import EmmaLogo from "../img/emmaLogoSmall.png";
 function Logo() {
   return (
     <Box display="flex" fontWeight="lighter" paddingBottom="4px">
-      <img alt="" src={EmmaLogo} width="70" height="70" />
+      <img alt="" src={EmmaLogo} maxWidth="100%" height="auto" />
 
       <Box
         paddingLeft="4px"
@@ -16,11 +16,11 @@ function Logo() {
         display="flex"
         justifyContent="center"
       >
-        <Box fontSize="2.5vw" fontWeight="500">
+        <Box fontSize="2rem" fontWeight="500">
           BUYER BEWARE
         </Box>
 
-        <Box alignSelf="flex-end" fontSize="2vw">
+        <Box alignSelf="flex-end" fontSize="1.5rem">
           HOME INSPECTION, LLC
         </Box>
       </Box>

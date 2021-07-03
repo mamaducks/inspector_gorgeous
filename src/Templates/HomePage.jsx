@@ -24,8 +24,8 @@ export const HomePage = () => {
     <NewContainer>
       <LayoutBox
         image={House}
-        width="600px"
-        height="400px"
+        // width="600px"
+        // height="400px"
         heading="Let Us Help You Get to Know Your Home"
       >
         At Buyer Beware Home Inspections, we fully understand the importance of
@@ -56,7 +56,7 @@ export const HomePage = () => {
           width="33rem"
           fontWeight="lighter"
         >
-          <Box fontSize="1.25em" paddingTop="15px">
+          <Box fontSize="1.5rem" paddingTop="15px">
             We Offer the Following Inspection Services:
           </Box>
           <Divider style={{ margin: "10px 0" }} />

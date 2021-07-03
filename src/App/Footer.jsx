@@ -27,7 +27,7 @@ function FooterBox({ children, ...props }) {
       letterSpacing={0.5}
       lineHeight={1.4}
       textAlign="center"
-      fontSize="16px"
+      fontSize="1rem"
       {...props}
     >
       {children}
@@ -45,9 +45,9 @@ export const Footer = () => {
               BUYER BEWARE HOME INSPECTION
             </Box>
 
-            <Box fontSize="15px">
+            <Box fontSize="0.8rem">
               <div>Proudly Serving South Jersey</div>
-              <Box fontSize="12px">
+              <Box fontSize="0.7rem">
                 Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape
                 May Counties
               </Box>
@@ -63,6 +63,7 @@ export const Footer = () => {
               justifyContent="center"
               paddingBottom="5px"
               alignItems="center"
+              fontSize="0.8rem"
             >
               <Icon>
                 <FaPhoneAlt fontSize="18px" />
@@ -70,8 +71,8 @@ export const Footer = () => {
 
               <div>1-609-670-0451</div>
             </Box>
-            <Box>
-              <div>
+            <Box fontSize="0.8rem">
+              <div >
                 <MailTo
                   label="Click Here"
                   style={{ color: "#a71976", fontWeight: "bold" }}

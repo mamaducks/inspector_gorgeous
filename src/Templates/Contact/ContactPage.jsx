@@ -30,7 +30,7 @@ export const ContactPage = () => {
           />
 
           <DivBox>
-            <Box fontSize="1.15em">
+            <Box fontSize="1.5rem">
               Buyer Beware Home Inspections is based out of Berlin, NJ
             </Box>
             <Divider />
@@ -40,12 +40,12 @@ export const ContactPage = () => {
         </FlexBox>
 
         <FlexBox flexWrap="wrap">
-          <img alt="" src={MapImage} style={{ paddingBlock: "10px" }} />
+          <img alt="" src={MapImage} style={{ paddingBlock: "10px" }} maxWidth="100%" height="auto"/>
           <FlexBox
             alignSelf="center"
             flexDirection="column"
             lineHeight="2"
-            fontSize="25px"
+            fontSize="1.25rem"
           >
             <InfoBox Icon={<FaMobileAlt />} info="p: 609-670-0451" />
             <InfoBox Icon={<FaMapMarkerAlt />} info="Berlin, NJ 08009" />
@@ -59,7 +59,7 @@ export const ContactPage = () => {
             <ContactBox
               marginBlock="12px"
               justifyContent="space-evenly"
-              fontSize="17px"
+              fontSize="1.2rem"
               alignSelf="center"
               style={{ paddingBlock: "10px" }}
               flexWrap="wrap"
@@ -105,7 +105,7 @@ export const ContactPage = () => {
       </NewContainer>
       <ContactBox
         fontWeight="700"
-        fontSize="large"
+        fontSize="1.2rem"
         lineHeight={2}
         style={{ color: "#ffffff", backgroundColor: "#a71976" }}
       >

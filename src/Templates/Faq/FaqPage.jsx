@@ -13,8 +13,8 @@ export function FaqPage() {
     <NewContainer>
       <LayoutBox
         image={Corner}
-        width="600"
-        height="400"
+        // width="600"
+        // height="400"
         heading="What to expect"
         reverse
       >
@@ -33,8 +33,8 @@ export function FaqPage() {
 
       <LayoutBox
         image={Curve}
-        width="600px"
-        height="400px"
+        // width="600px"
+        // height="400px"
         heading="What We Inspect"
       >
         <ul

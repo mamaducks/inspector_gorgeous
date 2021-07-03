@@ -10,8 +10,9 @@ export function ServicesPage() {
     <NewContainer>
       <LayoutBox
         image={MagHouse}
-        width="600px"
-        height="400px"
+        // width="600px"
+        // height="400px"
+        maxWidth="100%" height="auto"
         heading="Home Inspection Services"
       >
         Home inspections provide valuable information before you buy a home.
@@ -27,7 +28,7 @@ export function ServicesPage() {
         services.
         <DialogButton title="Schedule Today" content={<Schedule />} style={{marginTop:"12px"}}/>
       </LayoutBox>
-      <DivBox fontSize="1.25em" style={{paddingTop:"12px"}}>
+      <DivBox fontSize="1.25rem" style={{paddingTop:"12px"}}>
         We inspect the following when accessible:
       </DivBox>
       <Divider />

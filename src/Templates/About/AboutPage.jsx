@@ -8,7 +8,11 @@ import Inspect from "../../img/inspector.png";
 export function AboutPage() {
   return (
     <NewContainer>
-      <LayoutBox image={About} width="600" height="400" heading="About Us">
+      <LayoutBox 
+      image={About} 
+      // width="600" 
+      // height="400" 
+      heading="About Us">
         Adrienne Soto is the founder and primary home inspector at Buyer Beware
         Home Inspections LLC. Before she inspected homes, she was a longtime
         designer/remodeler and has a vast knowledge of many aspects of real
@@ -25,8 +29,8 @@ export function AboutPage() {
 
       <LayoutBox
         image={Inspect}
-        width="600"
-        height="400"
+        // width="600"
+        // height="400"
         reverse
         heading="Background and Experience"
       >

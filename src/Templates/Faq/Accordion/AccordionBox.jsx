@@ -31,7 +31,7 @@ export const AccordionBox = ({ heading, body }) => {
         <DivBox className={classes.heading}>{heading}</DivBox>
       </AccordionSummary>
       <AccordionDetails className={classes.body}>
-        <DivBox fontSize="14px">{body}</DivBox>
+        <DivBox fontSize="1.25rem">{body}</DivBox>
       </AccordionDetails>
     </Accordion>
   );
