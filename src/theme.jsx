@@ -33,15 +33,15 @@ const theme = createMuiTheme({
     },
 
     MuiButton: {
-      // Name of the component ⚛️ / style sheet
       root: {
-        // Name of the rule
-        // Some CSS
+        variant: "outlined",
+        color: "#a71976",
       },
       label: {
-        color: "#01333c",
+        color: "#a71976",
       },
     },
+
     MuiIconButton: {
       root: { color: "black", fontSize: "2rem", padding: "0px" },
     },
@@ -60,6 +60,7 @@ const theme = createMuiTheme({
     },
     MuiTab: {
       root: {
+        display: "flex",
         "&:hover": {
           color: "#c575aa",
         },

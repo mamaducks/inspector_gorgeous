@@ -1,17 +1,27 @@
 import { Box, Container, Divider } from "@material-ui/core";
+import { useMediaQuery } from "react-responsive";
 
-export function PadBox({ children, ...props }) {
+export function FlexBox({ children, ...props }) {
   return (
-    <Box p={10} style={{ padding: 10 }} {...props}>
+    <Box display="flex" justifyContent="space-evenly" {...props}>
       {children}
     </Box>
   );
 }
 
-
-export function FlexBox({ children, ...props }) {
+export function DivBox({ children, ...props }) {
   return (
-    <Box display="flex" justifyContent="space-evenly" {...props}>
+    <Box
+      justifyContent="center"
+      display="flex"
+      flexDirection="column"
+      alignContent="end"
+      fontWeight="lighter"
+      lineHeight={1.5}
+      letterSpacing={1}
+      textAlign="center"
+      {...props}
+    >
       {children}
     </Box>
   );
@@ -39,6 +49,10 @@ export function LayoutBox({
   reverse,
   ...props
 }) {
+  const isWide = useMediaQuery({
+    query: "(min-device-width: 700px)",
+  });
+
   return (
     <Box
       display="flex"
@@ -46,8 +60,11 @@ export function LayoutBox({
       justifyContent="space-evenly"
       alignContent="space-between"
       margin="25px 0"
+      flexWrap="wrap"
     >
-      <img alt="" src={image} style={{ alignSelf: "center" }} {...props} />
+      {isWide && (
+        <img alt="" src={image} style={{ alignSelf: "center" }} {...props} />
+      )}
 
       <Box
         lineHeight={1.5}
@@ -58,6 +75,7 @@ export function LayoutBox({
         alignContent="end"
         width="33rem"
         fontWeight="lighter"
+        paddingTop="10px"
       >
         <Box fontSize="1.25em">{heading}</Box>
 
@@ -65,130 +83,6 @@ export function LayoutBox({
 
         {children}
       </Box>
-    </Box>
-  );
-}
-
-export function InfoBox({ Icon, info, children, ...props }) {
-  return (
-    <Box padding="10px" paddingBottom="24px" {...props}>
-      <Box
-        alignItems="center"
-        display="flex"
-        flexDirection="column"
-        color="#a51b77"
-        paddingBottom="8px"
-      >
-        <img alt="" src={Icon} width="50px" height="50px" />
-      </Box>
-      <Box color="#32474b" textAlign="center" fontSize="16px" letterSpacing={1}>
-        {info}
-      </Box>
-    </Box>
-  );
-}
-
-export function DivBox({ children, ...props }) {
-  return (
-    <Box
-      justifyContent="center"
-      display="flex"
-      flexDirection="column"
-      alignContent="end"
-      fontWeight="lighter"
-      lineHeight={1.5}
-      letterSpacing={1}
-      textAlign="center"
-      {...props}
-    >
-      {children}
-    </Box>
-  );
-}
-
-export function FootOuterBox({ children }) {
-  return (
-    <Box
-      display="flex"
-      justifyContent="space-evenly"
-      color="#a71976"
-      alignItems="center"
-      paddingTop="4px"
-    >
-      {children}
-    </Box>
-  );
-}
-
-export function FooterBox({ children, ...props }) {
-  return (
-    <PadBox>
-      <Box
-        letterSpacing={0.5}
-        lineHeight={1.4}
-        textAlign="center"
-        fontSize="16px"
-        {...props}
-      >
-        {children}
-      </Box>
-    </PadBox>
-  );
-}
-
-export function ContactBox({ children, ...props }) {
-  return (
-    <Box
-      textAlign="center"
-      fontSize="22px"
-      display="flex"
-      fontWeight="lighter"
-      alignItems="center"
-      justifyContent="center"
-      letterSpacing={1}
-      {...props}
-    >
-      {children}
-    </Box>
-  );
-}
-
-export function ServiceGrid({ children }) {
-  return (
-    <Box display="flex" justifyContent="center" flexWrap="wrap" style={{paddingBlock:"10px"}}>
-      {children}
-    </Box>
-  );
-}
-export function ServiceDialog({ children }) {
-  return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      justifyContent="space-between"
-      alignItems="center"
-      padding="25px"
-      width="300px"
-
-      letterSpacing={0.3}
-      fontSize="14px"
-    >
-      {children}
-    </Box>
-  );
-}
-export function ServiceCard({ children }) {
-  return (
-    <Box
-      alignItems="center"
-      justifyContent="center"
-      display="flex"
-      flexDirection="column"
-      width="230px"
-      height="180px"
-      fontSize="14px"
-    >
-      {children}
     </Box>
   );
 }

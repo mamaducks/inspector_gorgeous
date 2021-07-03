@@ -1,11 +1,39 @@
 import { AppBar, Box, Icon } from "@material-ui/core";
-import React from "react";
-import { ScheduleButtonNew } from "../Components/Schedule/ScheduleButton";
-import { MailTo } from "./MailTo";
-import { FooterBox, FootOuterBox } from "../Components/Box/AppBoxes";
 import { FaPhoneAlt } from "react-icons/fa";
+import { MailTo } from "../Components/Social/MailTo";
+import { FooterButton } from "../Components/Schedule/RequestsDialogButtons";
+import { Schedule } from "../Components/Schedule/Schedule";
+import { Quote } from "../Components/Schedule/Quote";
 
+function FootOuterBox({ children }) {
+  return (
+    <Box padding="10px">
+      <Box
+        display="flex"
+        justifyContent="space-evenly"
+        color="#a71976"
+        alignItems="center"
+        flexWrap="wrap"
+      >
+        {children}
+      </Box>
+    </Box>
+  );
+}
 
+function FooterBox({ children, ...props }) {
+  return (
+    <Box
+      letterSpacing={0.5}
+      lineHeight={1.4}
+      textAlign="center"
+      fontSize="16px"
+      {...props}
+    >
+      {children}
+    </Box>
+  );
+}
 
 export const Footer = () => {
   return (
@@ -25,25 +53,23 @@ export const Footer = () => {
               </Box>
             </Box>
           </FooterBox>
-          <FooterBox fontWeight="bold">
-            Call Today for a Quote
-            <Box display="flex">
+          <FooterBox>
+            <FooterButton title="Get a Quote" content={<Quote />} />
+            <FooterButton title="Schedule Online" content={<Schedule />} />
+          </FooterBox>
+          <FooterBox>
+            <Box
+              display="flex"
+              justifyContent="center"
+              paddingBottom="5px"
+              alignItems="center"
+            >
               <Icon>
-                <FaPhoneAlt />
+                <FaPhoneAlt fontSize="18px" />
               </Icon>
 
               <div>1-609-670-0451</div>
             </Box>
-            <Box paddingTop="5px">
-              <ScheduleButtonNew
-                title="Schedule Online"
-                size="small"
-                fontSize="14px"
-              />
-            </Box>
-          </FooterBox>
-          <FooterBox>
-            Email Us
             <Box>
               <div>
                 <MailTo

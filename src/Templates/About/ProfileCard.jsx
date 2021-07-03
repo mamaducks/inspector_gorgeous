@@ -5,11 +5,11 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
-import { FlexBox } from "../../Components/Box/AppBoxes";
-import EmmaLogo from "../../img/newEmmaLogo.png";
+import { useMediaQuery } from "react-responsive";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoIosPhonePortrait, IoMdPin } from "react-icons/io";
-import { useMediaQuery } from "react-responsive";
+import { FlexBox } from "../../Components/Box/AppBoxes";
+import EmmaLogo from "../../img/newEmmaLogo.png";
 
 function ProfileCardInfo({ Icon, info }) {
   return (

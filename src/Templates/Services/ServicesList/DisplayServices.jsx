@@ -1,37 +1,67 @@
-import { servicesCard } from "./ServiceList";
-import {
-  ServiceGrid,
-  ServiceCard,
-  ServiceDialog,
-  DivBox
-} from "../../../Components/Box/AppBoxes";
 import React, { useState } from "react";
 import { Box, Card, Dialog } from "@material-ui/core";
+import { servicesCard } from "./ServiceList";
+import { DivBox } from "../../../Components/Box/AppBoxes";
 
 export function DisplayService() {
   const [selected, setSelected] = useState();
 
   return (
-    <ServiceGrid>
+    <Box
+      display="flex"
+      justifyContent="center"
+      flexWrap="wrap"
+      style={{ paddingBlock: "10px" }}
+    >
       <Dialog open={!!selected} onClose={() => setSelected(undefined)}>
-        <ServiceDialog>
-          <img alt="" src={selected?.image} width="120px" height="120px" style={{paddingBlock:"12px"}} />
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="space-between"
+          alignItems="center"
+          padding="25px"
+          width="300px"
+          letterSpacing={0.3}
+          fontSize="14px"
+        >
+          <img
+            alt=""
+            src={selected?.image}
+            width="120px"
+            height="120px"
+            style={{ paddingBlock: "12px" }}
+          />
 
-          <DivBox textAlign="justify">{selected?.textBack}</DivBox>
-        </ServiceDialog>
+          <DivBox textAlign="justify" flexWrap="wrap">
+            {selected?.textBack}
+          </DivBox>
+        </Box>
       </Dialog>
 
       {servicesCard.map(({ image, textBack, textFront }, index) => (
         <div key={index} title={textBack}>
-          <Card onClick={() => setSelected({ image, textBack, textFront })} style={{margin: "8px", cursor:"pointer"}}>
-            <ServiceCard>
+          <Card
+            onClick={() => setSelected({ image, textBack, textFront })}
+            style={{ margin: "8px", cursor: "pointer" }}
+          >
+            <Box
+              alignItems="center"
+              justifyContent="center"
+              display="flex"
+              flexDirection="column"
+              width="230px"
+              height="180px"
+              fontSize="14px"
+            >
               <img alt="" src={image} width="50px" height="50px" />
 
-              <Box fontWeight="lighter">{textFront}</Box>
-            </ServiceCard>
+              <Box fontWeight="lighter" lineHeight={4}>
+                {textFront}
+              </Box>
+            </Box>
           </Card>
         </div>
       ))}
-    </ServiceGrid>
+    </Box>
   );
 }

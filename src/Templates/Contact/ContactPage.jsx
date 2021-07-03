@@ -1,59 +1,32 @@
 import { Box, Divider } from "@material-ui/core";
-import React from "react";
-import { HiOutlineMail, HiOutlineHeart } from "react-icons/hi";
+import { useMediaQuery } from "react-responsive";
+import { BsHeart } from "react-icons/bs";
+import { HiOutlineMail } from "react-icons/hi";
+import { FaMobileAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { Days, BusinessInfoBox, ContactBox, InfoBox } from "./ContactBox";
 import { Social } from "../../Components/Social/SocialMedia";
-import {
-  NewContainer,
-  
-  DivBox,
-  FlexBox,
-} from "../../Components/Box/AppBoxes";
+import { NewContainer, DivBox, FlexBox } from "../../Components/Box/AppBoxes";
 import Happy from "../../img/happyHouse.png";
-import Heart from "../../img/heart.svg";
 import MapImage from "../../img/mapNJ.png";
-import Locate from "../../img/locateSVG.svg";
-import Mail from "../../img/mailSVG.svg";
-import Phone from "../../img/phoneSVG.svg";
-import { InfoBox } from "../../Components/Box/AppBoxes";
-
-function Days({ children }) {
-  return (
-    <Box fontWeight="bold" style={{ paddingInline: "10px" }}>
-      {children}
-    </Box>
-  );
-}
-
-
-function ContactBox({ children, ...props }) {
-  return (
-    <Box
-      textAlign="center"
-      fontSize="22px"
-      display="flex"
-      fontWeight="lighter"
-      alignItems="center"
-      justifyContent="center"
-      letterSpacing={1}
-      {...props}
-    >
-      {children}
-    </Box>
-  );
-}
-
 
 export const ContactPage = () => {
+  const isWide = useMediaQuery({
+    query: "(min-device-width: 700px)",
+  });
+
   return (
     <>
       <NewContainer>
-        <FlexBox alignSelf="center" style={{paddingBlock:"28px"}}>
+        <FlexBox alignSelf="center" style={{ paddingBlock: "30px" }}>
           <img
             alt=""
             src={Happy}
             width="80px"
             height="80px"
-            style={{ paddingRight: "30px" }}
+            style={{
+              paddingRight: "30px",
+            }}
           />
 
           <DivBox>
@@ -65,36 +38,59 @@ export const ContactPage = () => {
             Philadelphia
           </DivBox>
         </FlexBox>
-        <FlexBox>
-          <img alt="" src={MapImage} />
-          <FlexBox alignSelf="center" flexDirection="column">
-            <InfoBox Icon={Phone} info="p: 609-670-0451" />
-            <InfoBox Icon={Locate} info="Berlin, NJ 08009" />
-            <InfoBox Icon={Mail} info="BuyerBewareHomeInspections@gmail.com" />
+
+        <FlexBox flexWrap="wrap">
+          <img alt="" src={MapImage} style={{ paddingBlock: "10px" }} />
+          <FlexBox
+            alignSelf="center"
+            flexDirection="column"
+            lineHeight="2"
+            fontSize="25px"
+          >
+            <InfoBox Icon={<FaMobileAlt />} info="p: 609-670-0451" />
+            <InfoBox Icon={<FaMapMarkerAlt />} info="Berlin, NJ 08009" />
+            <InfoBox
+              Icon={<FiMail />}
+              info="BuyerBewareHomeInspections@gmail.com"
+            />
+            <BusinessInfoBox />
           </FlexBox>
+          {isWide && (
+            <ContactBox
+              marginBlock="12px"
+              justifyContent="space-evenly"
+              fontSize="17px"
+              alignSelf="center"
+              style={{ paddingBlock: "15px" }}
+              flexWrap="wrap"
+            >
+              <FlexBox>
+                <Days>Monday thru Friday</Days>
+                8:00 am - 7:00 pm{" "}
+              </FlexBox>
+              <FlexBox>
+                <Days>Saturday</Days>
+                9:00 am - 5:00 pm
+              </FlexBox>
+              <FlexBox>
+                <Days>Sunday </Days>
+                Closed
+              </FlexBox>
+            </ContactBox>
+          )}
         </FlexBox>
-        
-        <ContactBox
-          marginBlock="12px"
-          justifyContent="space-evenly"
-          fontSize="17px"
-          alignSelf="center"
-          style={{paddingBlock:"15px"}}
-        >
-          <Days>Monday thru Friday</Days> 8:00 am - 7:00 pm{" "}
-          <Days>Saturday</Days> 9:00 am - 5:00 pm
-          <Days>Sunday </Days>Closed
-        </ContactBox>
       </NewContainer>
 
-      
-      <NewContainer >
+      <NewContainer>
         <Box alignSelf="center" style={{ paddingTop: "15px" }}>
-          <ContactBox>
+          <ContactBox flexWrap="wrap">
             {" "}
             Have any questions? We'd{" "}
-            {/* <HiOutlineHeart fontSize="45px" color="#a71976" /> */}
-            <img alt="" src={Heart} width="40px" height="35px" padding="7px" color="#a71976"/>
+            <BsHeart
+              fontSize="45px"
+              color="#a71976"
+              style={{ padding: "8px" }}
+            />
             to hear from you!
           </ContactBox>
           <Divider />
@@ -102,11 +98,12 @@ export const ContactPage = () => {
           <Social
             color="#a71976"
             fontSize="35px"
+            style={{ paddingBottom: "12px" }}
             label={<HiOutlineMail color="#a71976" fontSize="35px" />}
           />
         </Box>
-        </NewContainer>
-        <ContactBox
+      </NewContainer>
+      <ContactBox
         fontWeight="700"
         fontSize="large"
         lineHeight={2}
@@ -115,8 +112,6 @@ export const ContactPage = () => {
         Traditional Home Inspections • Pre-Listing Inspections • Radon Testing •
         Termite Inspections
       </ContactBox>
-      
-
     </>
   );
 };

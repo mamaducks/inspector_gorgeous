@@ -1,8 +1,9 @@
-import { LayoutBox, NewContainer, DivBox } from "../../Components/Box/AppBoxes";
-import { ScheduleButtonNew } from "../../Components/Schedule/ScheduleButton";
-import MagHouse from "../../img/houseMagnify.png";
 import { Divider } from "@material-ui/core";
 import { DisplayService } from "./ServicesList/DisplayServices";
+import { DialogButton } from "../../Components/Schedule/RequestsDialogButtons";
+import { LayoutBox, NewContainer, DivBox } from "../../Components/Box/AppBoxes";
+import { Schedule } from "../../Components/Schedule/Schedule";
+import MagHouse from "../../img/houseMagnify.png";
 
 export function ServicesPage() {
   return (
@@ -21,18 +22,16 @@ export function ServicesPage() {
         report of a home’s condition so you can move forward confidently with
         peace of mind and knowledge to make informed decisions about your home.
         <br />
-        <br />
         With over 20 years experience restoring, building, and designing homes
         Buyer Beware is the top choice in south jersey for your home inspection
         services.
+        <DialogButton title="Schedule Today" content={<Schedule />} />
       </LayoutBox>
       <DivBox fontSize="1.25em">
         We inspect the following when accessible:
       </DivBox>
       <Divider />
       <DisplayService />
-
-      <ScheduleButtonNew title="Schedule Today" />
     </NewContainer>
   );
 }

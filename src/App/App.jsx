@@ -7,12 +7,9 @@ export function App() {
   return (
     <>
       <AppBar />
-
-
       <div className="container">
         <Router />
       </div>
-
       <Footer />
     </>
   );

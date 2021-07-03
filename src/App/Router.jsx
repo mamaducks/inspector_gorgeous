@@ -5,9 +5,8 @@ import {
   Router as ReactRouter,
   Switch,
 } from "react-router-dom";
-import { history } from "../_helpers/helpers";
 import routes from "./Routes";
-
+import { history } from "../_helpers/helpers";
 import { AboutPage } from "../Templates/About/AboutPage";
 import { ContactPage } from "../Templates/Contact/ContactPage";
 import { FaqPage } from "../Templates/Faq/FaqPage";

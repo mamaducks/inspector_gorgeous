@@ -21,3 +21,4 @@ export const MailTo = ({ label, ...props }) => {
     </Mailto>
   );
 };
+
