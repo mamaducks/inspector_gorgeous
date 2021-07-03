@@ -4,9 +4,10 @@ import { BsHeart } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaMobileAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { Days, BusinessInfoBox, ContactBox, InfoBox } from "./ContactBox";
+import { Days, ContactBox, InfoBox } from "./ContactBox";
 import { Social } from "../../Components/Social/SocialMedia";
 import { NewContainer, DivBox, FlexBox } from "../../Components/Box/AppBoxes";
+import { BusinessInfoButton } from "../../Components/Schedule/BusinessInfoButton";
 import Happy from "../../img/happyHouse.png";
 import MapImage from "../../img/mapNJ.png";
 
@@ -40,7 +41,13 @@ export const ContactPage = () => {
         </FlexBox>
 
         <FlexBox flexWrap="wrap">
-          <img alt="" src={MapImage} style={{ paddingBlock: "10px" }} maxWidth="100%" height="auto"/>
+          <img
+            alt=""
+            src={MapImage}
+            style={{ paddingBlock: "10px" }}
+            maxWidth="100%"
+            height="auto"
+          />
           <FlexBox
             alignSelf="center"
             flexDirection="column"
@@ -53,7 +60,7 @@ export const ContactPage = () => {
               Icon={<FiMail />}
               info="BuyerBewareHomeInspections@gmail.com"
             />
-            <BusinessInfoBox />
+            <BusinessInfoButton />
           </FlexBox>
           {isWide && (
             <ContactBox

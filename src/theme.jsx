@@ -32,16 +32,21 @@ const theme = createMuiTheme({
       },
     },
 
-    MuiButton: {
-      root: {
-        variant: "outlined",
-        color: "#a71976",
-      },
-      label: {
-        color: "#a71976",
-      },
-    },
-
+    // MuiButton: {
+    //   root: {
+    //     variant: "contained",
+    //     color: "#a71976",
+    //     backgroundColor: "#ece7eb"
+    //   },
+    //   label: {
+    //     color: "#a71976",
+    //   },
+    // },
+    // MuiButtonContained: {
+    // root: {
+    // backgroundColor: "#ece7eb"
+    // }
+    // },
     MuiIconButton: {
       root: { color: "black", fontSize: "2rem", padding: "0px" },
     },

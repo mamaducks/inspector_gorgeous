@@ -6,7 +6,7 @@ export function DialogButton({ title, content, ...props }) {
 
   return (
     <>
-      <Box display="flex" justifyContent="center" width="100%" >
+      <Box display="flex" justifyContent="center" width="100%">
         <Button variant="contained" {...props} onClick={() => setOpen(true)}>
           {title}
         </Button>
@@ -23,6 +23,32 @@ export function DialogButton({ title, content, ...props }) {
         </div>
       </Box>
     </>
+  );
+}
+
+export function BusinessButton({ title, icon, content, ...props }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Box display="flex" justifyContent="center">
+      <Button variant="outlined" {...props} onClick={() => setOpen(true)}>
+        {title}
+      </Button>
+      <Button variant="contained" color="secondary" startIcon={icon}>
+        {title}
+      </Button>
+
+      <div>
+        <Dialog
+          open={open}
+          onClose={() => setOpen(false)}
+          fullWidth
+          maxWidth="md"
+        >
+          {content}
+        </Dialog>
+      </div>
+    </Box>
   );
 }
 

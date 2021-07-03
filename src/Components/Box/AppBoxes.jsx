@@ -64,7 +64,14 @@ export function LayoutBox({
       flexWrap="wrap"
     >
       {isWide && (
-        <img alt="" src={image} maxWidth="100%" height="auto" style={{ alignSelf: "center" }} {...props} />
+        <img
+          alt=""
+          src={image}
+          maxWidth="100%"
+          height="auto"
+          style={{ alignSelf: "center" }}
+          {...props}
+        />
       )}
 
       <Box
