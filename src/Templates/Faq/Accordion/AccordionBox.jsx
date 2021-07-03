@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   body: {
-    backgroundColor: "#f1e9ee",
+    backgroundColor: "#f9f5f7",
   },
 }));
 
@@ -31,7 +31,7 @@ export const AccordionBox = ({ heading, body }) => {
         <DivBox className={classes.heading}>{heading}</DivBox>
       </AccordionSummary>
       <AccordionDetails className={classes.body}>
-        <DivBox fontSize="1.25rem">{body}</DivBox>
+        <DivBox fontSize="1rem">{body}</DivBox>
       </AccordionDetails>
     </Accordion>
   );
