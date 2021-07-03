@@ -18,7 +18,7 @@ export const ContactPage = () => {
   return (
     <>
       <NewContainer>
-        <FlexBox alignSelf="center" style={{ paddingBlock: "30px" }}>
+        <FlexBox alignSelf="center" style={{ paddingBlock: "20px" }}>
           <img
             alt=""
             src={Happy}
@@ -61,7 +61,7 @@ export const ContactPage = () => {
               justifyContent="space-evenly"
               fontSize="17px"
               alignSelf="center"
-              style={{ paddingBlock: "15px" }}
+              style={{ paddingBlock: "10px" }}
               flexWrap="wrap"
             >
               <FlexBox>
@@ -82,7 +82,7 @@ export const ContactPage = () => {
       </NewContainer>
 
       <NewContainer>
-        <Box alignSelf="center" style={{ paddingTop: "15px" }}>
+        <Box alignSelf="center" style={{ paddingBlock: "5px" }}>
           <ContactBox flexWrap="wrap">
             {" "}
             Have any questions? We'd{" "}

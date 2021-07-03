@@ -6,7 +6,7 @@ const useStyles = makeStyles({
   accordion: {
     flexDirection: "column",
     borderRadius: 5,
-    marginBlock: "20px",
+    marginBlock: "10px",
     paddingBottom: "15px",
   },
 });

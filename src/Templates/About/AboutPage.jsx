@@ -39,7 +39,7 @@ export function AboutPage() {
         fully insured. Contact Adrienne at Buyer Beware Home Inspections today
         to schedule your reliable, professional in-depth home inspection in the
         Southern New Jersey area.
-        <DialogButton title="Request an Inspection" content={<Request />} />
+        <DialogButton title="Request an Inspection" content={<Request />} style={{marginTop:"12px"}} />
       </LayoutBox>
 
       <ProfileCard />

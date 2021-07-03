@@ -28,7 +28,7 @@ export function FaqPage() {
         through the home with us on inspection day, and learn about the home’s
         features, as well as tips for care and maintenance.
         <br />
-        <DialogButton title="Schedule Online" content={<Schedule />} />
+        <DialogButton title="Schedule Online" content={<Schedule />} style={{marginTop:"10px"}}/>
       </LayoutBox>
 
       <LayoutBox
@@ -51,7 +51,7 @@ export function FaqPage() {
         <DialogButton title="Request an Inspection" content={<Request />} />
       </LayoutBox>
 
-      <Divider />
+      <Divider style={{marginTop: "12px"}}/>
 
       <FaqAccordion />
     </NewContainer>

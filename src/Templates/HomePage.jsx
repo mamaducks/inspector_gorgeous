@@ -56,7 +56,7 @@ export const HomePage = () => {
           width="33rem"
           fontWeight="lighter"
         >
-          <Box fontSize="1.25em" paddingTop="20px">
+          <Box fontSize="1.25em" paddingTop="15px">
             We Offer the Following Inspection Services:
           </Box>
           <Divider style={{ margin: "10px 0" }} />
@@ -71,7 +71,7 @@ export const HomePage = () => {
               <li key={service}>{service}</li>
             ))}
           </ul>
-          <DialogButton title="Request Inspection" content={<Request />} />
+          <DialogButton title="Request Inspection" content={<Request />}  />
         </Box>
         <QuoteBox />
       </Box>

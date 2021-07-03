@@ -25,9 +25,9 @@ export function ServicesPage() {
         With over 20 years experience restoring, building, and designing homes
         Buyer Beware is the top choice in south jersey for your home inspection
         services.
-        <DialogButton title="Schedule Today" content={<Schedule />} />
+        <DialogButton title="Schedule Today" content={<Schedule />} style={{marginTop:"12px"}}/>
       </LayoutBox>
-      <DivBox fontSize="1.25em">
+      <DivBox fontSize="1.25em" style={{paddingTop:"12px"}}>
         We inspect the following when accessible:
       </DivBox>
       <Divider />
