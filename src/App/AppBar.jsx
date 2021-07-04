@@ -1,5 +1,4 @@
 import { Box, Tab, Tabs } from "@material-ui/core";
-import { HiOutlineMail } from "react-icons/hi";
 import routes from "./Routes";
 import { Social } from "../Components/Social/SocialMedia";
 import { FlexBox } from "../Components/Box/AppBoxes";
