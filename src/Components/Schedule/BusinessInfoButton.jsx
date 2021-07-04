@@ -47,6 +47,7 @@ export function BusinessInfoButton() {
   return (
     <Button
       variant="contained"
+      size="small"
       color="secondary"
       startIcon={<RiUserShared2Fill />}
       href="https://www.spectora.com/inspection-request/my-inspection-company-2f689b3a14"

@@ -7,7 +7,7 @@ import EmmaLogo from "../img/emmaLogoSmall.png";
 
 function Logo() {
   return (
-    <Box display="flex" fontWeight="lighter" paddingBottom="4px">
+    <Box display="flex" fontWeight="lighter" paddingBottom="4px" maxHeight="95px" >
       <img alt="" src={EmmaLogo} maxWidth="100%" height="auto" />
 
       <Box
@@ -16,11 +16,11 @@ function Logo() {
         display="flex"
         justifyContent="center"
       >
-        <Box fontSize="2rem" fontWeight="500">
+        <Box fontSize="2.2vw" fontWeight="500" alignSelf="flex-start">
           BUYER BEWARE
         </Box>
 
-        <Box alignSelf="flex-end" fontSize="1.5rem">
+        <Box alignSelf="flex-end" fontSize="1.8vw">
           HOME INSPECTION, LLC
         </Box>
       </Box>
@@ -31,14 +31,13 @@ function Logo() {
 export function AppBar() {
   return (
     <>
-      <FlexBox justifyContent="space-between">
+      <FlexBox justifyContent="space-between" maxHeight="125px">
         <Logo />
 
         <Social
           color="black"
           alignSelf="flex-end"
-          fontSize="35px"
-          label={<HiOutlineMail color="black" fontSize="35px" />}
+          fontSize="2.2vw"
         />
       </FlexBox>
       <Box style={{ backgroundColor: "#a71976", padding: "1px" }}>

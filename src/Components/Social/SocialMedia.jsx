@@ -9,10 +9,10 @@ export function Social({ color, size, label, ...props }) {
       display="flex"
       justifyContent="space-evenly"
       paddingBottom="10px"
-      minWidth="200px"
+      minWidth="175px"
       {...props}
     >
-      <MailTo label={<FiMail color={color} />} />
+      <MailTo label={<FiMail color={color}/>} />
 
       <a
         href="https://www.facebook.com/Home-Inspections-105580485123207/"
