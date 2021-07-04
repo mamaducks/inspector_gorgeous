@@ -1,21 +1,14 @@
 import { Box, Divider } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
-import { BsHeart } from "react-icons/bs";
-import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
-import { FaMobileAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
-import { ImMobile } from "react-icons/im";
-import { FiMail } from "react-icons/fi";
-import { Days, ContactBox, InfoBox } from "./ContactBox";
-import { Social } from "../../Components/Social/SocialMedia";
+import { ContactBox } from "./ContactBox";
+import { ContactSocial } from "./ContactSocial";
+import { ContactMap } from "./ContactMap";
 import { NewContainer, DivBox, FlexBox } from "../../Components/Box/AppBoxes";
-import { BusinessInfoButton } from "../../Components/Schedule/BusinessInfoButton";
 import Happy from "../../img/happyHouse.png";
-import MapImage from "../../img/mapNJ.png";
 
 export const ContactPage = () => {
   const isWide = useMediaQuery({
-    query: "(min-device-width: 700px)",
+    query: "(min-device-width: 800px)",
   });
 
   return (
@@ -33,95 +26,33 @@ export const ContactPage = () => {
           />
 
           <DivBox>
-            <Box fontSize="1.5rem">
+            <Box fontSize="2vw">
               Buyer Beware Home Inspections is based out of Berlin, NJ
             </Box>
             <Divider />
-            We offer Home Inspection services to areas of New Jersey and
-            Philadelphia
+            <Box fontSize="1.5vw">
+              We offer Home Inspection services to areas of New Jersey and
+              Philadelphia
+            </Box>
+            
           </DivBox>
         </FlexBox>
 
-        <FlexBox flexWrap="wrap">
-          <img
-            alt=""
-            src={MapImage}
-            style={{ paddingBlock: "10px" }}
-            maxWidth="80%"
-            height="auto"
-          />
-          <FlexBox
-            alignSelf="center"
-            flexDirection="column"
-            lineHeight="2"
-            fontSize="1rem"
-          >
-            <InfoBox Icon={<FaMobileAlt />} info="p: 609-670-0451" />
-            <InfoBox Icon={<IoLocationOutline />} info="Berlin, NJ 08009" />
-            <InfoBox
-              Icon={<IoMailOutline />}
-              info="BuyerBewareHomeInspections@gmail.com"
-              paddingBottom="5px"
-            />
-            <BusinessInfoButton />
-          </FlexBox>
-          {isWide && (
-            <ContactBox
-              marginBlock="12px"
-              justifyContent="space-evenly"
-              fontSize="1.2rem"
-              alignSelf="center"
-              style={{ paddingBlock: "10px" }}
-              flexWrap="wrap"
-            >
-              <FlexBox>
-                <Days>Monday thru Friday</Days>
-                8:00 am - 7:00 pm{" "}
-              </FlexBox>
-              <FlexBox>
-                <Days>Saturday</Days>
-                9:00 am - 5:00 pm
-              </FlexBox>
-              <FlexBox>
-                <Days>Sunday </Days>
-                Closed
-              </FlexBox>
-            </ContactBox>
-          )}
-        </FlexBox>
+        <ContactMap />
       </NewContainer>
 
-      <NewContainer>
-        <Box alignSelf="center" style={{ paddingBlock: "5px" }}>
-          <ContactBox flexWrap="wrap">
-            {" "}
-            Have any questions? We'd{" "}
-            <BsHeart
-              fontSize="45px"
-              color="#c54097"
-              style={{ padding: "8px" }}
-            />
-            to hear from you!
-          </ContactBox>
-          <Divider />
-
-          <Social
-            color="#c54097"
-            fontSize="35px"
-            style={{ paddingBottom: "12px" }}
-            label={<HiOutlineMail color="#c54097" fontSize="35px" />}
-          />
-        </Box>
-      </NewContainer>
-      <ContactBox
-        fontWeight="700"
-        fontSize="1.2rem"
-        lineHeight={2}
-        style={{ color: "#ffffff", backgroundColor: "#a71976" }}
-      >
-        Traditional Home Inspections • Pre-Listing Inspections • Radon Testing •
-        Termite Inspections
-      </ContactBox>
+      <ContactSocial />
+      {isWide && (
+        <ContactBox
+          fontWeight="700"
+          fontSize="1.2vw"
+          lineHeight={2}
+          style={{ color: "#ffffff", backgroundColor: "#a71976" }}
+        >
+          Traditional Home Inspections • Pre-Listing Inspections • Radon Testing
+          • Termite Inspections
+        </ContactBox>
+      )}
     </>
   );
 };
