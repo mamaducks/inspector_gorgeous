@@ -1,8 +1,10 @@
 import { Box, Divider } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import { BsHeart } from "react-icons/bs";
-import { HiOutlineMail } from "react-icons/hi";
+import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
 import { FaMobileAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
+import { ImMobile } from "react-icons/im";
 import { FiMail } from "react-icons/fi";
 import { Days, ContactBox, InfoBox } from "./ContactBox";
 import { Social } from "../../Components/Social/SocialMedia";
@@ -45,20 +47,21 @@ export const ContactPage = () => {
             alt=""
             src={MapImage}
             style={{ paddingBlock: "10px" }}
-            maxWidth="100%"
+            maxWidth="80%"
             height="auto"
           />
           <FlexBox
             alignSelf="center"
             flexDirection="column"
             lineHeight="2"
-            fontSize="1.25rem"
+            fontSize="1rem"
           >
             <InfoBox Icon={<FaMobileAlt />} info="p: 609-670-0451" />
-            <InfoBox Icon={<FaMapMarkerAlt />} info="Berlin, NJ 08009" />
+            <InfoBox Icon={<IoLocationOutline />} info="Berlin, NJ 08009" />
             <InfoBox
-              Icon={<FiMail />}
+              Icon={<IoMailOutline />}
               info="BuyerBewareHomeInspections@gmail.com"
+              paddingBottom="5px"
             />
             <BusinessInfoButton />
           </FlexBox>
@@ -95,7 +98,7 @@ export const ContactPage = () => {
             Have any questions? We'd{" "}
             <BsHeart
               fontSize="45px"
-              color="#a71976"
+              color="#c54097"
               style={{ padding: "8px" }}
             />
             to hear from you!
@@ -103,10 +106,10 @@ export const ContactPage = () => {
           <Divider />
 
           <Social
-            color="#a71976"
+            color="#c54097"
             fontSize="35px"
             style={{ paddingBottom: "12px" }}
-            label={<HiOutlineMail color="#a71976" fontSize="35px" />}
+            label={<HiOutlineMail color="#c54097" fontSize="35px" />}
           />
         </Box>
       </NewContainer>

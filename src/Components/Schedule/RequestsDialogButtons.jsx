@@ -30,11 +30,21 @@ export function BusinessButton({ title, icon, content, ...props }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Box display="flex" justifyContent="center">
-      <Button variant="outlined" {...props} onClick={() => setOpen(true)}>
-        {title}
-      </Button>
-      <Button variant="contained" color="secondary" startIcon={icon}>
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignSelf="center"
+      padding="8px"
+      width="80%"
+    >
+      <Button
+        variant="contained"
+        color="secondary"
+        startIcon={icon}
+        fontSize="1rem"
+        fullWidth
+        onClick={() => setOpen(true)}
+      >
         {title}
       </Button>
 

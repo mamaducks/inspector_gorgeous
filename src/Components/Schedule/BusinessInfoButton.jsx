@@ -1,12 +1,15 @@
-import { Button } from "@material-ui/core";
+import { Box, Button } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
-import { FlexBox } from "../../Components/Box/AppBoxes";
 import { Schedule } from "../../Components/Schedule/Schedule";
 import { Quote } from "../../Components/Schedule/Quote";
 import { Request } from "../../Components/Schedule/InspectionForm";
 import { BusinessButton } from "./RequestsDialogButtons";
-import { GrFormSchedule, GrDocumentUser } from "react-icons/gr";
-import { RiMoneyDollarCircleLine, RiUserShared2Fill } from "react-icons/ri";
+import {
+  RiMoneyDollarCircleLine,
+  RiCalendarEventLine,
+  RiUserShared2Fill,
+  RiFileTextLine,
+} from "react-icons/ri";
 
 export function BusinessInfoButton() {
   const isWide = useMediaQuery({
@@ -15,23 +18,30 @@ export function BusinessInfoButton() {
 
   if (isWide) {
     return (
-      <FlexBox>
-        <BusinessButton
-          title="Schedule Online"
-          icon={<GrFormSchedule fontSize="20px" />}
-          content={<Schedule />}
-        />
+      <Box
+        padding="10px"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+      >
         <BusinessButton
           title="Get a Quote"
-          icon={<RiMoneyDollarCircleLine fontSize="20px" />}
+          icon={<RiMoneyDollarCircleLine />}
           content={<Quote />}
         />
+
+        <BusinessButton
+          title="Schedule Online"
+          icon={<RiCalendarEventLine />}
+          content={<Schedule />}
+        />
+
         <BusinessButton
           title="Request an Inspection"
-          icon={<GrDocumentUser fontSize="20px" />}
+          icon={<RiFileTextLine />}
           content={<Request />}
         />
-      </FlexBox>
+      </Box>
     );
   }
   return (

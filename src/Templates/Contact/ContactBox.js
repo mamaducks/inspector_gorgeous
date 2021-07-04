@@ -26,13 +26,13 @@ export function ContactBox({ children, ...props }) {
 
 export function InfoBox({ Icon, info, children, ...props }) {
   return (
-    <Box padding="10px" paddingBottom="24px" {...props}>
+    <Box padding="10px" paddingBottom="10px" {...props}>
       <Box
         alignItems="center"
         display="flex"
         flexDirection="column"
         color="#a51b77"
-        paddingBottom="8px"
+        paddingBottom="5px"
       >
         {Icon}
       </Box>
