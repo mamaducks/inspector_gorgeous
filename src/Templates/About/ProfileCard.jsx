@@ -15,7 +15,7 @@ function ProfileCardInfo({ Icon, info }) {
   return (
     <ListItem>
       <ListItemIcon>
-        <Icon color="#a71976" fontSize="20px" />
+        <Icon />
       </ListItemIcon>
 
       <ListItemText>{info}</ListItemText>
@@ -29,8 +29,8 @@ export function ProfileCard() {
   });
 
   return (
-    <Container style={{ margin: 25 }}>
-      <Paper>
+    <Container style={{ marginBottom: 25 }}>
+      <Paper style={{ padding: 25 }}>
         <FlexBox>
           {isWide && (
             <img
