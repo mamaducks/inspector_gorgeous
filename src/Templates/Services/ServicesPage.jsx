@@ -1,7 +1,8 @@
 import { Divider } from "@material-ui/core";
 import { DisplayService } from "./ServicesList/DisplayServices";
+import {ServiceCard} from "./ServicesList/ServiceCard";
 import { DialogButton } from "../../Components/Schedule/RequestsDialogButtons";
-import { LayoutBox, NewContainer, DivBox } from "../../Components/Box/AppBoxes";
+import { LayoutBox, NewContainer, DivBox, MainContent } from "../../Components/Box/AppBoxes";
 import { Schedule } from "../../Components/Schedule/Schedule";
 import MagHouse from "../../img/houseMagnify.png";
 
@@ -13,8 +14,8 @@ export function ServicesPage() {
         // width="600px"
         // height="400px"
         maxWidth="100%" height="auto"
-        heading="Home Inspection Services"
       >
+        <MainContent heading="Home Inspection Services">
         Home inspections provide valuable information before you buy a home.
         It’s only through a full residential inspection that you’re able to find
         out what you need to know about the home’s essential systems. We will
@@ -26,6 +27,8 @@ export function ServicesPage() {
         With over 20 years experience restoring, building, and designing homes
         Buyer Beware is the top choice in south jersey for your home inspection
         services.
+        </MainContent>
+       
         <DialogButton title="Schedule Today" content={<Schedule />} style={{marginTop:"12px"}}/>
       </LayoutBox>
       <DivBox fontSize="1.25rem" style={{paddingTop:"12px"}}>
@@ -33,6 +36,7 @@ export function ServicesPage() {
       </DivBox>
       <Divider />
       <DisplayService />
+      <ServiceCard/>
     </NewContainer>
   );
 }
