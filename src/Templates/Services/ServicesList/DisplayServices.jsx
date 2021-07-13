@@ -53,7 +53,7 @@ export function DisplayService() {
             >
               <img alt="" src={image} width="50px" height="50px" />
 
-              <Box fontWeight="lighter" lineHeight={4}>
+              <Box fontWeight="lighter" lineHeight={4} fontSize="1rem">
                 {textFront}
               </Box>
             </Box>
