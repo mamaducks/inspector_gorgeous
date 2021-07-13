@@ -1,26 +1,73 @@
 import { useMediaQuery } from "react-responsive";
-import { AppBar, Box, Icon } from "@material-ui/core";
+import { AppBar, Box, Icon, IconButton, Typography } from "@material-ui/core";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MailTo } from "../Components/Social/MailTo";
-import { FooterButton } from "../Components/Schedule/RequestsDialogButtons";
 import { Schedule } from "../Components/Schedule/Schedule";
 import { Quote } from "../Components/Schedule/Quote";
 import House from "../img/littleHouse.png";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { AiOutlineSchedule } from "react-icons/ai";
+import React, { useState } from "react";
+import { Button, Dialog } from "@material-ui/core";
 
-function FootOuterBox({ children }) {
+export function FooterButton({ title, icon, content }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Box padding="8px">
-      <Box
-        display="flex"
-        justifyContent="space-around"
-        color="#a71976"
-        alignItems="center"
-        flexWrap="wrap"
+    <Box display="flex" justifyContent="center" width="100%" margin="4px">
+      <Button
+        variant="outlined"
+        size="small"
+        fullWidth
+        onClick={() => setOpen(true)}
+        style={{
+          border: "1.8px solid #a71976",
+          color: "#c54097",
+          lineHeight: "1",
+          padding: "2px",
+        }}
       >
-        {children}
-      </Box>
+        {title}
+      </Button>
+
+      <div>
+        <Dialog
+          open={open}
+          onClose={() => setOpen(false)}
+          fullWidth
+          maxWidth="md"
+        >
+          {content}
+        </Dialog>
+      </div>
     </Box>
   );
+}
+
+
+
+export function FootQuoteButton() {
+  const isWide = useMediaQuery({
+    query: "(min-device-width: 650px)",
+  });
+
+  if (isWide) {
+    return <FooterButton title="Get a Quote" content={<Quote />} />;
+  }
+  return (
+    <FooterButton title={<RiMoneyDollarCircleLine />} content={<Quote />} />
+  );
+}
+
+export function FootBookButton() {
+  const isWide = useMediaQuery({
+    query: "(min-device-width: 650px)",
+  });
+
+  if (isWide) {
+    return <FooterButton title="Schedule Online" content={<Schedule />} />;
+  }
+  return <FooterButton title={<AiOutlineSchedule />} content={<Schedule />} />;
 }
 
 function FooterBox({ children, ...props }) {
@@ -29,7 +76,7 @@ function FooterBox({ children, ...props }) {
       letterSpacing={0.5}
       lineHeight={1.4}
       textAlign="center"
-      fontSize="1rem"
+      fontSize="1em"
       {...props}
     >
       {children}
@@ -44,21 +91,29 @@ export const Footer = () => {
   return (
     <>
       <AppBar position="sticky" elevation={0}>
-        <FootOuterBox>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          color="#a71976"
+          alignItems="center"
+          flexWrap="wrap"
+          style={{ paddingInline: "30px" }}
+        >
           <FooterBox>
-            <Box lineHeight={1.5} fontWeight="600" fontSize="0.9vw">
+            <Typography variant="subtitle2" noWrap="true" display="block">
               BUYER BEWARE HOME INSPECTION
-            </Box>
+            </Typography>
 
-            <Box fontSize="0.7vw" lineHeight={1.2}>
-              <div>Proudly Serving South Jersey</div>
-              <Box fontSize="0.6vw">
-                Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape
-                May Counties
-              </Box>
-            </Box>
+            <Typography variant="subtitle2">
+              Proudly Serving South Jersey
+            </Typography>
+
+            <Typography variant="caption" gutterBottom>
+              Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape May
+              Counties
+            </Typography>
           </FooterBox>
-          <FooterBox display="flex" justifyContent="center" alignItems="center">
+          <FooterBox display="flex" alignItems="center" padding="10px">
             {isWide && (
               <img
                 alt=""
@@ -68,10 +123,15 @@ export const Footer = () => {
                 height="auto"
               />
             )}
-            <div>
-              <FooterButton title="Get a Quote" content={<Quote />} />
-              <FooterButton title="Schedule Online" content={<Schedule />} />
-            </div>
+            <Box
+              display="flex"
+              padding="10px"
+              alignItems="center"
+              flexDirection="column"
+            >
+              <FootQuoteButton />
+              <FootBookButton />
+            </Box>
           </FooterBox>
           <FooterBox>
             <Box
@@ -79,24 +139,29 @@ export const Footer = () => {
               justifyContent="center"
               paddingBottom="2px"
               alignItems="center"
-              fontSize="1vw"
             >
               <Icon style={{ display: "flex", alignItems: "center" }}>
-                <FaPhoneAlt fontSize="1vw" color="#a71976" />
+                <FaPhoneAlt fontSize="0.8em" color="#c54097" />
               </Icon>
-              1-609-670-0451
+              <Typography variant="body1" noWrap="true" display="block">
+                1-609-670-0451
+              </Typography>
             </Box>
-            <Box fontSize="1vw" color="#a71976">
-              <div>
-                <MailTo
-                  label="Click Here"
-                  style={{ color: "#c54097", fontWeight: "bold" }}
-                />{" "}
-                to send us an email
-              </div>
+            <Box display="flex" justifyContent="center" color="#a71976">
+              <MailTo
+                style={{
+                  color: "#c54097",
+                  fontWeight: "bold",
+                  fontSize: "1.5em",
+                  paddingRight: "5px",
+                }}
+              />
+              <Typography variant="body1" noWrap="true" display="block">
+                Send us an email
+              </Typography>
             </Box>
           </FooterBox>
-        </FootOuterBox>
+        </Box>
       </AppBar>
     </>
   );

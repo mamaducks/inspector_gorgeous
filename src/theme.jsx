@@ -18,6 +18,7 @@ const theme = createMuiTheme({
     },
   },
 
+  
   overrides: {
     MuiToolbar: {
       root: {
@@ -47,9 +48,10 @@ const theme = createMuiTheme({
     // backgroundColor: "#ece7eb"
     // }
     // },
-    MuiIconButton: {
-      root: { color: "black", fontSize: "2rem", padding: "0px" },
-    },
+
+    // MuiIconButton: {
+    //   root: { color: "black", fontSize: "2rem", padding: "0px" },
+    // },
 
     MuiContainer: {
       root: {
@@ -84,6 +86,8 @@ const theme = createMuiTheme({
       root: {
         minWidth: "unset",
         padding: 10,
+        color: "#a71976",
+        fontSize: "1.8rem",
       },
     },
 

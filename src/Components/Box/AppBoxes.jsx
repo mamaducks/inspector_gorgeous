@@ -1,5 +1,24 @@
-import { Box, Container, Divider } from "@material-ui/core";
+import {
+  Box,
+  CardActions,
+  CardContent,
+  Container,
+  Divider,
+  Typography,
+} from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
+import { makeStyles } from "@material-ui/core";
+import styles from "../../styles.css";
+const useStyles = makeStyles({
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+  },
+  content: {
+    fontWeight: "300",
+  },
+});
 
 export function FlexBox({ children, ...props }) {
   return (
@@ -17,7 +36,6 @@ export function DivBox({ children, ...props }) {
       flexDirection="column"
       alignContent="end"
       fontWeight="lighter"
-      lineHeight={1.5}
       letterSpacing={1}
       textAlign="center"
       fontSize="1.25rem"
@@ -28,15 +46,11 @@ export function DivBox({ children, ...props }) {
   );
 }
 
-export function NewContainer({ children }) {
+export function NewContainer({ children, ...props }) {
+  const classes = useStyles();
+
   return (
-    <Container
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-      }}
-    >
+    <Container className={classes.container} {...props}>
       {children}
     </Container>
   );
@@ -61,36 +75,36 @@ export function LayoutBox({
       justifyContent="space-evenly"
       alignContent="space-between"
       margin="25px 0"
-      flexWrap="wrap"
+      // flexWrap="wrap"
     >
       {isWide && (
         <img
           alt=""
           src={image}
-          maxWidth="100%"
+          maxWidth="80%"
+          width="60%"
           height="auto"
-          style={{ alignSelf: "center" }}
+          style={{ alignSelf: "center", paddingBlock: "10px" }}
           {...props}
         />
       )}
-
-      <Box
-        lineHeight={1.5}
-        letterSpacing={1}
-        justifyContent="center"
-        display="flex"
-        flexDirection="column"
-        alignContent="end"
-        width="33rem"
-        fontWeight="lighter"
-        paddingTop="10px"
-      >
-        <Box fontSize="1.5rem">{heading}</Box>
-
-        <Divider style={{ margin: "10px 0" }} />
-
-        {children}
-      </Box>
+      <div>{children}</div>
     </Box>
+  );
+}
+
+export function MainContent({ heading, children, ...props }) {
+  const classes = useStyles();
+  return (
+    <CardContent {...props}>
+      <Typography color="textPrimary" variant="h5" gutterBottom>
+        {heading}
+      </Typography>
+      <Divider style={{ margin: "10px 0" }} />
+
+      <Typography variant="subtitle1" component="p" className={classes.content}>
+        {children}
+      </Typography>
+    </CardContent>
   );
 }

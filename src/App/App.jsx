@@ -1,12 +1,12 @@
 import React from "react";
-import { AppBar } from "./AppBar";
+import { AppBarHeader } from "./AppBar";
 import { Footer } from "./Footer";
 import { Router } from "./Router";
-
+import styles from "../styles.css";
 export function App() {
   return (
     <>
-      <AppBar />
+      <AppBarHeader />
       <div className="container">
         <Router />
       </div>
