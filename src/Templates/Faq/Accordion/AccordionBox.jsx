@@ -8,9 +8,13 @@ import { MdExpandMore } from "react-icons/md";
 import { DivBox } from "../../../Components/Box/AppBoxes";
 
 const useStyles = makeStyles((theme) => ({
+  accord: {
+    backgroundColor: "#e4dadf",
+  },
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
+    
   },
 
   body: {
@@ -22,11 +26,12 @@ export const AccordionBox = ({ heading, body }) => {
   const classes = useStyles();
 
   return (
-    <Accordion >
+    <Accordion  >
       <AccordionSummary
         expandIcon={<MdExpandMore />}
         aria-controls="panel-content"
         id="panel-header"
+        className={classes.accord}
       >
         <DivBox className={classes.heading}>{heading}</DivBox>
       </AccordionSummary>
