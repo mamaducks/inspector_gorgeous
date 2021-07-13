@@ -1,10 +1,91 @@
 import { useMediaQuery } from "react-responsive";
 import { FaMobileAlt } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
-import { Days, ContactBox, InfoBox } from "./ContactBox";
 import { FlexBox } from "../../Components/Box/AppBoxes";
 import { BusinessInfoButton } from "../../Components/Schedule/BusinessInfoButton";
 import MapImage from "../../img/mapNJ.png";
+import { Box, CardContent, Grid, Typography } from "@material-ui/core";
+
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    ...theme.typography.button,
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(1),
+  },
+  grid: {
+    direction: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    flexWrap: "wrap",
+    "& div": {
+      fontWeight: "bold",
+      paddingInline: "10px",
+    },
+  },
+}));
+
+export function Info({ Icon, info }) {
+  return (
+    <CardContent>
+      <Box
+        alignItems="center"
+        display="flex"
+        flexDirection="column"
+        color="#a51b77"
+        fontSize="2rem"
+      >
+        {Icon}
+        <Typography color="textPrimary" variant="subtitle1" gutterBottom>
+          {info}
+        </Typography>
+      </Box>
+    </CardContent>
+  );
+}
+
+export function Hours() {
+  const classes = useStyles();
+
+  const isWide = useMediaQuery({
+    query: "(min-device-width: 650px)",
+  });
+
+  if (isWide) {
+    return (
+      <Box paddingBottom="10px">
+        <Typography>
+          <Grid container className={classes.grid}>
+            <div>Monday thru Friday</div>
+            8:00 am - 7:00 pm
+            <div>Saturday</div>
+            9:00 am - 5:00 pm
+            <div>Sunday </div>
+            Closed
+          </Grid>
+        </Typography>
+      </Box>
+    );
+  }
+  return (
+    <div>
+      <Typography color="textPrimary" gutterBottom>
+        Monday thru Friday
+        <Typography color="textSecondary"> 8:00 am - 7:00 pm</Typography>
+      </Typography>
+      <Typography color="textPrimary" gutterBottom>
+        Saturday
+        <Typography color="textSecondary"> 9:00 am - 5:00 pm</Typography>
+      </Typography>
+      <Typography color="textPrimary" gutterBottom>
+        Sunday
+        <Typography color="textSecondary">Closed</Typography>
+      </Typography>
+    </div>
+  );
+}
 
 export const ContactMap = () => {
   const isWide = useMediaQuery({
@@ -13,52 +94,20 @@ export const ContactMap = () => {
   return (
     <FlexBox flexWrap="wrap">
       {isWide && (
-        <img
-          alt=""
-          src={MapImage}
-          style={{ paddingBlock: "10px" }}
-          maxWidth="100%"
-          height="auto"
-        />
+        <img alt="" src={MapImage} maxWidth="100%" width="60%" height="auto" />
       )}
-      <FlexBox
-        alignSelf="center"
-        flexDirection="column"
-        lineHeight="2"
-        fontSize="1.2vw"
-      >
-        <InfoBox Icon={<FaMobileAlt />} info="p: 609-670-0451" />
-        <InfoBox Icon={<IoLocationOutline />} info="Berlin, NJ 08009" />
-        <InfoBox
+      <CardContent>
+        <Info Icon={<FaMobileAlt />} info="p: 609-670-0451" />
+        <Info Icon={<IoLocationOutline />} info="Berlin, NJ 08009" />
+        <Info
           Icon={<IoMailOutline />}
           info="BuyerBewareHomeInspections@gmail.com"
           paddingBottom="5px"
         />
         <BusinessInfoButton />
-      </FlexBox>
-      {isWide && (
-        <ContactBox
-          marginBlock="12px"
-          justifyContent="space-evenly"
-          fontSize="1.2vw"
-          alignSelf="center"
-          style={{ paddingBlock: "10px" }}
-          flexWrap="wrap"
-        >
-          <FlexBox>
-            <Days>Monday thru Friday</Days>
-            8:00 am - 7:00 pm{" "}
-          </FlexBox>
-          <FlexBox>
-            <Days>Saturday</Days>
-            9:00 am - 5:00 pm
-          </FlexBox>
-          <FlexBox>
-            <Days>Sunday </Days>
-            Closed
-          </FlexBox>
-        </ContactBox>
-      )}
+      </CardContent>
+
+      <Hours />
     </FlexBox>
   );
 };
