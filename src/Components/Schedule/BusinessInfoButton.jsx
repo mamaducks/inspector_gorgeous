@@ -10,6 +10,8 @@ import {
   RiUserShared2Fill,
   RiFileTextLine,
 } from "react-icons/ri";
+import { AiOutlineSchedule } from "react-icons/ai";
+import { GrSchedules } from "react-icons/gr";
 
 export function BusinessInfoButton() {
   const isWide = useMediaQuery({
@@ -32,7 +34,7 @@ export function BusinessInfoButton() {
 
         <BusinessButton
           title="Schedule Online"
-          icon={<RiCalendarEventLine />}
+          icon={<AiOutlineSchedule />}
           content={<Schedule />}
         />
 
@@ -45,14 +47,17 @@ export function BusinessInfoButton() {
     );
   }
   return (
+    <Box display="flex" justifyContent="center">
     <Button
       variant="contained"
       size="small"
+      alignItems="center"
       color="secondary"
       startIcon={<RiUserShared2Fill />}
       href="https://www.spectora.com/inspection-request/my-inspection-company-2f689b3a14"
     >
       View my Profile
     </Button>
+    </Box>
   );
 }

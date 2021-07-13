@@ -61,26 +61,3 @@ export function BusinessButton({ title, icon, content, ...props }) {
     </Box>
   );
 }
-
-export function FooterButton({ title, content }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <Box display="flex" justifyContent="center" width="100%" margin="3px">
-      <Button variant="outlined" size="small" fullWidth onClick={() => setOpen(true)} style={{border: "1.8px solid #a71976", color:"#c54097", lineHeight:"1"}}>
-        {title}
-      </Button>
-
-      <div>
-        <Dialog
-          open={open}
-          onClose={() => setOpen(false)}
-          fullWidth
-          maxWidth="md"
-        >
-          {content}
-        </Dialog>
-      </div>
-    </Box>
-  );
-}
