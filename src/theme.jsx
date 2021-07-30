@@ -20,12 +20,12 @@ const theme = createMuiTheme({
 
   
   overrides: {
-    MuiToolbar: {
-      root: {
-        paddingLeft: 9,
-        paddingRight: 12,
-      },
-    },
+    // MuiToolbar: {
+    //   root: {
+    //     paddingLeft: 9,
+    //     paddingRight: 12,
+    //   },
+    // },
 
     MuiDivider: {
       root: {
@@ -57,6 +57,7 @@ const theme = createMuiTheme({
       root: {
         justifyContent: "space-evenly",
         display: "flex",
+        width: "100vw"
       },
     },
 

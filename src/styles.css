@@ -1,7 +1,20 @@
 .container {
-  background-color: #f7f7f7;
+  background-color: #f3f1f2;
+  width: 100vw;
 }
 
 .content {
   font-weight: 300;
+}
+
+.footer {
+  background-color: "#e6d1dd";
+}
+
+.card:hover {
+  background-color: #e6d1dd;
+}
+
+h4 {
+  font-size: clamp(1rem, 2.3vw, 2rem);
 }
