@@ -104,7 +104,7 @@ export const ContactMap = () => {
     query: "(min-device-width: 800px)",
   });
   return (
-    <FlexBox flexWrap="wrap">
+    <FlexBox flexWrap="wrap" alignItems="center">
       {isWide && (
         <img alt="" src={MapImage} maxWidth="100%" width="60%" height="auto" />
       )}

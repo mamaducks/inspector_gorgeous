@@ -9,7 +9,7 @@ import Roof from "../roofSVG.svg";
 import Wall from "../wallImg.svg";
 import Wind from "../winDoorSVG.svg";
 
-export var servicesCard = [
+export const servicesCard = [
   {
     image: Plug,
     textFront: "Electrical Panels & Breakers",
@@ -18,7 +18,7 @@ export var servicesCard = [
   {
     image: Wall,
     textFront: "Walls, Ceilings, & Floors",
-    textBack: "   Visible areas of all walls, ceilings, stairways, and floors are assessed for signs of leakage, damage, sagging or other structural concerns. Termite damage is also on an inspector’s radar; peeling or pitted paint may indicate termite damage underneath. Your inspector will  check for leaning, cracked, or bowed walls, all of which may be signs of defects in the foundation or underlying structure of the home, examine ceilings for cracks that may indicate structural problems as well as look for any signs that moisture is getting into the ceiling from the attic or rooms above. We will also examine the floors. Sloping, uneven floors may mean the structure underneath is damaged due to ground settling, moisture, or termites.",
+    textBack: "  Your inspector will  check for leaning, cracked, or bowed walls, peeling or pitted paint, as well as look for signs of leakage, damage, or sagging all of which may be signs of defects in the foundation or underlying structure of the home, examine ceilings for cracks that may indicate structural problems as well as look for any signs that moisture is getting into the ceiling from the attic or rooms above. Termite damage is also on an inspector’s radar; peeling or pitted paint may indicate termite damage underneath. We will also examine the floors. Sloping, uneven floors may mean the structure underneath is damaged due to ground settling, moisture, or termites.",
   },
   {
     image: Wind,

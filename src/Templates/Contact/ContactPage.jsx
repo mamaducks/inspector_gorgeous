@@ -40,10 +40,10 @@ export const ContactPage = () => {
           )}
           <DivBox>
             <CardContent>
-              <Typography color="textPrimary" variant="h5" gutterBottom>
+              <Typography color="textPrimary" variant="h5">
                 Buyer Beware Home Inspections is based out of Berlin, NJ
               </Typography>
-              <Divider style={{ margin: "10px 0" }} />
+              <Divider />
 
               <Typography
                 variant="subtitle1"
@@ -58,39 +58,48 @@ export const ContactPage = () => {
         </FlexBox>
 
         <ContactMap />
-      </NewContainer>
-
-      <NewContainer>
         <Box alignSelf="center" paddingTop="8px">
           <CardContent style={{ padding: "0px" }}>
-          <Typography color="textPrimary" variant="h5" gutterBottom style={{display:"flex", alignItems:"center"}}>
-          Have any questions? We'd
+            <Typography
+              color="textPrimary"
+              variant="h5"
+              gutterBottom
+              style={{ alignItems: "center", flexWrap: "nowrap" }}
+            >
+              Have any questions? We'd
               <BsHeart
-                fontSize="1.1em"
+                fontSize="1.1rem"
                 color="#a71976"
                 style={{ paddingInline: "8px" }}
               />
               to hear from you!
-              </Typography>
-            
+            </Typography>
+
             <Divider />
             <CardActions>
               <Social color="#a71976" />
             </CardActions>
           </CardContent>
         </Box>
+        
+
       </NewContainer>
+
       {isWide && (
         <Box
           textAlign="center"
           style={{ color: "#ffffff", backgroundColor: "#a71976" }}
         >
-          <Typography variant="subtitle1">
+          <Typography
+            variant="h1"
+            style={{ fontSize: "1.1rem", lineHeight: "2" }}
+          >
             Traditional Home Inspections • Pre-Listing Inspections • Radon
             Testing • Termite Inspections
           </Typography>
         </Box>
       )}
+     
     </>
   );
 };

@@ -95,25 +95,33 @@ export const Footer = () => {
           color="#a71976"
           alignItems="center"
           flexWrap="wrap"
-          style={{  paddingTop: "10px" }}
+          style={{ paddingTop: "3px" }}
         >
           <FooterBox>
             <Typography
               variant="subtitle1"
-              noWrap="true"
               display="block"
-              // lineHeight={0.2}
+              lineHeight="1.1"
               // fontSize="1.5rem"
             >
               BUYER BEWARE HOME INSPECTION
               <Typography variant="subtitle2">
                 Proudly Serving South Jersey
               </Typography>
-              <Typography variant="caption" display="block" textAlign="start" gutterBottom >
-                Burlington, Camden, Gloucester, Cumberland,
-                  Atlantic, and Cape May Counties
-                </Typography>
+              <Typography
+                variant="caption"
+                gutterBottom
+                
+                // styles={{
+                //   overflow: "hidden",
+                //   flexWrap: "wrap",
+                //   whiteSpace: "unset",
+                // }}
+              >
+                Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape
+                May Counties
               </Typography>
+            </Typography>
           </FooterBox>
           <FooterBox display="flex" paddingRight="35px">
             {isWide && (

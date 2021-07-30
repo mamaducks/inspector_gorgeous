@@ -62,7 +62,7 @@ export function AppBarButton() {
       <MenuButton
         alignSelf="flex-end"
         paddingRight="1em"
-        fontSize="1.5em"
+        fontSize="1.8em"
       />
     </div>
   );

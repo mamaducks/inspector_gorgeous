@@ -1,6 +1,6 @@
 .container {
   background-color: #f3f1f2;
-  width: 100vw;
+  /* display: inline-flex; */
 }
 
 .content {

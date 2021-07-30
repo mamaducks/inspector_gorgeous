@@ -1,9 +1,18 @@
 import React, { useState } from "react";
-import { Box, Card, Dialog } from "@material-ui/core";
+import { Box, Card, Dialog, makeStyles } from "@material-ui/core";
 import { servicesCard } from "./ServiceList";
 import { DivBox } from "../../../Components/Box/AppBoxes";
 import styles from "../../../styles.css";
+
+const useStyles = makeStyles(({ palette }) => ({
+  card: {
+    "&:hover": {
+      backgroundColor: palette.secondary.light,
+    },
+  },
+}));
 export function DisplayService() {
+  const styles = useStyles();
   const [selected, setSelected] = useState();
 
   return (
@@ -42,7 +51,8 @@ export function DisplayService() {
           <Card
             onClick={() => setSelected({ image, textBack, textFront })}
             style={{ margin: "8px", cursor: "pointer" }}
-            className="card"
+            classes={{ root: styles.card }}
+            // className="card"
           >
             <Box
               alignItems="center"
