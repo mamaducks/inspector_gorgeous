@@ -1,4 +1,7 @@
-export const MailTo = ({ label, ...props }) => {
+import { Icon } from "@material-ui/core";
+import { FiMail, FiInstagram, FiFacebook } from "react-icons/fi";
+
+export const MailTo = ({ label, icon, color, children, ...props }) => {
   const Mailto = ({ email, subject = "", body = "", label = "", children }) => {
     let params = subject || body ? "?" : "";
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
@@ -6,7 +9,9 @@ export const MailTo = ({ label, ...props }) => {
 
     return (
       <a href={`mailto:${email}${params}`} {...props}>
-        {children}
+        {/* {children} */}
+        <FiMail color={color} />
+        {/* <Icon style={{display:"flex"}}>{icon}</Icon> */}
       </a>
     );
   };
@@ -17,7 +22,8 @@ export const MailTo = ({ label, ...props }) => {
       subject="I'm interested in a quote!"
       body="Enter the details of your message and contact information."
     >
-      {label}
+      {children}
+     
     </Mailto>
   );
 };

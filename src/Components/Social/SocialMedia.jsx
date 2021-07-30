@@ -14,7 +14,7 @@ export function Social({ color, size, label, ...props }) {
         // minWidth="18%"
         width: "100%",
         // fontSize:"2em"
-        fontSize: "1.7em",
+        fontSize: "1.8em",
         
       }}
       {...props}

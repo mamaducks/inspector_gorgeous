@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Card, Dialog } from "@material-ui/core";
 import { servicesCard } from "./ServiceList";
 import { DivBox } from "../../../Components/Box/AppBoxes";
-
+import styles from "../../../styles.css";
 export function DisplayService() {
   const [selected, setSelected] = useState();
 
@@ -42,6 +42,7 @@ export function DisplayService() {
           <Card
             onClick={() => setSelected({ image, textBack, textFront })}
             style={{ margin: "8px", cursor: "pointer" }}
+            className="card"
           >
             <Box
               alignItems="center"
@@ -53,7 +54,7 @@ export function DisplayService() {
             >
               <img alt="" src={image} width="50px" height="50px" />
 
-              <Box fontWeight="lighter" lineHeight={4} fontSize="1rem">
+              <Box fontWeight="lighter" lineHeight={4} fontSize="1.1rem">
                 {textFront}
               </Box>
             </Box>

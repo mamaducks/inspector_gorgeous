@@ -17,6 +17,7 @@ const useStyles = makeStyles({
   },
   content: {
     fontWeight: "300",
+    fontSize: "1.1rem"
   },
 });
 
@@ -75,6 +76,7 @@ export function LayoutBox({
       justifyContent="space-evenly"
       alignContent="space-between"
       margin="25px 0"
+      alignItems="center"
       // flexWrap="wrap"
     >
       {isWide && (

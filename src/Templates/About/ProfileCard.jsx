@@ -29,9 +29,10 @@ export function ProfileCard() {
   });
 
   return (
-    <Container style={{ marginBottom: 25 }}>
-      <Paper style={{ padding: 25 }}>
+    <Container display="flex" style={{ marginBottom: 25 }}>
+      <Paper style={{ padding: 5 }}> 
         <FlexBox>
+         
           {isWide && (
             <img
               alt=""
@@ -52,6 +53,7 @@ export function ProfileCard() {
 
             <ProfileCardInfo Icon={IoMdPin} info="Based in Berlin, NJ" />
           </div>
+          
         </FlexBox>
       </Paper>
     </Container>

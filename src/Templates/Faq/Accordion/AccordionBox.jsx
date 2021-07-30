@@ -2,6 +2,7 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Box,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { MdExpandMore } from "react-icons/md";
@@ -14,11 +15,13 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
-    
   },
 
   body: {
     backgroundColor: "#f9f5f7",
+    fontWeight: "lighter",
+    letterSpacing: 1,
+    fontSize: "1rem",
   },
 }));
 
@@ -26,17 +29,17 @@ export const AccordionBox = ({ heading, body }) => {
   const classes = useStyles();
 
   return (
-    <Accordion  >
+    <Accordion>
       <AccordionSummary
         expandIcon={<MdExpandMore />}
         aria-controls="panel-content"
         id="panel-header"
         className={classes.accord}
       >
-        <DivBox className={classes.heading}>{heading}</DivBox>
+        <Box className={classes.heading}>{heading}</Box>
       </AccordionSummary>
       <AccordionDetails className={classes.body}>
-        <DivBox fontSize="1rem">{body}</DivBox>
+        <Box>{body}</Box>
       </AccordionDetails>
     </Accordion>
   );

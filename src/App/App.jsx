@@ -1,16 +1,18 @@
 import React from "react";
-import { AppBarHeader } from "./AppBar";
+import { AppBarHeader, AppBarHeaderCopy } from "./AppBar";
 import { Footer } from "./Footer";
 import { Router } from "./Router";
 import styles from "../styles.css";
 export function App() {
   return (
     <>
-      <AppBarHeader />
+      {/* <AppBarHeader /> */}
+      <AppBarHeaderCopy/>
       <div className="container">
+        
         <Router />
       </div>
-      <Footer />
+      <Footer className="footer" />
     </>
   );
 }

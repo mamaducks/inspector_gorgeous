@@ -44,8 +44,6 @@ export function FooterButton({ title, icon, content }) {
   );
 }
 
-
-
 export function FootQuoteButton() {
   const isWide = useMediaQuery({
     query: "(min-device-width: 650px)",
@@ -73,10 +71,10 @@ export function FootBookButton() {
 function FooterBox({ children, ...props }) {
   return (
     <Box
-      letterSpacing={0.5}
-      lineHeight={1.4}
+      // letterSpacing={0.5}
+      // lineHeight={1.4}
       textAlign="center"
-      fontSize="1em"
+      // fontSize="1em"
       {...props}
     >
       {children}
@@ -93,27 +91,31 @@ export const Footer = () => {
       <AppBar position="sticky" elevation={0}>
         <Box
           display="flex"
-          justifyContent="space-between"
+          justifyContent="space-evenly"
           color="#a71976"
           alignItems="center"
           flexWrap="wrap"
-          style={{ paddingInline: "30px" }}
+          style={{  paddingTop: "10px" }}
         >
           <FooterBox>
-            <Typography variant="subtitle2" noWrap="true" display="block">
+            <Typography
+              variant="subtitle1"
+              noWrap="true"
+              display="block"
+              // lineHeight={0.2}
+              // fontSize="1.5rem"
+            >
               BUYER BEWARE HOME INSPECTION
-            </Typography>
-
-            <Typography variant="subtitle2">
-              Proudly Serving South Jersey
-            </Typography>
-
-            <Typography variant="caption" gutterBottom>
-              Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape May
-              Counties
-            </Typography>
+              <Typography variant="subtitle2">
+                Proudly Serving South Jersey
+              </Typography>
+              <Typography variant="caption" display="block" textAlign="start" gutterBottom >
+                Burlington, Camden, Gloucester, Cumberland,
+                  Atlantic, and Cape May Counties
+                </Typography>
+              </Typography>
           </FooterBox>
-          <FooterBox display="flex" alignItems="center" padding="10px">
+          <FooterBox display="flex" paddingRight="35px">
             {isWide && (
               <img
                 alt=""
@@ -133,13 +135,14 @@ export const Footer = () => {
               <FootBookButton />
             </Box>
           </FooterBox>
-          <FooterBox>
-            <Box
-              display="flex"
-              justifyContent="center"
-              paddingBottom="2px"
-              alignItems="center"
-            >
+          <FooterBox
+            display="flex"
+            // padding="10px"
+            // alignItems="center"
+            justifyContent="center"
+            flexDirection="column"
+          >
+            <Box display="flex" paddingBottom="4px">
               <Icon style={{ display: "flex", alignItems: "center" }}>
                 <FaPhoneAlt fontSize="0.8em" color="#c54097" />
               </Icon>

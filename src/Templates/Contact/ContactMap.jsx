@@ -15,14 +15,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(1),
   },
+  hrInfo: {
+    lineHeight: "2",
+  },
+  hours: {
+    paddingBlock: "10px",
+  },
   grid: {
     direction: "row",
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
+    fontSize: "1.1rem",
+    fontWeight: "lighter",
     "& div": {
       fontWeight: "bold",
       paddingInline: "10px",
+      fontSize: "1.1rem",
+      color: "#494649"
     },
   },
 }));
@@ -36,9 +46,11 @@ export function Info({ Icon, info }) {
         flexDirection="column"
         color="#a51b77"
         fontSize="2rem"
+        minHeight="80px"
+        justifyContent="space-between"
       >
         {Icon}
-        <Typography color="textPrimary" variant="subtitle1" gutterBottom>
+        <Typography color="textPrimary" variant="subtitle1" paddingBlock="10px" gutterBottom >
           {info}
         </Typography>
       </Box>
@@ -55,8 +67,8 @@ export function Hours() {
 
   if (isWide) {
     return (
-      <Box paddingBottom="10px">
-        <Typography>
+      <Box className={classes.hours}>
+        <Typography className={classes.hrInfo}>
           <Grid container className={classes.grid}>
             <div>Monday thru Friday</div>
             8:00 am - 7:00 pm

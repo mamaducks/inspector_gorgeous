@@ -1,4 +1,4 @@
-import { Divider } from "@material-ui/core";
+import { Divider, Typography } from "@material-ui/core";
 import { DisplayService } from "./ServicesList/DisplayServices";
 import {ServiceCard} from "./ServicesList/ServiceCard";
 import { DialogButton } from "../../Components/Schedule/RequestsDialogButtons";
@@ -13,7 +13,7 @@ export function ServicesPage() {
         image={MagHouse}
         // width="600px"
         // height="400px"
-        maxWidth="100%" height="auto"
+        // maxWidth="100%" height="auto"
       >
         <MainContent heading="Home Inspection Services">
         Home inspections provide valuable information before you buy a home.
@@ -27,16 +27,19 @@ export function ServicesPage() {
         With over 20 years experience restoring, building, and designing homes
         Buyer Beware is the top choice in south jersey for your home inspection
         services.
+        {/* <DialogButton title="Schedule Today" content={<Schedule />} style={{marginTop:"12px"}}/> */}
         </MainContent>
        
-        <DialogButton title="Schedule Today" content={<Schedule />} style={{marginTop:"12px"}}/>
+        <DialogButton title="Schedule Today" content={<Schedule />} />
       </LayoutBox>
-      <DivBox fontSize="1.25rem" style={{paddingTop:"12px"}}>
-        We inspect the following when accessible:
-      </DivBox>
+     
+      <Typography color="textPrimary" variant="h5" style={{paddingLeft:"12px", paddingTop:"10px"}}>
+      We inspect the following when accessible:
+      </Typography>
       <Divider />
       <DisplayService />
-      <ServiceCard/>
+      {/* <ServiceCard/> */}
+      
     </NewContainer>
   );
 }
