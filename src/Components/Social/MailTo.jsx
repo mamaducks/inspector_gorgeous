@@ -1,5 +1,4 @@
-import { Icon } from "@material-ui/core";
-import { FiMail, FiInstagram, FiFacebook } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
 
 export const MailTo = ({ label, icon, color, children, ...props }) => {
   const Mailto = ({ email, subject = "", body = "", label = "", children }) => {
@@ -9,9 +8,7 @@ export const MailTo = ({ label, icon, color, children, ...props }) => {
 
     return (
       <a href={`mailto:${email}${params}`} {...props}>
-        {/* {children} */}
         <FiMail color={color} />
-        {/* <Icon style={{display:"flex"}}>{icon}</Icon> */}
       </a>
     );
   };

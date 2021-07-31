@@ -2,16 +2,14 @@ import { Box, Button } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import { Schedule } from "../../Components/Schedule/Schedule";
 import { Quote } from "../../Components/Schedule/Quote";
-import { Request } from "../../Components/Schedule/InspectionForm";
+import { Request } from "./InspectionForm";
 import { BusinessButton } from "./RequestsDialogButtons";
 import {
   RiMoneyDollarCircleLine,
-  RiCalendarEventLine,
   RiUserShared2Fill,
   RiFileTextLine,
 } from "react-icons/ri";
 import { AiOutlineSchedule } from "react-icons/ai";
-import { GrSchedules } from "react-icons/gr";
 
 export function BusinessInfoButton() {
   const isWide = useMediaQuery({

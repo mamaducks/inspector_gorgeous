@@ -1,5 +1,5 @@
 import { useMediaQuery } from "react-responsive";
-import { AppBar, Box, Icon, IconButton, Typography } from "@material-ui/core";
+import { AppBar, Box, Icon, Typography } from "@material-ui/core";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MailTo } from "../Components/Social/MailTo";
 import { Schedule } from "../Components/Schedule/Schedule";
@@ -70,13 +70,7 @@ export function FootBookButton() {
 
 function FooterBox({ children, ...props }) {
   return (
-    <Box
-      // letterSpacing={0.5}
-      // lineHeight={1.4}
-      textAlign="center"
-      // fontSize="1em"
-      {...props}
-    >
+    <Box textAlign="center" {...props}>
       {children}
     </Box>
   );
@@ -98,26 +92,12 @@ export const Footer = () => {
           style={{ paddingTop: "3px" }}
         >
           <FooterBox>
-            <Typography
-              variant="subtitle1"
-              display="block"
-              lineHeight="1.1"
-              // fontSize="1.5rem"
-            >
+            <Typography variant="subtitle1" display="block" lineHeight="1.1">
               BUYER BEWARE HOME INSPECTION
               <Typography variant="subtitle2">
                 Proudly Serving South Jersey
               </Typography>
-              <Typography
-                variant="caption"
-                gutterBottom
-                
-                // styles={{
-                //   overflow: "hidden",
-                //   flexWrap: "wrap",
-                //   whiteSpace: "unset",
-                // }}
-              >
+              <Typography variant="caption" gutterBottom>
                 Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape
                 May Counties
               </Typography>
@@ -145,8 +125,6 @@ export const Footer = () => {
           </FooterBox>
           <FooterBox
             display="flex"
-            // padding="10px"
-            // alignItems="center"
             justifyContent="center"
             flexDirection="column"
           >

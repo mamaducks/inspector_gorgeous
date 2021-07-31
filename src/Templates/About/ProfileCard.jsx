@@ -1,14 +1,13 @@
 import {
   Paper,
-  Container,
   ListItem,
   ListItemIcon,
   ListItemText,
+  Box,
 } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoIosPhonePortrait, IoMdPin } from "react-icons/io";
-import { FlexBox } from "../../Components/Box/AppBoxes";
 import EmmaLogo from "../../img/newEmmaLogo.png";
 
 function ProfileCardInfo({ Icon, info }) {
@@ -29,10 +28,8 @@ export function ProfileCard() {
   });
 
   return (
-    <Container display="flex" style={{ marginBottom: 25 }}>
-      <Paper style={{ padding: 5 }}> 
-        <FlexBox>
-         
+      <Paper style={{ padding: 5, marginBottom: 20 }}>
+        <Box display="flex" justifyContent="space-evenly">
           {isWide && (
             <img
               alt=""
@@ -53,9 +50,7 @@ export function ProfileCard() {
 
             <ProfileCardInfo Icon={IoMdPin} info="Based in Berlin, NJ" />
           </div>
-          
-        </FlexBox>
+        </Box>
       </Paper>
-    </Container>
   );
 }

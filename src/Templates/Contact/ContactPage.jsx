@@ -2,17 +2,12 @@ import {
   Box,
   CardActions,
   CardContent,
+  Container,
   Divider,
   Typography,
 } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import { ContactMap } from "./ContactMap";
-import {
-  NewContainer,
-  DivBox,
-  FlexBox,
-  MainContent,
-} from "../../Components/Box/AppBoxes";
 import Heart from "../../img/heartHouse.png";
 import { BsHeart } from "react-icons/bs";
 import { Social } from "../../Components/Social/SocialMedia";
@@ -24,8 +19,8 @@ export const ContactPage = () => {
 
   return (
     <>
-      <NewContainer>
-        <FlexBox alignSelf="center" style={{ paddingBlock: "10px" }}>
+      <Container>
+        <Box display="flex" justifyContent="space-evenly" alignSelf="center" style={{ paddingBlock: "10px" }}>
           {isWide && (
             <img
               alt=""
@@ -38,7 +33,7 @@ export const ContactPage = () => {
               }}
             />
           )}
-          <DivBox>
+        
             <CardContent>
               <Typography color="textPrimary" variant="h5">
                 Buyer Beware Home Inspections is based out of Berlin, NJ
@@ -54,8 +49,8 @@ export const ContactPage = () => {
                 Philadelphia
               </Typography>
             </CardContent>
-          </DivBox>
-        </FlexBox>
+          
+        </Box>
 
         <ContactMap />
         <Box alignSelf="center" paddingTop="8px">
@@ -81,9 +76,7 @@ export const ContactPage = () => {
             </CardActions>
           </CardContent>
         </Box>
-        
-
-      </NewContainer>
+      </Container>
 
       {isWide && (
         <Box
@@ -99,7 +92,6 @@ export const ContactPage = () => {
           </Typography>
         </Box>
       )}
-     
     </>
   );
 };

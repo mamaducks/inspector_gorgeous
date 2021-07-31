@@ -1,18 +1,27 @@
 import React from "react";
-import { AppBarHeader, AppBarHeaderCopy } from "./AppBar";
+import { makeStyles } from "@material-ui/core";
+import { AppBarHeader } from "./AppBar";
 import { Footer } from "./Footer";
 import { Router } from "./Router";
-import styles from "../styles.css";
+
+const useStyles = makeStyles({
+  container: {
+    backgroundColor: "#f3f1f2",
+  },
+  footer: {
+    backgroundColor: "#e6d1dd"
+  }
+});
+
 export function App() {
+  const classes = useStyles();
   return (
     <>
-      {/* <AppBarHeader /> */}
-      <AppBarHeaderCopy/>
-      <div className="container">
-        
+      <AppBarHeader />
+      <div className={classes.container}>
         <Router />
       </div>
-      <Footer className="footer" />
+      <Footer className={classes.footer} />
     </>
   );
 }

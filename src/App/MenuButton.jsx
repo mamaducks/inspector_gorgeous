@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Box, Button, IconButton, Menu, MenuItem } from "@material-ui/core";
+import { IconButton, Menu, MenuItem } from "@material-ui/core";
 import routes from "./Routes";
 import { IoMdMenu } from "react-icons/io";
 
 export function MenuButton() {
-  const [open, setOpen] = useState(false);
-
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -27,9 +25,6 @@ export function MenuButton() {
       >
         <IoMdMenu color="black" />
       </IconButton>
-      {/* <Button variant="contained" aria-haspopup="true" onClick={handleClick}>
-          open menu
-        </Button> */}
 
       <Menu
         id="simple-menu"
@@ -42,7 +37,6 @@ export function MenuButton() {
         {Object.values(routes).map(({ link, label }) => (
           <MenuItem
             key={link}
-            //   label={label}
             href={link}
             component="a"
             value={link}

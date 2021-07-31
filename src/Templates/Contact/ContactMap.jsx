@@ -1,7 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 import { FaMobileAlt } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
-import { FlexBox } from "../../Components/Box/AppBoxes";
 import { BusinessInfoButton } from "../../Components/Schedule/BusinessInfoButton";
 import MapImage from "../../img/mapNJ.png";
 import { Box, CardContent, Grid, Typography } from "@material-ui/core";
@@ -104,7 +103,7 @@ export const ContactMap = () => {
     query: "(min-device-width: 800px)",
   });
   return (
-    <FlexBox flexWrap="wrap" alignItems="center">
+    <Box display="flex" justifyContent="space-evenly" flexWrap="wrap" alignItems="center">
       {isWide && (
         <img alt="" src={MapImage} maxWidth="100%" width="60%" height="auto" />
       )}
@@ -120,6 +119,6 @@ export const ContactMap = () => {
       </CardContent>
 
       <Hours />
-    </FlexBox>
+    </Box>
   );
 };

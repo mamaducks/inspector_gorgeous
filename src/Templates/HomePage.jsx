@@ -1,14 +1,13 @@
-import { Divider, Box, Typography } from "@material-ui/core";
+import { Box, Container } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import { INSPECT_TYPE } from "../Templates/Services/services";
 import {
   LayoutBox,
   MainContent,
-  NewContainer,
 } from "../Components/Box/AppBoxes";
 import { DialogButton } from "../Components/Schedule/RequestsDialogButtons";
-import { Quote } from "../Components/Schedule/Quote.js";
-import { Schedule } from "../Components/Schedule/Schedule.js";
+import { Quote } from "../Components/Schedule/Quote";
+import { Schedule } from "../Components/Schedule/Schedule";
 import { Request } from "../Components/Schedule/InspectionForm";
 import House from "../img/homePage.png";
 
@@ -25,7 +24,7 @@ function QuoteBox() {
 
 export const HomePage = () => {
   return (
-    <NewContainer>
+    <Container>
       <LayoutBox image={House}>
         <MainContent heading="Let Us Help You Get to Know Your Home">
           At Buyer Beware Home Inspections, we fully understand the importance
@@ -65,6 +64,6 @@ export const HomePage = () => {
         </MainContent>
         <QuoteBox />
       </Box>
-    </NewContainer>
+    </Container>
   );
 };

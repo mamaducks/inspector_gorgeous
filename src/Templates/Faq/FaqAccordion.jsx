@@ -1,4 +1,4 @@
-import { Container } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { AccordionBox } from "../Faq/Accordion/AccordionBox";
 
@@ -15,7 +15,7 @@ export function FaqAccordion() {
   const classes = useStyles();
 
   return (
-    <Container className={classes.accordion}>
+    <Box className={classes.accordion}>
       <AccordionBox
         heading="WHAT DOES YOUR HOME INSPECTION COVER?"
         body="
@@ -45,6 +45,6 @@ export function FaqAccordion() {
         heading="HOW MUCH IS A HOME INSPECTION?"
         body="The cost of a Home Inspection can vary widely depending on the type of home, the size of the home, and maybe most importantly - on the Inspector themselves.   We believe in fair, honest, upfront pricing.  We are proud to offer senior and military discounts.  Click Here to request your free quote!"
       />
-    </Container>
+    </Box>
   );
 }

@@ -1,22 +1,17 @@
 import { ProfileCard } from "./ProfileCard";
 import {
   LayoutBox,
-  NewContainer,
   MainContent,
 } from "../../Components/Box/AppBoxes";
 import { DialogButton } from "../../Components/Schedule/RequestsDialogButtons";
 import { Request } from "../../Components/Schedule/InspectionForm";
 import About from "../../img/houseB.png";
-import Inspect from "../../img/inspector.png";
 import Check from "../../img/checkCert.png";
+import { Container } from "@material-ui/core";
 export function AboutPage() {
   return (
-    <NewContainer>
-      <LayoutBox
-        image={About}
-        // width="600"
-        // height="400"
-      >
+    <Container>
+      <LayoutBox image={About}>
         <MainContent heading="About Us">
           Adrienne Soto is the founder and primary home inspector at Buyer
           Beware Home Inspections LLC. Before she inspected homes, she was a
@@ -24,7 +19,6 @@ export function AboutPage() {
           of real estate with over 20 years of experience in restoring, building
           and designing homes in the New Jersey area.
           <br />
-          {/* <br /> */}
           Working with many contractors and inspectors through the years has
           given her experience and a keen sense of knowing what to look for when
           inspecting a property. Adrienne enjoys all aspects of building and
@@ -33,13 +27,7 @@ export function AboutPage() {
         </MainContent>
       </LayoutBox>
 
-      <LayoutBox
-        image={Check}
-        // width="600"
-        // height="400"
-        reverse
-        // heading="Background and Experience"
-      >
+      <LayoutBox image={Check} reverse>
         <MainContent
           heading="Background and Experience"
           style={{ maxWidth: "80%" }}
@@ -51,10 +39,10 @@ export function AboutPage() {
           the year she takes continuing education courses to stay abreast on new
           products and inspection techniques.
           <br />
-          Our Home Inspectors are fully
-          licensed by the state, and fully insured. Contact Adrienne at Buyer
-          Beware Home Inspections today to schedule your reliable, professional
-          in-depth home inspection in the Southern New Jersey area.
+          Our Home Inspectors are fully licensed by the state, and fully
+          insured. Contact Adrienne at Buyer Beware Home Inspections today to
+          schedule your reliable, professional in-depth home inspection in the
+          Southern New Jersey area.
           <DialogButton
             title="Request an Inspection"
             content={<Request />}
@@ -64,6 +52,6 @@ export function AboutPage() {
       </LayoutBox>
 
       <ProfileCard />
-    </NewContainer>
+    </Container>
   );
 }

@@ -14,11 +14,39 @@ const theme = createMuiTheme({
       secondary: "#000000",
     },
     background: {
-      default: "#ece3e3",
+      // default: "#ece3e3",
+      default: "#f3f1f2",
     },
   },
 
-  
+  typography: {
+    h5: {
+    fontSize: '1.2rem',
+    '@media (min-width:600px)': {
+      fontSize: '1.5rem',
+    },
+    paddingLeft: "5px"
+    
+  },
+  subtitle1: {
+    fontWeight: 400,
+    fontSize: "1.1rem",
+    paddingLeft: "5px",
+    
+  },
+  subtitle2: {
+lineHeight: 1,
+fontWeight: 300
+},
+caption: {
+  fontWeight: 300
+},
+body1: {
+  letterSpacing: "0.1em"
+}
+  },
+ 
+
   overrides: {
     // MuiToolbar: {
     //   root: {
@@ -55,9 +83,13 @@ const theme = createMuiTheme({
 
     MuiContainer: {
       root: {
-        justifyContent: "space-evenly",
         display: "flex",
-        width: "100vw"
+        backgroundColor: "#f3f1f2",
+        boxSizing: "border-box",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        flexDirection: "column",
       },
     },
 
@@ -98,6 +130,14 @@ const theme = createMuiTheme({
       },
     },
   },
+  // MuiButton: {
+  //   outlinedSizeSmall: {
+  //     root: {
+  //       fontSize: "0.84rem"
+  //     }
+      
+  //   }
+  // }
 });
 
 export default theme;

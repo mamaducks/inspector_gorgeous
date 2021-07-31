@@ -1,14 +1,13 @@
-import { Divider, Typography } from "@material-ui/core";
+import { Container, Divider, Typography } from "@material-ui/core";
 import { DisplayService } from "./ServicesList/DisplayServices";
-import {ServiceCard} from "./ServicesList/ServiceCard";
 import { DialogButton } from "../../Components/Schedule/RequestsDialogButtons";
-import { LayoutBox, NewContainer, DivBox, MainContent } from "../../Components/Box/AppBoxes";
+import { LayoutBox, MainContent } from "../../Components/Box/AppBoxes";
 import { Schedule } from "../../Components/Schedule/Schedule";
 import MagHouse from "../../img/houseMagnify.png";
 
 export function ServicesPage() {
   return (
-    <NewContainer>
+    <Container>
       <LayoutBox
         image={MagHouse}
         // width="600px"
@@ -40,6 +39,6 @@ export function ServicesPage() {
       <DisplayService />
       {/* <ServiceCard/> */}
       
-    </NewContainer>
+    </Container>
   );
 }

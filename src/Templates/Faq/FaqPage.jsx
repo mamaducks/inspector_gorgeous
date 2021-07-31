@@ -1,10 +1,9 @@
-import { Divider, Typography } from "@material-ui/core";
+import { Container, Divider } from "@material-ui/core";
 import { FaqAccordion } from "../Faq/FaqAccordion";
 import { SERVICES } from "../../Templates/Services/services";
 import {
   LayoutBox,
   MainContent,
-  NewContainer,
 } from "../../Components/Box/AppBoxes";
 import { DialogButton } from "../../Components/Schedule/RequestsDialogButtons";
 import { Schedule } from "../../Components/Schedule/Schedule";
@@ -14,19 +13,12 @@ import Curve from "../../img/curve.png";
 
 export function FaqPage() {
   return (
-    <NewContainer>
-      <LayoutBox
-        image={Corner}
-        // width="600"
-        // height="400"
-        // heading="What to expect"
-        reverse
-      >
+    <Container>
+      <LayoutBox image={Corner} reverse>
         <MainContent heading="What to expect">
           Our New Jersey home inspection is a thorough, objective visual
           analysis of a home`s structure and mechanical systems.
           <br />
-          {/* <br /> */}
           Buyers Beware inspector will do an in-depth inspection and provide a
           comprehensive report on the condition of the property. Our home
           inspectors are always reliable, professional, and knowledgeable. Walk
@@ -34,16 +26,7 @@ export function FaqPage() {
           features, as well as tips for care and maintenance.
           <br />
         </MainContent>
-        {/* Our New Jersey home inspection is a thorough, objective visual analysis
-        of a home`s structure and mechanical systems.
-        <br />
-        <br />
-        Buyers Beware inspector will do an in-depth inspection and provide a
-        comprehensive report on the condition of the property. Our home
-        inspectors are always reliable, professional, and knowledgeable. Walk
-        through the home with us on inspection day, and learn about the home’s
-        features, as well as tips for care and maintenance.
-        <br /> */}
+
         <DialogButton
           title="Schedule Online"
           content={<Schedule />}
@@ -51,12 +34,7 @@ export function FaqPage() {
         />
       </LayoutBox>
 
-      <LayoutBox
-        image={Curve}
-        // width="600px"
-        // height="420px"
-        // heading="What We Inspect"
-      >
+      <LayoutBox image={Curve}>
         <MainContent heading="What We Inspect">
           <ul
             style={{
@@ -78,6 +56,6 @@ export function FaqPage() {
       <Divider style={{ marginTop: "12px" }} />
 
       <FaqAccordion />
-    </NewContainer>
+    </Container>
   );
 }
