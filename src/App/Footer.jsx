@@ -2,7 +2,6 @@ import { useMediaQuery } from "react-responsive";
 import {
   AppBar,
   Box,
-  CardActions,
   Typography,
 } from "@material-ui/core";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -13,6 +12,7 @@ import House from "../img/littleHouse.png";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { AiOutlineSchedule } from "react-icons/ai";
 import React, { useState } from "react";
+import {DialogButton} from "../Components/Schedule/RequestsDialogButtons";
 import { Button, Dialog } from "@material-ui/core";
 
 export function FooterButton({ title, icon, content }) {
@@ -54,9 +54,9 @@ export function FootQuoteButtonNew({ title, titleWide, content }) {
   });
 
   if (isWide) {
-    return <FooterButton title={titleWide} content={content} />;
+    return <DialogButton title={titleWide} content={content} />;
   }
-  return <FooterButton title={title} content={content} />;
+  return <DialogButton title={title} content={content} />;
 }
 
 export const Footer = () => {
@@ -65,13 +65,13 @@ export const Footer = () => {
   });
   return (
     <>
-      <AppBar position="sticky" elevation={0}>
-        <Box display="flex" color="#a71976" alignItems="center" flexWrap="wrap">
-          <Box textAlign="center" flex="auto">
-            <Typography variant="subtitle1">
+      <AppBar position="sticky" elevation={0} >
+        <Box display="flex" color="#a71976" alignItems="center" flexWrap="wrap" alignContent="center">
+          <Box textAlign="center" flex="auto" paddingTop="10px">
+            <Typography variant="subtitle1" paddingTop="8px" paddingBottom="1px">
               BUYER BEWARE HOME INSPECTION
               </Typography>
-              <Typography variant="subtitle2">
+              <Typography variant="subtitle2" lineHeight="1.4">
                 Proudly Serving South Jersey
               </Typography>
               <Typography variant="caption" gutterBottom >
@@ -80,18 +80,19 @@ export const Footer = () => {
               </Typography>
           </Box>
 
-          <Box margin="5px" display="flex" height="120px" flex="auto" text-align="center">
+          <Box margin="5px" display="flex" height="120px" flex="auto" text-align="center" style={{justifyContent:"center"}}>
             {/* <Box display="flex" flexGrow="1" text-align="center"> */}
               {isWide && (
                 <img
                   alt=""
                   src={House}
-                  height="auto"
+                  // height="auto"
                   width="165px"
+                  maxHeight="100px"
                   style={{ paddingInline: "5px" }}
                 />
               )}
-              <CardActions
+              <Box
                // alignItems="center"
                 display="flex"
                 style={{ flexDirection: "column", justifyContent: "center" }}
@@ -108,14 +109,14 @@ export const Footer = () => {
                   content={<Schedule />}
                   contentWide={<Schedule />}
                 />
-              </CardActions>
+              </Box>
             {/* </Box> */}
           </Box>
           {/* <Box flex="auto"> */}
             <Box display="flex" flex="auto" color="#c54097" justifyContent="center" flexDirection="column" alignItems="center">
               <Typography
                 variant="body1"
-                gutterBottom
+                
                 style={{
                   alignItems: "center",
                   display: "flex",

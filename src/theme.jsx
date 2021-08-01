@@ -32,7 +32,7 @@ const theme = createTheme({
       lineHeight: "1.2",
     },
     subtitle2: {
-      lineHeight: "1.2",
+      lineHeight: "1.4",
       fontWeight: 300,
       fontSize: "clamp(0.8rem, 0.8vw, 1.8rem)",
     },
