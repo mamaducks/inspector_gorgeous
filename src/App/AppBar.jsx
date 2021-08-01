@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   logoText: {
     display: "inline-flex",
     flexDirection: "column",
-    fontSize: "0.875em",
+    fontSize: "0.8em",
   },
   logoTextContainer: {
     flex: 1,
