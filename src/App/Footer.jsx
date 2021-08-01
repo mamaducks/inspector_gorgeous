@@ -74,13 +74,13 @@ export const Footer = () => {
               <Typography variant="subtitle2" lineHeight="1.4">
                 Proudly Serving South Jersey
               </Typography>
-              <Typography variant="caption" gutterBottom >
+              <Typography variant="caption" >
                 Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape
                 May Counties
               </Typography>
           </Box>
 
-          <Box margin="5px" display="flex" height="120px" flex="auto" text-align="center" style={{justifyContent:"center"}}>
+          <Box margin="5px" display="flex" flex="auto" text-align="center" style={{justifyContent:"center"}}>
             {/* <Box display="flex" flexGrow="1" text-align="center"> */}
               {isWide && (
                 <img
