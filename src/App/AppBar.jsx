@@ -69,7 +69,8 @@ export function AppBarHeader() {
             <Typography
               variant="h4"
               align="right"
-              fontSize="1.2rem"
+              noWrap="true"
+              style={{fontSize: "1.9rem"}}
             >
               {" "}
               BUYER BEWARE
