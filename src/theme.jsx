@@ -14,7 +14,6 @@ const theme = createTheme({
       secondary: "#000000",
     },
     background: {
-      // default: "#ece3e3",
       default: "#f3f1f2",
     },
   },
@@ -54,38 +53,11 @@ const theme = createTheme({
   },
 
   overrides: {
-    // MuiToolbar: {
-    //   root: {
-    //     paddingLeft: 9,
-    //     paddingRight: 12,
-    //   },
-    // },
-
     MuiDivider: {
       root: {
         margin: "10px 0",
       },
     },
-
-    // MuiButton: {
-    //   root: {
-    //     variant: "contained",
-    //     color: "#a71976",
-    //     backgroundColor: "#ece7eb"
-    //   },
-    //   label: {
-    //     color: "#a71976",
-    //   },
-    // },
-    // MuiButtonContained: {
-    // root: {
-    // backgroundColor: "#ece7eb"
-    // }
-    // },
-
-    // MuiIconButton: {
-    //   root: { color: "black", fontSize: "2rem", padding: "0px" },
-    // },
 
     MuiContainer: {
       root: {
@@ -138,17 +110,10 @@ const theme = createTheme({
     MuiListItemText: {
       root: {
         fontFamily: "Helvetica",
+        fontSize: "clamp(1.1rem, 1vw, 1.8rem)",
       },
     },
   },
-  // MuiButton: {
-  //   outlinedSizeSmall: {
-  //     root: {
-  //       fontSize: "0.84rem"
-  //     }
-
-  //   }
-  // }
 });
 
 export default theme;

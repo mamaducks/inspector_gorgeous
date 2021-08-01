@@ -4,6 +4,7 @@ import {
   ListItemIcon,
   ListItemText,
   Box,
+  Container,
 } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import { AiOutlineMail } from "react-icons/ai";
@@ -28,6 +29,7 @@ export function ProfileCard() {
   });
 
   return (
+    <Container>
       <Paper style={{ padding: 5, marginBottom: 20 }}>
         <Box display="flex" justifyContent="space-evenly">
           {isWide && (
@@ -52,5 +54,6 @@ export function ProfileCard() {
           </div>
         </Box>
       </Paper>
+    </Container>
   );
 }

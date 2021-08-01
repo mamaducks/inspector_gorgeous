@@ -38,7 +38,7 @@ export const ContactPage = () => {
             <Typography color="textPrimary" variant="h5">
               Buyer Beware Home Inspections is based out of Berlin, NJ
             </Typography>
-            <Divider style={{margin: 5}}/>
+            <Divider style={{ margin: 5 }} />
 
             <Typography
               variant="subtitle1"
@@ -70,8 +70,9 @@ export const ContactPage = () => {
             </Typography>
 
             <Divider />
+
             <CardActions>
-              <Social color="#a71976" />
+              <Social color="#a71976" style={{ justifyContent: "center" }} />
             </CardActions>
           </CardContent>
         </Box>
@@ -80,7 +81,7 @@ export const ContactPage = () => {
       {isWide && (
         <Box
           textAlign="center"
-          style={{ color: "#ffffff", backgroundColor: "#a71976"  }}
+          style={{ color: "#ffffff", backgroundColor: "#a71976" }}
         >
           <Typography
             variant="h1"

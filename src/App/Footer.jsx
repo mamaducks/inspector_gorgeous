@@ -14,39 +14,6 @@ import { AiOutlineSchedule } from "react-icons/ai";
 import React from "react";
 import {DialogButton} from "../Components/Schedule/RequestsDialogButtons";
 
-// export function FooterButton({ title, icon, content }) {
-//   const [open, setOpen] = useState(false);
-
-//   return (
-//     <Box display="flex" justifyContent="center" width="100%" margin="4px">
-//       <Button
-//         variant="outlined"
-//         fullWidth
-//         onClick={() => setOpen(true)}
-//         style={{
-//           border: "1.8px solid #a71976",
-//           color: "#c54097",
-//           lineHeight: "1",
-//           padding: "2px",
-//         }}
-//       >
-//         {title}
-//       </Button>
-
-//       <div>
-//         <Dialog
-//           open={open}
-//           onClose={() => setOpen(false)}
-//           fullWidth
-//           maxWidth="md"
-//         >
-//           {content}
-//         </Dialog>
-//       </div>
-//     </Box>
-//   );
-// }
-
 export function FootQuoteButtonNew({ title, titleWide, content }) {
   const isWide = useMediaQuery({
     query: "(min-device-width: 650px)",
@@ -80,19 +47,16 @@ export const Footer = () => {
           </Box>
 
           <Box margin="5px" display="flex" flex="auto" text-align="center" style={{justifyContent:"center"}}>
-            {/* <Box display="flex" flexGrow="1" text-align="center"> */}
               {isWide && (
                 <img
                   alt=""
                   src={House}
-                  // height="auto"
                   width="165px"
                   maxHeight="100px"
                   style={{ paddingInline: "5px" }}
                 />
               )}
               <Box
-               // alignItems="center"
                 display="flex"
                 style={{ flexDirection: "column", justifyContent: "center" }}
               >
@@ -109,9 +73,7 @@ export const Footer = () => {
                   contentWide={<Schedule />}
                 />
               </Box>
-            {/* </Box> */}
           </Box>
-          {/* <Box flex="auto"> */}
             <Box display="flex" flex="auto" color="#c54097" justifyContent="center" flexDirection="column" alignItems="center">
               <Typography
                 variant="body1"
@@ -151,7 +113,6 @@ export const Footer = () => {
                 />
                 Send us an email
               </Typography>
-            {/* </Box> */}
           </Box>
         </Box>
       </AppBar>

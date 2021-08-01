@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs, CardContent, Typography } from "@material-ui/core";
+import { Box, Tab, Tabs, Typography } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 
 import routes from "./Routes";
@@ -9,11 +9,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    //flexGrow: 1,
     display: "flex",
   },
   image: {
-    // width: "25%",
     height: "auto",
     maxWidth: "120px",
   },
@@ -23,14 +21,13 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(2),
   },
-  title: {
-    flexGrow: 1,
-    alignSelf: "flex-end",
-    fontSize: "2em",
-    paddingRight: theme.spacing(2),
-    "& > a": {
-      marginLeft: theme.spacing(2),
-    },
+  logoText: {
+    display: "inline-flex",
+    flexDirection: "column",
+    fontSize: "0.875em",
+  },
+  logoTextContainer: {
+    flex: 1,
   },
   grow: {
     flexGrow: 1,
@@ -46,11 +43,7 @@ export function AppBarButton() {
   });
   const classes = useStyles();
 
-  if (isWide) {
-    return <Social color="black" className={classes.title} />;
-  }
-
-  return <MenuButton  />;
+  return isWide ? <Social color="black" className={classes.social} /> : null;
 }
 
 export function AppBarHeader() {
@@ -61,16 +54,15 @@ export function AppBarHeader() {
 
   return (
     <>
-      <Box margin="5px" display="flex" height="120px">
-        <Box display="flex" flexGrow="1">
-          <img alt="" src={EmmaLogo} height="107px" className={classes.image} />
-
-          <CardContent>
+      <Box margin="5px" display="flex" height="120px" alignItems="center">
+        <img alt="" src={EmmaLogo} height="107px" className={classes.image} />
+        <div className={classes.logoTextContainer}>
+          <div className={classes.logoText}>
             <Typography
               variant="h4"
               align="right"
               noWrap="true"
-              style={{fontSize: "1.9rem", lineHeight: "1.2"}}
+              style={{ fontSize: "1.9em", lineHeight: "1.2" }}
             >
               {" "}
               BUYER BEWARE
@@ -79,28 +71,16 @@ export function AppBarHeader() {
             <Typography
               variant="h6"
               align="right"
-              style={{ fontWeight: "300" }}
+              style={{ fontSize: "1.2em", fontWeight: "300" }}
             >
               HOME INSPECTION, LLC
             </Typography>
-          </CardContent>
-        </Box>
-
-        
-        <div
-           style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            alignSelf: "flex-end"
-          }}>
-          <AppBarButton
-            style={{
-              maxWidth: "30%",
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
-          />
           </div>
+        </div>
+
+        {!isWide && <MenuButton />}
+
+        {isWide && <Social />}
       </Box>
 
       {isWide && (

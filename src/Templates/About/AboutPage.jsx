@@ -38,7 +38,6 @@ export function AboutPage() {
       <LayoutBox image={Check} reverse>
         <MainContent
           heading="Background and Experience"
-          style={{ maxWidth: "80%" }}
         >
           Adrienne has completed all of the state’s required approved
           professional home inspection courses and exams, and has also passed
@@ -58,7 +57,6 @@ export function AboutPage() {
           />
         </MainContent>
       </LayoutBox>
-
       <ProfileCard />
     </Container>
   );
