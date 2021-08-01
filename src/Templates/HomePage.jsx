@@ -62,7 +62,7 @@ export const HomePage = () => {
           </ul>
           <DialogButton title="Request Inspection" content={<Request />} />
         </MainContent>
-        {/* <QuoteBox /> */}
+        <QuoteBox />
       </Box>
     </Container>
   );
