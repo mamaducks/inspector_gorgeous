@@ -25,7 +25,6 @@ export function AboutPage() {
           <Box display="flex" justifyContent="center" paddingTop="10px">
             <Button
               variant="contained"
-             // alignItems="center"
               color="secondary"
               href="https://www.spectora.com/inspection-request/my-inspection-company-2f689b3a14"
               style={{ marginTop: "8px" }}

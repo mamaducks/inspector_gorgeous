@@ -11,42 +11,41 @@ import { Quote } from "../Components/Schedule/Quote";
 import House from "../img/littleHouse.png";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { AiOutlineSchedule } from "react-icons/ai";
-import React, { useState } from "react";
+import React from "react";
 import {DialogButton} from "../Components/Schedule/RequestsDialogButtons";
-import { Button, Dialog } from "@material-ui/core";
 
-export function FooterButton({ title, icon, content }) {
-  const [open, setOpen] = useState(false);
+// export function FooterButton({ title, icon, content }) {
+//   const [open, setOpen] = useState(false);
 
-  return (
-    <Box display="flex" justifyContent="center" width="100%" margin="4px">
-      <Button
-        variant="outlined"
-        fullWidth
-        onClick={() => setOpen(true)}
-        style={{
-          border: "1.8px solid #a71976",
-          color: "#c54097",
-          lineHeight: "1",
-          padding: "2px",
-        }}
-      >
-        {title}
-      </Button>
+//   return (
+//     <Box display="flex" justifyContent="center" width="100%" margin="4px">
+//       <Button
+//         variant="outlined"
+//         fullWidth
+//         onClick={() => setOpen(true)}
+//         style={{
+//           border: "1.8px solid #a71976",
+//           color: "#c54097",
+//           lineHeight: "1",
+//           padding: "2px",
+//         }}
+//       >
+//         {title}
+//       </Button>
 
-      <div>
-        <Dialog
-          open={open}
-          onClose={() => setOpen(false)}
-          fullWidth
-          maxWidth="md"
-        >
-          {content}
-        </Dialog>
-      </div>
-    </Box>
-  );
-}
+//       <div>
+//         <Dialog
+//           open={open}
+//           onClose={() => setOpen(false)}
+//           fullWidth
+//           maxWidth="md"
+//         >
+//           {content}
+//         </Dialog>
+//       </div>
+//     </Box>
+//   );
+// }
 
 export function FootQuoteButtonNew({ title, titleWide, content }) {
   const isWide = useMediaQuery({

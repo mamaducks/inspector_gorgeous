@@ -20,10 +20,8 @@ export function LayoutBox({
       justifyContent="space-evenly"
       alignContent="space-between"
       margin="10px 0"
-     // alignItems="center"
       width="-webkit-fill-available"
       flex="1 auto"
-      //flexFlow={isWide ? "inherit" : "row wrap"}
     >
       {isWide && (
         <img
