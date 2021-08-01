@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function AppBarButton() {
   const isWide = useMediaQuery({
-    query: "(min-device-width: 650px)",
+    query: "(min-width: 48rem)",
   });
   const classes = useStyles();
 
@@ -56,7 +56,7 @@ export function AppBarButton() {
 export function AppBarHeader() {
   const classes = useStyles();
   const isWide = useMediaQuery({
-    query: "(min-device-width: 800px)",
+    query: "(min-width: 48rem)",
   });
 
   return (
@@ -85,12 +85,12 @@ export function AppBarHeader() {
           </CardContent>
         </Box>
 
+        
         <div
-          style={{
-            alignSelf: "flex-end",
-            flexGrow: "1",
-          }}
-        >
+           style={{
+            display: "flex",
+            justifyContent: "flex-end",
+          }}>
           <AppBarButton
             style={{
               maxWidth: "30%",
@@ -98,7 +98,7 @@ export function AppBarHeader() {
               justifyContent: "flex-end",
             }}
           />
-        </div>
+          </div>
       </Box>
 
       {isWide && (
