@@ -48,7 +48,7 @@ export const HomePage = () => {
         }}
         flexWrap="wrap"
       >
-        <MainContent heading="We Offer the Following Inspection Services:">
+        <MainContent heading="We Offer the Following Inspection Services:" style={{paddingBottom:"1px"}}>
           <ul
             style={{
               listStyleType: "square",

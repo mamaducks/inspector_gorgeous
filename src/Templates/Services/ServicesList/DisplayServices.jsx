@@ -19,7 +19,7 @@ export function DisplayService() {
       display="flex"
       justifyContent="center"
       flexWrap="wrap"
-      style={{ paddingBlock: "10px" }}
+      style={{ paddingBottom: "10px" }}
     >
       <Dialog open={!!selected} onClose={() => setSelected(undefined)}>
         <Box

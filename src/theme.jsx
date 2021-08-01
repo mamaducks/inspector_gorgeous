@@ -21,7 +21,7 @@ const theme = createTheme({
 
   typography: {
     h5: {
-      fontSize: "clamp(1.1em, 1.3vw, 1.8em)",
+      fontSize: "clamp(1.5rem, 1.3vw, 2rem)",
 
       paddingLeft: "5px",
     },

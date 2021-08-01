@@ -91,13 +91,13 @@ export function AppBarHeader() {
            style={{
             display: "flex",
             justifyContent: "flex-end",
+            alignSelf: "flex-end"
           }}>
           <AppBarButton
             style={{
               maxWidth: "30%",
               display: "flex",
               justifyContent: "flex-end",
-              alignSelf: "flex-end"
             }}
           />
           </div>
