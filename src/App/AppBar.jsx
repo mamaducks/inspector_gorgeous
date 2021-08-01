@@ -50,7 +50,7 @@ export function AppBarButton() {
     return <Social color="black" className={classes.title} />;
   }
 
-  return <MenuButton alignSelf="flex-end" fontSize="1.8em" />;
+  return <MenuButton  />;
 }
 
 export function AppBarHeader() {
@@ -70,7 +70,7 @@ export function AppBarHeader() {
               variant="h4"
               align="right"
               noWrap="true"
-              style={{fontSize: "1.9rem"}}
+              style={{fontSize: "1.9rem", lineHeight: "1.2"}}
             >
               {" "}
               BUYER BEWARE
@@ -97,6 +97,7 @@ export function AppBarHeader() {
               maxWidth: "30%",
               display: "flex",
               justifyContent: "flex-end",
+              alignSelf: "flex-end"
             }}
           />
           </div>

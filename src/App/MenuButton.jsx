@@ -23,7 +23,7 @@ export function MenuButton() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <IoMdMenu color="black" />
+        <IoMdMenu color="black" fontSize="1.6em"/>
       </IconButton>
 
       <Menu
