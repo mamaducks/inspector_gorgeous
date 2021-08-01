@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "2",
   },
   hours: {
-    paddingBlock: "10px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
   },
   grid: {
     justifyContent: "center",
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     "& div": {
       fontWeight: "bold",
       paddingInline: "10px",
-      color: "#494649"
+      color: "#494649",
     },
   },
 }));
@@ -46,7 +47,13 @@ export function Info({ Icon, info }) {
         justifyContent="space-between"
       >
         {Icon}
-        <Typography color="textPrimary" variant="subtitle1" paddingBlock="10px" gutterBottom >
+        <Typography
+          color="textPrimary"
+          variant="subtitle1"
+          paddingTop="10px"
+          paddingBottom="10px"
+          gutterBottom
+        >
           {info}
         </Typography>
       </Box>
@@ -58,7 +65,7 @@ export function Hours() {
   const classes = useStyles();
 
   const isWide = useMediaQuery({
-    query: "(min-device-width: 650px)",
+    query: "(min-width: 48rem)",
   });
 
   if (isWide) {
@@ -100,10 +107,13 @@ export const ContactMap = () => {
     query: "(min-device-width: 800px)",
   });
   return (
-    <Box display="flex" justifyContent="space-evenly" flexWrap="wrap" alignItems="center">
-      {isWide && (
-        <img alt="" src={MapImage} maxWidth="100%" width="60%" height="auto" />
-      )}
+    <Box
+      display="flex"
+      justifyContent="space-evenly"
+      flexWrap="wrap"
+      alignItems="center"
+    >
+      {isWide && <img alt="" src={MapImage} width="60%" height="auto" />}
       <CardContent>
         <Info Icon={<FaMobileAlt />} info="p: 609-670-0451" />
         <Info Icon={<IoLocationOutline />} info="Berlin, NJ 08009" />

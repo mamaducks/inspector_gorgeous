@@ -112,7 +112,7 @@ export const Footer = () => {
             {/* </Box> */}
           </Box>
           {/* <Box flex="auto"> */}
-            <Box display="flex" flex="auto" color="#c54097" justifyContent="center" flexDirection="column">
+            <Box display="flex" flex="auto" color="#c54097" justifyContent="center" flexDirection="column" alignItems="center">
               <Typography
                 variant="body1"
                 gutterBottom

@@ -1,10 +1,7 @@
 import { Box, Container } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import { INSPECT_TYPE } from "../Templates/Services/services";
-import {
-  LayoutBox,
-  MainContent,
-} from "../Components/Box/AppBoxes";
+import { LayoutBox, MainContent } from "../Components/Box/AppBoxes";
 import { DialogButton } from "../Components/Schedule/RequestsDialogButtons";
 import { Quote } from "../Components/Schedule/Quote";
 import { Schedule } from "../Components/Schedule/Schedule";
@@ -13,7 +10,7 @@ import House from "../img/homePage.png";
 
 function QuoteBox() {
   const isWide = useMediaQuery({
-    query: "(min-device-width: 900px)",
+    query: "(min-width: 48rem)",
   });
 
   if (isWide) {
@@ -26,7 +23,7 @@ export const HomePage = () => {
   return (
     <Container>
       <LayoutBox image={House}>
-        <MainContent heading="Let Us Help You Get to Know Your Home" >
+        <MainContent heading="Let Us Help You Get to Know Your Home">
           At Buyer Beware Home Inspections, we fully understand the importance
           of a thorough home inspection, and that’s why we work so hard to offer
           you the very best. Let us provide an unbiased, comprehensive, visual
@@ -44,7 +41,11 @@ export const HomePage = () => {
         display="flex"
         justifyContent="space-evenly"
         alignContent="space-between"
-        style={{ paddingBlock: "18px", minWidth: "-webkit-fill-available"}}
+        style={{
+          paddingTop: "18px",
+          paddingBottom: "18px",
+          minWidth: "-webkit-fill-available",
+        }}
         flexWrap="wrap"
       >
         <MainContent heading="We Offer the Following Inspection Services:">
