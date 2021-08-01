@@ -42,8 +42,8 @@ export const HomePage = () => {
         justifyContent="space-evenly"
         alignContent="space-between"
         style={{
-          paddingTop: "18px",
-          paddingBottom: "18px",
+          paddingTop: "10px",
+          paddingBottom: "12px",
           minWidth: "-webkit-fill-available",
         }}
         flexWrap="wrap"

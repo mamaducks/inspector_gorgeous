@@ -32,7 +32,7 @@ export function ServicesPage() {
         <DialogButton title="Schedule Today" content={<Schedule />} />
       </LayoutBox>
      
-      <Typography color="textPrimary" variant="h5" style={{paddingLeft:"12px", paddingTop:"10px"}}>
+      <Typography color="textPrimary" variant="h5" style={{paddingLeft:"12px", paddingTop:"8px"}}>
       We inspect the following when accessible:
       </Typography>
       <Divider />

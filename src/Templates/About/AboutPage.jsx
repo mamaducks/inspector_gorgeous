@@ -22,7 +22,7 @@ export function AboutPage() {
           inspecting a property. Adrienne enjoys all aspects of building and
           maintaining homes, and is eager to share this information with her
           clients.
-          <Box display="flex" justifyContent="center" padding="10px">
+          <Box display="flex" justifyContent="center" paddingTop="10px">
             <Button
               variant="contained"
              // alignItems="center"

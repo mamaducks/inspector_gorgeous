@@ -50,7 +50,7 @@ const theme = createTheme({
       fontWeight: 300,
       fontSize: "clamp(1.1rem, 1vw, 1.8rem)",
       paddingLeft: "5px",
-    }
+    },
   },
 
   overrides: {
@@ -96,6 +96,11 @@ const theme = createTheme({
         alignItems: "center",
         alignSelf: "center",
         flexDirection: "column",
+      },
+    },
+    MuiCardContent: {
+      root: {
+        padding: "10px",
       },
     },
 
