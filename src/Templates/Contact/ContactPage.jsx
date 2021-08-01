@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 import { ContactMap } from "./ContactMap";
-import Heart from "../../img/heartHouse.png";
+import Heart from "../../img/houseColor.png";
 import { BsHeart } from "react-icons/bs";
 import { Social } from "../../Components/Social/SocialMedia";
 
