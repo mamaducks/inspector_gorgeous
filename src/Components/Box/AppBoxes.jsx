@@ -20,20 +20,27 @@ export function LayoutBox({
       justifyContent="space-evenly"
       alignContent="space-between"
       margin="25px 0"
-      alignItems="center"
+     // alignItems="center"
+      width="-webkit-fill-available"
+      flex="1 auto"
+      //flexFlow={isWide ? "inherit" : "row wrap"}
     >
       {isWide && (
         <img
           alt=""
           src={image}
-          maxWidth="80%"
-          width="60%"
+          width="45%"
           height="auto"
-          style={{ alignSelf: "center", paddingBlock: "10px" }}
+          style={{
+            alignSelf: "center",
+            minWidth: 300,
+            paddingBlock: "10px",
+            flexGrow: 0,
+          }}
           {...props}
         />
       )}
-      <div>{children}</div>
+      <Box>{children}</Box>
     </Box>
   );
 }
@@ -46,7 +53,7 @@ export function MainContent({ heading, children, ...props }) {
       </Typography>
       <Divider style={{ margin: "10px 0" }} />
 
-      <Typography variant="subtitle1" component="p">
+      <Typography variant="body2" component="div">
         {children}
       </Typography>
     </CardContent>

@@ -20,7 +20,7 @@ export const ContactPage = () => {
   return (
     <>
       <Container>
-        <Box display="flex" justifyContent="space-evenly" alignSelf="center" style={{ paddingBlock: "10px" }}>
+        <Box display="flex" style={{ paddingTop: "10px" }}>
           {isWide && (
             <img
               alt=""
@@ -33,23 +33,22 @@ export const ContactPage = () => {
               }}
             />
           )}
-        
-            <CardContent>
-              <Typography color="textPrimary" variant="h5">
-                Buyer Beware Home Inspections is based out of Berlin, NJ
-              </Typography>
-              <Divider />
 
-              <Typography
-                variant="subtitle1"
-                component="p"
-                style={{ fontWeight: "300", fontSize: "1.1rem" }}
-              >
-                We offer Home Inspection services to areas of New Jersey and
-                Philadelphia
-              </Typography>
-            </CardContent>
-          
+          <CardContent>
+            <Typography color="textPrimary" variant="h5">
+              Buyer Beware Home Inspections is based out of Berlin, NJ
+            </Typography>
+            <Divider style={{margin: 5}}/>
+
+            <Typography
+              variant="subtitle1"
+              component="p"
+              // style={{ fontWeight: "300", fontSize: "1.1rem" }}
+            >
+              We offer Home Inspection services to areas of New Jersey and
+              Philadelphia
+            </Typography>
+          </CardContent>
         </Box>
 
         <ContactMap />
@@ -81,7 +80,7 @@ export const ContactPage = () => {
       {isWide && (
         <Box
           textAlign="center"
-          style={{ color: "#ffffff", backgroundColor: "#a71976" }}
+          style={{ color: "#ffffff", backgroundColor: "#a71976"  }}
         >
           <Typography
             variant="h1"

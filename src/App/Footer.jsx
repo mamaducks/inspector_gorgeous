@@ -1,5 +1,10 @@
 import { useMediaQuery } from "react-responsive";
-import { AppBar, Box, Icon, Typography } from "@material-ui/core";
+import {
+  AppBar,
+  Box,
+  CardActions,
+  Typography,
+} from "@material-ui/core";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MailTo } from "../Components/Social/MailTo";
 import { Schedule } from "../Components/Schedule/Schedule";
@@ -17,7 +22,6 @@ export function FooterButton({ title, icon, content }) {
     <Box display="flex" justifyContent="center" width="100%" margin="4px">
       <Button
         variant="outlined"
-        size="small"
         fullWidth
         onClick={() => setOpen(true)}
         style={{
@@ -44,36 +48,15 @@ export function FooterButton({ title, icon, content }) {
   );
 }
 
-export function FootQuoteButton() {
+export function FootQuoteButtonNew({ title, titleWide, content }) {
   const isWide = useMediaQuery({
     query: "(min-device-width: 650px)",
   });
 
   if (isWide) {
-    return <FooterButton title="Get a Quote" content={<Quote />} />;
+    return <FooterButton title={titleWide} content={content} />;
   }
-  return (
-    <FooterButton title={<RiMoneyDollarCircleLine />} content={<Quote />} />
-  );
-}
-
-export function FootBookButton() {
-  const isWide = useMediaQuery({
-    query: "(min-device-width: 650px)",
-  });
-
-  if (isWide) {
-    return <FooterButton title="Schedule Online" content={<Schedule />} />;
-  }
-  return <FooterButton title={<AiOutlineSchedule />} content={<Schedule />} />;
-}
-
-function FooterBox({ children, ...props }) {
-  return (
-    <Box textAlign="center" {...props}>
-      {children}
-    </Box>
-  );
+  return <FooterButton title={title} content={content} />;
 }
 
 export const Footer = () => {
@@ -83,73 +66,93 @@ export const Footer = () => {
   return (
     <>
       <AppBar position="sticky" elevation={0}>
-        <Box
-          display="flex"
-          justifyContent="space-evenly"
-          color="#a71976"
-          alignItems="center"
-          flexWrap="wrap"
-          style={{ paddingTop: "3px" }}
-        >
-          <FooterBox>
-            <Typography variant="subtitle1" display="block" lineHeight="1.1">
+        <Box display="flex" color="#a71976" alignItems="center" flexWrap="wrap">
+          <Box textAlign="center" flex="auto">
+            <Typography variant="subtitle1">
               BUYER BEWARE HOME INSPECTION
+              </Typography>
               <Typography variant="subtitle2">
                 Proudly Serving South Jersey
               </Typography>
-              <Typography variant="caption" gutterBottom>
+              <Typography variant="caption" gutterBottom >
                 Burlington, Camden, Gloucester, Cumberland, Atlantic, and Cape
                 May Counties
               </Typography>
-            </Typography>
-          </FooterBox>
-          <FooterBox display="flex" paddingRight="35px">
-            {isWide && (
-              <img
-                alt=""
-                src={House}
-                style={{ paddingRight: "10px" }}
-                maxWidth="100%"
-                height="auto"
-              />
-            )}
-            <Box
-              display="flex"
-              padding="10px"
-              alignItems="center"
-              flexDirection="column"
-            >
-              <FootQuoteButton />
-              <FootBookButton />
-            </Box>
-          </FooterBox>
-          <FooterBox
-            display="flex"
-            justifyContent="center"
-            flexDirection="column"
-          >
-            <Box display="flex" paddingBottom="4px">
-              <Icon style={{ display: "flex", alignItems: "center" }}>
-                <FaPhoneAlt fontSize="0.8em" color="#c54097" />
-              </Icon>
-              <Typography variant="body1" noWrap="true" display="block">
+          </Box>
+
+          <Box margin="5px" display="flex" height="120px" flex="auto" text-align="center">
+            {/* <Box display="flex" flexGrow="1" text-align="center"> */}
+              {isWide && (
+                <img
+                  alt=""
+                  src={House}
+                  height="auto"
+                  width="165px"
+                  style={{ paddingInline: "5px" }}
+                />
+              )}
+              <CardActions
+               // alignItems="center"
+                display="flex"
+                style={{ flexDirection: "column", justifyContent: "center" }}
+              >
+                <FootQuoteButtonNew
+                  title={<RiMoneyDollarCircleLine />}
+                  titleWide="Get a Quote"
+                  content={<Quote />}
+                  contentWide={<Quote />}
+                />
+                <FootQuoteButtonNew
+                  title={<AiOutlineSchedule />}
+                  titleWide="Schedule Online"
+                  content={<Schedule />}
+                  contentWide={<Schedule />}
+                />
+              </CardActions>
+            {/* </Box> */}
+          </Box>
+          {/* <Box flex="auto"> */}
+            <Box display="flex" flex="auto" color="#c54097" justifyContent="center" flexDirection="column">
+              <Typography
+                variant="body1"
+                gutterBottom
+                style={{
+                  alignItems: "center",
+                  display: "flex",
+                }}
+              >
+                <FaPhoneAlt
+                  fontSize="1.1em"
+                  style={{
+                    paddingInline: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                />
                 1-609-670-0451
               </Typography>
-            </Box>
-            <Box display="flex" justifyContent="center" color="#a71976">
-              <MailTo
+            
+              <Typography
+                variant="body1"
+                gutterBottom
                 style={{
-                  color: "#c54097",
-                  fontWeight: "bold",
-                  fontSize: "1.5em",
-                  paddingRight: "5px",
+                  alignItems: "center",
+                  display: "flex",
                 }}
-              />
-              <Typography variant="body1" noWrap="true" display="block">
+              >
+                <MailTo
+                  style={{
+                    color: "#c54097",
+                    fontSize: "1.1em",
+                    paddingInline: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                />
                 Send us an email
               </Typography>
-            </Box>
-          </FooterBox>
+            {/* </Box> */}
+          </Box>
         </Box>
       </AppBar>
     </>

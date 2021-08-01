@@ -21,16 +21,13 @@ const useStyles = makeStyles((theme) => ({
     paddingBlock: "10px",
   },
   grid: {
-    direction: "row",
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
-    fontSize: "1.1rem",
     fontWeight: "lighter",
     "& div": {
       fontWeight: "bold",
       paddingInline: "10px",
-      fontSize: "1.1rem",
       color: "#494649"
     },
   },

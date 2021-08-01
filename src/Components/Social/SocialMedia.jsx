@@ -15,22 +15,21 @@ export function Social({ color, size, label, ...props }) {
       }}
       {...props}
     >
-      <a
-        href="https://www.facebook.com/Home-Inspections-105580485123207/"
-      >
+      <a href="https://www.facebook.com/Home-Inspections-105580485123207/">
         <FaFacebookSquare color={color} />
       </a>
+
       <a
         href="https://www.instagram.com/buyerbewarehomeinspections"
         className="instagram social"
       >
         <FiInstagram color={color} />
       </a>
+
       <a href="https://www.spectora.com/inspection-request/my-inspection-company-2f689b3a14">
         <RiUserSharedLine color={color} />
       </a>
       <MailTo color={color} />
-      
     </div>
   );
 }

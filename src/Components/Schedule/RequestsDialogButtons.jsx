@@ -6,7 +6,7 @@ export function DialogButton({ title, content, ...props }) {
 
   return (
     <>
-      <Box display="flex" justifyContent="center" width="100%">
+      <Box display="flex" justifyContent="center" width="100%" padding="10px">
         <Button variant="contained" color="secondary" {...props} onClick={() => setOpen(true)}>
           {title}
         </Button>

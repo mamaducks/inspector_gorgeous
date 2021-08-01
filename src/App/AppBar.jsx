@@ -1,10 +1,4 @@
-import {
-  Box,
-  Tab,
-  Tabs,
-  CardContent,
-  Typography,
-} from "@material-ui/core";
+import { Box, Tab, Tabs, CardContent, Typography } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
 
 import routes from "./Routes";
@@ -15,10 +9,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    //flexGrow: 1,
     display: "flex",
   },
-
   image: {
     width: "25%",
     height: "auto",
@@ -34,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     alignSelf: "flex-end",
     fontSize: "2em",
+    paddingRight: theme.spacing(2),
+    "& > a": {
+      marginLeft: theme.spacing(2),
+    },
   },
   grow: {
     flexGrow: 1,
@@ -52,11 +49,8 @@ export function AppBarButton() {
   if (isWide) {
     return <Social color="black" className={classes.title} />;
   }
-  return (
-    <div>
-      <MenuButton alignSelf="flex-end" paddingRight="1em" fontSize="1.8em" />
-    </div>
-  );
+
+  return <MenuButton alignSelf="flex-end" fontSize="1.8em" />;
 }
 
 export function AppBarHeader() {
@@ -64,6 +58,7 @@ export function AppBarHeader() {
   const isWide = useMediaQuery({
     query: "(min-device-width: 800px)",
   });
+
   return (
     <>
       <Box margin="5px" display="flex" height="120px">
@@ -72,25 +67,24 @@ export function AppBarHeader() {
 
           <CardContent>
             <Typography
-              noWrap="true"
               variant="h4"
               align="right"
               fontSize="1.2rem"
             >
               {" "}
-              BUYER BEWARE{" "}
+              BUYER BEWARE
             </Typography>
 
             <Typography
               variant="h6"
               align="right"
-              noWrap="true"
               style={{ fontWeight: "300" }}
             >
               HOME INSPECTION, LLC
             </Typography>
           </CardContent>
         </Box>
+
         <div
           style={{
             alignSelf: "flex-end",
@@ -106,6 +100,7 @@ export function AppBarHeader() {
           />
         </div>
       </Box>
+
       {isWide && (
         <Box style={{ backgroundColor: "#a71976", padding: "1px" }}>
           <Box display="flex" color="white" justifyContent="space-between">

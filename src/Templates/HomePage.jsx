@@ -26,7 +26,7 @@ export const HomePage = () => {
   return (
     <Container>
       <LayoutBox image={House}>
-        <MainContent heading="Let Us Help You Get to Know Your Home">
+        <MainContent heading="Let Us Help You Get to Know Your Home" >
           At Buyer Beware Home Inspections, we fully understand the importance
           of a thorough home inspection, and that’s why we work so hard to offer
           you the very best. Let us provide an unbiased, comprehensive, visual
@@ -44,7 +44,7 @@ export const HomePage = () => {
         display="flex"
         justifyContent="space-evenly"
         alignContent="space-between"
-        style={{ paddingBlock: "18px" }}
+        style={{ paddingBlock: "18px", minWidth: "-webkit-fill-available"}}
         flexWrap="wrap"
       >
         <MainContent heading="We Offer the Following Inspection Services:">

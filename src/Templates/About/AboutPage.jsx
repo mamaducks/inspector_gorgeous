@@ -1,13 +1,11 @@
 import { ProfileCard } from "./ProfileCard";
-import {
-  LayoutBox,
-  MainContent,
-} from "../../Components/Box/AppBoxes";
+import { LayoutBox, MainContent } from "../../Components/Box/AppBoxes";
 import { DialogButton } from "../../Components/Schedule/RequestsDialogButtons";
 import { Request } from "../../Components/Schedule/InspectionForm";
 import About from "../../img/houseB.png";
 import Check from "../../img/checkCert.png";
-import { Container } from "@material-ui/core";
+import { Box, Button, Container } from "@material-ui/core";
+
 export function AboutPage() {
   return (
     <Container>
@@ -24,6 +22,17 @@ export function AboutPage() {
           inspecting a property. Adrienne enjoys all aspects of building and
           maintaining homes, and is eager to share this information with her
           clients.
+          <Box display="flex" justifyContent="center" padding="10px">
+            <Button
+              variant="contained"
+             // alignItems="center"
+              color="secondary"
+              href="https://www.spectora.com/inspection-request/my-inspection-company-2f689b3a14"
+              style={{ marginTop: "8px" }}
+            >
+              View my Profile
+            </Button>
+          </Box>
         </MainContent>
       </LayoutBox>
 

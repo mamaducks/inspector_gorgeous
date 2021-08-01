@@ -21,31 +21,37 @@ const theme = createMuiTheme({
 
   typography: {
     h5: {
-    fontSize: '1.2rem',
-    '@media (min-width:600px)': {
-      fontSize: '1.5rem',
+      fontSize: "clamp(1.1em, 1.3vw, 1.8em)",
+
+      paddingLeft: "5px",
     },
-    paddingLeft: "5px"
-    
+    subtitle1: {
+      fontWeight: 300,
+      fontSize: "clamp(1.1rem, 1vw, 1.8rem)",
+      paddingLeft: "5px",
+      lineHeight: "1.2",
+    },
+    subtitle2: {
+      lineHeight: "1.2",
+      fontWeight: 300,
+      fontSize: "clamp(0.8rem, 0.8vw, 1.8rem)",
+    },
+    caption: {
+      fontWeight: 300,
+      fontSize: "clamp(0.8rem, 0.7vw, 1.8rem)",
+      lineHeight: "1.2",
+    },
+    body1: {
+      letterSpacing: "0.1em",
+      fontSize: "clamp(1rem, 1vw, 1.8rem)",
+      fontWeight: 300,
+    },
+    body2: {
+      fontWeight: 300,
+      fontSize: "clamp(1.1rem, 1vw, 1.8rem)",
+      paddingLeft: "5px",
+    }
   },
-  subtitle1: {
-    fontWeight: 400,
-    fontSize: "1.1rem",
-    paddingLeft: "5px",
-    
-  },
-  subtitle2: {
-lineHeight: 1,
-fontWeight: 300
-},
-caption: {
-  fontWeight: 300
-},
-body1: {
-  letterSpacing: "0.1em"
-}
-  },
- 
 
   overrides: {
     // MuiToolbar: {
@@ -135,7 +141,7 @@ body1: {
   //     root: {
   //       fontSize: "0.84rem"
   //     }
-      
+
   //   }
   // }
 });

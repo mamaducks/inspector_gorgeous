@@ -45,17 +45,17 @@ export function BusinessInfoButton() {
     );
   }
   return (
-    <Box display="flex" justifyContent="center">
-    <Button
-      variant="contained"
-      size="small"
-      alignItems="center"
-      color="secondary"
-      startIcon={<RiUserShared2Fill />}
-      href="https://www.spectora.com/inspection-request/my-inspection-company-2f689b3a14"
-    >
-      View my Profile
-    </Button>
+    <Box display="flex" justifyContent="center" padding="10px">
+      <Button
+        variant="contained"
+        size="small"
+        alignItems="center"
+        color="secondary"
+        startIcon={<RiUserShared2Fill />}
+        href="https://www.spectora.com/inspection-request/my-inspection-company-2f689b3a14"
+      >
+        View my Profile
+      </Button>
     </Box>
   );
 }
