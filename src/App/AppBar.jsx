@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   image: {
-    width: "25%",
+    // width: "25%",
     height: "auto",
     maxWidth: "120px",
   },
@@ -63,7 +63,7 @@ export function AppBarHeader() {
     <>
       <Box margin="5px" display="flex" height="120px">
         <Box display="flex" flexGrow="1">
-          <img alt="" src={EmmaLogo} height="auto" className={classes.image} />
+          <img alt="" src={EmmaLogo} height="107px" className={classes.image} />
 
           <CardContent>
             <Typography
