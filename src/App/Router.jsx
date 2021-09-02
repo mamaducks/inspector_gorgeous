@@ -5,12 +5,12 @@ import {
   Router as ReactRouter,
   Switch,
 } from "react-router-dom";
-import routes from "./Routes";
+import routes from "./Routes.js";
 import { history } from "../_helpers/helpers";
 import { AboutPage } from "../Templates/About/AboutPage";
 import { ContactPage } from "../Templates/Contact/ContactPage";
 import { FaqPage } from "../Templates/Faq/FaqPage";
-import { HomePage } from "../Templates/HomePage";
+import { HomePage } from "../Templates/Home/HomePage";
 import { ServicesPage } from "../Templates/Services/ServicesPage";
 
 export function Router() {

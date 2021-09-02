@@ -26,7 +26,7 @@ const theme = createTheme({
     },
     subtitle1: {
       fontWeight: 300,
-      fontSize: "clamp(1.1rem, 1vw, 1.8rem)",
+      fontSize: "clamp(1rem, 1vw, 1.5rem)",
       paddingLeft: "5px",
       lineHeight: "1.2",
     },

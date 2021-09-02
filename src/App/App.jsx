@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import { AppBarHeader } from "./AppBar";
-import { Footer } from "./Footer";
+import { AppBarHeader } from "../AppBar/AppBar";
+import { Footer } from "../Footer/Footer";
 import { Router } from "./Router";
 
 const useStyles = makeStyles({

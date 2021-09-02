@@ -4,7 +4,7 @@ import { RiUserSharedLine } from "react-icons/ri";
 import { FaFacebookSquare } from "react-icons/fa";
 import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles(({ palette, spacing }) => ({
+const useStyles = makeStyles(({ spacing }) => ({
   social: {
     display: "flex",
     justifyContent: "flex-end",

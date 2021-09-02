@@ -1,7 +1,7 @@
-import { Box, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { useMediaQuery } from "react-responsive";
-import { Schedule } from "../../Components/Schedule/Schedule";
-import { Quote } from "../../Components/Schedule/Quote";
+import { Schedule } from "../Schedule/Schedule";
+import { Quote } from "../Schedule/Quote";
 import { Request } from "./InspectionForm";
 import { BusinessButton } from "./RequestsDialogButtons";
 import {
@@ -10,6 +10,7 @@ import {
   RiFileTextLine,
 } from "react-icons/ri";
 import { AiOutlineSchedule } from "react-icons/ai";
+import {FlexColumnBox} from "../App/AppBoxes";
 
 export function BusinessInfoButton() {
   const isWide = useMediaQuery({
@@ -18,12 +19,7 @@ export function BusinessInfoButton() {
 
   if (isWide) {
     return (
-      <Box
-        padding="10px"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-      >
+      <FlexColumnBox>
         <BusinessButton
           title="Get a Quote"
           icon={<RiMoneyDollarCircleLine />}
@@ -41,11 +37,11 @@ export function BusinessInfoButton() {
           icon={<RiFileTextLine />}
           content={<Request />}
         />
-      </Box>
+      </FlexColumnBox>
     );
   }
   return (
-    <Box display="flex" justifyContent="center" padding="10px">
+    <FlexColumnBox>
       <Button
         variant="contained"
         size="small"
@@ -56,6 +52,6 @@ export function BusinessInfoButton() {
       >
         View my Profile
       </Button>
-    </Box>
+    </FlexColumnBox>
   );
 }

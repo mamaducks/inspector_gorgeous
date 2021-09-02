@@ -1,7 +1,7 @@
 import { FiMail } from "react-icons/fi";
 
 export const MailTo = ({ label, icon, color, children, ...props }) => {
-  const Mailto = ({ email, subject = "", body = "", label = "", children }) => {
+  const Mailto = ({ email, subject = "", body = "" }) => {
     let params = subject || body ? "?" : "";
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
     if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;

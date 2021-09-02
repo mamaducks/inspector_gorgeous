@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Button, Dialog } from "@material-ui/core";
+import { FlexColumnBox } from "../App/AppBoxes";
 
 export function DialogButton({ title, content, ...props }) {
   const [open, setOpen] = useState(false);
@@ -26,15 +27,12 @@ export function DialogButton({ title, content, ...props }) {
   );
 }
 
-export function BusinessButton({ title, icon, content, ...props }) {
+export function BusinessButton({ title, icon, content }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignSelf="center"
-      padding="8px"
+    <FlexColumnBox
+      padding="5px"
       width="80%"
     >
       <Button
@@ -58,6 +56,6 @@ export function BusinessButton({ title, icon, content, ...props }) {
           {content}
         </Dialog>
       </div>
-    </Box>
+    </FlexColumnBox>
   );
 }

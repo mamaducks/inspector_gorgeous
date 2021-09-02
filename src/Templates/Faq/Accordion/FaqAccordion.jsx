@@ -1,6 +1,7 @@
-import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { AccordionBox } from "../Faq/Accordion/AccordionBox";
+import { AccordionBox } from "./AccordionBox";
+import { Box } from "@material-ui/core";
+import {ClickHere} from "./AccordionClickHere";
 
 const useStyles = makeStyles({
   accordion: {
@@ -43,7 +44,9 @@ export function FaqAccordion() {
 
       <AccordionBox
         heading="HOW MUCH IS A HOME INSPECTION?"
-        body="The cost of a Home Inspection can vary widely depending on the type of home, the size of the home, and maybe most importantly - on the Inspector themselves.   We believe in fair, honest, upfront pricing.  We are proud to offer senior and military discounts.  Click Here to request your free quote!"
+        body= {<span>The cost of a Home Inspection can vary widely depending on the type of home, the size of the home, and maybe most importantly - on the Inspector themselves.  We believe in fair, honest, upfront pricing.  We are proud to offer senior and military discounts. 
+        <ClickHere />
+         </span>}
       />
     </Box>
   );

@@ -9,7 +9,7 @@ import {
 import { useMediaQuery } from "react-responsive";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoIosPhonePortrait, IoMdPin } from "react-icons/io";
-import EmmaLogo from "../../img/newEmmaLogo.png";
+import EmmaLogo from "./newEmmaLogo.png";
 
 function ProfileCardInfo({ Icon, info }) {
   return (

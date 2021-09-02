@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
-
   body: {
     backgroundColor: "#f9f5f7",
     fontWeight: "lighter",
