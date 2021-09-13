@@ -15,7 +15,7 @@ export const MailTo = ({ label, icon, color, children, ...props }) => {
 
   return (
     <Mailto
-      email="scrubblies@gmail.com"
+      email="buyerbewarehomeinspections@gmail.com"
       subject="I'm interested in a quote!"
       body="Enter the details of your message and contact information."
     >
